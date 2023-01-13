@@ -1,0 +1,61 @@
+.contentLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  height: 100vh;
+}
+
+.titleLogin h1 {
+  padding: 3rem;
+}
+
+.cartLogin {
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem;
+  width: 500px;
+  height: 350px;
+
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.contentCartLogin {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contentCartLogin h1 {
+  margin: 2rem;
+}
+
+.usericon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.usericon img {
+  width: 2rem;
+}
+.usericon input {
+  padding: 0.4rem;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.btnEnviar {
+  padding: 1rem 2rem;
+  margin: 3rem;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+}

@@ -1,0 +1,106 @@
+.contentCal {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 10vh;
+}
+
+.contentCal div h1 {
+  text-align: center;
+  padding: 3rem;
+  margin-top: 1rem;
+}
+
+.formCal {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 1rem;
+}
+.divForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+.formCal {
+  width: 40%;
+}
+.formCal input {
+  width: 40%;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  margin: 1rem;
+  padding: 0.3rem;
+  border-radius: 3px;
+  border: none;
+  text-align: right;
+  outline: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.formCal label {
+  width: 50%;
+  font-size: 1.2rem;
+  text-align: right;
+  margin: 1rem 2rem 0 0;
+  padding: 0.3rem;
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+}
+
+.btnCalcular {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnCalcular button {
+  margin: 2rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  background: rgba(64, 66, 57, 0.637);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.resultsCal {
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem;
+  width: 70%;
+  height: 350px;
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.resultsCal h3 {
+  margin: 2rem;
+}
+.resultsCal p {
+  margin: 0.2rem;
+}
+
+.numberResult {
+  font-weight: bold;
+  font-size: 2rem;
+  color: rgb(53, 218, 61);
+}

@@ -1,23 +1,70 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Navigate, Route, Routes } from "react-router-dom";
+import { Login } from "./pages/Login/Login";
+import { JwtHandler } from "./jwt_handler/jwt_handler";
+import { Home } from "./pages/Home/Home";
+import { Apliques } from "./pages/Apliques/Apliques";
+import { Calculadora } from "./pages/Calculadora/Calculadora";
+import { Header } from "./components/Header/Header";
+import { View } from "./pages/View/View";
+import { Create } from "./pages/Create/Create";
+import { InfoProdutos } from "./pages/InfoProdutos/InfoProdutos";
 
 function App() {
+  const PrivateRoute = ({ children, redirectTo }) => {
+    const isAuthenticated = JwtHandler.isJwtValid();
+    // console.log("isAuh:", isAuthenticated);
+    return isAuthenticated ? children : <Navigate to={redirectTo} />;
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/infoProdutos" element={<InfoProdutos />} />
+
+        <Route
+          path="/home"
+          element={
+            <PrivateRoute redirectTo="/">
+              <Home />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/apliques"
+          element={
+            <PrivateRoute redirectTo="/">
+              <Apliques />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/calculadora"
+          element={
+            <PrivateRoute redirectTo="/">
+              <Calculadora />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/aplique/:id"
+          element={
+            <PrivateRoute redirectTo="/">
+              <View />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/create"
+          element={
+            <PrivateRoute redirectTo="/">
+              <Create />
+            </PrivateRoute>
+          }
+        />
+      </Routes>
     </div>
   );
 }

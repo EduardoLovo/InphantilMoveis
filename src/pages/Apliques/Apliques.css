@@ -1,0 +1,90 @@
+.contentAplique {
+  padding-top: 10vh;
+}
+
+.contentAplique h1 {
+  margin: 3rem;
+  font-size: 5vh;
+}
+.divBtnBack {
+  width: 90%;
+  text-align: right;
+  margin: 3rem 0;
+}
+
+.btnBack {
+  width: 8vw;
+  height: 5vh;
+  cursor: pointer;
+  background: rgba(64, 66, 57, 0.637);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.btnBack:hover {
+  background: rgba(0, 0, 0, 0.452);
+}
+
+.btnAdd {
+  margin-right: 1rem;
+  width: 15vw;
+  background: rgba(139, 165, 46, 0.637);
+}
+
+.btnEdit {
+  width: 5vw;
+  height: 3.5vh;
+  margin: 0.5rem;
+  background: rgba(63, 111, 167, 0.637);
+}
+
+.listAplic {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cart {
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem;
+  width: 22vw;
+  height: 68vh;
+
+  background: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.cart h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.cart p {
+  font-size: large;
+  font-weight: bold;
+}
+
+.cart span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.cart img {
+  width: 18vw;
+  height: 45vh;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-radius: 5px;
+}
+
+.green {
+  color: rgb(42, 161, 78);
+}
+
+.red {
+  color: rgb(90, 28, 28);
+}
