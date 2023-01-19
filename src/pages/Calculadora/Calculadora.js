@@ -25,17 +25,32 @@ export const Calculadora = () => {
     navigate("/Home");
   };
 
+  var atual = 600000.00;
+
+//com R$
+var f = atual.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+
+//sem R$
+var f2 = atual.toLocaleString('pt-br', {minimumFractionDigits: 2});
+
+console.log(f);
+console.log(f2);
+
+  
+
+
   return (
     <div className="contentCal">
       <div>
         <h1>Calculadora Á Vista / Prazo</h1>
+        
       </div>
 
       <div className="divForm">
         <form onSubmit={calcular} className="formCal">
           <div className="inputs">
             <label>Valor da entrada</label>
-            <input type="number" step="0.01" id="ve" min="0.01" />
+            <input type="number" step="0.01" id="ve" min="0.01"  />
           </div>
           <div className="inputs">
             <label>Valor total (sem o valor do frete)</label>

@@ -6,9 +6,10 @@
 }
 
 .contentCal div h1 {
-  text-align: center;
-  padding: 3rem;
-  margin-top: 1rem;
+  /* text-align: center; */
+  /* padding: 3rem; */
+  margin: 3rem 0 3rem 5rem;
+  font-size: 10vh;
 }
 
 .formCal {

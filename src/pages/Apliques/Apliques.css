@@ -3,8 +3,8 @@
 }
 
 .contentAplique h1 {
-  margin: 3rem;
-  font-size: 5vh;
+  margin: 3rem 0 3rem 5rem;
+  font-size: 10vh;
 }
 .divBtnBack {
   width: 90%;
@@ -13,45 +13,54 @@
 }
 
 .btnBack {
-  width: 8vw;
-  height: 5vh;
+  width: 8rem;
+  height: 3rem;
   cursor: pointer;
-  background: rgba(64, 66, 57, 0.637);
+  background: rgba(0, 0, 0, 0.35);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(13.5px);
   -webkit-backdrop-filter: blur(13.5px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: 0.3s ease-in
 }
 
 .btnBack:hover {
-  background: rgba(0, 0, 0, 0.452);
+  background: rgba(61, 57, 57, 0.452);
 }
 
 .btnAdd {
   margin-right: 1rem;
-  width: 15vw;
+  width: 13rem;
   background: rgba(139, 165, 46, 0.637);
 }
 
+.btnAdd:hover {
+  background: rgb(139, 165, 46);
+
+}
+
 .btnEdit {
-  width: 5vw;
+  width: 5rem;
   height: 3.5vh;
   margin: 0.5rem;
   background: rgba(63, 111, 167, 0.637);
+  transition: 0.3s ease-in
 }
 
 .listAplic {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
+
 .cart {
   padding: 1rem;
   text-align: center;
   margin: 1rem;
-  width: 22vw;
-  height: 68vh;
-
+  width: 300px;
+  height: 400px;
+  transition: 0.2s ease-in;
   background: rgba(0, 0, 0, 0.35);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(13.5px);
@@ -60,12 +69,29 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.cart h3 {
+
+
+.cartRed {
+  padding: 1rem;
+  text-align: center;
+  margin: 1rem;
+  width: 300px;
+  height: 400px;
+
+  background: rgba(83, 26, 26, 0.767);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.numberCart {
   color: white;
   margin-bottom: 0.5rem;
 }
 
-.cart p {
+.quantCart {
   font-size: large;
   font-weight: bold;
 }
@@ -74,17 +100,19 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
-.cart img {
-  width: 18vw;
-  height: 45vh;
+.imgCart {
+  width: 220px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border-radius: 5px;
 }
+
+
 
 .green {
   color: rgb(42, 161, 78);
 }
 
 .red {
-  color: rgb(90, 28, 28);
+  color: rgb(197, 0, 0);
+
 }

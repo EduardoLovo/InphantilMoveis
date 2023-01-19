@@ -43,13 +43,17 @@ export const Home = () => {
               navigate("/infoProdutos");
             }}
           >
-            Informações do produto
+            Informações 
           </button>
         </div>
 
+        <div className="divBtnLogout">
         <button onClick={logout} className="btnBack">
           sair
         </button>
+
+        </div>
+
       </div>
     </div>
   );

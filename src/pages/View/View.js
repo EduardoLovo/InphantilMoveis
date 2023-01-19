@@ -24,14 +24,20 @@ export const View = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    console.log(e.target.estoque.value);
+
     const number = e.target.number.value;
     const img = e.target.img.value;
     const quantidade = e.target.quantidade.value;
+    const estoque = e.target.estoque.value;
+
     const payload = {
       number,
       img,
       quantidade,
+      estoque
     };
+
     const response = await Api.buildApiPatchRequest(
       Api.updateUrl(id),
       payload,
@@ -97,18 +103,28 @@ export const View = () => {
             id="img"
             name="img"
             defaultValue={aplique.img}
-            placeholder="Numero do aplique"
+            placeholder="Imagem do aplique"
           />
           <label>quantidade:</label>
           <input
             id="quantidade"
             name="quantidade"
             defaultValue={aplique.quantidade}
-            placeholder="Numero do aplique"
+            placeholder="Quantidade"
           />
+
+          <label>Estoque: </label>
+          {aplique.estoque} 
+          <select id="estoque" name="estoque" defaultValue={aplique.estoque} placeholder="Estoque">
+            <option>...</option>
+            <option>Sim</option>
+            <option>Nao</option>
+          </select> 
+
           <button className="btnAtu btnBack" type="submit" onClick={notify}>
             atualizar
           </button>
+
         </form>
       </div>
 

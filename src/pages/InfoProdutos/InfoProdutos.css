@@ -1,3 +1,81 @@
 .contentInfo {
   padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.limpeza {
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(78, 77, 55));
+  padding: 1rem;
+  margin: 1rem;
+  width: 80vw;
+  display: flex;
+  
+}
+
+.limpImage {
+  width:  70vw;
+  margin-top: 2rem;
+}
+
+.limpImage img {
+  width: 100%;
+}
+
+
+
+.limpText {
+  width: 38vw;
+  height: 100%;
+}
+
+.limpText p {
+  color: rgb(24, 6, 6);
+  width: 40vw;
+  height: 100%;
+  margin: 0.5rem;
+}
+
+.alinham {
+  display: flex;
+}
+
+.alinham p {
+  width: 30vw;
+  padding: 2rem;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.garantiaText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+}
+
+.garantia p {
+margin: 0.5rem;  
+}
+
+.arejar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  
+}
+
+.arejar img {
+  width: 20rem;
+}
+
+.arejar p {
+  width: 50%;
+  margin: 0.5rem;
 }
