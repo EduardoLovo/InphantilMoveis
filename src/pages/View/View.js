@@ -91,21 +91,21 @@ export const View = () => {
           </button>
         </div>
         <form className="formulario" onSubmit={handleSubmit}>
-          <label>numero:</label>
+          <label>Numero:</label>
           <input
             id="number"
             name="number"
             defaultValue={aplique.number}
             placeholder="Numero do aplique"
           />
-          <label>imagem:</label>
+          <label>Imagem:</label>
           <input
             id="img"
             name="img"
             defaultValue={aplique.img}
             placeholder="Imagem do aplique"
           />
-          <label>quantidade:</label>
+          <label>Quantidade:</label>
           <input
             id="quantidade"
             name="quantidade"
@@ -116,7 +116,7 @@ export const View = () => {
           <label>Estoque: </label>
           {aplique.estoque} 
           <select id="estoque" name="estoque" defaultValue={aplique.estoque} placeholder="Estoque">
-            <option>...</option>
+            <option >{aplique.estoque}</option>
             <option>Sim</option>
             <option>Nao</option>
           </select> 

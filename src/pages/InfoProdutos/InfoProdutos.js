@@ -60,10 +60,11 @@ export const InfoProdutos = () => {
           <p>
             📝 GARANTIA ⌛ Nossos produtos possuem 1 ano de garantia nas espumas, e
             180 dias no revestimento. Esta garantia é fornecida pelas indústrias das
-            matérias primas. Em caso de defeito de Fabricação ou problemas advindos
-            do transporte entre em contato imediatamente com o setor de atendimento!
-            (Em prazo máximo de 7 dias) 
+            matérias primas. 
           </p>
+          <p>Em caso de defeito de Fabricação ou problemas advindos
+            do transporte entre em contato imediatamente com o setor de atendimento!
+            (Em prazo máximo de 7 dias) </p>
           <p>🗓️ ATENÇÃO!!! Trocas e devolução devem ser
             feitas em até 7 dias do recebimento, o produto não pode ter sido usado e
             a embalagem deve ser a mesma do envio! </p>
@@ -75,7 +76,7 @@ export const InfoProdutos = () => {
       <div className="alinham limpeza">
         <p>
           Este é o vídeo de montagem da nossa Cama, é importante seguir os passos
-          do mesmo, não alterando a ordem de montagem! link do YouTube:
+          do mesmo, não alterando a ordem de montagem! 
           
         </p>
         <YouTube videoId="TAtMg7sJZA8" />

@@ -31,12 +31,12 @@ export const ListeApliques = () => {
   return (
     <div className="listAplic">
         {apliques.map((aplique, index) => (
-          <div  className={aplique.estoque === "Sim" ? "cart" : "cartRed"}>
+          <div  className={aplique.estoque === "Nao" ? "cartRed" : "cart"}>
             <h3 className="numberCart">{aplique.number}</h3>
             <img src={aplique.img} alt="img" className="imgCart"/>
             <p className="quantCart">
               Em estoque:{" "}
-              <span className={aplique.estoque === "Sim"  ? "green" : "red"}>
+              <span className={aplique.estoque === "Nao"  ? "red" : "green"}>
                 {" "}
                 {aplique.quantidade}
               </span>

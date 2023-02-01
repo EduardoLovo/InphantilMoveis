@@ -1,6 +1,6 @@
 import { JwtHandler } from "../jwt_handler/jwt_handler";
 export const Api = {
-  baseUrl: "http://localhost:3000",
+  baseUrl: "https://inphantil-backend-fxjbz5b5p-eduardolovo.vercel.app",
 
   // Rota Login
   loginUrl: () => Api.baseUrl + "/login/",

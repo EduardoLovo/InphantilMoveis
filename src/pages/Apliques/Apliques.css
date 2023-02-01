@@ -45,7 +45,8 @@
   height: 3.5vh;
   margin: 0.5rem;
   background: rgba(63, 111, 167, 0.637);
-  transition: 0.3s ease-in
+  transition: 0.3s ease-in;
+  border-radius: 5px;
 }
 
 .listAplic {
@@ -59,7 +60,7 @@
   text-align: center;
   margin: 1rem;
   width: 300px;
-  height: 400px;
+  height: 450px;
   transition: 0.2s ease-in;
   background: rgba(0, 0, 0, 0.35);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -76,7 +77,7 @@
   text-align: center;
   margin: 1rem;
   width: 300px;
-  height: 400px;
+  height: 450px;
 
   background: rgba(83, 26, 26, 0.767);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -101,7 +102,7 @@
   font-weight: bold;
 }
 .imgCart {
-  width: 220px;
+  width: 250px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border-radius: 5px;
 }
@@ -115,4 +116,23 @@
 .red {
   color: rgb(197, 0, 0);
 
+}
+
+
+.display {
+  display: none;
+}
+.Appfilter {
+  width: 100%;
+}
+.Appfilter input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  font-size: 1.5rem;
+  padding: .3rem;
+  outline: 1px solid rgba(255, 255, 255, 0.37);
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.548);
 }
