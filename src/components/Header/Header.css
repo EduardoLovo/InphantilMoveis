@@ -48,3 +48,17 @@
   color: rgba(31, 38, 135, 0.37);
 }
 
+@media screen and (max-width: 568px){
+	.contentHeader {
+    padding: 2.5rem 0;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+  }
+  .contentHeader p {
+    display: none;
+    }
+  
+  
+  
+}

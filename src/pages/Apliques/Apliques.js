@@ -91,7 +91,7 @@ export const Apliques = () => {
 
   return (
     <div className="contentAplique">
-      <div>
+      <div className="divH1">
         <h1>Estoque de apliques</h1>
       </div>
       <div className="divBtnBack">

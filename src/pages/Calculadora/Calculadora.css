@@ -105,3 +105,25 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 2rem;
   color: rgb(53, 218, 61);
 }
+
+@media screen and (max-width: 568px){
+  .contentCal div {
+    display: flex;
+    margin: 0 0 0 -2.5rem;
+  }
+  
+  .contentCal div h1 {
+    /* text-align: center; */
+    /* padding: 3rem; */
+    font-size: 5vh;
+  }
+
+  .divForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
