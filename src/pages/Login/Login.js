@@ -38,7 +38,7 @@ export const Login = () => {
       navigate("/Home");
       window.location.reload();
     } else {
-      console.log("senha incorreta");
+      alert("senha incorreta");
     }
   };
 
