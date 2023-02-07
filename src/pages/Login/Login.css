@@ -61,8 +61,3 @@
 }
 
 
-@media screen and (max-width: 568px){
-	.titleLogin h1 {
-    color: aqua;
-  }
-}
