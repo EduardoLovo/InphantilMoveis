@@ -39,7 +39,7 @@ export const Calculadora = () => {
 
   return (
     <div className="contentCal">
-      <div>
+      <div className="divTitle">
         <h1>Calculadora Á Vista / Prazo</h1>
       </div>
 

@@ -108,16 +108,19 @@ input[type="number"]::-webkit-inner-spin-button {
 
 @media screen and (max-width: 568px){
   .contentCal {
-    width: 100vw;
-  }
-  .contentCal div {
-    margin: 0 0 0 -2.5rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
   }
   
-  .contentCal div h1 {
-    /* text-align: center; */
-    /* padding: 3rem; */
-    font-size: 3vh;
+  .divTitle {
+    width: 100vw;
+  }
+  
+  .contentCal .divTitle h1 {
+    text-align: start;
+    /* width: 100vw; */
+    font-size: 4vh;
   }
 
   .divForm {
@@ -125,21 +128,23 @@ input[type="number"]::-webkit-inner-spin-button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    position: relative;
   }
+
 
   .formCal {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    position: sticky;
   }
+
   .formCal input {
     width: 200px;
     height: 2.5rem;
     font-size: 1.2rem;
-    margin: 1rem;
-    padding: 0.3rem;
+    /* margin: 1rem; */
+    /* padding: 0.3rem; */
     border-radius: 3px;
     border: none;
     /* text-align: right; */
@@ -150,12 +155,15 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 1rem;
     text-align: left;
     margin: 0 0 0 2rem;
-    padding: 0.3rem;
+    /* padding: 0.3rem; */
   }
 
   .inputs {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100vw;
+
   }
 
   .resultsCal {
