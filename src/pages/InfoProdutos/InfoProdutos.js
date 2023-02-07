@@ -7,6 +7,16 @@ import garantia from '../../images/garantia.png'
 import vento from '../../images/vento.png'
 
 export const InfoProdutos = () => {
+
+  const opts = {
+    
+    width: '100%',
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 1,
+    },
+  };
+
   return (
     <div className="contentInfo">
       
@@ -44,7 +54,7 @@ export const InfoProdutos = () => {
       </div>
 
       <div className="alinham limpeza">
-        <YouTube videoId="EI-uWTHEtZA" />
+        <YouTube videoId="EI-uWTHEtZA" opts={opts}/>
         <p>
           Esse é o vídeo de alinhamento da nossa cama, recomendamos e é muito
           importante que seja feito de tempos em tempos, pois irá conservar sua
@@ -79,7 +89,7 @@ export const InfoProdutos = () => {
           do mesmo, não alterando a ordem de montagem! 
           
         </p>
-        <YouTube videoId="TAtMg7sJZA8" />
+        <YouTube videoId="TAtMg7sJZA8" opts={opts} />
       </div>
 
       <div className=" limpeza arejar">
