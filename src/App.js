@@ -9,6 +9,7 @@ import { Header } from "./components/Header/Header";
 import { View } from "./pages/View/View";
 import { Create } from "./pages/Create/Create";
 import { InfoProdutos } from "./pages/InfoProdutos/InfoProdutos";
+import { ApliquesClientes } from "./pages/ApliquesClientes/ApliquesClientes";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/infoProdutos" element={<InfoProdutos />} />
+        <Route path="/apliqueslist" element={<ApliquesClientes />} />
 
         <Route
           path="/home"
