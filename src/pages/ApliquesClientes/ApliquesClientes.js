@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Api } from '../../Api/Api';
-import { ListeApliques } from '../../components/ListApliques/ListeApliques';
+import './ApliquesClientes.css'
+
 
 export const ApliquesClientes = () => {
 
@@ -15,8 +16,9 @@ export const ApliquesClientes = () => {
   useEffect(() => {
     loadData();
   }, []);
+
   return (
-    <div className="listAplic">
+    <div className="listAplic apliClient">
         {apliques.map((aplique, index) => (
           <div  className="cart">
             <h3 className="numberCart">{aplique.number}</h3>
