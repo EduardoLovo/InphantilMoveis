@@ -45,7 +45,7 @@
 
 .homeIcon:hover{
   scale: 1.1;
-  color: rgba(31, 38, 135, 0.37);
+  color: rgb(11, 78, 9);
 }
 
 @media screen and (max-width: 568px){

@@ -27,10 +27,13 @@ export const ApliquesClientes = () => {
   return (
     <div className="listAplic apliClient">
         {apliques.map((aplique, index) => (
-          <div  className="cart cardcliente">
+          
+          <div  className={aplique.estoque === "Nao" && aplique.quantidade === "0" ? "displayApliClien": 'cart cardcliente'}>
             <h3 className="numberCart">{aplique.number}</h3>
             <img src={aplique.img} alt="img" className="imgCart"/>
           </div>
+        
+        
         ))}
         
       </div>
