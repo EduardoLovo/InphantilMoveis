@@ -27,7 +27,7 @@ export const ApliquesClientes = () => {
   return (
     <div className="listAplic apliClient">
         {apliques.map((aplique, index) => (
-          <div  className="cart">
+          <div  className="cart cardcliente">
             <h3 className="numberCart">{aplique.number}</h3>
             <img src={aplique.img} alt="img" className="imgCart"/>
           </div>
