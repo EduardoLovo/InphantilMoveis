@@ -55,10 +55,13 @@
     justify-content: center;
     width: 100vw;
   }
+
+  .contentHeader img {
+    margin-left: -0.0005px;
+  }
+
   .contentHeader p {
     display: none;
     }
-  
-  
   
 }
