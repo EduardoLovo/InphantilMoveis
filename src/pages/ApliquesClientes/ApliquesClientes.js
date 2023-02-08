@@ -17,6 +17,13 @@ export const ApliquesClientes = () => {
     loadData();
   }, []);
 
+  function compare(a, b) {
+    if (a.number < b.number) return -1;
+    if (a.number > b.number) return 1;
+    return 0;
+  }
+  apliques.sort(compare);
+
   return (
     <div className="listAplic apliClient">
         {apliques.map((aplique, index) => (
