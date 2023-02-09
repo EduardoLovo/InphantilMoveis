@@ -11,21 +11,6 @@ export const Apliques = () => {
   const type = localStorage.getItem("user");
   const navigate = useNavigate();
 
-  // const [filter, setFilter] = useState('')
-
-  const [apliques, setApliques] = useState([]);
-
-  const loadData = async () => {
-  const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
-  const results = await response.json();
-  setApliques(results);
-
-  };
-  useEffect(() => {
-    loadData();
-  }, []);
-
-
   const backPage = () => {
     navigate("/home");
   };
@@ -50,7 +35,8 @@ export const Apliques = () => {
       resp.number.toLowerCase().includes(result)
     );
     setData(results);
-  }, [result]);
+    // eslint-disable-next-line
+  }, [result]); 
 
   const [display, setDisplay] = useState('')
 
