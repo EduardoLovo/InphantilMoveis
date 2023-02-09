@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Api } from "../../Api/Api";
 
-
-
 export const ListeApliques = () => {
     const type = localStorage.getItem("user");
 
@@ -31,7 +29,7 @@ export const ListeApliques = () => {
   return (
     <div className="listAplic">
         {apliques.map((aplique, index) => (
-          <div  className={aplique.estoque === "Nao" ? "cartRed" : "cart"}>
+          <div key={index}  className={aplique.estoque === "Nao" ? "cartRed" : "cart"}>
             <h3 className="numberCart">{aplique.number}</h3>
             <img src={aplique.img} alt="img" className="imgCart"/>
             <p className="quantCart">
@@ -60,7 +58,6 @@ export const ListeApliques = () => {
             )}
           </div>
         ))}
-        
       </div>
   )
 }

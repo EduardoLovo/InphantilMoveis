@@ -9,7 +9,6 @@ import vento from '../../images/vento.png'
 export const InfoProdutos = () => {
 
   const opts = {
-    
     width: '100%',
     // playerVars: {
     //   // https://developers.google.com/youtube/player_parameters
@@ -89,7 +88,7 @@ export const InfoProdutos = () => {
           do mesmo, não alterando a ordem de montagem! 
           
         </p>
-        <YouTube videoId="TAtMg7sJZA8" opts={opts} />
+        <YouTube videoId="TAtMg7sJZA8" opts={opts}/>
       </div>
 
       <div className=" limpeza arejar">

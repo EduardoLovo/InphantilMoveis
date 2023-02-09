@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import "./Calculadora.css";
 import { useNavigate } from "react-router-dom";
-import { IMaskInput } from "react-imask";
-import { mask , unMask} from "remask";
-
-
 
 export const Calculadora = () => {
   const navigate = useNavigate();
@@ -29,13 +25,6 @@ export const Calculadora = () => {
     navigate("/Home");
   };
 
-
-  const [input1, setInput1] = useState('')
-  
-  const onChange = (e) => {
-    var valor =  +e.target.value
-    setInput1(valor)
-  }
 
   return (
     <div className="contentCal">

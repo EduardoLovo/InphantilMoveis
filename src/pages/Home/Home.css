@@ -4,7 +4,7 @@
 .butons button {
   width: 15rem;
   height: 5rem;
-  margin: 1rem;
+  margin: 2rem 0 0 1rem;
   border: none;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.35);
@@ -29,18 +29,9 @@
   bottom: 0;
   right: 0;
   left: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.modal-content {
-  width: 90%;
-  max-width: 500px;
-  background-color: white;
-  padding: 10px;
-  border-radius: 5px;
 }
 
 .divBtnLogout {

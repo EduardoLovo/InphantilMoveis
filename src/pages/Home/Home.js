@@ -9,41 +9,30 @@ Modal.setAppElement("#root");
 export const Home = () => {
   const navigate = useNavigate();
 
-  const Calculadora = () => {
-    navigate("/calculadora");
-  };
-  const handleAplique = () => {
-    navigate("/apliques");
-  };
-
   const logout = () => {
     JwtHandler.clearJwt();
-
     navigate("/");
   };
-
-  // const [modalIsOpen, setIsOpen] = useState(false);
-
-  // function openModal() {
-  //   setIsOpen(true);
-  // }
-
-  // function closeModal() {
-  //   setIsOpen(false);
-  // }
 
   return (
     <div>
       <div className="contentHome">
         <div className="butons">
-          <button onClick={Calculadora}>Calculadora</button>
-          <button onClick={handleAplique}>Aplique</button>
+          <button onClick={() =>{navigate("/calculadora")}}>Calculadora</button>
+          <button onClick={() =>{navigate("/apliques")}}>Aplique</button>
           <button
             onClick={() => {
               navigate("/infoProdutos");
             }}
           >
             Informações 
+          </button>
+          <button
+            onClick={() => {
+              navigate("/apliqueslist");
+            }}
+          >
+            Clientes 
           </button>
         </div>
 
