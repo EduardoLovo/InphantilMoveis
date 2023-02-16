@@ -46,6 +46,7 @@
 
 .alinham {
   display: flex;
+  justify-content: center;
 }
 
 .alinham p {
@@ -85,6 +86,7 @@ margin: 0.5rem;
   width: 80%;
   margin: 0.5rem;
 }
+
 
 
 @media screen and (max-width: 568px) {
@@ -129,5 +131,9 @@ margin: 0.5rem;
   .arejar p {
     width: 90vw;
    
+  }
+  .youtubeVideo {
+    width: 95%;
+    height: 250px;
   }
 }

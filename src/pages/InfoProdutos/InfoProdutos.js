@@ -1,25 +1,37 @@
 import React from "react";
 import "./InfoProdutos.css";
-import YouTube from 'react-youtube';
 import './InfoProdutos.css'
 import limpeza from '../../images/limpeza.png'
 import garantia from '../../images/garantia.png'
 import vento from '../../images/vento.png'
 
 export const InfoProdutos = () => {
-
-  const opts = {
-    width: '100%',
-    // playerVars: {
-    //   // https://developers.google.com/youtube/player_parameters
-    //   autoplay: 1,
-    // },
-  };
-
   return (
     <div className="contentInfo">
       
+      <div className="garantia limpeza">
+        <div>
+          <img src={garantia} alt='gara' />
+        </div>
+        <div className="garantiaText" >
+          <p>
+            📝 GARANTIA ⌛ Nossos produtos possuem 1 ano de garantia nas espumas, e
+            180 dias no revestimento. Esta garantia é fornecida pelas indústrias das
+            matérias primas. 
+          </p>
+          <p>Em caso de defeito de Fabricação ou problemas advindos
+            do transporte entre em contato imediatamente com o setor de atendimento!
+            (Em prazo máximo de 7 dias) </p>
+          <p>🗓️ ATENÇÃO!!! Trocas e devolução devem ser
+            feitas em até 7 dias do recebimento, o produto não pode ter sido usado e
+            a embalagem deve ser a mesma do envio! </p>
+
+        </div>
+
+      </div>
+      
       <div className="limpeza">
+        
         <div className="limpText">
           <h2>Limpeza</h2>
           <p>Limpeza da Cama, Tapete e Protetor de parede 🚰 </p>
@@ -53,7 +65,18 @@ export const InfoProdutos = () => {
       </div>
 
       <div className="alinham limpeza">
-        <YouTube videoId="EI-uWTHEtZA" opts={opts}/>
+        <iframe 
+          width="789" 
+          height="434" 
+          src="https://www.youtube.com/embed/EI-uWTHEtZA" 
+          title="Alinhamento de Cama Phant" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen
+          className="youtubeVideo"
+          >
+          </iframe>
+        {/* <YouTube videoId="EI-uWTHEtZA" opts={opts}/> */}
         <p>
           Esse é o vídeo de alinhamento da nossa cama, recomendamos e é muito
           importante que seja feito de tempos em tempos, pois irá conservar sua
@@ -61,26 +84,7 @@ export const InfoProdutos = () => {
         </p>
       </div>
 
-      <div className="garantia limpeza">
-        <div>
-          <img src={garantia} alt='gara' />
-        </div>
-        <div className="garantiaText" >
-          <p>
-            📝 GARANTIA ⌛ Nossos produtos possuem 1 ano de garantia nas espumas, e
-            180 dias no revestimento. Esta garantia é fornecida pelas indústrias das
-            matérias primas. 
-          </p>
-          <p>Em caso de defeito de Fabricação ou problemas advindos
-            do transporte entre em contato imediatamente com o setor de atendimento!
-            (Em prazo máximo de 7 dias) </p>
-          <p>🗓️ ATENÇÃO!!! Trocas e devolução devem ser
-            feitas em até 7 dias do recebimento, o produto não pode ter sido usado e
-            a embalagem deve ser a mesma do envio! </p>
-
-        </div>
-
-      </div>
+      
 
       <div className="alinham limpeza">
         <p>
@@ -88,7 +92,18 @@ export const InfoProdutos = () => {
           do mesmo, não alterando a ordem de montagem! 
           
         </p>
-        <YouTube videoId="TAtMg7sJZA8" opts={opts}/>
+        {/* <YouTube videoId="TAtMg7sJZA8" opts={opts}/> */}
+        <iframe 
+          width="772" 
+          height="434" 
+          src="https://www.youtube.com/embed/TAtMg7sJZA8" 
+          title="Montagem da Cama Montessoriana Phant" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen
+          className="youtubeVideo"
+          >
+        </iframe>
       </div>
 
       <div className=" limpeza arejar">
