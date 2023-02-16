@@ -1,9 +1,14 @@
 .contentHome {
   padding-top: 10vh;
 }
-.butons button {
+
+.butons {
+  display: flex;
+}
+
+.cardHome {
   width: 15rem;
-  height: 5rem;
+  height: 15rem;
   margin: 2rem 0 0 1rem;
   border: none;
   cursor: pointer;
@@ -11,15 +16,27 @@
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(13.5px);
   -webkit-backdrop-filter: blur(13.5px);
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  transition: 0.2s ease-in;
+  transition: 0.1s ease-in;
   font-size: 1.5rem;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cardHome span{
+  text-align: center;
 }
 
-.butons button:hover {
-  background: rgba(0, 0, 0, 0.452);
+.iconHome {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+.cardHome:hover {
+  background: rgba(196, 107, 23, 0.582);
 }
 
 .modal-overlay {
@@ -41,4 +58,25 @@
 
 .divBtnLogout button {
   margin-left: 2rem;
+}
+
+@media screen and (max-width: 568px){
+  .cardHome {
+    width: 70%;
+    height: 7rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .butons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .iconHome {
+    margin: 0;
+  }
 }

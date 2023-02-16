@@ -19,7 +19,7 @@ export const View = () => {
     };
 
     loadProduct();
-  }, []);
+  }, [id]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -84,7 +84,7 @@ export const View = () => {
       <div className="viewAplicForm">
         <div className="viewAplic">
           <h1>{aplique.number}</h1>
-          <img src={aplique.img} />
+          <img src={aplique.img} alt='foto do aplique'/>
           <p>Quantidade: {aplique.quantidade}</p>
           <button className="btnBack btnDel" onClick={deleteAplic}>
             Deletar

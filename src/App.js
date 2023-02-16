@@ -10,6 +10,7 @@ import { View } from "./pages/View/View";
 import { Create } from "./pages/Create/Create";
 import { InfoProdutos } from "./pages/InfoProdutos/InfoProdutos";
 import { ApliquesClientes } from "./pages/ApliquesClientes/ApliquesClientes";
+import { ListaFiltradaCorte } from "./pages/ListaFiltradaCorte/ListaFiltradaCorte";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -39,6 +40,14 @@ function App() {
           element={
             <PrivateRoute redirectTo="/">
               <Apliques />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/filtrados"
+          element={
+            <PrivateRoute redirectTo="/">
+              <ListaFiltradaCorte />
             </PrivateRoute>
           }
         />

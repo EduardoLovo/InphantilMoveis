@@ -39,13 +39,13 @@
 .homeIcon {
   margin-left: 2rem;
   font-size: 2rem;
-  transition: 0.3s ease-in;
+  transition: 0.1s ease-in;
   cursor: pointer;
 }
 
 .homeIcon:hover{
   scale: 1.1;
-  color: rgb(11, 78, 9);
+  color: rgb(196, 106, 23, 0.582);
 }
 
 @media screen and (max-width: 568px){

@@ -35,7 +35,7 @@ export const Login = () => {
 
       JwtHandler.setJwt(accessToken);
 
-      navigate("/Home");
+      navigate("/home");
       window.location.reload();
     } else {
       alert("senha incorreta");

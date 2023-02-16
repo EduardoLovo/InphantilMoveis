@@ -6,6 +6,7 @@
   margin: 3rem 0 3rem 5rem;
   font-size: 10vh;
 }
+
 .divBtnBack {
   width: 90%;
   text-align: right;
@@ -37,7 +38,6 @@
 
 .btnAdd:hover {
   background: rgb(139, 165, 46);
-
 }
 
 .btnEdit {
@@ -55,6 +55,8 @@
   justify-content: center;
 }
 
+
+
 .cart {
   padding: 1rem;
   text-align: center;
@@ -70,15 +72,12 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-
-
 .cartRed {
   padding: 1rem;
   text-align: center;
   margin: 1rem;
   width: 300px;
   height: 450px;
-
   background: rgba(83, 26, 26, 0.767);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(13.5px);
@@ -101,13 +100,12 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
+
 .imgCart {
   width: 250px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border-radius: 5px;
 }
-
-
 
 .green {
   color: rgb(42, 161, 78);
@@ -115,16 +113,16 @@
 
 .red {
   color: rgb(197, 0, 0);
-
 }
-
 
 .display {
   display: none;
 }
+
 .Appfilter {
   width: 100%;
 }
+
 .Appfilter input {
   display: flex;
   justify-content: center;
@@ -137,6 +135,20 @@
   background: rgba(0, 0, 0, 0.548);
 }
 
+.filtrados {
+  display: flex;
+  width: 100%;
+}
+
+.inputCheck {
+  margin-left: 8rem;
+  font-size: 1.2rem;
+}
+
+.linkFiltro:hover {
+  cursor: pointer;
+  color: rgba(196, 107, 23, 0.582);
+}
 
 @media screen and (max-width: 568px){
   .contentAplique h1 {
