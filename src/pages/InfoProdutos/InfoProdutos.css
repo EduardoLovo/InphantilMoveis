@@ -56,6 +56,12 @@
   text-align: center;
 }
 
+.garantia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .garantiaText {
   display: flex;
   align-items: center;
@@ -135,5 +141,6 @@ margin: 0.5rem;
   .youtubeVideo {
     width: 95%;
     height: 250px;
+    margin: 0 auto;
   }
 }
