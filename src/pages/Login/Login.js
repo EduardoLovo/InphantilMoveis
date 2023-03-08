@@ -3,9 +3,28 @@ import { useNavigate } from "react-router-dom";
 import { Api } from "../../Api/Api";
 import "./Login.css";
 import { JwtHandler } from "../../jwt_handler/jwt_handler";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export const Login = () => {
   const navigate = useNavigate();
+
+  const [isLogged, setIsLogged] = useState(JwtHandler.isJwtValid);
+
+  console.log(isLogged);
+
+  useEffect(() => {
+    if(isLogged=== true){
+      navigate("/home")
+    }
+}, [isLogged]);
+
+  if(isLogged === true){
+    navigate('/home')
+  } else{
+    console.log('fazer login');
+  }
+
 
   const handleSubmit = async (event) => {
     // Previne o comportamento padrão do submit, que no caso do form é o refresh
@@ -29,6 +48,7 @@ export const Login = () => {
     localStorage.setItem("user", body.userType);
     console.log(body.userType);
 
+    
     if (response.status === 200) {
       // Login successfully
       const accessToken = body.accessToken;
@@ -38,7 +58,7 @@ export const Login = () => {
       navigate("/home");
       window.location.reload();
     } else {
-      alert("senha incorreta");
+      alert("Usuario ou senha incorreto");
     }
   };
 

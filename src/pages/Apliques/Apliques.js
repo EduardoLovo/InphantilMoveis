@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ListeApliques } from "../../components/ListApliques/ListeApliques";
 import { Api } from "../../Api/Api";
 import Modal from "react-modal";
+import { Loading } from "../../components/Loading/Loading";
 Modal.setAppElement("#root");
 
 export const Apliques = () => {
@@ -19,6 +20,7 @@ export const Apliques = () => {
   const [data, setData] = useState([]);
   const [searchFilter, setSearchFilter] = useState([]);
   const [result, setResult] = useState("");
+  const [removeLoading, setRemoveLoading] = useState(false)
 
   const loadFilter = async () => {
     const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
@@ -51,18 +53,8 @@ export const Apliques = () => {
 
 //===========================================================
 
-  // const [filtroCorte, setFiltroCorte] = useState(false)
-  // const [filtrados, setFiltrados] = useState('display')
 
-  // const click = () => {
-  //   if(filtrados === 'display') {
-  //     setFiltrados('') 
-  //     setDisplay('display')
-  //   } else {
-  //     setFiltrados('display')
-  //     setDisplay('listAplic')
-  //   }
-  // }
+
 
   return (
     <div className="contentAplique">
@@ -87,6 +79,8 @@ export const Apliques = () => {
           Voltar
         </button>
       </div>
+
+      
 
       <div className={type === "adm" ? "inputCheck" : "display"}>
         <label onClick={()=>{navigate("/filtrados")}} className='linkFiltro'> Mostrar apliques com 4 ou menos para cortar</label>
@@ -156,7 +150,9 @@ export const Apliques = () => {
       </div> */}
 
       <div className={display}> 
-        <ListeApliques /> 
+        
+        <ListeApliques setRemoveLoading={setRemoveLoading}/> 
+        
       </div>
 
       <div className="divBtnBack">

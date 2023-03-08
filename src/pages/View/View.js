@@ -3,6 +3,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Api } from "../../Api/Api";
 import "./View.css";
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const View = () => {
   const params = useParams();
   const id = params.id;
@@ -52,7 +55,7 @@ export const View = () => {
     }
   };
 
-  const notify = () => alert("Aplique atualizado com sucesso!");
+  const notify = () => toast("Atualizado com sucesso!");
 
   const deleteAplic = async (e) => {
     e.preventDefault();
@@ -71,6 +74,7 @@ export const View = () => {
   };
   return (
     <div className="contentCal">
+      
       <div>
         {/* <button
           className="btnBack"
@@ -123,7 +127,10 @@ export const View = () => {
 
           <button className="btnAtu btnBack" type="submit" onClick={notify}>
             atualizar
+            
           </button>
+
+          
 
         </form>
       </div>

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Api } from "../../Api/Api";
 
-export const ListeApliques = () => {
+export const ListeApliques = (props) => {
+    console.log(props.setRemoveLoading);
     const type = localStorage.getItem("user");
 
     const [apliques, setApliques] = useState([]);
