@@ -5,6 +5,7 @@ import './Create.css'
 
 export const Create = () => {
   const navigate = useNavigate();
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -25,9 +26,10 @@ export const Create = () => {
       payload,
       true
     );
+    
     if (response.status === 200) {
       // Product created successfully
-      alert("Tarefa adicionada com sucesso!");
+      alert("Aplique adicionada com sucesso!");
       navigate("/apliques");
     } else {
       // Error

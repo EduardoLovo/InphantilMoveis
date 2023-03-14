@@ -11,6 +11,7 @@ import { Create } from "./pages/Create/Create";
 import { InfoProdutos } from "./pages/InfoProdutos/InfoProdutos";
 import { ApliquesClientes } from "./pages/ApliquesClientes/ApliquesClientes";
 import { ListaFiltradaCorte } from "./pages/ListaFiltradaCorte/ListaFiltradaCorte";
+import { Task } from "./pages/Task/Task";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -75,6 +76,15 @@ function App() {
             </PrivateRoute>
           }
         />
+        <Route
+          path="/tarefas"
+          element={
+            <PrivateRoute redirectTo="/">
+              <Task />
+            </PrivateRoute>
+          }
+        />
+       
       </Routes>
     </div>
   );

@@ -8,6 +8,7 @@ import { BsCalculatorFill } from "react-icons/bs";
 import { GiRolledCloth } from "react-icons/gi";
 import { FaInfoCircle } from "react-icons/fa";
 import { GrCatalog } from "react-icons/gr";
+import { Loading } from "../../components/Loading/Loading";
 Modal.setAppElement("#root");
 
 export const Home = () => {
@@ -18,7 +19,6 @@ export const Home = () => {
     navigate("/");
   };
 
-  
 
   return (
     <div>
@@ -41,6 +41,10 @@ export const Home = () => {
             <GrCatalog className="iconHome"/>
             <span>Catalogo (clientes)</span>
           </div>
+          <div onClick={() =>{navigate("/tarefas")}} className="cardHome">
+            <GrCatalog className="iconHome"/>
+            <span>Tarefas</span>
+          </div>
         </div>
 
         <div className="divBtnLogout">
@@ -48,8 +52,10 @@ export const Home = () => {
             sair
           </button>
         </div>
-
+        <Loading/>
       </div>
+
+      
     </div>
   );
 };

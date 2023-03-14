@@ -1,6 +1,6 @@
 import { JwtHandler } from "../jwt_handler/jwt_handler";
 export const Api = {
-  baseUrl: "https://inphantil-backend-fxjbz5b5p-eduardolovo.vercel.app",
+  baseUrl: "https://inphantil-banco-eduardolovo.vercel.app",
 
   // Rota Login
   loginUrl: () => Api.baseUrl + "/login/",
@@ -8,11 +8,20 @@ export const Api = {
   // Rotas Usuarios
   readAllUsuariosUrl: () => Api.baseUrl + "/users",
   createUsuariosUrl: () => Api.baseUrl + "/auth/register",
+
+   // Rotas Apliques
   readAllApliquesUrl: () => Api.baseUrl + "/aplique",
   addApliquesUrl: () => Api.baseUrl + "/aplique/create",
   readByIdUrl: (id) => Api.baseUrl + "/aplique/getById/" + id,
   updateUrl: (id) => Api.baseUrl + "/aplique/updateOne/" + id,
   deleteAplicUrl: (id) => Api.baseUrl + "/aplique/deleteOne/" + id,
+
+   // Rotas Task
+   readAllTaskUrl: () => Api.baseUrl + "/tarefas",
+   addTaskUrl: () => Api.baseUrl + "/tarefas/create",
+   readByIdTaskUrl: (id) => Api.baseUrl + "/tarefas/getById/" + id,
+   updateTaskUrl: (id) => Api.baseUrl + "/tarefas/updateOne/" + id,
+   deleteTaskUrl: (id) => Api.baseUrl + "/tarefas/deleteOne/" + id,
 
   // Auth Header
 
