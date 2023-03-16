@@ -125,7 +125,7 @@ export const Task = () => {
       };
 
     const naoAuto = () => {
-        alert('Nao autorizado');
+        alert('Não autorizado, apenas Adm pode fazer alterações');
     }
 
   return (

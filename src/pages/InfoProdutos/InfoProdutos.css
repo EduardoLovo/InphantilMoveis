@@ -12,7 +12,8 @@
 }
 
 .limpeza {
-  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(199, 190, 26));
+  /* background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgb(199, 190, 26)); */
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(109, 104, 18, 0.5));
   padding: 1rem;
   margin: 1rem;
   width: 80vw;

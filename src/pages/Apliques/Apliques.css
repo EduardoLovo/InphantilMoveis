@@ -94,6 +94,7 @@
 .quantCart {
   font-size: large;
   font-weight: bold;
+  margin-top: .5rem;
 }
 
 .cart span {
@@ -118,6 +119,8 @@
 
 .red {
   color: rgb(197, 0, 0);
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .display {
