@@ -32,7 +32,10 @@ export const ListeApliques = (props) => {
         {apliques.map((aplique, index) => (
           <div key={index}  className={aplique.estoque === "Nao" ? "cartRed" : "cart"}>
             <h3 className="numberCart">{aplique.number}</h3>
+            
             <img src={aplique.img} alt="img" className="imgCart"/>
+
+            
             <p className="quantCart">
               Em estoque:{" "}
               <span className={aplique.estoque === "Nao"  ? "red" : "green"}>

@@ -1,11 +1,12 @@
 .apliClient {
     padding-top: 10vh;
-    background-color: rgb(164,164,163);
+    /* background-color: rgb(164,164,163); */
 }
 
 
 .cardcliente {
-    box-shadow: 0 0 10px  rgb(198, 226, 39);
+    /* box-shadow: 0 0 10px  rgb(198, 226, 39); */
+    box-shadow: 0 0 10px  rgba(253,187,45,1);
     height: 400px;
 }
 
