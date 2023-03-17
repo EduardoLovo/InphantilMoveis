@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { ListeApliques } from "../../components/ListApliques/ListeApliques";
 import { Api } from "../../Api/Api";
 import Modal from "react-modal";
-import { Loading } from "../../components/Loading/Loading";
+// import { Loading } from "../../components/Loading/Loading";
 Modal.setAppElement("#root");
 
 export const Apliques = () => {
@@ -20,7 +20,7 @@ export const Apliques = () => {
   const [data, setData] = useState([]);
   const [searchFilter, setSearchFilter] = useState([]);
   const [result, setResult] = useState("");
-  const [removeLoading, setRemoveLoading] = useState(false)
+  // const [removeLoading, setRemoveLoading] = useState(false)
 
   const loadFilter = async () => {
     const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
@@ -82,8 +82,11 @@ export const Apliques = () => {
 
       
 
+      <div className={type === "adm" ? "inputCheck" : "display"} onClick={()=>{navigate("/filtrados")}}>
+        <label  className='linkFiltro'> Mostrar apliques com 4 ou menos para cortar</label>
+      </div>
       <div className={type === "adm" ? "inputCheck" : "display"}>
-        <label onClick={()=>{navigate("/filtrados")}} className='linkFiltro'> Mostrar apliques com 4 ou menos para cortar</label>
+        <label onClick={()=>{navigate("/comprar-apliques")}} className='linkFiltro'> Apliques para comprar</label>
       </div>
 
       {/* <Filter />; */}
@@ -151,7 +154,7 @@ export const Apliques = () => {
 
       <div className={display}> 
         
-        <ListeApliques setRemoveLoading={setRemoveLoading}/> 
+        <ListeApliques /> 
         
       </div>
 

@@ -151,6 +151,16 @@
 .inputCheck {
   margin-left: 8rem;
   font-size: 1.2rem;
+  background: rgba(0, 0, 0, 0.548);
+  padding: 1rem;
+  width: 430px;
+  border-radius: 3px;
+  margin: .5rem;  
+}
+
+.inputCheck:hover {
+  cursor: pointer;
+  color: rgba(196, 107, 23, 0.582);
 }
 
 .linkFiltro:hover {

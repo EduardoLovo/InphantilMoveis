@@ -1,12 +1,10 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import ReactLoading from "react-loading";
 import { Api } from '../../Api/Api';
-import './ListaFiltradaCorte.css'
 
 
-export const ListaFiltradaCorte = () => {
+export const ApliquesComprar = () => {
   const navigate = useNavigate();
   const [apliques, setApliques] = useState([]);
  
@@ -27,7 +25,7 @@ export const ListaFiltradaCorte = () => {
       <button onClick={()=>{navigate("/apliques")}} className='btnBack margin'>Voltar para catalogo</button>
        <div className='listAplic'>
         {apliques.map((aplique, i) => (
-          <div key={i} className={aplique.quantidade < 5 && aplique.estoque !== 'Nao' ? '': 'display'}>
+          <div key={i} className={aplique.estoque === 'Nao' ? '': 'display'}>
             <div  className={aplique.estoque === "Nao" ? "cartRed" : "cart"}>
               <h3 className="numberCart">{aplique.number}</h3>
               <img src={aplique.img} alt="img" className="imgCart"/>
@@ -41,7 +39,7 @@ export const ListaFiltradaCorte = () => {
             </div>
           </div>
         ))}
-         
+        
       </div>  
     </div>
   )

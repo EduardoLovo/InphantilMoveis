@@ -12,6 +12,7 @@ import { InfoProdutos } from "./pages/InfoProdutos/InfoProdutos";
 import { ApliquesClientes } from "./pages/ApliquesClientes/ApliquesClientes";
 import { ListaFiltradaCorte } from "./pages/ListaFiltradaCorte/ListaFiltradaCorte";
 import { Task } from "./pages/Task/Task";
+import { ApliquesComprar } from "./pages/ApliquesComprar/ApliquesComprar";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -49,6 +50,14 @@ function App() {
           element={
             <PrivateRoute redirectTo="/">
               <ListaFiltradaCorte />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/comprar-apliques"
+          element={
+            <PrivateRoute redirectTo="/">
+              <ApliquesComprar />
             </PrivateRoute>
           }
         />
