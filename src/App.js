@@ -28,6 +28,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/infoProdutos" element={<InfoProdutos />} />
         <Route path="/apliqueslist" element={<ApliquesClientes />} />
+        <Route path="/comprar-apliques" element={<ApliquesComprar />} />
 
         <Route
           path="/home"
@@ -53,14 +54,14 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route
+        {/* <Route
           path="/comprar-apliques"
           element={
             <PrivateRoute redirectTo="/">
               <ApliquesComprar />
             </PrivateRoute>
           }
-        />
+        /> */}
         <Route
           path="/calculadora"
           element={

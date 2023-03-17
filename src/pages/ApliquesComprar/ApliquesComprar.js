@@ -25,7 +25,7 @@ export const ApliquesComprar = () => {
       <button onClick={()=>{navigate("/apliques")}} className='btnBack margin'>Voltar para catalogo</button>
        <div className='listAplic'>
         {apliques.map((aplique, i) => (
-          <div key={i} className={aplique.estoque === 'Nao' ? '': 'display'}>
+          <div key={i} className={aplique.quantidade <= 5 && aplique.estoque === 'Nao' ? '': 'display'}>
             <div  className={aplique.estoque === "Nao" ? "cartRed" : "cart"}>
               <h3 className="numberCart">{aplique.number}</h3>
               <img src={aplique.img} alt="img" className="imgCart"/>
