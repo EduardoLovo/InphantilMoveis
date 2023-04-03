@@ -7,7 +7,8 @@ import "./Home.css";
 import { BsCalculatorFill } from "react-icons/bs";
 import { GiRolledCloth } from "react-icons/gi";
 import { FaInfoCircle } from "react-icons/fa";
-import { GrCatalog } from "react-icons/gr";
+import { GiWhiteBook } from "react-icons/gi";
+import { BiTask } from "react-icons/bi";
 import { Loading } from "../../components/Loading/Loading";
 Modal.setAppElement("#root");
 
@@ -38,11 +39,11 @@ export const Home = () => {
             <span>Informações dos prdutos (clientes)</span>
           </div>
           <div onClick={() =>{navigate("/apliqueslist")}} className="cardHome">
-            <GrCatalog className="iconHome"/>
+            <GiWhiteBook className="iconHome"/>
             <span>Catalogo (clientes)</span>
           </div>
           <div onClick={() =>{navigate("/tarefas")}} className="cardHome">
-            <GrCatalog className="iconHome"/>
+            <BiTask className="iconHome"/>
             <span>Tarefas</span>
           </div>
         </div>

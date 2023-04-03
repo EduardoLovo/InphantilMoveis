@@ -6,7 +6,9 @@ import { FaHome } from "react-icons/fa";
 import { GiRolledCloth } from "react-icons/gi";
 import { BsCalculatorFill } from "react-icons/bs";
 import { FaInfoCircle } from "react-icons/fa";
+import { GiWhiteBook } from "react-icons/gi";
 import { ToastContainer } from "react-toastify";
+import { BiTask } from "react-icons/bi";
 
 export const Header = () => {
   const navigate = useNavigate()
@@ -24,6 +26,8 @@ export const Header = () => {
       <p onClick={() => navigate('./calculadora')} className="homeIcon"><BsCalculatorFill /></p>
       <p onClick={() => navigate('./apliques')} className="homeIcon"> <GiRolledCloth/> </p>
       <p onClick={() => navigate('./infoProdutos')} className="homeIcon"> <FaInfoCircle/> </p>
+      <p onClick={() => navigate('./apliqueslist')} className="homeIcon"> <GiWhiteBook/> </p>
+      <p onClick={() => navigate('./tarefas')} className="homeIcon"> <BiTask/> </p>
 
       <ToastContainer />
     </div>
