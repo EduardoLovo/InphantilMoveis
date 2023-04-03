@@ -133,7 +133,7 @@ export const Task = () => {
         <form onSubmit={handleAdd} className='formTask'>
             <label>Tarefa:</label>
             <textarea id='text' name='text'/>
-            <label>Vendedora:</label>
+            <label>Colaborador(a):</label>
             <input id='vendedor' name='vendedor'/>
             <button onClick={notify}>Adicionar Tarefa</button>
         </form>
@@ -147,7 +147,7 @@ export const Task = () => {
                             <p>{task.text}</p>
                         </div>
                         <div>
-                            <label>Vendedora:</label>
+                            <label>Colaborador(a):</label>
                             <p>{task.vendedor}</p>
                         </div>
                     </div>

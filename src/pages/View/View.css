@@ -60,3 +60,35 @@
   background-color: rgb(165, 42, 42);
 }
 
+
+@media screen and (max-width: 568px) {
+  .viewAplicForm {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+  }
+
+  .viewAplic {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contentCal div h1 {
+    margin: 1rem;
+  }
+
+  .btnDel {
+    margin: 1rem;
+  }
+
+  .formulario input {
+    width: 90%;
+  }
+
+  .btnBack {
+    margin: 1rem;
+  }
+}
+

@@ -40,13 +40,8 @@ export const Create = () => {
       <div>
         <h1>Adicionar novo aplique</h1>
       </div>
-      <button className="btnBack"
-        onClick={() => {
-          navigate("/apliques");
-        }}
-      >
-        Voltar
-      </button>
+      
+
       <form onSubmit={handleSubmit} className="formulario formCreate" >
         <label>Numero do aplique: </label>
         <input id="number" name="number" />
@@ -62,6 +57,16 @@ export const Create = () => {
         </select>
         <button type="submit">Adicionar</button>
       </form>
+
+      <div className="divBtnCreate">
+        <button className="btnBack"
+          onClick={() => {
+            navigate("/apliques");
+          }}
+        >
+          Voltar
+        </button>
+      </div>
     </div>
   );
 };

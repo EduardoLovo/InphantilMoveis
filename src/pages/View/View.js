@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Api } from "../../Api/Api";
 import "./View.css";
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const View = () => {
@@ -74,17 +74,6 @@ export const View = () => {
   };
   return (
     <div className="contentCal">
-      
-      <div>
-        {/* <button
-          className="btnBack"
-          onClick={() => {
-            navigate("/apliques");
-          }}
-        >
-          Voltar
-        </button> */}
-      </div>
       <div className="viewAplicForm">
         <div className="viewAplic">
           <h1>{aplique.number}</h1>
