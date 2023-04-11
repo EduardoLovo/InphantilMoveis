@@ -4,7 +4,6 @@ import './InfoProdutos.css'
 import limpeza from '../../images/limpeza.png'
 import garantia from '../../images/garantia.png'
 import vento from '../../images/vento.png'
-// import ReactLoading from "react-loading";
 
 
 export const InfoProdutos = () => {
@@ -12,6 +11,7 @@ export const InfoProdutos = () => {
     <div className="contentInfo">
       
       <div className="garantia limpeza">
+      
         <div>
           <img src={garantia} alt='gara' />
         </div>
@@ -51,25 +51,28 @@ export const InfoProdutos = () => {
       </div>
 
       <div className="alinham limpeza">
-        <iframe 
-          width="789" 
-          height="434" 
-          src="https://www.youtube.com/embed/EI-uWTHEtZA" 
-          title="Alinhamento de Cama Phant" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen
-          className="youtubeVideo"
-          >
-        </iframe>
-        <p>
-          Esse é o vídeo de alinhamento da nossa cama. É muito importante que seja feito de tempos em tempos, pois irá conservar sua cama sempre alinhada.
-        </p>
+        
+          <iframe 
+            width="789" 
+            height="434" 
+            src="https://www.youtube.com/embed/EI-uWTHEtZA" 
+            title="Alinhamento de Cama Phant" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+            className="youtubeVideo"
+            >
+          </iframe>
+          <p>
+            Esse é o vídeo de alinhamento da nossa cama. É muito importante que seja feito de tempos em tempos, pois irá conservar sua cama sempre alinhada.
+          </p>
+        
       </div>
 
       
 
       <div className="alinham limpeza">
+
         <p>
           Este é o vídeo de montagem da cama, é importante seguir os passos nele descritos, não alterando a ordem de montagem!
         </p>
@@ -85,6 +88,34 @@ export const InfoProdutos = () => {
           className="youtubeVideo"
           >
         </iframe>
+      </div>
+
+      <div className="limpeza">
+        <div className="divProtetorP">
+          <h2>Instalação do protetor de parede</h2>
+          <p>
+            O mais indicado para instalação do seu protetor é ser feito em 2 pessoas, para que o mesmo fique o mais esticado possível no momento da colagem. A colagem deve ser realizada em etapas, onde o velcro deve ser colado na sequência, inferior, superior, laterais. Caso sua casa tenha rodapé a instalação deve ser feita logo acima do mesmo.
+          </p>
+          <p>Passo a Passo da instalação:</p>
+          <p>
+            1. Estique o protetor de parede no local que deseja instalá-lo com o zíper voltado para baixo, em direção ao chão.
+          </p>
+          <p>
+            2. Retire o papel do velcro autoadesivo da parte inferior por partes e vá colando na parede com muito cuidado, pois após colado dificilmente conseguirá retirar sem estragar a parede.
+          </p>
+          <p>
+            3. Verifique se o protetor ficou colado bem esticado e logo acima do rodapé de forma reta antes de continuar a instalação.
+          </p>
+          <p>
+            4. Retire o papel do velcro superior, também por partes, esticar bem o protetor antes de colar para que não fique frouxo e forme uma “barriga”.
+          </p>
+          <p>
+            5. Após colar os velcros inferior e superior retire a fita do velcro lateral de um dos lados e depois do outro e PRONTO! Sua instalação está finalizada.
+          </p>
+          <p>
+            Tome cuidado no momento de colar, pois o velcro é de alta fixação e após colado em sua parede a remoção é muito difícil e deve ser feita com muito cuidado,pois há grandes chances de arrancar a tinta, reboco ou papel de parede. 
+          </p>
+        </div>
       </div>
 
       <div className=" limpeza arejar">

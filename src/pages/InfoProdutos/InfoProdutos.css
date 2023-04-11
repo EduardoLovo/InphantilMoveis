@@ -7,6 +7,10 @@
   
 }
 
+.contentInfo h2 {
+  font-size: 2rem;
+}
+
 .contentInfo p {
   font-size: 1.2rem;
 }
@@ -90,6 +94,10 @@ margin: 0.5rem;
 .arejar p {
   width: 80%;
   margin: 0.5rem;
+}
+
+.divProtetorP p {
+  margin: 1rem;
 }
 
 
