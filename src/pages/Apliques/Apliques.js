@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./Apliques.css";
 import { useNavigate } from "react-router-dom";
 import { ListeApliques } from "../../components/ListApliques/ListeApliques";
 import { Api } from "../../Api/Api";
-import Modal from "react-modal";
-// import { Loading } from "../../components/Loading/Loading";
-Modal.setAppElement("#root");
+import "./Apliques.css";
 
 export const Apliques = () => {
 
@@ -20,7 +17,6 @@ export const Apliques = () => {
   const [data, setData] = useState([]);
   const [searchFilter, setSearchFilter] = useState([]);
   const [result, setResult] = useState("");
-  // const [removeLoading, setRemoveLoading] = useState(false)
 
   const loadFilter = async () => {
     const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
@@ -53,9 +49,6 @@ export const Apliques = () => {
 
 //===========================================================
 
-
-
-
   return (
     <div className="contentAplique">
       <div className="divH1">
@@ -80,8 +73,6 @@ export const Apliques = () => {
         </button>
       </div>
 
-      
-
       <div className={type === "adm" ? "inputCheck" : "display"} onClick={()=>{navigate("/filtrados")}}>
         <label  className='linkFiltro'> Mostrar apliques com 4 ou menos para cortar</label>
       </div>
@@ -99,34 +90,28 @@ export const Apliques = () => {
             onChange={onChange}
           />
           <div className={display === '' ? 'display': 'listAplic'}>
-              {data.map((aplique, i) => (
-                <div  key={i}>
-                  <div  className={aplique.estoque === "Nao" ? "cartRed" : "cart"}>
-                    <h3 className="numberCart">{aplique.number}</h3>
-                    <img src={aplique.img} alt="img" className="imgCart"/>
-                    <p className="quantCart">
-                      Em estoque:{" "}
-                      <span className={aplique.estoque === "Nao"  ? "red" : "green"}>
-                        {" "}
-                        {aplique.quantidade}
-                      </span>
-                    </p>
-                    {type === "adm" ? (
-                      <div>
-                        <button
-                          className="btnBack btnEdit"
-                          onClick={() => {
-                            navigate(`/aplique/${aplique._id}`);
-                          }}
-                        >
+              {data.map((aplique, index) => (
+                <div class="col alingListCards" key={index}>
+                <div class="card">
+                  <img src={aplique.img} class="card-img-top" alt="..."/>
+                  <div class={aplique.estoque === "Nao" ? "card-body text-danger" : "card-body text-success"}>
+                    <h5 class="card-title">{aplique.number} </h5>
+                    <p class="card-text">
+                      Estoque = {aplique.quantidade}
+                      {type === "adm" ? (
+                      <button
+                        type="button" 
+                        class="btn btn-outline-warning"
+                        onClick={() => {
+                          navigate(`/aplique/${aplique._id}`);
+                        }}>
                           Editar
-                        </button>
-                      </div>
-                    ) : (
-                      ""
-                    )}
+                      </button>
+                    ): ""}
+                      </p>
                   </div>
-              </div>
+                </div>
+              </div>  
               ))}
               
           </div>
@@ -153,9 +138,7 @@ export const Apliques = () => {
       </div> */}
 
       <div className={display}> 
-        
-        <ListeApliques /> 
-        
+        <ListeApliques />  
       </div>
 
       <div className="divBtnBack">

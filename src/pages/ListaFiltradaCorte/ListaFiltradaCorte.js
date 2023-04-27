@@ -26,22 +26,21 @@ export const ListaFiltradaCorte = () => {
     <div className='filtroContent'>  
       <button onClick={()=>{navigate("/apliques")}} className='btnBack margin'>Voltar para catalogo</button>
        <div className='listAplic'>
-        {apliques.map((aplique, i) => (
-          <div key={i} className={aplique.quantidade < 5 && aplique.estoque !== 'Nao' ? '': 'display'}>
-            <div  className={aplique.estoque === "Nao" ? "cartRed" : "cart"}>
-              <h3 className="numberCart">{aplique.number}</h3>
-              <img src={aplique.img} alt="img" className="imgCart"/>
-              <p className="quantCart">
-                Em estoque:{" "}
-                <span className={aplique.estoque === "Nao"  ? "red" : "green"}>
-                  {" "}
-                  {aplique.quantidade}
-                </span>
-              </p>
+        {apliques.map((aplique, index) => (
+          <div key={index} className={aplique.quantidade < 5 && aplique.estoque !== 'Nao' ? '': 'display'}>
+            <div class="col alingListCards">
+            <div class="card">
+              <img src={aplique.img} class="card-img-top" alt="..."/>
+              <div class={aplique.estoque === "Nao" ? "card-body text-danger" : "card-body text-success"}>
+                <h5 class="card-title">{aplique.number} </h5>
+                <p class="card-text">
+                  Estoque = {aplique.quantidade} 
+                </p>
+              </div>
             </div>
           </div>
+          </div>
         ))}
-         
       </div>  
     </div>
   )

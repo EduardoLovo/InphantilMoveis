@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "./Calculadora.css";
 import { useNavigate } from "react-router-dom";
+import "./Calculadora.css";
+import "../../Style/style.css"
 
 export const Calculadora = () => {
   const navigate = useNavigate();
@@ -21,69 +22,78 @@ export const Calculadora = () => {
     setValorTotal(vt.replace(".", ","));
   };
 
-  const backPage = () => {
-    navigate("/Home");
-  };
-
-
   return (
-    <div className="contentCal">
-      <div className="divTitle">
+    <div className="container text-center">
+
+      <div className="">
         <h1>Calculadora Á Vista / Prazo</h1>
       </div>
 
-      <div className="divForm">
-        <form onSubmit={calcular} className="formCal">
-          <div className="inputs">
-            <label>Valor da entrada</label>
-            <input type="number" step="0.01" id="ve" min="0.01" />
-          </div>
-          <div className="inputs">
-            <label>Valor total (sem o valor do frete)</label>
-
-            <input type="number" step="0.01" id="vt" min="0.01" />
-          </div>
-          <div className="btnCalcular">
-            <button type="submit" value="Calcular">
-              Calcular
-            </button>
-          </div>
-        </form>
-        <div className="resultsCal">
-          <div>
-            <h3>Resultado:</h3>
-          </div>
-          {!resultado ? (
-            ""
-          ) : (
-            <div>
-              <p>
-                O valor da entrada é: R${" "}
-                <span>
-                  {valorEntrada.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")}
-                </span>
-              </p>
-              <p>
-                O valor total é: R${" "}
-                <span>
-                  {valorTotal.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")}
-                </span>
-              </p>
-              <p>
-                O valor que ficará para o cliente pagar a prazo é: R${" "}
-                <span className="numberResult">
-                  {resultado.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")}
-                </span>
-              </p>
+      <div class="row align-items-start">
+        <div className="row col">
+          <form onSubmit={calcular} class="col"> 
+            <div class="mb-3">
+              <label for="exampleInputNumber1" class="form-label">Valor da entrada</label>
+              <input 
+                type="number" 
+                class="form-control" 
+                id="ve" 
+                step="0.01" 
+                min="0.01"
+              />
             </div>
-          )}
+            <div class="mb-3">
+              <label for="exampleInputNumber1" class="form-label">Valor total (sem o valor do frete)</label>
+              <input 
+                type="number" 
+                class="form-control" 
+                id="vt" 
+                step="0.01" 
+                min="0.01"
+              />
+            </div>
+            
+            <input class="btn btn-primary" type="submit" value="Calcular"></input>
+          </form>
+          
+          <div className="resultsCal col">
+            <div>
+              <h3>Resultado:</h3>
+            </div>
+            {!resultado ? (
+              ""
+            ) : (
+              <div>
+                <p>
+                  O valor da entrada é: R${" "}
+                  <span>
+                    {valorEntrada.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")}
+                  </span>
+                </p>
+                <p>
+                  O valor total é: R${" "}
+                  <span>
+                    {valorTotal.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")}
+                  </span>
+                </p>
+                <p>
+                  O valor que ficará para o cliente pagar a prazo é: R${" "}
+                  <span className="numberResult">
+                    {resultado.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.")}
+                  </span>
+                </p>
+              </div>
+            )}
+          </div>
         </div>
-      </div>
+      </div>   
+
       <div className="divBtnBack">
-        <button onClick={backPage} className="btnBack">
-          Voltar
+        <button onClick={() => navigate('/home')} className="btnBack">
+            Voltar
         </button>
-      </div>
+      </div>  
+
     </div>
   );
 };

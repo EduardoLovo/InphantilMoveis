@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Api } from '../../Api/Api';
 import './ApliquesClientes.css'
 
-
 export const ApliquesClientes = () => {
 
     const [apliques, setApliques] = useState([]);
@@ -28,14 +27,15 @@ export const ApliquesClientes = () => {
     <div className="listAplic apliClient">
         {apliques.map((aplique, index) => (
           
-          <div  className={aplique.estoque === "Nao" && aplique.quantidade === "0" ? "displayApliClien": 'cart cardcliente'}>
-            <h3 className="numberCart">{aplique.number}</h3>
-            <img src={aplique.img} alt="img" className="imgCart"/>
-          </div>
-        
-        
+          <div  className={aplique.estoque === "Nao" && aplique.quantidade === "0" ? "displayApliClien": 'col alingListCards'}>
+            <div class="card">
+              <img src={aplique.img} class="card-img-top" alt="..."/>
+              <div class="card-body text-warning">
+                <h5 class="card-title text-center">{aplique.number} </h5>
+              </div>
+            </div>
+          </div>   
         ))}
-        
       </div>
   )
 }

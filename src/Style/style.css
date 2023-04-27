@@ -1,0 +1,55 @@
+.container{
+  padding-top: 10vh;
+}
+/* Botao 'voltar' ================================================*/
+.divBtnBack {
+    width: 90%;
+    text-align: left;
+    margin-top: 1rem;
+  }
+
+.btnBack{
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.3s ease-in
+}
+
+.btnBack:hover {
+    background: rgba(61, 57, 57, 0.452);
+  }
+/* ================================================================ */
+
+/* .btnBack {
+    width: 7rem;
+    height: 3rem;
+
+  } */
+
+
+/* .divBtnBack {
+    margin:  0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+
+.glass {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 3px;
+}
+
+.cardMargin {
+  margin: 10px;
+}
+
+.display {
+  display: none;
+}

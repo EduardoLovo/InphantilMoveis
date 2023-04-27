@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Api } from "../../Api/Api";
 
-export const ListeApliques = (props) => {
-    console.log(props.setRemoveLoading);
+export const ListeApliques = () => {
     const type = localStorage.getItem("user");
-
     const [apliques, setApliques] = useState([]);
  
     const loadData = async () => {
@@ -30,36 +28,29 @@ export const ListeApliques = (props) => {
   return (
     <div className="listAplic">
         {apliques.map((aplique, index) => (
-          <div key={index}  className={aplique.estoque === "Nao" ? "cartRed" : "cart"}>
-            <h3 className="numberCart">{aplique.number}</h3>
-            
-            <img src={aplique.img} alt="img" className="imgCart"/>
-
-            
-            <p className="quantCart">
-              Em estoque:{" "}
-              <span className={aplique.estoque === "Nao"  ? "red" : "green"}>
-                {" "}
-                {aplique.quantidade}
-              </span>
-            </p>
-            {aplique.quantidade === 1
-              ? "Este aplique pode fabricar apenas 1 lençol (JUNIOR + Fronha), (SOLTEIRO + Fronha), (SOLTEIRÃO + Fronha), (VIUVA)"
-              : ""}
-            {type === "adm" ? (
-              <div>
-                <button
-                  className="btnBack btnEdit"
-                  onClick={() => {
-                    navigate(`/aplique/${aplique._id}`);
-                  }}
-                >
-                  Editar
-                </button>
+          <div>
+            <div class="col alingListCards" key={index}>
+              <div class="card">
+                <img src={aplique.img} class="card-img-top" alt="..."/>
+                <div class={aplique.estoque === "Nao" ? "card-body text-danger" : "card-body text-success"}>
+                  <h5 class="card-title">{aplique.number} </h5>
+                  <p class="card-text">
+                    Estoque = {aplique.quantidade}
+                    {type === "adm" ? (
+                    <button
+                            type="button" 
+                            class="btn btn-outline-warning"
+                            onClick={() => {
+                              navigate(`/aplique/${aplique._id}`);
+                            }}
+                          >
+                            Editar
+                          </button>
+                  ): ""}
+                    </p>
+                </div>
               </div>
-            ) : (
-              ""
-            )}
+            </div>  
           </div>
         ))}
       </div>

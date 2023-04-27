@@ -1,82 +1,26 @@
-.contentHome {
-  padding-top: 10vh;
+.iconHome {
+  font-size: 4rem;
+  margin: 1rem;
 }
 
-.butons {
+.homeCards {
   display: flex;
+  justify-content: center;
+  width: 12rem;
+  height: 15rem;
+  margin-bottom: 1rem;
 }
 
-.cardHome {
-  width: 15rem;
-  height: 15rem;
-  margin: 2rem 0 0 1rem;
-  border: none;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.35);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(13.5px);
-  -webkit-backdrop-filter: blur(13.5px);
-  border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  transition: 0.1s ease-in;
-  font-size: 1.5rem;
-  font-weight: bold;
+.p-3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.cardHome span{
-  text-align: center;
-}
-
-.iconHome {
-  font-size: 3rem;
-  margin: 1rem;
+  width: 12rem;
+  height: 15rem;
 }
 
-.cardHome:hover {
-  background: rgba(196, 107, 23, 0.582);
-}
-
-.modal-overlay {
-  background: #00000080;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.divBtnLogout {
-  width: 100%;
-  padding: 2rem;
-}
-
-.divBtnLogout button {
-  margin-left: 2rem;
-}
-
-@media screen and (max-width: 568px){
-  .cardHome {
-    width: 70%;
-    height: 7rem;
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .butons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .iconHome {
-    margin: 0;
-  }
+.card {
+  width: 20rem;
+  height: 25rem;
 }
