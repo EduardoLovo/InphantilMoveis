@@ -56,9 +56,16 @@ export const Apliques = () => {
       </div>
      
       <div className="divBtnBack">
+        
+        <button onClick={backPage} className="btnBack">
+          Voltar
+        </button>
+      </div>
+
+      <div>
         {type === "adm" ? (
           <button
-            className="btnAdd btnBack"
+          type="button" class="btn btn-outline-primary"
             onClick={() => {
               navigate("/create");
             }}
@@ -68,27 +75,30 @@ export const Apliques = () => {
         ) : (
           ""
         )}
-        <button onClick={backPage} className="btnBack">
-          Voltar
-        </button>
       </div>
-
       <div className={type === "adm" ? "inputCheck" : "display"} onClick={()=>{navigate("/filtrados")}}>
-        <label  className='linkFiltro'> Mostrar apliques com 4 ou menos para cortar</label>
+        <button  type="button" class="btn btn-outline-primary"> Mostrar apliques com 4 ou menos para cortar</button>
       </div>
       <div className={type === "adm" ? "inputCheck" : "display"}>
-        <label onClick={()=>{navigate("/comprar-apliques")}} className='linkFiltro'> Apliques para comprar</label>
+        <button onClick={()=>{navigate("/comprar-apliques")}} type="button" class="btn btn-outline-primary"> Apliques para comprar</button>
       </div>
 
       {/* <Filter />; */}
-      <div className="Filter">
-        <div className="Appfilter">
-          <input
-            type="text"
-            placeholder="Procurar ... "
-            value={result}
-            onChange={onChange}
-          />
+      <div className="">
+          <div class="position-relative d-flex justify-content-center">
+            <div class="input-group mb-3 w-25" >
+              <span class="input-group-text bg-black text-white" id="inputGroup-sizing-default">Procurar</span>
+              <input 
+                type="text" 
+                class="form-control" 
+                aria-label="Sizing example input" 
+                aria-describedby="inputGroup-sizing-default" 
+                onChange={onChange}
+                value={result}
+                />
+            </div>
+          </div>
+
           <div className={display === '' ? 'display': 'listAplic'}>
               {data.map((aplique, index) => (
                 <div class="col alingListCards" key={index}>
@@ -112,10 +122,9 @@ export const Apliques = () => {
                   </div>
                 </div>
               </div>  
-              ))}
-              
+              ))}  
           </div>
-        </div>
+
       </div>
 
       {/* <div className={filtrados}>

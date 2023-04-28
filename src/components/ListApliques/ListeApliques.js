@@ -30,16 +30,16 @@ export const ListeApliques = () => {
         {apliques.map((aplique, index) => (
           <div>
             <div class="col alingListCards" key={index}>
-              <div class="card">
+              <div class="card ">
                 <img src={aplique.img} class="card-img-top" alt="..."/>
-                <div class={aplique.estoque === "Nao" ? "card-body text-danger" : "card-body text-success"}>
+                <div class={aplique.estoque === "Nao" ? "card-body text-danger " : "card-body text-success"}>
                   <h5 class="card-title">{aplique.number} </h5>
-                  <p class="card-text">
+                  <p class="card-text ">
                     Estoque = {aplique.quantidade}
                     {type === "adm" ? (
                     <button
                             type="button" 
-                            class="btn btn-outline-warning"
+                            class="btn btn-outline-warning "
                             onClick={() => {
                               navigate(`/aplique/${aplique._id}`);
                             }}
