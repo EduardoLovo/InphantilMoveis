@@ -76,8 +76,8 @@ export const Apliques = () => {
           ""
         )}
       </div>
-      <div className={type === "adm" ? "inputCheck" : "display"} onClick={()=>{navigate("/filtrados")}}>
-        <button  type="button" class="btn btn-outline-primary"> Mostrar apliques com 4 ou menos para cortar</button>
+      <div className={type === "adm" ? "inputCheck" : "display"} >
+        <button  type="button" class="btn btn-outline-primary" onClick={()=>{navigate("/filtrados")}}> Mostrar apliques com 4 ou menos para cortar</button>
       </div>
       <div className={type === "adm" ? "inputCheck" : "display"}>
         <button onClick={()=>{navigate("/comprar-apliques")}} type="button" class="btn btn-outline-primary"> Apliques para comprar</button>
@@ -90,9 +90,9 @@ export const Apliques = () => {
               <span class="input-group-text bg-black text-white" id="inputGroup-sizing-default">Procurar</span>
               <input 
                 type="text" 
-                class="form-control" 
+                class="form-control --bs-primary-bg-subtle" 
                 aria-label="Sizing example input" 
-                aria-describedby="inputGroup-sizing-default" 
+                aria-describedby="inputGroup-sizing-default"
                 onChange={onChange}
                 value={result}
                 />
