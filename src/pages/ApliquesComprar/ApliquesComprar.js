@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Api } from '../../Api/Api';
 
-
 export const ApliquesComprar = () => {
   const navigate = useNavigate();
   const [apliques, setApliques] = useState([]);

@@ -45,6 +45,12 @@ export const Home = () => {
           </div>
         </div>
         <div class="col homeCards">
+          <div class="p-3 glass" onClick={() =>{navigate("/apliques-cabana")}} >
+            <GiWhiteBook className="iconHome"/>
+            <span>Catalogo Cabana (clientes)</span>
+          </div>
+        </div>
+        <div class="col homeCards">
           <div class="p-3 glass" onClick={() =>{navigate("/tarefas")}} >
             <BiTask className="iconHome"/>
             <span>Tarefas</span>
