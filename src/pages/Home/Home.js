@@ -56,6 +56,12 @@ export const Home = () => {
             <span>Tarefas</span>
           </div>
         </div>
+        <div class="col homeCards">
+          <div class="p-3 glass" onClick={() =>{navigate("/solteiro")}} >
+            <GiRolledCloth className="iconHome"/>
+            <span>Lençois pronta entrega</span>
+          </div>
+        </div>
         
       </div>
       <div className="divBtnLogout">

@@ -17,11 +17,15 @@ export const Api = {
   deleteAplicUrl: (id) => Api.baseUrl + "/aplique/deleteOne/" + id,
 
    // Rotas Task
-   readAllTaskUrl: () => Api.baseUrl + "/tarefas",
-   addTaskUrl: () => Api.baseUrl + "/tarefas/create",
-   readByIdTaskUrl: (id) => Api.baseUrl + "/tarefas/getById/" + id,
-   updateTaskUrl: (id) => Api.baseUrl + "/tarefas/updateOne/" + id,
-   deleteTaskUrl: (id) => Api.baseUrl + "/tarefas/deleteOne/" + id,
+  readAllTaskUrl: () => Api.baseUrl + "/tarefas",
+  addTaskUrl: () => Api.baseUrl + "/tarefas/create",
+  readByIdTaskUrl: (id) => Api.baseUrl + "/tarefas/getById/" + id,
+  updateTaskUrl: (id) => Api.baseUrl + "/tarefas/updateOne/" + id,
+  deleteTaskUrl: (id) => Api.baseUrl + "/tarefas/deleteOne/" + id,
+
+  // Rotas lençois
+  readAllLencolUrl: () => Api.baseUrl + "/lencolApliques",
+
 
   // Auth Header
 

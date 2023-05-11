@@ -14,6 +14,10 @@ import { ListaFiltradaCorte } from "./pages/ListaFiltradaCorte/ListaFiltradaCort
 import { Task } from "./pages/Task/Task";
 import { ApliquesComprar } from "./pages/ApliquesComprar/ApliquesComprar";
 import { ApliquesCabana } from "./pages/ApliquesCabana/ApliquesCabana";
+import { Solteiro } from "./pages/Lencois/Solteiro";
+import { Viuva } from "./pages/Lencois/Viuva";
+import { Casal } from "./pages/Lencois/Casal";
+import { Junior } from "./pages/Lencois/Junior";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -31,6 +35,10 @@ function App() {
         <Route path="/apliqueslist" element={<ApliquesClientes />} />
         <Route path="/comprar-apliques" element={<ApliquesComprar />} />
         <Route path="/apliques-cabana" element={<ApliquesCabana />} />
+        <Route path="/solteiro" element={<Solteiro />} />
+        <Route path="/viuva" element={<Viuva />} />
+        <Route path="/casal" element={<Casal />} />
+        <Route path="/junior" element={<Junior />} />
 
         <Route
           path="/home"
