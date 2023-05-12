@@ -1,16 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Api } from "../../Api/Api";
-import "./Login.css";
 import { JwtHandler } from "../../jwt_handler/jwt_handler";
 import { useState } from "react";
 import { useEffect } from "react";
+import "./Login.css";
 
 export const Login = () => {
   const navigate = useNavigate();
 
   const [isLogged, setIsLogged] = useState(JwtHandler.isJwtValid);
-
 
   useEffect(() => {
     if(isLogged=== true){
@@ -75,8 +74,7 @@ export const Login = () => {
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
           <input type="password" class="form-control" id="password" name="password" />
-        </div>
-       
+        </div> 
         <button type="submit" class="btn btn-primary ">Entrar</button>      
       </form>
 

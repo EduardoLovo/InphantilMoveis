@@ -12,11 +12,6 @@ import { BiTask } from "react-icons/bi";
 export const Home = () => {
   const navigate = useNavigate();
 
-  const logout = () => {
-    JwtHandler.clearJwt();
-    navigate("/");
-  };
-
   return (
     <div class="container px-4 text-center">
       <div class="row gx-3">
@@ -61,15 +56,8 @@ export const Home = () => {
             <GiRolledCloth className="iconHome"/>
             <span>Lençois pronta entrega</span>
           </div>
-        </div>
-        
+        </div>       
       </div>
-      <div className="divBtnLogout">
-        <button onClick={logout} className="btnBack">
-          Logout
-        </button>
-      </div>
-
     </div>
   );
 };

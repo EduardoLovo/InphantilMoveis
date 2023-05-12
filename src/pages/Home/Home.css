@@ -1,6 +1,7 @@
 .iconHome {
   font-size: 4rem;
   margin: 1rem;
+  color: bisque;
 }
 
 .homeCards {
@@ -18,7 +19,14 @@
   align-items: center;
   width: 12rem;
   height: 15rem;
+  color: bisque;
 }
+
+.container {
+  margin-top: -4rem;
+}
+
+
 
 .card {
   width: 20rem;
