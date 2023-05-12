@@ -11,7 +11,6 @@ export const Login = () => {
 
   const [isLogged, setIsLogged] = useState(JwtHandler.isJwtValid);
 
-  console.log(isLogged);
 
   useEffect(() => {
     if(isLogged=== true){
@@ -22,7 +21,7 @@ export const Login = () => {
   if(isLogged === true){
     navigate('/home')
   } else{
-    console.log('fazer login');
+    console.log(setIsLogged);
   }
 
 
@@ -65,34 +64,22 @@ export const Login = () => {
   return (
     <div className="contentLogin">
       <div className="titleLogin">
-        <h1>Inphantil</h1>
+        <h1 className="m-5">Inphantil</h1>
       </div>
-      <div className="cartLogin">
-        <div className="contentCartLogin">
-          <h1>Login</h1>
-          <form onSubmit={handleSubmit} className="form">
-            <label>Usuario</label>
-            <div className="usericon">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/768px-User_icon_2.svg.png"
-                alt="user"
-              />
-              <input type="text" id="usuario" name="usuario" />
-            </div>
-            <label>Senha</label>
-            <div className="usericon">
-              <img
-                src="https://cdn0.iconfinder.com/data/icons/i-Love-Icons/512/lock.png"
-                alt="lock"
-              />
 
-              <input type="password" id="password" name="password" />
-            </div>
-
-            <input type="submit" className="btnEnviar" />
-          </form>
+      <form onSubmit={handleSubmit}>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Usuario</label>
+          <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="emailHelp"/>
         </div>
-      </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" />
+        </div>
+       
+        <button type="submit" class="btn btn-primary ">Entrar</button>      
+      </form>
+
     </div>
   );
 };

@@ -76,6 +76,7 @@ export const Apliques = () => {
           ""
         )}
       </div>
+      
       <div className={type === "adm" ? "inputCheck" : "display"} >
         <button  type="button" class="btn btn-outline-primary" onClick={()=>{navigate("/filtrados")}}> Mostrar apliques com 4 ou menos para cortar</button>
       </div>

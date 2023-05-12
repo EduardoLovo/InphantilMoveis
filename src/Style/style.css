@@ -53,3 +53,7 @@
 .display {
   display: none;
 }
+
+.cursor{
+  cursor: pointer;
+}

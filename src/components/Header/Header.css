@@ -10,6 +10,8 @@
 
 }
 
-@media screen and (max-width: 568px){
-
+.centralize p{
+  height: 100%;
+  display: flex;
+  margin: 10px;
 }

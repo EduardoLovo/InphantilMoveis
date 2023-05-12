@@ -1,28 +1,2 @@
-.contentCreate {
-    padding-top: 10vh;
-    font-size: 5vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.contentCreate h1 {
-    margin: 1rem;
-}
-
-.contentCreate .divBtnCreate {
-   margin: 1rem;
-}
 
 
-.formCreate {
-    margin: 1rem;
-}   
-
-@media screen and (max-width: 568px) {
-    .contentCreate h1 {
-        font-size: 2rem;
-        margin-top: 1.5rem;
-    }
-  }

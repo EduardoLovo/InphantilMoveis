@@ -28,7 +28,7 @@ export const ApliquesClientes = () => {
         {apliques.map((aplique, index) => (
           
           <div  className={aplique.estoque === "Nao" && aplique.quantidade === "0" ? "displayApliClien": 'col alingListCards'}>
-            <div class="card">
+            <div class="card border-dark mb-3">
               <img src={aplique.img} class="card-img-top" alt="..."/>
               <div class="card-body text-warning">
                 <h5 class="card-title text-center">{aplique.number} </h5>

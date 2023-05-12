@@ -25,7 +25,7 @@ export const Junior = () => {
         <div className='listAplic'>
             {lencolAplique.map((lencol, index) => (
                 <div key={index} className={lencol.tamanho === "Junior" ? "col alingListCards" : "displayApliClien"}>
-                  <div class="card">
+                  <div class="card border-dark mb-3">
                     <img src={lencol.img} class="card-img-top" alt="..."/>
                     <div class="card-body text-warning">
                       <h5 class="card-title text-center">{lencol.number} </h5>

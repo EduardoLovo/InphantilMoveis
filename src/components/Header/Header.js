@@ -13,20 +13,22 @@ export const Header = () => {
   const navigate = useNavigate()
 
   return (
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+      <div class="container-fluid ">
 
-        <img className="logoHeader" src={logo} alt='logo' />
+        <div class="d-flex align-items-center centralize">
+          <img className="logoHeader" src={logo} alt='logo' />
+          <p class="navbar-brand cursor" onClick={() => navigate('./home')}>INPHANTIL</p>
+        </div>
 
-        <p class="navbar-brand" onClick={() => navigate('./home')}>INPHANTIL</p>
        
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <p class="nav-link"  onClick={() => navigate('./calculadora')}><BsCalculatorFill /></p>
-            <p class="nav-link"  onClick={() => navigate('./apliques')}><GiRolledCloth/> </p>
-            <p class="nav-link"  onClick={() => navigate('./infoProdutos')}><FaInfoCircle/> </p>
-            <p class="nav-link"  onClick={() => navigate('./apliqueslist')}><GiWhiteBook/> </p>
-            <p class="nav-link"  onClick={() => navigate('./tarefas')}><BiTask/> </p>
+        <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+          <div class="navbar-nav centralize">
+            <p class="nav-link cursor"  onClick={() => navigate('./calculadora')}><BsCalculatorFill /></p>
+            <p class="nav-link cursor"  onClick={() => navigate('./apliques')}><GiRolledCloth/> </p>
+            <p class="nav-link cursor"  onClick={() => navigate('./infoProdutos')}><FaInfoCircle/> </p>
+            <p class="nav-link cursor"  onClick={() => navigate('./apliqueslist')}><GiWhiteBook/> </p>
+            <p class="nav-link cursor"  onClick={() => navigate('./tarefas')}><BiTask/> </p>
           </div>
         </div>
 

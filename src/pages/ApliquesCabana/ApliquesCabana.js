@@ -32,7 +32,7 @@ export const ApliquesCabana = () => {
         {apliques.map((aplique, index) => (
           
           <div key={index} className={aplique.estoque === "Sim"  ? "col alingListCards" : "displayApliClienCabana"}>
-            <div class="card">
+            <div class="card border-dark mb-3">
               <img src={aplique.img} class="card-img-top" alt="..."/>
               <div class="card-body text-warning">
                 <h5 class="card-title text-center">{aplique.number} </h5>
