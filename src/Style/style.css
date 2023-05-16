@@ -54,7 +54,19 @@
   display: none;
 }
 
-.cursor{
+.cursor:hover{
   cursor: pointer;
-  color: aquamarine;
+  color: rgb(34, 221, 159);
+}
+
+.menu-lecol {
+  margin: 1rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: rgb(88, 10, 10);
+  text-decoration-line:  underline;
+  cursor: pointer;
+  padding: .5rem .8rem;
+  background-color: rgba(0, 0, 0, 0.288);
+  border-radius: 5px;
 }

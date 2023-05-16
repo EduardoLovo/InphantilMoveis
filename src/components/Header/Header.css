@@ -14,4 +14,12 @@
   height: 100%;
   display: flex;
   margin: 10px;
+  transition: .5s;
+  cursor: pointer;
 }
+
+.centralize p:hover {
+  color: rgb(42, 165, 118);
+  scale: 1.2;
+}
+

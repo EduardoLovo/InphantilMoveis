@@ -7,10 +7,10 @@ export const TamanhosLencol = () => {
 
   return (
     <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-info m-2" onClick={()=>navigate("/junior")}>Junior</button>
-        <button type="button" class="btn btn-info m-2" onClick={()=>navigate("/solteiro")}>Solteiro / Solteirão</button>
-        <button type="button" class="btn btn-info m-2" onClick={()=>navigate("/viuva")}>Viuva</button>
-        <button type="button" class="btn btn-info m-2" onClick={()=>navigate("/casal")}>Casal</button>
+        <span className='menu-lecol'  onClick={()=>navigate("/junior")}> Junior</span>
+        <span className='menu-lecol'  onClick={()=>navigate("/solteiro")}>Solteiro / Solteirão</span>
+        <span className='menu-lecol'  onClick={()=>navigate("/viuva")}>Viuva</span>
+        <span className='menu-lecol'  onClick={()=>navigate("/casal")}>Casal</span>
     </div>
   )
 }

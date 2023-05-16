@@ -2,6 +2,11 @@
   font-size: 4rem;
   margin: 1rem;
   color: bisque;
+  transition: .3s;
+}
+
+.iconHome:hover{
+  scale: 1.1;
 }
 
 .homeCards {
@@ -10,6 +15,10 @@
   width: 12rem;
   height: 15rem;
   margin-bottom: 1rem;
+}
+
+.homeCards:hover{
+  color: rgb(182, 44, 44);
 }
 
 .p-3 {
@@ -22,11 +31,11 @@
   color: bisque;
 }
 
+
+
 .container {
   margin-top: -4rem;
 }
-
-
 
 .card {
   width: 20rem;
