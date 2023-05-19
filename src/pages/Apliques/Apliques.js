@@ -38,6 +38,14 @@ export const Apliques = () => {
 
   const [display, setDisplay] = useState('listAplic')
 
+  function compare(a, b) {
+    if (a.number < b.number) return -1;
+    if (a.number > b.number) return 1;
+    return 0;
+  }
+
+  data.sort(compare)
+
   const onChange = (evt) => {
     setResult(evt.target.value);
     if(evt.target.value === '') {
