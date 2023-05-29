@@ -3,8 +3,11 @@ import { Api } from '../../Api/Api';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { TamanhosLencol } from '../../components/TamanhosLencol/TamanhosLencol';
+import { useNavigate } from 'react-router-dom';
 
 export const Viuva = () => {
+  const type = localStorage.getItem("user");
+  const navigate = useNavigate();
     const [lencolAplique, setLencolAplique] = useState([]);
  
     const loadData = async () => {
@@ -25,7 +28,6 @@ export const Viuva = () => {
 
     lencolAplique.sort(compare)
 
-
   return (
     <div>
       <TamanhosLencol/>
@@ -37,8 +39,11 @@ export const Viuva = () => {
                     <img src={lencol.img} class="card-img-top" alt="..."/>
                     <div class="card-body text-warning">
                       <h5 class="card-title text-center">{lencol.number} </h5>
-                      <p>Estoque: {lencol.quantidade}</p>
-                      <span>{lencol.tamanho}</span>
+                      <div class="d-flex justify-content-between">
+                        <p>Estoque: {lencol.quantidade}</p>
+                        {type === "adm" ? (
+                          <button onClick={()=>{navigate(`/edit-lencol/${lencol._id}`)}} type="button" class="btn btn-outline-warning">Editar</button>
+                        ): ""}                      </div>                      <span>{lencol.tamanho}</span>
                       <span> - {lencol.cor}</span>
                     </div>
                   </div>

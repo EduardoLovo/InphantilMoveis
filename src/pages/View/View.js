@@ -140,59 +140,6 @@ export const View = () => {
           </div>
 
         </div>
-
-      {/* <div className="viewAplicForm">
-        <form className="formulario" onSubmit={handleSubmit}>
-          <label>Numero:</label>
-          <input
-            id="number"
-            name="number"
-            defaultValue={aplique.number}
-            placeholder="Numero do aplique"
-          />
-          <label>Imagem:</label>
-          <input
-            id="img"
-            name="img"
-            defaultValue={aplique.img}
-            placeholder="Imagem do aplique"
-          />
-          <label>Quantidade:</label>
-          <input
-            id="quantidade"
-            name="quantidade"
-            defaultValue={aplique.quantidade}
-            placeholder="Quantidade"
-          />
-
-          <label>Estoque: </label>
-          {aplique.estoque} 
-          <select id="estoque" name="estoque" defaultValue={aplique.estoque} placeholder="Estoque">
-            <option >{aplique.estoque}</option>
-            <option>Sim</option>
-            <option>Nao</option>
-          </select> 
-
-          <button className="btnAtu btnBack" type="submit" onClick={notify}>
-            atualizar
-            
-          </button>
-
-          
-
-        </form>
-      </div> */}
-
-      {/* <div>
-        <button
-          className="btnBack"
-          onClick={() => {
-            navigate("/apliques");
-          }}
-        >
-          Voltar
-        </button>
-      </div> */}
     </div>
   );
 };

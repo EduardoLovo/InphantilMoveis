@@ -18,6 +18,7 @@ import { Solteiro } from "./pages/Lencois/Solteiro";
 import { Viuva } from "./pages/Lencois/Viuva";
 import { Casal } from "./pages/Lencois/Casal";
 import { Junior } from "./pages/Lencois/Junior";
+import { EditLencol } from "./pages/EditLencol/EditLencol";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -101,6 +102,14 @@ function App() {
           element={
             <PrivateRoute redirectTo="/">
               <Task />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/edit-lencol/:id/"
+          element={
+            <PrivateRoute redirectTo="/">
+              <EditLencol />
             </PrivateRoute>
           }
         />
