@@ -68,7 +68,7 @@ export const EditLencol = () => {
 
     if (response.status === 200) {
       // Product updated successfully
-      navigate("/apliques");
+      navigate("/solteiro");
     } else {
       // Error
       console.log("Erro ao deletar");

@@ -28,6 +28,7 @@ export const Login = () => {
     // Previne o comportamento padrão do submit, que no caso do form é o refresh
     event.preventDefault();
 
+    console.log('foiiii');
     // Obtém os dados dos inputs
     const usuario = event.target.usuario.value;
     const password = event.target.password.value;
