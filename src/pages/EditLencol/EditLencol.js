@@ -78,69 +78,69 @@ export const EditLencol = () => {
 
   return (
     <div>
-      <div class="row align-items-center">
+      <div className="row align-items-center">
 
-        <div class="col d-flex flex-column mb-3 align-items-center">
+        <div className="col d-flex flex-column mb-3 align-items-center">
           <p>{lencol.number}</p>
-          <img src={lencol.img} class="w-50 h-auto  p-3" alt='foto do aplique'/>
+          <img src={lencol.img} className="w-50 h-auto  p-3" alt='foto do aplique'/>
           <p>Quantidade: {lencol.quantidade}</p>
           <button className="btnBack btnDel" onClick={deleteAplic}>
             Deletar
           </button>
         </div>
 
-        <div class="col">
-          <form class="d-flex flex-column align-items-center" onSubmit={handleSubmit}>
+        <div className="col">
+          <form className="d-flex flex-column align-items-center" onSubmit={handleSubmit}>
             <h3>Editar</h3>
-            <div class="input-group mb-3 w-50">
-              <span class="input-group-text" id="inputGroup-sizing-default">Numero</span>
+            <div className="input-group mb-3 w-50">
+              <span className="input-group-text" id="inputGroup-sizing-default">Numero</span>
               <input 
                 id="number"
                 name="number"
                 defaultValue={lencol.number} 
                 type="text" 
-                class="form-control" 
+                className="form-control" 
                 aria-label="Sizing example input" 
                 aria-describedby="inputGroup-sizing-default"/>
             </div>
-            <div class="input-group mb-3 w-50">
-              <span class="input-group-text" id="inputGroup-sizing-default">Imagem</span>
+            <div className="input-group mb-3 w-50">
+              <span className="input-group-text" id="inputGroup-sizing-default">Imagem</span>
               <input 
                 id="img"
                 name="img"
                 defaultValue={lencol.img} 
                 type="text" 
-                class="form-control" 
+                className="form-control" 
                 aria-label="Sizing example input" 
                 aria-describedby="inputGroup-sizing-default"/>
             </div>
-            <div class="input-group mb-3 w-50">
-              <span class="input-group-text" id="inputGroup-sizing-default">Quantidade</span>
+            <div className="input-group mb-3 w-50">
+              <span className="input-group-text" id="inputGroup-sizing-default">Quantidade</span>
               <input 
               id="quantidade"
               name="quantidade"
               defaultValue={lencol.quantidade} 
               type="text" 
-              class="form-control" 
+              className="form-control" 
               aria-label="Sizing example input" 
               aria-describedby="inputGroup-sizing-default"/>
             </div>
-            <div class="input-group mb-3 w-50">
-              <span class="input-group-text" id="inputGroup-sizing-default">Tamanho</span>
+            <div className="input-group mb-3 w-50">
+              <span className="input-group-text" id="inputGroup-sizing-default">Tamanho</span>
               <input 
               id="tamanho"
               name="tamanho"
               defaultValue={lencol.tamanho} 
               type="text" 
-              class="form-control" 
+              className="form-control" 
               aria-label="Sizing example input" 
               aria-describedby="inputGroup-sizing-default"/>
             </div>
 
             <label>Cor: </label>
             {lencol.estoque} 
-            <div class="input-group mb-3 w-50">
-              <select id="cor" name="cor" class="form-control" s defaultValue={lencol.cor} placeholder="cor">
+            <div className="input-group mb-3 w-50">
+              <select id="cor" name="cor" className="form-control" s defaultValue={lencol.cor} placeholder="cor">
                 <option >{lencol.cor}</option>
                 <option>Bege</option>
                 <option>Azul</option>

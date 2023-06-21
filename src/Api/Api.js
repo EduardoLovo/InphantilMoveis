@@ -25,7 +25,7 @@ export const Api = {
 
   // Rotas lençois
   readAllLencolUrl: () => Api.baseUrl + "/lencolApliques",
-  addLencolkUrl: () => Api.baseUrl + "/lencolApliques/create",
+  addLencolUrl: () => Api.baseUrl + "/lencolApliques/create",
   readByIdLencolUrl: (id) => Api.baseUrl + "/lencolApliques/getById/" + id,
   updateLencolUrl: (id) => Api.baseUrl + "/lencolApliques/updateOne/" + id,
   deleteLencolUrl: (id) => Api.baseUrl + "/lencolApliques/deleteOne/" + id,

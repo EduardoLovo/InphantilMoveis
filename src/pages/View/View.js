@@ -75,58 +75,58 @@ export const View = () => {
 
   return (
     <div className="">
-        <div class="row align-items-center">
+        <div className="row align-items-center">
 
-          <div class="col d-flex flex-column mb-3 align-items-center">
+          <div className="col d-flex flex-column mb-3 align-items-center">
             <p>{aplique.number}</p>
-            <img src={aplique.img} class="w-50 h-auto  p-3" alt='foto do aplique'/>
+            <img src={aplique.img} className="w-50 h-auto  p-3" alt='foto do aplique'/>
             <p>Quantidade: {aplique.quantidade}</p>
             <button className="btnBack btnDel" onClick={deleteAplic}>
               Deletar
             </button>
           </div>
 
-          <div class="col">
-            <form class="d-flex flex-column align-items-center" onSubmit={handleSubmit}>
+          <div className="col">
+            <form className="d-flex flex-column align-items-center" onSubmit={handleSubmit}>
               <h3>Editar</h3>
-              <div class="input-group mb-3 w-50">
-                <span class="input-group-text" id="inputGroup-sizing-default">Nmero</span>
+              <div className="input-group mb-3 w-50">
+                <span className="input-group-text" id="inputGroup-sizing-default">Nmero</span>
                 <input 
                   id="number"
                   name="number"
                   defaultValue={aplique.number} 
                   type="text" 
-                  class="form-control" 
+                  className="form-control" 
                   aria-label="Sizing example input" 
                   aria-describedby="inputGroup-sizing-default"/>
               </div>
-              <div class="input-group mb-3 w-50">
-                <span class="input-group-text" id="inputGroup-sizing-default">Imagem</span>
+              <div className="input-group mb-3 w-50">
+                <span className="input-group-text" id="inputGroup-sizing-default">Imagem</span>
                 <input 
                   id="img"
                   name="img"
                   defaultValue={aplique.img} 
                   type="text" 
-                  class="form-control" 
+                  className="form-control" 
                   aria-label="Sizing example input" 
                   aria-describedby="inputGroup-sizing-default"/>
               </div>
-              <div class="input-group mb-3 w-50">
-                <span class="input-group-text" id="inputGroup-sizing-default">Quantidade</span>
+              <div className="input-group mb-3 w-50">
+                <span className="input-group-text" id="inputGroup-sizing-default">Quantidade</span>
                 <input 
                 id="quantidade"
                 name="quantidade"
                 defaultValue={aplique.quantidade} 
                 type="text" 
-                class="form-control" 
+                className="form-control" 
                 aria-label="Sizing example input" 
                 aria-describedby="inputGroup-sizing-default"/>
               </div>
 
               <label>Estoque: </label>
               {aplique.estoque} 
-              <div class="input-group mb-3 w-50">
-                <select id="estoque" name="estoque" class="form-control" s defaultValue={aplique.estoque} placeholder="Estoque">
+              <div className="input-group mb-3 w-50">
+                <select id="estoque" name="estoque" className="form-control" s defaultValue={aplique.estoque} placeholder="Estoque">
                   <option >{aplique.estoque}</option>
                   <option>Sim</option>
                   <option>Nao</option>

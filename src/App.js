@@ -19,6 +19,7 @@ import { Viuva } from "./pages/Lencois/Viuva";
 import { Casal } from "./pages/Lencois/Casal";
 import { Junior } from "./pages/Lencois/Junior";
 import { EditLencol } from "./pages/EditLencol/EditLencol";
+import { CreateLencolApli } from "./pages/CreateLencolApli/CreateLencolApli";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -110,6 +111,14 @@ function App() {
           element={
             <PrivateRoute redirectTo="/">
               <EditLencol />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/createlencol"
+          element={
+            <PrivateRoute redirectTo="/">
+              <CreateLencolApli />
             </PrivateRoute>
           }
         />

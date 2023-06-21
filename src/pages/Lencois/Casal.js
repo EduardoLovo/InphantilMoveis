@@ -36,14 +36,14 @@ export const Casal = () => {
         <div className='listAplic'>
             {lencolAplique.map((lencol, index) => (
                 <div key={index} className={lencol.tamanho === "Casal" ? "col alingListCards" : "displayApliClien"}>
-                  <div class="card border-dark mb-3">
-                    <img src={lencol.img} class="card-img-top" alt="..."/>
-                    <div class="card-body text-warning">
-                      <h5 class="card-title text-center">{lencol.number} </h5>
-                      <div class="d-flex justify-content-between">
+                  <div className="card border-dark mb-3">
+                    <img src={lencol.img} className="card-img-top" alt="..."/>
+                    <div className="card-body text-warning">
+                      <h5 className="card-title text-center">{lencol.number} </h5>
+                      <div className="d-flex justify-content-between">
                         <p>Estoque: {lencol.quantidade}</p>
                         {type === "adm" ? (
-                          <button onClick={()=>{navigate(`/edit-lencol/${lencol._id}`)}} type="button" class="btn btn-outline-warning">Editar</button>
+                          <button onClick={()=>{navigate(`/edit-lencol/${lencol._id}`)}} type="button" className="btn btn-outline-warning">Editar</button>
                         ): ""}
                       </div>
                       <span>{lencol.tamanho}</span>

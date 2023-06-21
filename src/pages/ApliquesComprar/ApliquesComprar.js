@@ -25,12 +25,12 @@ export const ApliquesComprar = () => {
        <div className='listAplic'>
         {apliques.map((aplique, index) => (
           <div key={index} className={aplique.quantidade <= 5 && aplique.estoque === 'Nao' ? '': 'display'}>
-              <div class="col alingListCards" >
-                <div class="card border-dark mb-3">
-                  <img src={aplique.img} class="card-img-top" alt="..."/>
-                  <div class={aplique.estoque === "Nao" ? "card-body text-danger" : "card-body text-success"}>
-                    <h5 class="card-title">{aplique.number} </h5>
-                    <p class="card-text">
+              <div className="col alingListCards" >
+                <div className="card border-dark mb-3">
+                  <img src={aplique.img} className="card-img-top" alt="..."/>
+                  <div className={aplique.estoque === "Nao" ? "card-body text-danger" : "card-body text-success"}>
+                    <h5 className="card-title">{aplique.number} </h5>
+                    <p className="card-text">
                       Estoque = {aplique.quantidade}
                     </p>
                   </div>

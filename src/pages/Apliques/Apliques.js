@@ -73,7 +73,7 @@ export const Apliques = () => {
       <div>
         {type === "adm" ? (
           <button
-          type="button" class="btn btn-outline-primary"
+          type="button" className="btn btn-outline-primary"
             onClick={() => {
               navigate("/create");
             }}
@@ -86,20 +86,20 @@ export const Apliques = () => {
       </div>
       
       <div className={type === "adm" ? "inputCheck" : "display"} >
-        <button  type="button" class="btn btn-outline-primary" onClick={()=>{navigate("/filtrados")}}> Mostrar apliques com 4 ou menos para cortar</button>
+        <button  type="button" className="btn btn-outline-primary" onClick={()=>{navigate("/filtrados")}}> Mostrar apliques com 4 ou menos para cortar</button>
       </div>
       <div className={type === "adm" ? "inputCheck" : "display"}>
-        <button onClick={()=>{navigate("/comprar-apliques")}} type="button" class="btn btn-outline-primary"> Apliques para comprar</button>
+        <button onClick={()=>{navigate("/comprar-apliques")}} type="button" className="btn btn-outline-primary"> Apliques para comprar</button>
       </div>
 
       {/* <Filter />; */}
       <div className="">
-          <div class="position-relative d-flex justify-content-center">
-            <div class="input-group mb-3 w-25" >
-              <span class="input-group-text bg-black text-white" id="inputGroup-sizing-default">Procurar</span>
+          <div className="position-relative d-flex justify-content-center">
+            <div className="input-group mb-3 w-25" >
+              <span className="input-group-text bg-black text-white" id="inputGroup-sizing-default">Procurar</span>
               <input 
                 type="text" 
-                class="form-control --bs-primary-bg-subtle" 
+                className="form-control --bs-primary-bg-subtle" 
                 aria-label="Sizing example input" 
                 aria-describedby="inputGroup-sizing-default"
                 onChange={onChange}
@@ -110,17 +110,17 @@ export const Apliques = () => {
 
           <div className={display === '' ? 'display': 'listAplic'}>
               {data.map((aplique, index) => (
-                <div class="col alingListCards" key={index}>
-                <div class="card">
-                  <img src={aplique.img} class="card-img-top" alt="..."/>
-                  <div class={aplique.estoque === "Nao" ? "card-body text-danger" : "card-body text-success"}>
-                    <h5 class="card-title">{aplique.number} </h5>
-                    <p class="card-text">
+                <div className="col alingListCards" key={index}>
+                <div className="card">
+                  <img src={aplique.img} className="card-img-top" alt="..."/>
+                  <div className={aplique.estoque === "Nao" ? "card-body text-danger" : "card-body text-success"}>
+                    <h5 className="card-title">{aplique.number} </h5>
+                    <p className="card-text">
                       Estoque = {aplique.quantidade}
                       {type === "adm" ? (
                       <button
                         type="button" 
-                        class="btn btn-outline-warning"
+                        className="btn btn-outline-warning"
                         onClick={() => {
                           navigate(`/aplique/${aplique._id}`);
                         }}>

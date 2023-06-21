@@ -15,6 +15,7 @@ export const Login = () => {
     if(isLogged=== true){
       navigate("/home")
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [isLogged]);
 
   if(isLogged === true){
@@ -68,15 +69,15 @@ export const Login = () => {
       </div>
 
       <form onSubmit={handleSubmit}>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Usuario</label>
-          <input type="text" class="form-control" id="usuario" name="usuario" aria-describedby="emailHelp"/>
+        <div className="mb-3">
+          <label for="exampleInputEmail1" className="form-label">Usuario</label>
+          <input type="text" className="form-control" id="usuario" name="usuario" aria-describedby="emailHelp"/>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password" name="password" />
+        <div className="mb-3">
+          <label for="exampleInputPassword1" className="form-label">Password</label>
+          <input type="password" className="form-control" id="password" name="password" />
         </div> 
-        <button type="submit" class="btn btn-primary ">Entrar</button>      
+        <button type="submit" className="btn btn-primary ">Entrar</button>      
       </form>
 
     </div>

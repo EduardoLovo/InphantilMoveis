@@ -37,44 +37,44 @@ export const Create = () => {
   };
   return (
     <div className="contentCreate">
-      <div class="text-center m-4">
+      <div className="text-center m-4">
         <h1>Adicionar novo aplique</h1>
       </div>
-      <form class="d-flex flex-column align-items-center" onSubmit={handleSubmit}>
-        <div class="input-group mb-3 w-50">
-          <span class="input-group-text" id="inputGroup-sizing-default">Nmero</span>
+      <form className="d-flex flex-column align-items-center" onSubmit={handleSubmit}>
+        <div className="input-group mb-3 w-50">
+          <span className="input-group-text" id="inputGroup-sizing-default">Nmero</span>
           <input 
             id="number"
             name="number"
             type="text" 
-            class="form-control" 
+            className="form-control" 
             aria-label="Sizing example input" 
             aria-describedby="inputGroup-sizing-default"/>
         </div>
-        <div class="input-group mb-3 w-50">
-          <span class="input-group-text" id="inputGroup-sizing-default">Imagem</span>
+        <div className="input-group mb-3 w-50">
+          <span className="input-group-text" id="inputGroup-sizing-default">Imagem</span>
           <input 
             id="img"
             name="img"
             type="text" 
-            class="form-control" 
+            className="form-control" 
             aria-label="Sizing example input" 
             aria-describedby="inputGroup-sizing-default"/>
         </div>
-        <div class="input-group mb-3 w-50">
-          <span class="input-group-text" id="inputGroup-sizing-default">Quantidade</span>
+        <div className="input-group mb-3 w-50">
+          <span className="input-group-text" id="inputGroup-sizing-default">Quantidade</span>
           <input 
           id="quantidade"
           name="quantidade"
           type="text" 
-          class="form-control" 
+          className="form-control" 
           aria-label="Sizing example input" 
           aria-describedby="inputGroup-sizing-default"/>
         </div>
 
         <label>Estoque: </label>
-        <div class="input-group mb-3 w-50">
-          <select id="estoque" name="estoque" class="form-control"  placeholder="Estoque">
+        <div className="input-group mb-3 w-50">
+          <select id="estoque" name="estoque" className="form-control"  placeholder="Estoque">
             <option>Sim</option>
             <option>Nao</option>
           </select> 

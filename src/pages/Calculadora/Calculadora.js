@@ -29,31 +29,31 @@ export const Calculadora = () => {
         <h1>Calculadora Á Vista / Prazo</h1>
       </div>
 
-      <div class="row align-items-start">
+      <div className="row align-items-start">
         <div className="row col">
-          <form onSubmit={calcular} class="col"> 
-            <div class="mb-3">
-              <label for="exampleInputNumber1" class="form-label">Valor da entrada</label>
+          <form onSubmit={calcular} className="col"> 
+            <div className="mb-3">
+              <label for="exampleInputNumber1" className="form-label">Valor da entrada</label>
               <input 
                 type="number" 
-                class="form-control" 
+                className="form-control" 
                 id="ve" 
                 step="0.01" 
                 min="0.01"
               />
             </div>
-            <div class="mb-3">
-              <label for="exampleInputNumber1" class="form-label">Valor total (sem o valor do frete)</label>
+            <div className="mb-3">
+              <label for="exampleInputNumber1" className="form-label">Valor total (sem o valor do frete)</label>
               <input 
                 type="number" 
-                class="form-control" 
+                className="form-control" 
                 id="vt" 
                 step="0.01" 
                 min="0.01"
               />
             </div>
             
-            <input class="btn btn-primary" type="submit" value="Calcular"></input>
+            <input className="btn btn-primary" type="submit" value="Calcular"></input>
           </form>
           
           <div className="resultsCal col">
