@@ -32,7 +32,7 @@ export const EditLencol = () => {
     const img = e.target.img.value;
     const quantidade = e.target.quantidade.value;
     const tamanho = e.target.tamanho.value;
-    const cor = e.target.tamanho.value;
+    const cor = e.target.cor.value;
 
     const payload = {
       number,
@@ -147,6 +147,8 @@ export const EditLencol = () => {
                 <option>Branco</option>
                 <option>Rosa</option>
                 <option>Rosa Bebe</option>
+                <option>Cinza</option>
+                <option>Prata</option>
               </select> 
 
             </div>

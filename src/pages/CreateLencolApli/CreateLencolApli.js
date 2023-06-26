@@ -13,7 +13,7 @@ export const CreateLencolApli = () => {
         const img = e.target.img.value;
         const quantidade = e.target.quantidade.value;
         const tamanho = e.target.tamanho.value;
-        const cor = e.target.tamanho.value;
+        const cor = e.target.cor.value;
 
         const payload = {
         number,
@@ -97,6 +97,8 @@ export const CreateLencolApli = () => {
                 <option>Rosa</option>
                 <option>Rosa Bebe</option>
                 <option>Palha</option>
+                <option>Cinza</option>
+                <option>Prata</option>
               </select> 
 
             </div>
