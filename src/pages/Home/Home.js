@@ -55,7 +55,13 @@ export const Home = () => {
             <GiRolledCloth className="iconHome"/>
             <span>Lençois pronta entrega</span>
           </div>
-        </div>       
+        </div>   
+        <div className="col homeCards">
+          <div className="p-3 glass" onClick={() =>{navigate("/calcmedidas")}}>
+            <BsCalculatorFill className="iconHome"/>
+            <span>Calculadora Medidas</span>
+          </div>
+        </div>    
       </div>
     </div>
   );
