@@ -34,22 +34,26 @@ export const CalcMedidas = () => {
         const lencomp = colcomp + 40
         console.log('lençol:', lenlar, 'x', lencomp);
 
-        setResultadoPhant(<div>
+        setResultadoPhant(<div className='fs-5 text'>
             <div>
                 <label>Externo: </label>
                 <span>{exlar} x {excomp}</span>
             </div>
-            <div>
+            <div className='mt-2'>
                 <label>Interno: </label>
                 <span>{inlar} x {incomp}</span>
             </div>
-            <div>
+            <div className='mt-2'>
                 <label>Colchão: </label>
                 <span>{collar} x {colcomp}</span>
             </div>
-            <div>
+            <div className='mt-2'>
                 <label>Lençol: </label>
                 <span>{lenlar} x {lencomp}</span>
+            </div>
+            <div>
+                <label>Quadrado: </label>
+                <span> Padrão</span>
             </div>
         </div>)
     }
@@ -89,28 +93,17 @@ export const CalcMedidas = () => {
         console.log('lençol:', lenlar, 'x', lencomp);
 
         setResultado(
-        <div>
+        <div className='fs-5 text'>
             <div>
                 <label>Externo: </label>
-                <span> {exlar} x {excomp}</span>
-            </div>
-            <div>
-                <label>Altura Externo: </label>
-                <span> {exalt}</span>
+                <span> {exlar} x {excomp} x {exalt}</span>
             </div>
 
             <div className='mt-2'>
                 <label>Interno: </label>
-                <span> {inlar} x {incomp}</span>
+                <span> {inlar} x {incomp} x {inalt}</span>
             </div>
-            <div>
-                <label>Altura Interno: </label>
-                <span> {inalt}</span>
-            </div>
-            {/* <div className='mt-2'>
-                <label>Colchão: </label>
-                <span> {collar} x {colcomp}</span>
-            </div> */}
+
             <div className='mt-2'>
                 <label>Lençol: </label>
                 <span> {lenlar} x {lencomp}</span>
