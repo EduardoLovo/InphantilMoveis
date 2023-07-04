@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 export const CalcMedidas = () => {
 
+    const [resultadoPhant, setResultadoPhant] = useState("");
     const [resultado, setResultado] = useState("");
 
 
@@ -33,7 +34,7 @@ export const CalcMedidas = () => {
         const lencomp = colcomp + 40
         console.log('lençol:', lenlar, 'x', lencomp);
 
-        setResultado(<div>
+        setResultadoPhant(<div>
             <div>
                 <label>Externo: </label>
                 <span>{exlar} x {excomp}</span>
@@ -106,17 +107,17 @@ export const CalcMedidas = () => {
                 <label>Altura Interno: </label>
                 <span> {inalt}</span>
             </div>
-            <div className='mt-2'>
+            {/* <div className='mt-2'>
                 <label>Colchão: </label>
                 <span> {collar} x {colcomp}</span>
-            </div>
+            </div> */}
             <div className='mt-2'>
                 <label>Lençol: </label>
                 <span> {lenlar} x {lencomp}</span>
             </div>
             <div>
                 <label>Quadrado: </label>
-                <span> {alt + 10}</span>
+                <span> {alt + 10} x {alt + 10}</span>
             </div>
         </div>
         )
@@ -142,8 +143,7 @@ export const CalcMedidas = () => {
                 </div>
                 <div class="col ms-5">
                     <h3>Resultado:</h3>
-                    {resultado}
-                    <p>Quadrado: Padrão</p>
+                    {resultadoPhant}
                 </div>
             </div>
         </div>
