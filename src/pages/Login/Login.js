@@ -4,6 +4,7 @@ import { Api } from "../../Api/Api";
 import { JwtHandler } from "../../jwt_handler/jwt_handler";
 import { useState } from "react";
 import { useEffect } from "react";
+import { toast } from 'react-toastify';
 import "./Login.css";
 
 export const Login = () => {
@@ -29,7 +30,6 @@ export const Login = () => {
     // Previne o comportamento padrão do submit, que no caso do form é o refresh
     event.preventDefault();
 
-    console.log('foiiii');
     // Obtém os dados dos inputs
     const usuario = event.target.usuario.value;
     const password = event.target.password.value;
@@ -42,23 +42,22 @@ export const Login = () => {
 
     // Faz uma requisição no backend
     const response = await Api.buildApiPostRequest(Api.loginUrl(), payload);
-
     const body = await response.json();
-    console.log(body);
     localStorage.setItem("user", body.userType);
-    console.log(body.userType);
 
-    
     if (response.status === 200) {
       // Login successfully
       const accessToken = body.accessToken;
 
       JwtHandler.setJwt(accessToken);
+      toast.success("Login efetuado com sucesso!")
 
       navigate("/home");
-      window.location.reload();
+      // window.location.reload();
     } else {
       alert("Usuario ou senha incorreto");
+      toast.error("Erro ao efetuar login!")
+
     }
   };
 

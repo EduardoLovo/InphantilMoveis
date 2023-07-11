@@ -8,7 +8,7 @@ import { Apliques } from "./pages/Apliques/Apliques";
 import { ApliquesClientes } from "./pages/Apliques/ApliquesClientes";
 import { ApliquesComprar } from "./pages/Apliques/ApliquesComprar";
 import { ApliquesCabana } from "./pages/Apliques/ApliquesCabana";
-import { View } from "./pages/Apliques/View/View";
+import { View } from "./pages/Apliques/View";
 import { Calculadora } from "./pages/Calculadora/Calculadora";
 import { Create } from "./pages/Apliques/Create";
 import { InfoProdutos } from "./pages/InfoProdutos/InfoProdutos";

@@ -3,12 +3,17 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Api } from '../../Api/Api';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const EditTecido = () => {
 
     const params = useParams();
     const id = params.id;
     const navigate = useNavigate();
+
+    const sucesso = () => toast.success("Atualizado com Sucesso!"); 
+    const erro = () => toast.error("Erro ao atualizar!");
 
     const [tecido, setTecido] = useState("");
 
@@ -21,9 +26,6 @@ export const EditTecido = () => {
 
         loadProduct();
     }, [id]);
-
-    console.log(tecido);
-
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -47,11 +49,11 @@ export const EditTecido = () => {
         );
         if (response.status === 200) {
           // Product updated successfully
+          sucesso()
           navigate("/tecidos");
-          
         } else {
           // Error
-          console.log("Erro ao atualizar");
+          erro()
         }
       };
     
@@ -141,7 +143,6 @@ export const EditTecido = () => {
             <button className="btnBack btnDel" onClick={deleteAplic}>
                 Deletar
             </button>
-
         </div>
       </div>
     )

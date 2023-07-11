@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Api } from "../../Api/Api";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Create = () => {
   const navigate = useNavigate();
@@ -28,10 +30,11 @@ export const Create = () => {
     
     if (response.status === 200) {
       // Product created successfully
-      alert("Aplique adicionada com sucesso!");
+      toast.success("Aplique adicionada com sucesso!")
       navigate("/apliques");
     } else {
       // Error
+      toast.error("Erro ao adicionar Aplique!")
     }
   };
   return (

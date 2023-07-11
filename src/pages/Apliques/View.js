@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Api } from "../../../Api/Api";
-import "./View.css";
-
+import { Api } from "../../Api/Api";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -27,8 +25,6 @@ export const View = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(e.target.estoque.value);
-
     const number = e.target.number.value;
     const img = e.target.img.value;
     const quantidade = e.target.quantidade.value;
@@ -48,14 +44,14 @@ export const View = () => {
     );
     if (response.status === 200) {
       // Product updated successfully
+      toast.success("Atualizado com Sucesso!")
       navigate("/apliques");
     } else {
       // Error
-      console.log("Erro ao atualizar");
+      toast.error("Erro ao atualizar!")
     }
   };
 
-  const notify = () => toast("Atualizado com sucesso!");
 
   const deleteAplic = async (e) => {
     e.preventDefault();
@@ -66,10 +62,11 @@ export const View = () => {
 
     if (response.status === 200) {
       // Product updated successfully
+      toast.success("Deletado com Sucesso!")
       navigate("/apliques");
     } else {
       // Error
-      console.log("Erro ao deletar");
+      toast.error("Erro ao deletar!")
     }
   };
 
@@ -133,7 +130,7 @@ export const View = () => {
                 </select> 
 
               </div>
-              <button className="btnAtu btnBack" type="submit" onClick={notify}>
+              <button className="btnAtu btnBack" type="submit" >
                 atualizar
               </button>   
             </form>

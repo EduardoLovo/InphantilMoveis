@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.css";
 import logo from '../../images/logo.jfif'
 import { useNavigate } from "react-router-dom";
@@ -7,13 +7,14 @@ import { BsCalculatorFill } from "react-icons/bs";
 import { FaInfoCircle } from "react-icons/fa";
 import { GiWhiteBook } from "react-icons/gi";
 import { JwtHandler } from "../../jwt_handler/jwt_handler";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Header = () => {
 
   const navigate = useNavigate()
 
-  const [isLogged, setIsLogged] = useState(JwtHandler.isJwtValid);
+  const isLogged = JwtHandler.isJwtValid;
 
   const logout = () => {
     JwtHandler.clearJwt();
@@ -46,6 +47,20 @@ export const Header = () => {
           Logout
         </button>: ''}
         </div>
+
+        <ToastContainer 
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="dark"
+        />
+        
 
       </div>
     </nav>
