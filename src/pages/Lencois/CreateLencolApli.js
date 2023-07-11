@@ -1,6 +1,7 @@
 import React from 'react'
 import { Api } from '../../Api/Api';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export const CreateLencolApli = () => {
 
@@ -31,7 +32,7 @@ export const CreateLencolApli = () => {
         
         if (response.status === 200) {
             // Product created successfully
-            alert("Lençol adicionado com sucesso!");
+            toast.success("Lençol adicionado com sucesso!")
             navigate("/solteiro");
         } else {
             // Error
@@ -78,17 +79,20 @@ export const CreateLencolApli = () => {
             </div>
             <div className="input-group mb-3 w-50">
               <span className="input-group-text" id="inputGroup-sizing-default">Tamanho</span>
-              <input 
-              id="tamanho"
-              name="tamanho"
-              type="text" 
-              className="form-control" 
-              aria-label="Sizing example input" 
-              aria-describedby="inputGroup-sizing-default"/>
+              <select id="tamanho" name="tamanho" className="form-control"  placeholder="tamanho">
+                <option ></option>
+                <option>Junior</option>
+                <option>Solteiro</option>
+                <option>Solteiro / Solteirão</option>
+                <option>Viuva</option>
+                <option>Casal</option>
+                <option>Queen</option>
+                <option>King</option>
+              </select> 
             </div>
 
-            <label>Cor: </label>
             <div className="input-group mb-3 w-50">
+              <span className="input-group-text" id="inputGroup-sizing-default">Cor</span>
               <select id="cor" name="cor" className="form-control"  placeholder="cor">
                 <option ></option>
                 <option>Bege</option>

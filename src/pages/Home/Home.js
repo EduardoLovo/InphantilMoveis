@@ -44,7 +44,7 @@ export const Home = () => {
           </div>
         </div>
         <div className="col homeCards">
-          <div className="p-3 glass" onClick={() =>{navigate("/solteiro")}} >
+          <div className="p-3 glass" onClick={() =>{navigate("/junior")}} >
             <GiRolledCloth className="iconHome"/>
             <span>Lençois pronta entrega</span>
           </div>

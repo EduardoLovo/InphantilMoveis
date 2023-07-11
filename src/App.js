@@ -23,6 +23,8 @@ import { CalcMedidas } from "./pages/Calculadora/CalcMedidas";
 import { Tecidos } from "./pages/Tecidos/Tecidos";
 import { AddTecido } from "./pages/Tecidos/AddTecido";
 import { EditTecido } from "./pages/Tecidos/EditTecido";
+import { Queen } from "./pages/Lencois/Queen";
+import { SoSolteiro } from "./pages/Lencois/ApenasSol";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -43,6 +45,8 @@ function App() {
         <Route path="/viuva" element={<Viuva />} />
         <Route path="/casal" element={<Casal />} />
         <Route path="/junior" element={<Junior />} />
+        <Route path="/queen" element={<Queen />} />
+        <Route path="/sosolteiro" element={<SoSolteiro />} />
 
         <Route
           path="/home"

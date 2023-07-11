@@ -23,8 +23,6 @@ export const EditLencol = () => {
     loadProduct();
   }, [id]);
 
-  const notify = () => toast("Atualizado com sucesso!");
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -49,7 +47,8 @@ export const EditLencol = () => {
     );
     if (response.status === 200) {
       // Product updated successfully
-      navigate("/solteiro");
+      toast.success("Lençol atualizado com sucesso!")
+      navigate("/junior");
       
     } else {
       // Error
@@ -66,13 +65,13 @@ export const EditLencol = () => {
 
     if (response.status === 200) {
       // Product updated successfully
-      navigate("/solteiro");
+      toast.success("Lençol excluido com sucesso!")
+      navigate("/junior");
     } else {
       // Error
       console.log("Erro ao deletar");
     }
   };
-
 
   return (
     <div>
@@ -150,7 +149,7 @@ export const EditLencol = () => {
               </select> 
 
             </div>
-            <button className="btnAtu btnBack" type="submit" onClick={notify}>
+            <button className="btnAtu btnBack" type="submit">
               atualizar
             </button>   
           </form>
