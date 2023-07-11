@@ -4,7 +4,6 @@ import { Api } from "../../Api/Api";
 import { JwtHandler } from "../../jwt_handler/jwt_handler";
 import { useState } from "react";
 import { useEffect } from "react";
-import { toast } from 'react-toastify';
 import "./Login.css";
 
 export const Login = () => {
@@ -13,18 +12,12 @@ export const Login = () => {
   const [isLogged, setIsLogged] = useState(JwtHandler.isJwtValid);
 
   useEffect(() => {
-    if(isLogged=== true){
+    if(isLogged === true){
       navigate("/home")
+      console.log(setIsLogged);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
 }, [isLogged]);
-
-  if(isLogged === true){
-    navigate('/home')
-  } else{
-    console.log(setIsLogged);
-  }
-
 
   const handleSubmit = async (event) => {
     // Previne o comportamento padrão do submit, que no caso do form é o refresh
@@ -48,16 +41,11 @@ export const Login = () => {
     if (response.status === 200) {
       // Login successfully
       const accessToken = body.accessToken;
-
       JwtHandler.setJwt(accessToken);
-      toast.success("Login efetuado com sucesso!")
-
       navigate("/home");
-      // window.location.reload();
+      window.location.reload();
     } else {
       alert("Usuario ou senha incorreto");
-      toast.error("Erro ao efetuar login!")
-
     }
   };
 

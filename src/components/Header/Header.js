@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import logo from '../../images/logo.jfif'
 import { useNavigate } from "react-router-dom";
@@ -14,10 +14,10 @@ export const Header = () => {
 
   const navigate = useNavigate()
 
-  const isLogged = JwtHandler.isJwtValid;
+  const [isLogged, setIsLogged] = useState(JwtHandler.isJwtValid);
 
   const logout = () => {
-    JwtHandler.clearJwt();
+    setIsLogged(JwtHandler.clearJwt());
     navigate("/");
     window.location.reload(false);
   };
