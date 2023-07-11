@@ -1,9 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react'
 import { Api } from '../../Api/Api';
-import './ApliquesCabana.css';
-
-
 
 export const ApliquesCabana = () => {
   const [apliques, setApliques] = useState([]);

@@ -42,7 +42,7 @@
 
 .glass {
   cursor: pointer;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(61, 61, 61, 0.801);
   border-radius: 3px;
 }
 
@@ -73,7 +73,7 @@
 
 .glass2 {
   cursor: pointer;
-  background: rgba(185, 167, 167, 0.281);
+  background: rgba(221, 204, 52, 0.76);
   
 }
 

@@ -136,25 +136,6 @@ export const Apliques = () => {
 
       </div>
 
-      {/* <div className={filtrados}>
-        <div>{data.map((aplique, i) => (
-          <div key={i} className={aplique.quantidade < 5 && aplique.estoque !== 'Nao' ? '': 'display'}>
-            <div  className={aplique.estoque === "Nao" ? "cartRed" : "cart"}>
-              <h3 className="numberCart">{aplique.number}</h3>
-              <img src={aplique.img} alt="img" className="imgCart"/>
-              <p className="quantCart">
-                Em estoque:{" "}
-                <span className={aplique.estoque === "Nao"  ? "red" : "green"}>
-                  {" "}
-                  {aplique.quantidade}
-                </span>
-              </p>
-            </div>
-          </div>
-        ))}
-        </div> 
-      </div> */}
-
       <div className={display}> 
         <ListeApliques />  
       </div>

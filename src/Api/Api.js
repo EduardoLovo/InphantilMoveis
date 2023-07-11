@@ -16,13 +16,6 @@ export const Api = {
   updateUrl: (id) => Api.baseUrl + "/aplique/updateOne/" + id,
   deleteAplicUrl: (id) => Api.baseUrl + "/aplique/deleteOne/" + id,
 
-   // Rotas Task
-  readAllTaskUrl: () => Api.baseUrl + "/tarefas",
-  addTaskUrl: () => Api.baseUrl + "/tarefas/create",
-  readByIdTaskUrl: (id) => Api.baseUrl + "/tarefas/getById/" + id,
-  updateTaskUrl: (id) => Api.baseUrl + "/tarefas/updateOne/" + id,
-  deleteTaskUrl: (id) => Api.baseUrl + "/tarefas/deleteOne/" + id,
-
   // Rotas lençois
   readAllLencolUrl: () => Api.baseUrl + "/lencolApliques",
   addLencolUrl: () => Api.baseUrl + "/lencolApliques/create",

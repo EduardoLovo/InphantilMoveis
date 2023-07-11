@@ -161,7 +161,7 @@ export const CalcMedidas = () => {
                             <input type="radio" class="form-check-input" id="acessorio" value='viral' name="radio-stacked" />
                             <label class="form-check-label" for="acessorio">Virol</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Calcular</button>
                     </form>
                 </div>
                 <div class="col ms-5">
@@ -200,7 +200,7 @@ export const CalcMedidas = () => {
                             <label class="form-check-label" for="acessorio">Virol com Aplique</label>
                         </div>
             
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Calcular</button>
                     </form>
                 </div>
                 <div class="col ms-5">

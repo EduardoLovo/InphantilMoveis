@@ -1,7 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Api } from "../../Api/Api";
-import './Create.css'
 
 export const Create = () => {
   const navigate = useNavigate();

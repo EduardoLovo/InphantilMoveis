@@ -2,25 +2,24 @@ import "./App.css";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { Login } from "./pages/Login/Login";
 import { JwtHandler } from "./jwt_handler/jwt_handler";
+import { Header } from "./components/Header/Header";
 import { Home } from "./pages/Home/Home";
 import { Apliques } from "./pages/Apliques/Apliques";
+import { ApliquesClientes } from "./pages/Apliques/ApliquesClientes";
+import { ApliquesComprar } from "./pages/Apliques/ApliquesComprar";
+import { ApliquesCabana } from "./pages/Apliques/ApliquesCabana";
+import { View } from "./pages/Apliques/View/View";
 import { Calculadora } from "./pages/Calculadora/Calculadora";
-import { Header } from "./components/Header/Header";
-import { View } from "./pages/View/View";
-import { Create } from "./pages/Create/Create";
+import { Create } from "./pages/Apliques/Create";
 import { InfoProdutos } from "./pages/InfoProdutos/InfoProdutos";
-import { ApliquesClientes } from "./pages/ApliquesClientes/ApliquesClientes";
-import { ListaFiltradaCorte } from "./pages/ListaFiltradaCorte/ListaFiltradaCorte";
-import { Task } from "./pages/Task/Task";
-import { ApliquesComprar } from "./pages/ApliquesComprar/ApliquesComprar";
-import { ApliquesCabana } from "./pages/ApliquesCabana/ApliquesCabana";
+import { ListaFiltradaCorte } from "./pages/Apliques/ListaFiltradaCorte";
 import { Solteiro } from "./pages/Lencois/Solteiro";
 import { Viuva } from "./pages/Lencois/Viuva";
 import { Casal } from "./pages/Lencois/Casal";
 import { Junior } from "./pages/Lencois/Junior";
-import { EditLencol } from "./pages/EditLencol/EditLencol";
-import { CreateLencolApli } from "./pages/CreateLencolApli/CreateLencolApli";
-import { CalcMedidas } from "./pages/CalcMedidas/CalcMedidas";
+import { EditLencol } from "./pages/Lencois/EditLencol";
+import { CreateLencolApli } from "./pages/Lencois/CreateLencolApli";
+import { CalcMedidas } from "./pages/Calculadora/CalcMedidas";
 import { Tecidos } from "./pages/Tecidos/Tecidos";
 import { AddTecido } from "./pages/Tecidos/AddTecido";
 import { EditTecido } from "./pages/Tecidos/EditTecido";
@@ -39,7 +38,6 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/infoProdutos" element={<InfoProdutos />} />
         <Route path="/apliqueslist" element={<ApliquesClientes />} />
-        {/* <Route path="/comprar-apliques" element={<ApliquesComprar />} /> */}
         <Route path="/apliques-cabana" element={<ApliquesCabana />} />
         <Route path="/solteiro" element={<Solteiro />} />
         <Route path="/viuva" element={<Viuva />} />
@@ -99,14 +97,6 @@ function App() {
           element={
             <PrivateRoute redirectTo="/">
               <Create />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/tarefas"
-          element={
-            <PrivateRoute redirectTo="/">
-              <Task />
             </PrivateRoute>
           }
         />

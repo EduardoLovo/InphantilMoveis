@@ -6,7 +6,6 @@ import { GiRolledCloth } from "react-icons/gi";
 import { BsCalculatorFill } from "react-icons/bs";
 import { FaInfoCircle } from "react-icons/fa";
 import { GiWhiteBook } from "react-icons/gi";
-import { BiTask } from "react-icons/bi";
 import { JwtHandler } from "../../jwt_handler/jwt_handler";
 
 
@@ -38,7 +37,6 @@ export const Header = () => {
             <p className="nav-link cursor"  onClick={() => navigate('./apliques')}><GiRolledCloth/> </p>
             <p className="nav-link cursor"  onClick={() => navigate('./infoProdutos')}><FaInfoCircle/> </p>
             <p className="nav-link cursor"  onClick={() => navigate('./apliqueslist')}><GiWhiteBook/> </p>
-            <p className="nav-link cursor"  onClick={() => navigate('./tarefas')}><BiTask/> </p>
           </div>
         </div>
 

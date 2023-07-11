@@ -6,7 +6,6 @@ import { BsCalculatorFill } from "react-icons/bs";
 import { GiRolledCloth } from "react-icons/gi";
 import { FaInfoCircle } from "react-icons/fa";
 import { GiWhiteBook } from "react-icons/gi";
-import { BiTask } from "react-icons/bi";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -44,12 +43,6 @@ export const Home = () => {
             <span>Catalogo Cabana (clientes)</span>
           </div>
         </div>
-        {/* <div className="col homeCards">
-          <div className="p-3 glass" onClick={() =>{navigate("/tarefas")}} >
-            <BiTask className="iconHome"/>
-            <span>Tarefas</span>
-          </div>
-        </div> */}
         <div className="col homeCards">
           <div className="p-3 glass" onClick={() =>{navigate("/solteiro")}} >
             <GiRolledCloth className="iconHome"/>

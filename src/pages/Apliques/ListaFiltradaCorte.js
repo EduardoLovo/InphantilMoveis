@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import ReactLoading from "react-loading";
 import { Api } from '../../Api/Api';
-import './ListaFiltradaCorte.css'
 
 
 export const ListaFiltradaCorte = () => {
@@ -24,7 +23,7 @@ export const ListaFiltradaCorte = () => {
 
   return (
     <div className='filtroContent'>  
-      <button onClick={()=>{navigate("/apliques")}} className='btnBack margin'>Voltar para catalogo</button>
+      <button onClick={()=>{navigate("/apliques")}} className='btnBack m-4'>Voltar para catalogo</button>
        <div className='listAplic'>
         {apliques.map((aplique, index) => (
           <div key={index} className={aplique.quantidade < 5 && aplique.estoque !== 'Nao' ? '': 'display'}>

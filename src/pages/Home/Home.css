@@ -1,7 +1,7 @@
 .iconHome {
   font-size: 4rem;
   margin: 1rem;
-  color: bisque;
+  color: rgb(204, 207, 18);
   transition: .3s;
 }
 
@@ -28,7 +28,7 @@
   align-items: center;
   width: 12rem;
   height: 15rem;
-  color: bisque;
+  color: rgb(204, 207, 18);
 }
 
 
