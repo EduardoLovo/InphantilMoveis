@@ -44,12 +44,12 @@ export const Home = () => {
             <span>Catalogo Cabana (clientes)</span>
           </div>
         </div>
-        <div className="col homeCards">
+        {/* <div className="col homeCards">
           <div className="p-3 glass" onClick={() =>{navigate("/tarefas")}} >
             <BiTask className="iconHome"/>
             <span>Tarefas</span>
           </div>
-        </div>
+        </div> */}
         <div className="col homeCards">
           <div className="p-3 glass" onClick={() =>{navigate("/solteiro")}} >
             <GiRolledCloth className="iconHome"/>
@@ -60,6 +60,12 @@ export const Home = () => {
           <div className="p-3 glass" onClick={() =>{navigate("/calcmedidas")}}>
             <BsCalculatorFill className="iconHome"/>
             <span>Calculadora Medidas</span>
+          </div>
+        </div>    
+        <div className="col homeCards">
+          <div className="p-3 glass" onClick={() =>{navigate("/tecidos")}}>
+            <GiRolledCloth className="iconHome"/>
+            <span>Tecidos</span>
           </div>
         </div>    
       </div>

@@ -42,7 +42,7 @@ export const Create = () => {
       </div>
       <form className="d-flex flex-column align-items-center" onSubmit={handleSubmit}>
         <div className="input-group mb-3 w-50">
-          <span className="input-group-text" id="inputGroup-sizing-default">Nmero</span>
+          <span className="input-group-text" id="inputGroup-sizing-default">Numero</span>
           <input 
             id="number"
             name="number"

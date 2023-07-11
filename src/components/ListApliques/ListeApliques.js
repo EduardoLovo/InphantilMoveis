@@ -37,7 +37,7 @@ export const ListeApliques = () => {
                   <div className={aplique.estoque === "Nao" ? "card-body text-danger " : "card-body text-success"}>
                     <h5 className="card-title">{aplique.number} </h5>
                     <p className="card-text ">
-                      Estoque = {aplique.quantidade}
+                      Estoque: {aplique.quantidade}
                       {type === "adm" ? (
                       <button
                               type="button" 

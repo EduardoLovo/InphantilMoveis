@@ -21,6 +21,9 @@ import { Junior } from "./pages/Lencois/Junior";
 import { EditLencol } from "./pages/EditLencol/EditLencol";
 import { CreateLencolApli } from "./pages/CreateLencolApli/CreateLencolApli";
 import { CalcMedidas } from "./pages/CalcMedidas/CalcMedidas";
+import { Tecidos } from "./pages/Tecidos/Tecidos";
+import { AddTecido } from "./pages/Tecidos/AddTecido";
+import { EditTecido } from "./pages/Tecidos/EditTecido";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -36,7 +39,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/infoProdutos" element={<InfoProdutos />} />
         <Route path="/apliqueslist" element={<ApliquesClientes />} />
-        <Route path="/comprar-apliques" element={<ApliquesComprar />} />
+        {/* <Route path="/comprar-apliques" element={<ApliquesComprar />} /> */}
         <Route path="/apliques-cabana" element={<ApliquesCabana />} />
         <Route path="/solteiro" element={<Solteiro />} />
         <Route path="/viuva" element={<Viuva />} />
@@ -67,14 +70,14 @@ function App() {
             </PrivateRoute>
           }
         />
-        {/* <Route
+        <Route
           path="/comprar-apliques"
           element={
             <PrivateRoute redirectTo="/">
               <ApliquesComprar />
             </PrivateRoute>
           }
-        /> */}
+        />
         <Route
           path="/calculadora"
           element={
@@ -128,6 +131,30 @@ function App() {
           element={
             <PrivateRoute redirectTo="/">
               <CalcMedidas />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/tecidos"
+          element={
+            <PrivateRoute redirectTo="/">
+              <Tecidos />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/addtecidos"
+          element={
+            <PrivateRoute redirectTo="/">
+              <AddTecido />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/tecidos/:id/"
+          element={
+            <PrivateRoute redirectTo="/">
+              <EditTecido />
             </PrivateRoute>
           }
         />

@@ -30,8 +30,14 @@ export const Api = {
   updateLencolUrl: (id) => Api.baseUrl + "/lencolApliques/updateOne/" + id,
   deleteLencolUrl: (id) => Api.baseUrl + "/lencolApliques/deleteOne/" + id,
 
-  // Auth Header
+  // Rotas Tecidos
+  readAllTecidolUrl: () => Api.baseUrl + "/lencolTecidos",
+  addTecidoUrl: () => Api.baseUrl + "/lencolTecidos/create",
+  readByIdTecidoUrl: (id) => Api.baseUrl + "/lencolTecidos/getById/" + id,
+  updateTecidoUrl: (id) => Api.baseUrl + "/lencolTecidos/updateOne/" + id,
+  deleteTecidoUrl: (id) => Api.baseUrl + "/lencolTecidos/deleteOne/" + id,
 
+  // Auth Header
   authHeader: () => ({
     Authorization: "Bearer " + JwtHandler.getJwt(),
   }),

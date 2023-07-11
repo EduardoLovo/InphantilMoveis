@@ -42,8 +42,6 @@ export const EditLencol = () => {
       cor
     };
 
-    console.log(payload);
-
     const response = await Api.buildApiPatchRequest(
       Api.updateLencolUrl(id),
       payload,

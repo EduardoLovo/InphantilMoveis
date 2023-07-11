@@ -100,8 +100,8 @@ export const CreateLencolApli = () => {
                 <option>Cinza</option>
                 <option>Prata</option>
               </select> 
-
             </div>
+            
             <button className="btnAtu btnBack" type="submit" >
               Adicionar
             </button>   
