@@ -42,14 +42,14 @@ export const Create = () => {
       <div className="text-center m-4">
         <h1>Adicionar novo aplique</h1>
       </div>
-      <form className="d-flex flex-column align-items-center" onSubmit={handleSubmit}>
-        <div className="input-group mb-3 w-50">
+      <form className="d-flex flex-column align-items-center scale" onSubmit={handleSubmit}>
+        <div className="input-group mb-3 w-50 scale">
           <span className="input-group-text" id="inputGroup-sizing-default">Numero</span>
           <input 
             id="number"
             name="number"
             type="text" 
-            className="form-control" 
+            className="form-control scale" 
             aria-label="Sizing example input" 
             aria-describedby="inputGroup-sizing-default"/>
         </div>
