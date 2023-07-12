@@ -31,18 +31,7 @@ export const Home = () => {
             <span>Informações dos prdutos (clientes)</span>
           </div>
         </div>
-        <div className="col homeCards">
-          <div className="p-3 glass" onClick={() =>{navigate("/apliqueslist")}} >
-            <GiWhiteBook className="iconHome"/>
-            <span>Catalogo (clientes)</span>
-          </div>
-        </div>
-        <div className="col homeCards">
-          <div className="p-3 glass" onClick={() =>{navigate("/apliques-cabana")}} >
-            <GiWhiteBook className="iconHome"/>
-            <span>Catalogo Cabana (clientes)</span>
-          </div>
-        </div>
+        
         <div className="col homeCards">
           <div className="p-3 glass" onClick={() =>{navigate("/junior")}} >
             <GiRolledCloth className="iconHome"/>
@@ -61,6 +50,27 @@ export const Home = () => {
             <span>Tecidos</span>
           </div>
         </div>    
+      </div>
+      <h2>Para clientes</h2>
+      <div className="row gx-3">
+       <div className="col homeCards">
+          <div className="p-3 glass" onClick={() =>{navigate("/apliqueslist")}} >
+            <GiWhiteBook className="iconHome"/>
+            <span>Catalogo (clientes)</span>
+          </div>
+        </div>
+        <div className="col homeCards">
+          <div className="p-3 glass" onClick={() =>{navigate("/apliques-cabana")}} >
+            <GiWhiteBook className="iconHome"/>
+            <span>Catalogo Cabana (clientes)</span>
+          </div>
+        </div>
+        <div className="col homeCards">
+          <div className="p-3 glass" onClick={() =>{navigate("/catalogoTecidos")}} >
+            <GiWhiteBook className="iconHome"/>
+            <span>Catalogo Tecidos (clientes)</span>
+          </div>
+        </div>
       </div>
     </div>
   );

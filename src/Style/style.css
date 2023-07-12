@@ -76,3 +76,12 @@
   background: rgba(221, 204, 52, 0.76);
   
 }
+
+.contenerTecido {
+  margin-bottom: 5rem;
+}
+
+.contenerTecido h2 {
+  font-size: 3rem;
+  
+}

@@ -40,45 +40,15 @@ export const Tecidos = () => {
        ''}
 
       <div>
-        <h2 className='ms-5'>Berço</h2>
-        <div className='d-flex flex-wrap justify-content-start'>
-          {tecidos.map((tecido, index) => (
-            <div className="col alingListCards" key={index}>
-              {tecido.tamanho === 'Berço - P' ? 
-              <div className="card border-dark mb-3">
-                <img src={tecido.img} className="card-img-top" alt="..."/>
-                <div className={tecido.quantidade <= "5" ? "card-body text-danger " : "card-body text-success"}>
-                  <p className="card-text">
-                    Estoque = {tecido.quantidade}
-                    {type === "adm" ? (
-                    <button
-                            type="button" 
-                            className="btn btn-outline-warning "
-                            onClick={() => {
-                              navigate(`/tecidos/${tecido._id}`);
-                            }}
-                          >
-                            Editar
-                          </button>
-                  ): ""}
-                  </p>
-                </div>
-              </div>
-              :''}
-          </div>
-            ))}
-        </div>
-      </div>
-
-      <div>
         <h2 className='ms-5'>Junior</h2>
         <div className='d-flex flex-wrap justify-content-start'>
           {tecidos.map((tecido, index) => (
-            <div className="col alingListCards" key={index}>
+            <div className="" key={index}>
               {tecido.tamanho === 'Junior - M' ? 
               <div className="card border-dark mb-3">
                 <img src={tecido.img} className="card-img-top" alt="..."/>
                 <div className={tecido.quantidade <= "5" ? "card-body text-danger " : "card-body text-success"}>
+                  <p>Cor: {tecido.cor}</p>
                   <p className="card-text">
                     Estoque = {tecido.quantidade}
                     {type === "adm" ? (
@@ -233,68 +203,7 @@ export const Tecidos = () => {
         </div>
       </div>
       
-      <div>
-        <h2 className='ms-5'>Queen</h2>
-        <div className='d-flex flex-wrap justify-content-start'>
-          {tecidos.map((tecido, index) => (
-            <div className="col alingListCards" key={index}>
-              {tecido.tamanho === 'Queen' ? 
-              <div className="card border-dark mb-3">
-                <img src={tecido.img} className="card-img-top" alt="..."/>
-                <div className={tecido.quantidade <= "5" ? "card-body text-danger " : "card-body text-success"}>
-                  <p className="card-text">
-                    Estoque = {tecido.quantidade}
-                    {type === "adm" ? (
-                    <button
-                            type="button" 
-                            className="btn btn-outline-warning "
-                            onClick={() => {
-                              navigate(`/tecidos/${tecido._id}`);
-                            }}
-                          >
-                            Editar
-                          </button>
-                  ): ""}
-                  </p>
-                </div>
-              </div>
-              :''}
-          </div>
-            ))}
-        </div>
-      </div>
-
-      <div>
-        <h2 className='ms-5'>King</h2>
-        <div className='d-flex flex-wrap justify-content-start'>
-          {tecidos.map((tecido, index) => (
-            <div className="col alingListCards" key={index}>
-              {tecido.tamanho === 'King' ? 
-              <div className="card border-dark mb-3">
-                <img src={tecido.img} className="card-img-top" alt="..."/>
-                <div className={tecido.quantidade <= "5" ? "card-body text-danger " : "card-body text-success"}>
-                  <p className="card-text">
-                    Estoque = {tecido.quantidade}
-                    {type === "adm" ? (
-                    <button
-                            type="button" 
-                            className="btn btn-outline-warning "
-                            onClick={() => {
-                              navigate(`/tecidos/${tecido._id}`);
-                            }}
-                          >
-                            Editar
-                          </button>
-                  ): ""}
-                  </p>
-                </div>
-              </div>
-              :''}
-          </div>
-            ))}
-        </div>
-      </div>
-
+      
     </div>
   )
 }
