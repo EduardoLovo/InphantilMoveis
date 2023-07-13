@@ -25,7 +25,11 @@ import { AddTecido } from "./pages/Tecidos/AddTecido";
 import { EditTecido } from "./pages/Tecidos/EditTecido";
 import { Queen } from "./pages/Lencois/Queen";
 import { SoSolteiro } from "./pages/Lencois/ApenasSol";
-import { CatalogoTecido } from "./pages/Tecidos/CatalogoTecido";
+import { TecidosJunior } from "./pages/Tecidos/CatalogoTecidos/Junior";
+import { TecidosSolteiro } from "./pages/Tecidos/CatalogoTecidos/Solteiro";
+import { TecidosCasal } from "./pages/Tecidos/CatalogoTecidos/Casal";
+import { TecidosViuva } from "./pages/Tecidos/CatalogoTecidos/Viuva";
+import { CatalogoTecidos } from "./pages/Tecidos/CatalogoTecidos";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -48,7 +52,11 @@ function App() {
         <Route path="/junior" element={<Junior />} />
         <Route path="/queen" element={<Queen />} />
         <Route path="/sosolteiro" element={<SoSolteiro />} />
-        <Route path="/CatalogoTecidos" element={<CatalogoTecido />} />
+        <Route path="/tecidosjunior" element={<TecidosJunior />} />
+        <Route path="/tecidossolteiro" element={<TecidosSolteiro />} />
+        <Route path="/tecidosviuva" element={<TecidosViuva />} />
+        <Route path="/tecidoscasal" element={<TecidosCasal />} />
+        <Route path="/catalogotecidos" element={<CatalogoTecidos />} />
 
         <Route
           path="/home"

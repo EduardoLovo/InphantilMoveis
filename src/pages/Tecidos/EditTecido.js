@@ -34,12 +34,14 @@ export const EditTecido = () => {
         const quantidade = +e.target.quantidade.value;
         const tamanho = e.target.tamanho.value;
         const cor = e.target.cor.value;
+        const estoque = e.target.estoque.value;
     
         const payload = {
           img,
           quantidade,
           tamanho,
-          cor
+          cor,
+          estoque
         };
     
         const response = await Api.buildApiPatchRequest(
@@ -73,8 +75,6 @@ export const EditTecido = () => {
         }
       };
 
-
-    console.log(tecido);
     return (
         <div className="contentCreate">
         <div className="text-center m-4">
@@ -134,6 +134,15 @@ export const EditTecido = () => {
                   <option>King</option>
                   </select> 
               </div>
+
+              <label>Estoque: </label>
+                <div className="input-group mb-3 w-50">
+                    <select id="estoque" name="estoque" className="form-control"  placeholder="estoque">
+                    <option>{tecido.estoque}</option>
+                    <option>Sim</option>
+                    <option>Nao</option>
+                    </select> 
+                </div>
   
           <button className="btnAtu btnBack" type="submit" >
             Atualizar

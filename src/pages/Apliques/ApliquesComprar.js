@@ -3,21 +3,20 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Api } from '../../Api/Api';
 
-export const ApliquesComprar = () => {
+export const ApliquesComprar = (type) => {
   const navigate = useNavigate();
   const [apliques, setApliques] = useState([]);
  
-    const loadData = async () => {
-    const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
-    const results = await response.json();
+  const loadData = async () => {
+  const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
+  const results = await response.json();
         
     setApliques(results);
   };
-    useEffect(() => {
-        loadData();
-    }, []);
 
-    console.log(apliques);
+  useEffect(() => {
+      loadData();
+  }, []);
 
   return (
     <div className='filtroContent'>  
@@ -37,8 +36,7 @@ export const ApliquesComprar = () => {
                 </div>
               </div>  
           </div>
-        ))}
-        
+        ))}        
       </div>  
     </div>
   )

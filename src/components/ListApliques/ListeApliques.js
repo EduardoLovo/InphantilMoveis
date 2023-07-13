@@ -52,8 +52,6 @@ export const ListeApliques = () => {
                       </p>
                   </div>
                 </div>
-
-              
             </div>  
           </div>
         ))}

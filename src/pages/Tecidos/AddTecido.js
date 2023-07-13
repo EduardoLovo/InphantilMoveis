@@ -12,13 +12,17 @@ export const AddTecido = () => {
     const quantidade = +e.target.quantidade.value;
     const cor = e.target.cor.value;
     const tamanho = e.target.tamanho.value;
+    const estoque = e.target.estoque.value;
 
     const payload = {
       img: img,
       quantidade: quantidade,
       cor: cor,
-      tamanho: tamanho
+      tamanho: tamanho,
+      estoque: estoque
     };
+
+    console.log(payload);
 
     const response = await Api.buildApiPostRequest(
       Api.addTecidoUrl(),
@@ -89,6 +93,15 @@ export const AddTecido = () => {
                 <option>Casal</option>
                 <option>Queen</option>
                 <option>King</option>
+                </select> 
+            </div>
+
+            <label>Estoque: </label>
+            <div className="input-group mb-3 w-50">
+                <select id="estoque" name="estoque" className="form-control"  placeholder="estoque">
+                <option ></option>
+                <option>Sim</option>
+                <option>Nao</option>
                 </select> 
             </div>
 

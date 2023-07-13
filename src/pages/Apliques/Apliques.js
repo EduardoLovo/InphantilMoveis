@@ -89,7 +89,7 @@ export const Apliques = () => {
         <button  type="button" className="btn btn-outline-primary" onClick={()=>{navigate("/filtrados")}}> Mostrar apliques com 4 ou menos para cortar</button>
       </div>
       <div className={type === "adm" ? "inputCheck" : "display"}>
-        <button onClick={()=>{navigate("/comprar-apliques")}} type="button" className="btn btn-outline-primary"> Apliques para comprar</button>
+        <button onClick={()=>{navigate("/comprar-apliques", {type})}} type="button" className="btn btn-outline-primary"> Apliques para comprar</button>
       </div>
 
       {/* <Filter />; */}

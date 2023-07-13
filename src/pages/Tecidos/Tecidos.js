@@ -49,8 +49,9 @@ export const Tecidos = () => {
                 <img src={tecido.img} className="card-img-top" alt="..."/>
                 <div className={tecido.quantidade <= "5" ? "card-body text-danger " : "card-body text-success"}>
                   <p>Cor: {tecido.cor}</p>
+                  <p>Estoque: {tecido.estoque}</p>
                   <p className="card-text">
-                    Estoque = {tecido.quantidade}
+                    Quantidade = {tecido.quantidade}
                     {type === "adm" ? (
                     <button
                             type="button" 
@@ -60,9 +61,10 @@ export const Tecidos = () => {
                             }}
                           >
                             Editar
-                          </button>
+                    </button>
                   ): ""}
                   </p>
+                  
                 </div>
               </div>
               :''}

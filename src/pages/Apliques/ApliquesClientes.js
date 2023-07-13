@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { Api } from '../../Api/Api';
 import './ApliquesClientes.css'
+import { useParams } from 'react-router-dom';
 
 export const ApliquesClientes = () => {
+  const params = useParams()
+  console.log(params);
 
-    const [apliques, setApliques] = useState([]);
- 
-    const loadData = async () => {
-    const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
-    const results = await response.json();
-    setApliques(results);
+  const [apliques, setApliques] = useState([]);
+
+  const loadData = async () => {
+  const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
+  const results = await response.json();
+  setApliques(results);
 
   };
   useEffect(() => {
@@ -34,6 +37,7 @@ export const ApliquesClientes = () => {
                 <h5 className="card-title text-center">{aplique.number} </h5>
               </div>
             </div>
+
           </div>   
         ))}
       </div>
