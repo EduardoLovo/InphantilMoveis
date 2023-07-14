@@ -30,6 +30,8 @@ import { TecidosSolteiro } from "./pages/Tecidos/CatalogoTecidos/Solteiro";
 import { TecidosCasal } from "./pages/Tecidos/CatalogoTecidos/Casal";
 import { TecidosViuva } from "./pages/Tecidos/CatalogoTecidos/Viuva";
 import { CatalogoTecidos } from "./pages/Tecidos/CatalogoTecidos";
+import { Teste } from "./pages/Teste";
+import { Teste2 } from "./pages/Teste2";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -57,6 +59,8 @@ function App() {
         <Route path="/tecidosviuva" element={<TecidosViuva />} />
         <Route path="/tecidoscasal" element={<TecidosCasal />} />
         <Route path="/catalogotecidos" element={<CatalogoTecidos />} />
+        <Route path="/teste" element={<Teste />} />
+        <Route path="/teste2" element={<Teste2 />} />
 
         <Route
           path="/home"

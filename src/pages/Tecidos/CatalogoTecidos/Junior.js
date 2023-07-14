@@ -35,7 +35,7 @@ export const TecidosJunior = () => {
               {tecido.tamanho === 'Junior - M' ? 
               <div className="card border-dark mb-3">
                 <img src={tecido.img} className="card-img-top" alt="..."/>
-                <div className={tecido.quantidade <= "5" ? "card-body text-danger " : "card-body text-success"}>
+                <div className="card-body text-success">
                   <p>Cor: {tecido.cor}</p>
                 </div>
               </div>

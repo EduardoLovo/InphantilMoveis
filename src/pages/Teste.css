@@ -1,0 +1,52 @@
+.imagem1 {
+    height: 50vh; 
+    /* width: 20; */
+}
+
+.teste2{
+    width: 100vw;
+    /* height: 100vh; */
+    background-color: rgba(41, 41, 41, 0.822);
+}
+
+
+.teste {   
+    /* background-color: rgba(41, 41, 41, 0.822); */
+    margin-top: 1rem  ;
+    padding: 2rem ;
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 590px) {
+    
+    .imagem1 {
+        height: 20rem; 
+        /* width: 20rem; */
+    }
+    .teste2{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(41, 41, 41, 0.822);
+        display: flex;
+        
+    }
+    .teste {   
+        /* display: flex; */
+        /* justify-content: flex-start; */
+        /* margin: 2rem ; */
+        /* align-items: center; */
+        transform: rotate(90deg);
+
+        /* width: 100rem; */
+        /* height: 100rem;  */
+        /* width: 100vw;
+        height: 100vh; */
+
+        
+    }
+}
