@@ -14,36 +14,34 @@ export const Teste2 = () => {
     const [tecidos, setTecidos] = useState([]);
     const [apliques, setApliques] = useState([]);
 
-
+    const [aaa, setAaa] = useState('')
+    
     const loadData = async () => {
         const response = await Api.buildApiGetRequest(Api.readAllTecidolUrl());
         const results = await response.json();
         const responseAplic = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
         const resultsAplic = await responseAplic.json();
         
-        console.log('foi');
+        
         setTecidos(results);
         setApliques(resultsAplic);
+       
       };
-
-    function compare(a, b) {
-      if (a.cor < b.cor) return -1;
-      if (a.cor > b.cor) return 1;
-      return 0;
-    }
-  
-    tecidos.sort(compare)
-
-    const recarregar = () => {
-        window.location.reload()
-    }
-
+      
     useEffect(() => {
-        loadData();
         
+        loadData();   
     },[])
 
+    function compare(a, b) {
+        if (a.cor < b.cor) return -1;
+        if (a.cor > b.cor) return 1;
+        return 0;
+      }
+        
+
     const comecar = () => {
+        setAaa('começar')
         setImagemInicial(
             <div>
                 <div> 
@@ -70,19 +68,24 @@ export const Teste2 = () => {
         )
     }
     
+    
 
     const primeiroClick = (e) => {
         e.preventDefault();
-        
 
-        console.log(e);
-       const imga = e.target.src
+        const imga = e.target.src
         
-        console.log('2');
         setMaisum(
             <img className='imagem1' src={imga} id="one" name="fav_language" value='aaaa' ></img>
         ) 
-    
+        function compareApliq(a, b) {
+            if (a.number < b.number) return -1;
+            if (a.number > b.number) return 1;
+            return 0;
+          }
+
+        apliques.sort(compareApliq)
+   
         setImagemInicial( 
         <div>
             <div className="listAplic apliClient">
@@ -111,20 +114,27 @@ export const Teste2 = () => {
         console.log('foi2');  
         setImagemInicial('')
     }
+
+    tecidos.sort(compare)
   return (
     <div >
-        <div>
-            <button onClick={recarregar}>refazer</button>
-            <button onClick={comecar} >começar / refazer</button>
+        <div className='buttonCaatalogo'>
+            <p>Clique no botão abaixo para começar;</p>
+            <p>Escolha a cor clicando em cima da cor e depois escolha o aplique</p>
+            <p>Pode refazer o processo quantas vezes quiser, é só clicar no botão novamente</p> 
+            <button onClick={comecar} >Começar / Refazer</button>
         </div>
 
         {imagemInicial}
-        
-        <div className='d-flex justify-content-start align-items-center teste2'>
-            <div className='teste'> 
-                {maisum}{agoraVai}{maisum} 
+
+        {aaa === '' ? '' : 
+            <div className='d-flex justify-content-start align-items-center teste2'>
+                <div className='teste'> 
+                    {maisum}{agoraVai}{maisum} 
+                </div>
             </div>
-        </div>
+        }
+        
     </div>
   )
 }

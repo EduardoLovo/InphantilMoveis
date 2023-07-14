@@ -1,6 +1,7 @@
 .imagem1 {
     height: 50vh; 
     /* width: 20; */
+    
 }
 
 .teste2{
@@ -8,6 +9,7 @@
     /* height: 100vh; */
     background-color: rgba(41, 41, 41, 0.822);
 }
+
 
 
 .teste {   
@@ -20,6 +22,31 @@
     /* flex-direction: column; */
     justify-content: center;
     align-items: center;
+}
+
+.buttonCaatalogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonCaatalogo p {
+    font-weight: 600;
+    font-size: large;
+}
+
+.buttonCaatalogo button {
+    padding: 2rem;
+    border-radius: 5px;
+    background-color: rgba(223, 144, 41, 0.719);
+    font-weight: 500;
+    margin-bottom: 1rem;
+
+}
+
+.buttonCaatalogo button:hover {
+    background-color:  rgba(223, 144, 41, 0.877) ;
 }
 
 @media (max-width: 590px) {
