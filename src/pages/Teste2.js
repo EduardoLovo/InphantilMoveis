@@ -41,7 +41,7 @@ export const Teste2 = () => {
         
 
     const comecar = () => {
-        setAaa('começar')
+        setAaa('Começar')
         setImagemInicial(
             <div>
                 <div> 
