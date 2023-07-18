@@ -42,6 +42,10 @@ export const CalcMedidas = () => {
 
         setResultadoPhant(<div className='fs-5 text'>
             <div>
+                <label>Cama Completa: </label>
+                <span> {lar} x {comp}</span>
+            </div>
+            <div className='mt-2'>
                 <label>Externo: </label>
                 <span> {exlar} x {excomp}</span>
             </div>
@@ -120,6 +124,10 @@ export const CalcMedidas = () => {
         setResultado(
         <div className='fs-5 text'>
             <div>
+                <label>Colchão: </label>
+                <span> {lar} x {comp} x {alt}</span>
+            </div>
+            <div className='mt-2'>
                 <label>Externo: </label>
                 <span> {exlar} x {excomp} x {exalt}</span>
             </div>
