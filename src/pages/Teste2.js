@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import './Teste.css'
+// import '../pages/Tecidos/'
 import { Api } from '../Api/Api';
 import { ApliquesClientes } from './Apliques/ApliquesClientes';
 import { TecidosJunior } from './Tecidos/CatalogoTecidos/Junior';

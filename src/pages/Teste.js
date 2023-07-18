@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import './Teste.css'
+// import './Teste.css'
 
 export const Teste = () => {
 

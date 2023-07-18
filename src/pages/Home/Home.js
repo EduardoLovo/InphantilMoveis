@@ -51,7 +51,7 @@ export const Home = () => {
           </div>
         </div>    
       </div>
-      <h2>Para clientes</h2>
+      <h2 className="textbranco">Para clientes</h2>
       <div className="row gx-3">
        <div className="col homeCards">
           <div className="p-3 glass" onClick={() =>{navigate("/apliqueslist")}} >
@@ -68,7 +68,7 @@ export const Home = () => {
         <div className="col homeCards">
           <div className="p-3 glass" onClick={() =>{navigate("/catalogoTecidos")}} >
             <GiWhiteBook className="iconHome"/>
-            <span>Catalogo Tecidos (clientes)</span>
+            <span>Catalogo - Lençol / Aplique - (clientes)</span>
           </div>
         </div>
         <div className="col homeCards">

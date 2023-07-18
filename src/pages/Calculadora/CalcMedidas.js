@@ -86,18 +86,31 @@ export const CalcMedidas = () => {
 
         //Altura 
         const dif = alt - 10
+        console.log(dif);
         const exalt = dif + 23
         const inalt = dif + 21
 
         //Lençol
-        const lenlar = lar + 40
+        // const lenlar = lar + 40
 
+        const lenlar = () => {
+            if (acessorio === 'lencol') {
+                const lenlar = lar + 40
+                return lenlar
+            } else {
+                const lenlar = lar + ((alt + 10) * 2)
+                return lenlar
+            }
+        }
+
+        
         const lencomp = () => {
             if (acessorio === 'lencol') {
                 const lencomp = comp + 40
-                return lencomp
+                return (lencomp)
             } else {
-                const lencomp = comp + 70
+                // const alturaVir = alt + 10
+                const lencomp = comp + ((alt + 10) * 2)
                 return lencomp
             }
         }
@@ -117,9 +130,8 @@ export const CalcMedidas = () => {
             </div>
 
             <div className='mt-2'>
-                {acessorio === 'lencol'? <label>Lençol: </label>: <label>Virol:</label>}
-                
-                <span> {lenlar} x {lencomp()}</span>
+                {acessorio === 'lencol'? <label>Lençol: </label> : <label>Virol:</label>}
+                <span> {lenlar()} x {lencomp()}</span>
             </div>
             {acessorio === 'lencol'? 
             <div>
@@ -131,7 +143,7 @@ export const CalcMedidas = () => {
             {acessorio === 'virolLiso'?
             <div>
                 <label>Retangulo: </label>
-                <span> {lenlar} x 50</span>
+                <span> {lenlar()} x 50</span>
             </div>: ''}
         </div>
         )

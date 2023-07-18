@@ -29,6 +29,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: rgba(179, 179, 14, 0.589);
 }
 
 .buttonCaatalogo p {
@@ -48,6 +49,7 @@
 .buttonCaatalogo button:hover {
     background-color:  rgba(223, 144, 41, 0.877) ;
 }
+
 
 @media (max-width: 590px) {
     
@@ -79,3 +81,4 @@
         
     }
 }
+

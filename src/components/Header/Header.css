@@ -6,7 +6,7 @@
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.18);
   margin-left: 1rem;
-  box-shadow: 0 1px 40px 0 rgba(11, 126, 36, 0.521);
+  box-shadow: 0 1px 40px 0 rgb(204, 207, 18);
 
 }
 
@@ -19,7 +19,7 @@
 }
 
 .centralize p:hover {
-  color: rgb(42, 165, 118);
+  color: rgba(0, 0, 0, 0.384);
   scale: 1.2;
 }
 
