@@ -74,7 +74,7 @@ export const TecidosViuva = () => {
         const imga = e.target.src
         
         setCor(
-            <img className='imagem1' src={imga} id="one" name="fav_language" value='aaaa' ></img>
+            <img className='imagem1' src={imga} id="one" name="fav_language" value='aaaa' alt='...'></img>
         ) 
         function compareApliq(a, b) {
             if (a.number < b.number) return -1;
@@ -107,7 +107,7 @@ export const TecidosViuva = () => {
         e.preventDefault();   
 
         const imga2 = e.target.src
-        setAplique( <img className='imagem1' src={imga2} id="one" name="fav_language" value='bbbb'></img> )
+        setAplique( <img className='imagem1' src={imga2} id="one" name="fav_language" value='bbbb' alt='...'></img> )
         setImagemInicial('')
     }
 
@@ -115,9 +115,10 @@ export const TecidosViuva = () => {
   return (
     <div >
         <div className='buttonCaatalogo'>
-            <p>Clique no botão abaixo para começar;</p>
-            <p>Escolha a cor clicando em cima da cor e depois escolha o aplique</p>
-            <p>Pode refazer o processo quantas vezes quiser, é só clicar no botão novamente</p> 
+            <p>Clique no botão abaixo para começar.</p>
+            <p>Escolha a cor clicando em cima da cor e depois escolha o aplique clicando no aplique.</p>
+            <p>Pode refazer o processo quantas vezes quiser, é só clicar no botão novamente.</p> 
+            <h5>Muito importante! O tom da cor do tecido, pode mudar de acordo com a tela do seu dispositivo.</h5>
             <button onClick={comecar} >Começar / Refazer</button>
         </div>
 

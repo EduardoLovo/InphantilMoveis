@@ -27,24 +27,26 @@ export const CatalogoTecidos = () => {
     
 
   return (
-    <div className='ms-4'> 
-        <h1>Links</h1>
-        <p className='glassYellow'>
-          <a href='./tecidosjunior'>Junior:</a>
-          <p>https://inphantil-moveis.vercel.app/tecidosjunior</p>
-        </p>
-        <p className='glassYellow'>
-          <a href='./tecidosSolteiro'>Solteiro / Solteirão</a>
-          <p>https://inphantil-moveis.vercel.app/tecidosSolteiro</p>
-        </p>
-        <p className='glassYellow'>
-          <a href='./tecidosViuva'>Viuva</a>
-          <p>https://inphantil-moveis.vercel.app/tecidosViuva</p>
-        </p>
-        <p className='glassYellow'>
-          <a href='./tecidosCasal'>Casal</a>
-          <p>https://inphantil-moveis.vercel.app/tecidosCasal</p>
-        </p>
+    <div > 
+      <h1 className='ms-3'>Links</h1>
+      <div className='ms-2'>
+          <p className='glassYellow'>
+            <a href='./tecidosjunior'>Junior:</a>
+            <p>https://inphantil-moveis.vercel.app/tecidosjunior</p>
+          </p>
+          <p className='glassYellow'>
+            <a href='./tecidosSolteiro'>Solteiro / Solteirão</a>
+            <p>https://inphantil-moveis.vercel.app/tecidosSolteiro</p>
+          </p>
+          <p className='glassYellow'>
+            <a href='./tecidosViuva'>Viuva</a>
+            <p>https://inphantil-moveis.vercel.app/tecidosViuva</p>
+          </p>
+          <p className='glassYellow'>
+            <a href='./tecidosCasal'>Casal</a>
+            <p>https://inphantil-moveis.vercel.app/tecidosCasal</p>
+          </p>
+      </div>
     </div>
   )
 }

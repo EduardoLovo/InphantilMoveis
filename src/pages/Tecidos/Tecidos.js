@@ -83,6 +83,7 @@ export const Tecidos = () => {
                 <img src={tecido.img} className="card-img-top" alt="..."/>
                 <div className={tecido.quantidade <= "5" ? "card-body text-danger " : "card-body text-success"}>
                   <p>Cor: {tecido.cor}</p>
+                  <p>Estoque: {tecido.estoque}</p>
                   <p className="card-text">
                     Estoque: {tecido.quantidade}
                     {type === "adm" ? (
@@ -116,6 +117,7 @@ export const Tecidos = () => {
                 <img src={tecido.img} className="card-img-top" alt="..."/>
                 <div className={tecido.quantidade <= "5" ? "card-body text-danger " : "card-body text-success"}>
                   <p>Cor: {tecido.cor}</p>
+                  <p>Estoque: {tecido.estoque}</p>
                   <p className="card-text">
                     Estoque = {tecido.quantidade}
                     {type === "adm" ? (
@@ -149,6 +151,7 @@ export const Tecidos = () => {
                 <img src={tecido.img} className="card-img-top" alt="..."/>
                 <div className={tecido.quantidade < 5 ? "card-body text-danger " : "card-body text-success"}>
                   <p>Cor: {tecido.cor}</p>
+                  <p>Estoque: {tecido.estoque}</p>
                   <p className="card-text">
                     Estoque = {tecido.quantidade}
                     {type === "adm" ? (
@@ -182,6 +185,7 @@ export const Tecidos = () => {
                 <img src={tecido.img} className="card-img-top" alt="..."/>
                 <div className={tecido.quantidade <= "5" ? "card-body text-danger " : "card-body text-success"}>
                   <p>Cor: {tecido.cor}</p>
+                  <p>Estoque: {tecido.estoque}</p>
                   <p className="card-text">
                     Estoque = {tecido.quantidade}
                     {type === "adm" ? (
@@ -204,8 +208,6 @@ export const Tecidos = () => {
         ))}
         </div>
       </div>
-      
-      
     </div>
   )
 }

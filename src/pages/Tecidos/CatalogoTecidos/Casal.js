@@ -115,9 +115,10 @@ export const TecidosCasal = () => {
   return (
     <div >
         <div className='buttonCaatalogo'>
-            <p>Clique no botão abaixo para começar;</p>
-            <p>Escolha a cor clicando em cima da cor e depois escolha o aplique</p>
-            <p>Pode refazer o processo quantas vezes quiser, é só clicar no botão novamente</p> 
+            <p>Clique no botão abaixo para começar.</p>
+            <p>Escolha a cor clicando em cima da cor e depois escolha o aplique clicando no aplique.</p>
+            <p>Pode refazer o processo quantas vezes quiser, é só clicar no botão novamente.</p> 
+            <h5>Muito importante! O tom da cor do tecido, pode mudar de acordo com a tela do seu dispositivo.</h5>
             <button onClick={comecar} >Começar / Refazer</button>
         </div>
 
