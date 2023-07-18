@@ -74,7 +74,7 @@ export const TecidosCasal = () => {
         const imga = e.target.src
         
         setCor(
-            <img className='imagem1' src={imga} id="one" name="fav_language" value='aaaa' ></img>
+            <img className='imagem1' src={imga} id="one" name="fav_language" value='aaaa' alt='...'></img>
         ) 
         function compareApliq(a, b) {
             if (a.number < b.number) return -1;
@@ -107,7 +107,7 @@ export const TecidosCasal = () => {
         e.preventDefault();   
 
         const imga2 = e.target.src
-        setAplique( <img className='imagem1' src={imga2} id="one" name="fav_language" value='bbbb'></img> )
+        setAplique( <img className='imagem1' src={imga2} id="one" name="fav_language" value='bbbb' alt='...'></img> )
         setImagemInicial('')
     }
 

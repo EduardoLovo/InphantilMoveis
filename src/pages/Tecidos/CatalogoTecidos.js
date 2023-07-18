@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 import { Api } from '../../Api/Api';
 
 export const CatalogoTecidos = () => {
     const [tecidos, setTecidos] = useState([]);
 
-    const navigate = useNavigate();
 
     const loadData = async () => {
         const response = await Api.buildApiGetRequest(Api.readAllTecidolUrl());
@@ -29,19 +27,23 @@ export const CatalogoTecidos = () => {
     
 
   return (
-    <div> 
+    <div className='ms-4'> 
         <h1>Links</h1>
-        <p>
-          <a href='./tecidosjunior'>Junior</a>
+        <p className='glassYellow'>
+          <a href='./tecidosjunior'>Junior:</a>
+          <p>https://inphantil-moveis.vercel.app/tecidosjunior</p>
         </p>
-        <p>
-        <a href='./tecidosSolteiro'>Solteiro / Solteirão</a>
+        <p className='glassYellow'>
+          <a href='./tecidosSolteiro'>Solteiro / Solteirão</a>
+          <p>https://inphantil-moveis.vercel.app/tecidosSolteiro</p>
         </p>
-        <p>
+        <p className='glassYellow'>
           <a href='./tecidosViuva'>Viuva</a>
+          <p>https://inphantil-moveis.vercel.app/tecidosViuva</p>
         </p>
-        <p>
+        <p className='glassYellow'>
           <a href='./tecidosCasal'>Casal</a>
+          <p>https://inphantil-moveis.vercel.app/tecidosCasal</p>
         </p>
     </div>
   )

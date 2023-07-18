@@ -99,10 +99,10 @@ export const CalcMedidas = () => {
 
         const lenlar = () => {
             if (acessorio === 'lencol') {
-                const lenlar = lar + 40
+                const lenlar = lar + ((alt + 10) * 2)
                 return lenlar
             } else {
-                const lenlar = lar + ((alt + 10) * 2)
+                const lenlar = lar + 40
                 return lenlar
             }
         }
@@ -110,11 +110,10 @@ export const CalcMedidas = () => {
         
         const lencomp = () => {
             if (acessorio === 'lencol') {
-                const lencomp = comp + 40
-                return (lencomp)
-            } else {
-                // const alturaVir = alt + 10
                 const lencomp = comp + ((alt + 10) * 2)
+                return (lencomp)
+            } else { 
+                const lencomp = comp + 70
                 return lencomp
             }
         }
@@ -162,29 +161,29 @@ export const CalcMedidas = () => {
     <div>
         <div className='p-5 glass2'>
             <h2>Sob Medida com colchão Phant:</h2>
-            <div class="row align-items-center ">
-                <div class="col">
+            <div className="row align-items-center ">
+                <div className="col">
                     <form onSubmit={calcularPhant}>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Largura</label>
-                            <input type="number" class="form-control" id="largura" aria-describedby="emailHelp"/>
+                        <div className="mb-3">
+                            <label for="exampleInputEmail1" className="form-label">Largura</label>
+                            <input type="number" className="form-control" id="largura" aria-describedby="emailHelp"/>
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Comprimento</label>
-                            <input type="number" class="form-control" id="comprimento"/>
+                        <div className="mb-3">
+                            <label for="exampleInputPassword1" className="form-label">Comprimento</label>
+                            <input type="number" className="form-control" id="comprimento"/>
                         </div>
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input" id="acessorio" value='lencol' name="radio-stacked" />
-                            <label class="form-check-label" for="acessorio">Lençol</label>
+                        <div className="form-check">
+                            <input type="radio" className="form-check-input" id="acessorio" value='lencol' name="radio-stacked" />
+                            <label className="form-check-label" for="acessorio">Lençol</label>
                         </div>
-                        <div class="form-check mb-3">
-                            <input type="radio" class="form-check-input" id="acessorio" value='viral' name="radio-stacked" />
-                            <label class="form-check-label" for="acessorio">Virol</label>
+                        <div className="form-check mb-3">
+                            <input type="radio" className="form-check-input" id="acessorio" value='viral' name="radio-stacked" />
+                            <label className="form-check-label" for="acessorio">Virol</label>
                         </div>
-                        <button type="submit" class="btn btn-primary">Calcular</button>
+                        <button type="submit" className="btn btn-primary">Calcular</button>
                     </form>
                 </div>
-                <div class="col ms-5">
+                <div className="col ms-5">
                     <h3>Resultado:</h3>
                     {resultadoPhant}
                 </div>
@@ -192,38 +191,38 @@ export const CalcMedidas = () => {
         </div>
         <div className='p-5 glass2 mt-4'>
             <h2>Sob Medida com colchão do cliente:</h2>
-            <div class="row align-items-center ">
-                <div class="col">
+            <div className="row align-items-center ">
+                <div className="col">
                     <form onSubmit={calcular}>
-                        <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Largura</label>
-                            <input type="number" class="form-control" id="largura" aria-describedby="emailHelp"/>
+                        <div className="mb-3">
+                            <label for="exampleInputEmail1" className="form-label">Largura</label>
+                            <input type="number" className="form-control" id="largura" aria-describedby="emailHelp"/>
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Comprimento</label>
-                            <input type="number" class="form-control" id="comprimento"/>
+                        <div className="mb-3">
+                            <label for="exampleInputPassword1" className="form-label">Comprimento</label>
+                            <input type="number" className="form-control" id="comprimento"/>
                         </div>
-                        <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Altura</label>
-                            <input type="number" class="form-control" id="altura"/>
+                        <div className="mb-3">
+                            <label for="exampleInputPassword1" className="form-label">Altura</label>
+                            <input type="number" className="form-control" id="altura"/>
                         </div>
-                        <div class="form-check">
-                            <input type="radio" class="form-check-input" id="acessorio" value='lencol' name="radio-stacked" />
-                            <label class="form-check-label" for="acessorio">Lençol</label>
+                        <div className="form-check">
+                            <input type="radio" className="form-check-input" id="acessorio" value='lencol' name="radio-stacked" />
+                            <label className="form-check-label" for="acessorio">Lençol</label>
                         </div>
-                        <div class="form-check ">
-                            <input type="radio" class="form-check-input" id="acessorio" value='virolLiso' name="radio-stacked" />
-                            <label class="form-check-label" for="acessorio">Virol Liso</label>
+                        <div className="form-check ">
+                            <input type="radio" className="form-check-input" id="acessorio" value='virolLiso' name="radio-stacked" />
+                            <label className="form-check-label" for="acessorio">Virol Liso</label>
                         </div>
-                        <div class="form-check mb-3">
-                            <input type="radio" class="form-check-input" id="acessorio" value='virol' name="radio-stacked" />
-                            <label class="form-check-label" for="acessorio">Virol com Aplique</label>
+                        <div className="form-check mb-3">
+                            <input type="radio" className="form-check-input" id="acessorio" value='virol' name="radio-stacked" />
+                            <label className="form-check-label" for="acessorio">Virol com Aplique</label>
                         </div>
             
-                        <button type="submit" class="btn btn-primary">Calcular</button>
+                        <button type="submit" className="btn btn-primary">Calcular</button>
                     </form>
                 </div>
-                <div class="col ms-5">
+                <div className="col ms-5">
                     <h3>Resultado:</h3>
                     {resultado}   
                 </div>
