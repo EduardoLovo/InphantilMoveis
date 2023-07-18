@@ -22,4 +22,10 @@ code {
     monospace;
 }
 
+@media (max-width: 514px) {
+  body {
+      background-image: url('./phantMobile.jpg');
+  }
+}
+
 
