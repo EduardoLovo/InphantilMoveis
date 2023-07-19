@@ -57,18 +57,19 @@ export const CalcMedidas = () => {
                 <label>Colchão: </label>
                 <span> {collar} x {colcomp}</span>
             </div>
-            <div className='mt-2'>
-                {acessorio === 'lencol'? <label>Lençol: </label>: <label>Virol:</label>}
-                
-                <span> {lenlar} x {lencomp()}</span>
-            </div>
             {acessorio === 'lencol'? 
-            <div>
+            <div className='mt-2'>
                 <label>Quadrado: </label>
                 <span> Padrão</span>
             </div>
             : ''
             }
+            <div className='mt-2'>
+                {acessorio === 'lencol'? <label>Lençol: </label>: <label>Virol:</label>}
+                
+                <span> {lenlar} x {lencomp()}</span>
+            </div>
+            
         </div>)
     }
 
@@ -135,23 +136,22 @@ export const CalcMedidas = () => {
                 <label>Interno: </label>
                 <span> {inlar} x {incomp} x {inalt}</span>
             </div>
-
-            <div className='mt-2'>
-                {acessorio === 'lencol'? <label>Lençol: </label> : <label>Virol:</label>}
-                <span> {lenlar()} x {lencomp()}</span>
-            </div>
             {acessorio === 'lencol'? 
-            <div>
+            <div className='mt-2'>
                 <label>Quadrado: </label>
                 <span> {alt + 10} x {alt + 10}</span>
             </div>
             : ''
             }
             {acessorio === 'virolLiso'?
-            <div>
+            <div className='mt-2'>
                 <label>Retangulo: </label>
                 <span> {lenlar()} x 50</span>
             </div>: ''}
+            <div className='mt-2'>
+                {acessorio === 'lencol'? <label>Lençol: </label> : <label>Virol:</label>}
+                <span> {lenlar()} x {lencomp()}</span>
+            </div>
         </div>
         )
 
