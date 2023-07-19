@@ -46,6 +46,10 @@ export const CatalogoTecidos = () => {
             <a href='./tecidosCasal'>Casal</a>
             <p>https://inphantil-moveis.vercel.app/tecidosCasal</p>
           </p>
+          <p className='glassYellow'>
+            <a href='./tecidosDemaisTamanhos'>Demais tamanhos</a>
+            <p>https://inphantil-moveis.vercel.app/tecidosDemaisTamanhos</p>
+          </p>
       </div>
     </div>
   )

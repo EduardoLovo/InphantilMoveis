@@ -125,13 +125,11 @@ export const EditTecido = () => {
               <div className="input-group mb-3 w-50">
                   <select id="tamanho" name="tamanho" className="form-control"  placeholder="cor">
                   <option>{tecido.tamanho}</option>
-                  <option>Berço - P</option>
                   <option>Junior - M</option>
                   <option>Solteiro / Solteirão - G</option>
                   <option>Viuva - GG</option>
                   <option>Casal</option>
-                  <option>Queen</option>
-                  <option>King</option>
+                  <option>BQK</option>
                   </select> 
               </div>
 

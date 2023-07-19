@@ -30,6 +30,7 @@ import { TecidosSolteiro } from "./pages/Tecidos/CatalogoTecidos/Solteiro";
 import { TecidosCasal } from "./pages/Tecidos/CatalogoTecidos/Casal";
 import { TecidosViuva } from "./pages/Tecidos/CatalogoTecidos/Viuva";
 import { CatalogoTecidos } from "./pages/Tecidos/CatalogoTecidos";
+import { TecidosBQK } from "./pages/Tecidos/CatalogoTecidos/BQK";
 // import { Teste } from "./pages/Teste";
 // import { Teste2 } from "./pages/Teste2";
 
@@ -58,6 +59,7 @@ function App() {
         <Route path="/tecidossolteiro" element={<TecidosSolteiro />} />
         <Route path="/tecidosviuva" element={<TecidosViuva />} />
         <Route path="/tecidoscasal" element={<TecidosCasal />} />
+        <Route path="/tecidosDemaisTamanhos" element={<TecidosBQK />} />
         <Route path="/catalogotecidos" element={<CatalogoTecidos />} />
         {/* <Route path="/teste" element={<Teste />} /> */}
         {/* <Route path="/teste2" element={<Teste2 />} /> */}
