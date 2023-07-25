@@ -12,6 +12,7 @@ export const Home = () => {
 
   return (
     <div className="container px-4 text-center">
+      <h2>Vendedoras:</h2>
       <div className="row gx-3">
         <div className="col homeCards">
           <div className="p-3 glass" onClick={() =>{navigate("/calculadora")}}>
@@ -24,14 +25,7 @@ export const Home = () => {
             <GiRolledCloth className="iconHome"/>
             <span>Apliques</span>
           </div>
-        </div>
-        <div className="col homeCards">
-          <div className="p-3 glass" onClick={() =>{navigate("/infoProdutos")}}>
-            <FaInfoCircle className="iconHome"/>
-            <span>Informações dos prdutos (clientes)</span>
-          </div>
-        </div>
-        
+        </div>        
         <div className="col homeCards">
           <div className="p-3 glass" onClick={() =>{navigate("/junior")}} >
             <GiRolledCloth className="iconHome"/>
@@ -51,8 +45,14 @@ export const Home = () => {
           </div>
         </div>    
       </div>
-      <h2 className="textbranco">Para clientes</h2>
+      <h2 className="textbranco">Clientes:</h2>
       <div className="row gx-3">
+      <div className="col homeCards">
+          <div className="p-3 glass" onClick={() =>{navigate("/infoProdutos")}}>
+            <FaInfoCircle className="iconHome"/>
+            <span>Informações dos prdutos (clientes)</span>
+          </div>
+        </div>
        <div className="col homeCards">
           <div className="p-3 glass" onClick={() =>{navigate("/apliqueslist")}} >
             <GiWhiteBook className="iconHome"/>
@@ -74,7 +74,7 @@ export const Home = () => {
         <div className="col homeCards">
           <div className="p-3 glass" onClick={() =>{navigate("/teste2")}} >
             <GiWhiteBook className="iconHome"/>
-            <span>Catalogo 2 (clientes)</span>
+            <span></span>
           </div>
         </div>
       </div>

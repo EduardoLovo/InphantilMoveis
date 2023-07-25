@@ -90,10 +90,6 @@
   
 }
 
-.textbranco {
-  color: #1a25c2;
-}
-
 .glassYellow {
   background: rgb(205,180,0);
   background: linear-gradient(90deg, rgba(205,180,0,1) 0%, rgba(198,198,18,0.8841911764705882) 47%, rgba(0,212,255,0) 100%);
