@@ -34,8 +34,8 @@ export const Header = () => {
        
         <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
           <div className="navbar-nav centralize">
-            <p className="nav-link cursor"  onClick={() => navigate('./calculadora')}><BsCalculatorFill /></p>
-            <p className="nav-link cursor"  onClick={() => navigate('./apliques')}><GiRolledCloth/> </p>
+            {/* <p className="nav-link cursor"  onClick={() => navigate('./calculadora')}><BsCalculatorFill /></p>
+            <p className="nav-link cursor"  onClick={() => navigate('./apliques')}><GiRolledCloth/> </p> */}
             <p className="nav-link cursor"  onClick={() => navigate('./infoProdutos')}><FaInfoCircle/> </p>
             <p className="nav-link cursor"  onClick={() => navigate('./apliqueslist')}><GiWhiteBook/> </p>
           </div>

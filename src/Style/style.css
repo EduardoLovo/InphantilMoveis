@@ -73,7 +73,11 @@
 
 .glass2 {
   cursor: pointer;
-  background: rgba(221, 204, 52, 0.76);
+  background: rgba(44, 44, 44, 0.87);
+  width: 80vw;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 5px;
   
 }
 
