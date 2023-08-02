@@ -82,7 +82,7 @@ export const EditLencol = () => {
           <img src={lencol.img} className="w-50 h-auto  p-3" alt='foto do aplique'/>
           <p>Quantidade: {lencol.quantidade}</p>
           <button className="btnBack btnDel" onClick={deleteAplic}>
-            Deletar
+            Deletarr
           </button>
         </div>
 
