@@ -121,6 +121,10 @@
     .container .col {
         display: flex;
         justify-content: center;
+
+    }
+    .container .col .card  {
+        width: 20rem;
     }
 }
 
