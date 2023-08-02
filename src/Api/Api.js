@@ -1,4 +1,4 @@
-import { JwtHandler } from "../jwt.handler/jwt_handler";
+import { JwtHandler } from "../jwt_handler/jwt_handler";
 export const Api = {
   baseUrl: "https://inphantil-banco-eduardolovo.vercel.app",
 

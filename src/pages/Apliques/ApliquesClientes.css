@@ -1,0 +1,13 @@
+.apliClient {
+    padding-top: 10vh;
+}
+
+.cardcliente {
+    box-shadow: 0 0 10px  rgba(253,187,45,1);
+    height: 400px;
+}
+
+.displayApliClien {
+    display: none;
+    
+}

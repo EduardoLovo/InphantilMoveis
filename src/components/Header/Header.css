@@ -1,0 +1,25 @@
+.logoHeader {
+  width: 2.5rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-left: 1rem;
+  box-shadow: 0 1px 40px 0 rgb(204, 207, 18);
+
+}
+
+.centralize p{
+  height: 100%;
+  display: flex;
+  margin: 10px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.centralize p:hover {
+  color: rgba(0, 0, 0, 0.384);
+  scale: 1.2;
+}
+
