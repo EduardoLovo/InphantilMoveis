@@ -3,7 +3,7 @@ import Logo from '../../img/LogoCir.png'
 import { Link, useNavigate } from 'react-router-dom';
 import './Sidebar.css';
 import '../../style/style.css';
-import { JwtHandler } from '../../jwt.handler/jwt_handler';
+import { JwtHandler } from '../../jwt_handler/jwt_handler';
 
 const Sidebar = () => {
   // const [sidebarOpen, setSidebarOpen] = useState(false);

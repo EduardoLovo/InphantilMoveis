@@ -6,7 +6,7 @@ import { LencolPESolteiro } from './LencolPESolteiro';
 import { LencolPESolteiroao } from './LencolPESolteiroao';
 import { LencolPEViuva } from './LencolPEViuva';
 import { LencolPEQueen } from './LencolPEQueen';
-import { JwtHandler } from '../../jwt.handler/jwt_handler';
+import { JwtHandler } from '../../jwt_handler/jwt_handler';
 
 export const CatalogoLencolPE = () => {
     const navigate = useNavigate();

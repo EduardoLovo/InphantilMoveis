@@ -1,7 +1,7 @@
 import React from "react";
 import { Api }from "../Api/Api";
 import { useNavigate } from "react-router-dom";
-import { JwtHandler } from "../jwt.handler/jwt_handler";
+import { JwtHandler } from "../jwt_handler/jwt_handler";
 import { useState } from "react";
 import { useEffect } from "react";
 
