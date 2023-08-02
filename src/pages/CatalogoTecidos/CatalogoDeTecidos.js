@@ -24,32 +24,35 @@ export const CatalogoDeTecidos = () => {
   
     tecidos.sort(compare)
 
-    
-
   return (
     <div > 
       <h1 className='ms-3'>Links</h1>
-      <div className='ms-2'>
-          <p className='glassYellow'>
+      <div className='ms-2 LinksCatalogo'>
+          <hr className='hr'/>
+          <div>
             <a href='./catalogo-junior'>Junior:</a>
             <p>https://inphantil-moveis.vercel.app/catalogo-junior</p>
-          </p>
-          <p className='glassYellow'>
+          </div>
+          <hr className='hr'/>
+          <div>
             <a href='./catalogo-solteiro-solteirao'>Solteiro / Solteirão</a>
             <p>https://inphantil-moveis.vercel.app/catalogo-solteiro-solteirao</p>
-          </p>
-          <p className='glassYellow'>
+          </div>
+          <hr className='hr'/>
+          <div>
             <a href='./catalogo-viuva'>Viuva</a>
             <p>https://inphantil-moveis.vercel.app/catalogo-viuva</p>
-          </p>
-          <p className='glassYellow'>
+          </div>
+          <hr className='hr'/>
+          <div>
             <a href='./catalogo-casal'>Casal</a>
             <p>https://inphantil-moveis.vercel.app/catalogo-casal</p>
-          </p>
-          <p className='glassYellow'>
-            <a href='./catalogo-bqk'>Demais tamanhos</a>
+          </div>
+          <hr className='hr'/>
+          <div>
+            <a href='./catalogo-bqk'>Demais Tamanhos</a>
             <p>https://inphantil-moveis.vercel.app/catalogo-bqk</p>
-          </p>
+          </div>
       </div>
     </div>
   )

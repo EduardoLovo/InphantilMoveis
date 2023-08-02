@@ -141,3 +141,21 @@
 .btn-group button {    
     height: 3rem;
 }
+
+/* Links catalogo */
+.LinksCatalogo div {
+    padding: 1rem 3rem;
+}
+
+.LinksCatalogo a {
+    text-decoration: none;
+    padding-left: 1rem;
+    color: rgba(255, 255, 135, 1);
+    transition: all .3s;
+}
+
+.LinksCatalogo a:hover {
+    text-decoration: underline;
+    color: rgba(255, 255, 135, 1);
+
+}
