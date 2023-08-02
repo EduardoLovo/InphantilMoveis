@@ -51,7 +51,7 @@ export const CatalogoLencolPE = () => {
             {type === "adm" ? (
              <button type="button" className="btn btn-warning btn-sm"
              onClick={() => {
-               navigate('/createlencol')}}
+               navigate('/lencol-create')}}
              >Adicionar novo lençol</button>) : ''}
           </div>
           :

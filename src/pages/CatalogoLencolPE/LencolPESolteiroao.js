@@ -39,7 +39,7 @@ export const LencolPESolteiroao = () => {
                         <div className="d-flex justify-content-between">
                           <p>Estoque: {lencol.quantidade}</p>
                           {type === "adm" ? (
-                            <button onClick={()=>{navigate(`/edit-lencol/${lencol._id}`)}} type="button" className="btn btn-outline-warning">Editar</button>
+                            <button onClick={()=>{navigate(`/lencol-edit/${lencol._id}`)}} type="button" className="btn btn-outline-warning">Editar</button>
                           ): ""}                      </div>                      <span>{lencol.tamanho}</span>
                         <span> - {lencol.cor}</span>
                       </div>

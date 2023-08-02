@@ -23,6 +23,8 @@ import { TecidosBQK } from "./pages/CatalogoTecidos/BQK";
 import { ToastContainer } from "react-toastify";
 import { ApliquesCreate } from "./pages/ApliquesCreate";
 import { CatalogoLencolPE } from "./pages/CatalogoLencolPE/CatalogoLencolPE";
+import { LencolCreate } from "./pages/CatalogoLencolPE/LencolCreate";
+import { LencolEdit } from "./pages/CatalogoLencolPE/LencolEdit";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -109,6 +111,22 @@ function App() {
           element={
             <PrivateRoute redirectTo="/">
               <ApliquesEdit />
+            </PrivateRoute>
+          }
+          />
+          <Route
+          path="/lencol-create/"
+          element={
+            <PrivateRoute redirectTo="/">
+              <LencolCreate />
+            </PrivateRoute>
+          }
+          />
+          <Route
+          path="/lencol-edit/:id/"
+          element={
+            <PrivateRoute redirectTo="/">
+              <LencolEdit />
             </PrivateRoute>
           }
           />

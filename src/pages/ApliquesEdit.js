@@ -80,7 +80,7 @@ export const ApliquesEdit = () => {
             <p>{aplique.number}</p>
             <img src={aplique.img} className="w-100  h-auto  p-3" alt='foto do aplique'/>
             <p>Quantidade: {aplique.quantidade}</p>
-            <button className="btnBack btnDel" onClick={deleteAplic}>
+            <button className="btnPadrao" onClick={deleteAplic}>
               Deletar
             </button>
           </div>
@@ -132,8 +132,8 @@ export const ApliquesEdit = () => {
                 </select> 
 
               </div>
-              <button className="btnAtu btnBack" type="submit" >
-                atualizar
+              <button className="btnPadrao" type="submit" >
+                Atualizar
               </button>   
             </form>
           </div>

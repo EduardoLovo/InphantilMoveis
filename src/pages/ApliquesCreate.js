@@ -83,7 +83,7 @@ export const ApliquesCreate = () => {
           </select> 
 
         </div>
-        <button className="btnAtu btnBack" type="submit" >
+        <button className="btnPadrao" type="submit" >
           Adicionar
         </button>   
       </form>
