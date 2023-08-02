@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-import '../style/style.css'
+import '../Style/style.css'
 
 export const CalculadoraParaLencois = () => {
 

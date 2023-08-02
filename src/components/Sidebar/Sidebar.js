@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Logo from '../../img/LogoCir.png'
 import { Link, useNavigate } from 'react-router-dom';
 import './Sidebar.css';
-import '../../style/style.css';
+import '../../Style/style.css';
 import { JwtHandler } from '../../jwt_handler/jwt_handler';
 
 const Sidebar = () => {
