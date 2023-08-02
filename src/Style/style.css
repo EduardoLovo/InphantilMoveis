@@ -117,6 +117,11 @@
     .btn-group{
         transform: scale(0.8);
     }
+
+    .container .col {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /* Edit aplique */
