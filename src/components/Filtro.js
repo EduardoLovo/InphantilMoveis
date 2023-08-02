@@ -31,7 +31,7 @@ export const Filtro = (props) => {
             {texto === '' ? '' :
             <div className='container'>
                 {filtrado.map((aplique, index) => (
-                <div className="col alingListCards" key={index}>
+                <div className="col " key={index}>
                     <div className="card">
                         <img src={aplique.img} className="card-img-top" alt="..."/>
                         <div className={aplique.estoque === "Nao" ? "card-body text-danger" : "card-body text-success"}>
@@ -43,11 +43,10 @@ export const Filtro = (props) => {
                             type="button" 
                             className="btn btn-outline-warning"
                             onClick={() => {
-                                navigate(`/aplique/${aplique._id}`);
+                                navigate(`/editar-aplique/${aplique._id}`);
                             }}>
                                 Editar
                             </button>
-                    
                             </p>
                         </div>
                     </div>
