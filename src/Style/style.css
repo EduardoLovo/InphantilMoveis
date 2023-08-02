@@ -1,99 +1,143 @@
-.container{
-  padding-top: 10vh;
-}
-/* Botao 'voltar' ================================================*/
-.divBtnBack {
-    width: 90%;
-    text-align: left;
-    margin-top: 1rem;
-  }
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
-.btnBack{
-    width: 5rem;
-    height: 2rem;
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0.35);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(13.5px);
-    -webkit-backdrop-filter: blur(13.5px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    transition: 0.3s ease-in
+
+/* Btn Padrap */
+.btnPadrao {
+    border-color: rgba(255, 255, 135, 1);
+    padding: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgba(255, 255, 135, 1);
+    transition: all .3s;
+}
+.btnPadrao:hover {
+    background-color: rgba(255, 255, 135, 1);
+    color: rgba(71, 71, 71, 1);
 }
 
-.btnBack:hover {
-    background: rgba(61, 57, 57, 0.452);
-  }
-/* ================================================================ */
-
-/* .btnBack {
-    width: 7rem;
-    height: 3rem;
-
-  } */
-
-
-/* .divBtnBack {
-    margin:  0;
+/* Login */
+.formLogin {
+    height: 80vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-  } */
-
-.glass {
-  cursor: pointer;
-  background: rgba(61, 61, 61, 0.801);
-  border-radius: 3px;
+    align-items: center;
+}
+.formLogin label {
+	color: rgba(255, 255, 135, 1);
 }
 
-.cardMargin {
-  margin: 10px;
+/* Home */
+.contentHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+.contentHome img {
+    width: 20rem;
+    height: 20rem;
+}
+
+.card {
+    width: 15rem;
+    margin: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
 
 .display {
-  display: none;
+    display: none;
 }
 
-.cursor:hover{
-  cursor: pointer;
-  color: rgb(34, 221, 159);
+/* Card */
+.card-background {
+    background-color: rgba(71, 71, 71, 1);
+    color: rgba(255, 255, 135, 1);
+    width: 100%;
+    height: 100;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.menu-lecol {
-  margin: 1rem;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: rgb(34, 34, 34);
-  text-decoration-line:  underline;
-  cursor: pointer;
-  padding: .5rem .8rem;
-  background-color: rgba(0, 0, 0, 0.288);
-  border-radius: 5px;
+.card-body button {
+    margin-left: 2rem ;
 }
 
-.glass2 {
-  cursor: pointer;
-  background: rgba(44, 44, 44, 0.87);
-  width: 80vw;
-  margin: 0 auto;
-  color: #fff;
-  border-radius: 5px;
-  
+/* HR */
+.hr {
+    border-top: 2px solid rgba(255, 255, 135, 1);
+    width: 80vw;
+    margin: 0 auto;
 }
 
-.contenerTecido {
-  margin-bottom: 5rem;
+.text-amarelo {
+    color: rgba(255, 255, 135, 1);
 }
 
-.contenerTecido h2 {
-  font-size: 3rem;
-  
+/* Info */
+.contentInfo {
+    background-color: rgba(255, 255, 255, 0.562);
 }
 
-.glassYellow {
-  background: rgb(205,180,0);
-  background: linear-gradient(90deg, rgba(205,180,0,1) 0%, rgba(198,198,18,0.8841911764705882) 47%, rgba(0,212,255,0) 100%);
-  padding: .5rem;
-  border-radius: 5px;
-  margin-bottom: 1rem;
+.contentInfo img {
+    width: 15rem;
+}
+
+.contentInfo:first-child {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.infochild {
+    margin: 2rem;
+}
+
+@media screen and (max-width: 568px) {
+    .infochild {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .youtubeVideo {
+        width: 100%;
+        height: 250px;
+        margin: 0 auto;
+    } 
+
+    .btn-group{
+        transform: scale(0.8);
+    }
+}
+
+/* Edit aplique */
+.containerEdit {
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Btn Lençois */
+.menuLencol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-group {
+    padding: 2rem;
+}
+
+.btn-group button {    
+    height: 3rem;
 }
