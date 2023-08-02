@@ -40,6 +40,7 @@ const Sidebar = () => {
           {isLogged === false ? 
           <div>
             <span ><Link to='/info'>Informações</Link></span>
+            <span ><Link to='/catalogo'>Informações</Link></span>
             <span ><Link to='https://www.inphantil.com.br/' target='_blank'>Inphantil Site</Link></span>
             <span ><Link to='https://www.instagram.com/inphantil/' target='_blank'>Instagram</Link></span>
             <span ><Link to='https://api.whatsapp.com/send?phone=5561982388828' target='_blank'>WhatsApp</Link>  </span>
