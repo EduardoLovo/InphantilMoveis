@@ -32,23 +32,23 @@ export const CatalogoDeTecidos = () => {
       <div className='ms-2'>
           <p className='glassYellow'>
             <a href='./catalogo-junior'>Junior:</a>
-            <p>https://inphantil-moveis.vercel.app/tecidosjunior</p>
+            <p>https://inphantil-moveis.vercel.app/catalogo-junior</p>
           </p>
           <p className='glassYellow'>
             <a href='./catalogo-solteiro-solteirao'>Solteiro / Solteirão</a>
-            <p>https://inphantil-moveis.vercel.app/tecidosSolteiro</p>
+            <p>https://inphantil-moveis.vercel.app/catalogo-solteiro-solteirao</p>
           </p>
           <p className='glassYellow'>
             <a href='./catalogo-viuva'>Viuva</a>
-            <p>https://inphantil-moveis.vercel.app/tecidosViuva</p>
+            <p>https://inphantil-moveis.vercel.app/catalogo-viuva</p>
           </p>
           <p className='glassYellow'>
             <a href='./catalogo-casal'>Casal</a>
-            <p>https://inphantil-moveis.vercel.app/tecidosCasal</p>
+            <p>https://inphantil-moveis.vercel.app/catalogo-casal</p>
           </p>
           <p className='glassYellow'>
             <a href='./catalogo-bqk'>Demais tamanhos</a>
-            <p>https://inphantil-moveis.vercel.app/tecidosDemaisTamanhos</p>
+            <p>https://inphantil-moveis.vercel.app/catalogo-bqk</p>
           </p>
       </div>
     </div>
