@@ -35,11 +35,23 @@ const Sidebar = () => {
           Menu
         </button>
         {isDropdownOpen && (
+           
           <div className="dropdown-content">
+          {isLogged === false ? 
+          <div>
             <span ><Link to='/info'>Informações</Link></span>
             <span ><Link to='https://www.inphantil.com.br/' target='_blank'>Inphantil Site</Link></span>
             <span ><Link to='https://www.instagram.com/inphantil/' target='_blank'>Instagram</Link></span>
             <span ><Link to='https://api.whatsapp.com/send?phone=5561982388828' target='_blank'>WhatsApp</Link>  </span>
+          </div>
+          :
+          <div>
+            <span><Link to='/apliques-estoque'>Apliques Estoque</Link></span>
+            <span><Link to='/calculadora-para-lencois'>Calculadora para Lençois</Link></span>
+            <span><Link to='/calculadora-60-40'>Calculadora 60 / 40</Link></span>
+          </div>
+          }
+            
           </div>
         )}
         </div>
