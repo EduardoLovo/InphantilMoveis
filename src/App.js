@@ -63,6 +63,7 @@ function App() {
           <Route path="/catalogo-lencol-pronta-entrega" element={<CatalogoLencolPE />} />
           <Route path="/info" element={<Info />} />
 
+          
           <Route
           path="/apliques-para-cortar"
           element={

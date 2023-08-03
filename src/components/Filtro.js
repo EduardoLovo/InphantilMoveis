@@ -7,6 +7,9 @@ export const Filtro = (props) => {
     const navigate = useNavigate()
     const [filtrado, setFiltrado] = useState([]);
     const texto = props.texto
+
+    const type = localStorage.getItem("user");
+
     useEffect(() => {
         const results = apliques.filter((resp) =>
           resp.number.toLowerCase().includes(texto)
@@ -38,15 +41,19 @@ export const Filtro = (props) => {
                         <h5 className="card-title">{aplique.number} </h5>
                         <p className="card-text">
                             Estoque = {aplique.quantidade}
-                            
+                            {type === 'adm' ? 
                             <button
                             type="button" 
-                            className="btn btn-outline-warning"
+                            className="btn btn-outline-warning "
                             onClick={() => {
-                                navigate(`/editar-aplique/${aplique._id}`);
-                            }}>
-                                Editar
+                            navigate(`/editar-aplique/${aplique._id}`);
+                            }}
+                            >
+                            Editar
                             </button>
+                            :
+                            ''
+                            }
                             </p>
                         </div>
                     </div>

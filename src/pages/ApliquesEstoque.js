@@ -4,6 +4,8 @@ import { Api } from "../Api/Api";
 import { Filtro } from "../components/Filtro";
 
 export const ApliquesEstoque = () => {
+  const type = localStorage.getItem("user");
+
     const [apliques, setApliques] = useState([]);
     const [texto, setTexto] = useState("");
 
@@ -58,15 +60,19 @@ export const ApliquesEstoque = () => {
                     <h5 className="card-title">{aplique.number} </h5>
                     <p className="card-text ">
                         Estoque: {aplique.quantidade}
+                        {type === 'adm' ? 
                         <button
-                            type="button" 
-                            className="btn btn-outline-warning "
-                            onClick={() => {
-                            navigate(`/editar-aplique/${aplique._id}`);
-                            }}
+                        type="button" 
+                        className="btn btn-outline-warning "
+                        onClick={() => {
+                          navigate(`/editar-aplique/${aplique._id}`);
+                        }}
                         >
                         Editar
                         </button>
+                        :
+                        ''
+                        }
                     </p>
                 </div>
                 </div>

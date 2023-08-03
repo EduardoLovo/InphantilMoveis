@@ -48,6 +48,7 @@ const Sidebar = () => {
           :
           <div>
             <span><Link to='/apliques-estoque'>Apliques Estoque</Link></span>
+            <span><Link to='/apliques-vendedoras'>Apliques Vendedoras</Link></span>
             <span><Link to='/calculadora-para-lencois'>Calculadora para Lençois</Link></span>
             <span><Link to='/calculadora-60-40'>Calculadora 60 / 40</Link></span>
           </div>
@@ -76,6 +77,7 @@ const Sidebar = () => {
           <Link to='/catalogo-cliente'>Apliques</Link>
           <Link to='/catalogo'>Catalogo</Link>
           <Link to='/catalogo-lencol-pronta-entrega'>Catalogo Lencol Pronto Entrega</Link>
+          <Link to='/apliques-estoque'>Apliques Estoque</Link>
           {type === 'adm' ?  
             <div>
               <Link to='/apliques-para-comprar'>Apliques para Comprar</Link>
