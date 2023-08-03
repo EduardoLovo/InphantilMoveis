@@ -74,7 +74,7 @@ const Sidebar = () => {
         <div className="sidebar-items">
           <Link to='/'>Home</Link>
           <Link to='/info'>Informações</Link>  
-          <Link to='/catalogo-cliente'>Apliques</Link>
+          <Link to='/catalogo-cliente'>Apliques Clientes</Link>
           <Link to='/catalogo'>Catalogo</Link>
           <Link to='/catalogo-lencol-pronta-entrega'>Catalogo Lencol Pronto Entrega</Link>
           <Link to='/apliques-estoque'>Apliques Estoque</Link>
