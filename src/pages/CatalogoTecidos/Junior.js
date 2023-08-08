@@ -120,9 +120,6 @@ export const TecidosJunior = () => {
             <button onClick={comecar}>Começar / Refazer</button>
         </div>
 
-        
-       
-
         {imagemInicial}
 
         <hr className='hr'/>

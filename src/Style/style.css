@@ -40,7 +40,7 @@
 }
 
 .card {
-    width: 15rem;
+    width: 12rem;
     margin: 10px;
 }
 
@@ -125,6 +125,9 @@
     }
     .container .col .card  {
         width: 20rem;
+    }
+    .card {
+        width: 15rem;
     }
 }
 

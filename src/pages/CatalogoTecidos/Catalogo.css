@@ -4,13 +4,12 @@
 
 .backgroundTransparente{
     background-color: rgba(41, 41, 41, 0.822);
-    /* width: 82%; */
 }
 
 
 
 .imagemFinal {   
-    padding: 2rem ;
+    padding: 1rem 0;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -23,30 +22,35 @@
     align-items: center;
     flex-direction: column;
     background-color: rgba(41, 41, 41, 0.822);
-    padding: 1rem;
+    /* padding: 1rem; */
     color: #fff;
     width: 100%;
 }
 
-.buttonCaatalogo p {
-    font-weight: 600;
-    font-size: large;
-    
+
+
+.fixed {
+    position: fixed;
+    z-index: 999;
+    width: 85vw;
 }
 
-.buttonCaatalogo button {
-    padding: 2rem;
-    border-radius: 5px;
-    border-color: rgba(255, 255, 135, 1);
-    background-color: rgba(255, 255, 135, 0.733);
-    font-weight: 500;
-    margin-bottom: 1rem;
-    transition: all .3s;
-
+.marginDesktop {
+    /* position: relative; */
+    /* margin-top: 30vw; */
+    margin-top: 21rem;
 }
 
-.buttonCaatalogo button:hover {
-    background-color:  rgba(255, 255, 135, 1);
+.btnFixado {
+    position: fixed;
+    z-index: 999;
+    top: 200px;
+    left: 16vw;
+    background-color: rgba(41, 41, 41, 0.822);
+    color: rgba(255, 255, 135, 1);
+    border: none;
+    border-radius: 3px;
+    padding: 1rem;
 }
 
 
@@ -64,5 +68,18 @@
     .imagemFinal {   
         transform: rotate(90deg);
     }
+    .fixed{
+        position: static;
+        width: 100vw;
+        text-align: center;
+    }
+    
+
+    .btnFixado {  
+        top: 70px;
+        left: 10px;
+        
+        padding: 1rem;
+        }
 }
 
