@@ -25,6 +25,7 @@ import { ApliquesCreate } from "./pages/ApliquesCreate";
 import { CatalogoLencolPE } from "./pages/CatalogoLencolPE/CatalogoLencolPE";
 import { LencolCreate } from "./pages/CatalogoLencolPE/LencolCreate";
 import { LencolEdit } from "./pages/CatalogoLencolPE/LencolEdit";
+import { ApliquesParaCabana } from "./pages/ApliquesParaCabana";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -61,6 +62,7 @@ function App() {
           <Route path="/catalogo-casal" element={<TecidosCasal />} />
           <Route path="/catalogo-bqk" element={<TecidosBQK />} />
           <Route path="/catalogo-lencol-pronta-entrega" element={<CatalogoLencolPE />} />
+          <Route path="/catalogo-apliques-para-cabana" element={<ApliquesParaCabana />} />
           <Route path="/info" element={<Info />} />
 
           
