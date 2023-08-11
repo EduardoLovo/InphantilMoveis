@@ -45,7 +45,7 @@ export const ApliquesEdit = () => {
     if (response.status === 200) {
       // Product updated successfully
       toast.success("Atualizado com Sucesso!")
-      navigate("/apliques-adm");
+      navigate("/apliques-estoque");
     
 
     } else {
