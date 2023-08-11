@@ -32,7 +32,7 @@ export const ApliquesCreate = () => {
     if (response.status === 200) {
       // Product created successfully
       toast.success("Aplique adicionada com sucesso!")
-      navigate("/apliques");
+      navigate("/apliques-estoque");
     } else {
       // Error
       toast.error("Erro ao adicionar Aplique!")

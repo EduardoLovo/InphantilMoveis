@@ -65,7 +65,7 @@ export const ApliquesEdit = () => {
     if (response.status === 200) {
       // Product updated successfully
       toast.success("Deletado com Sucesso!")
-      navigate("/apliques");
+      navigate("/apliques-estoque");
     } else {
       // Error
       toast.error("Erro ao deletar!")
