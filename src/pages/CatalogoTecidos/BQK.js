@@ -5,15 +5,11 @@ import './Catalogo.css'
 import { Api } from '../../Api/Api';
 
 export const TecidosBQK = () => {
-
     const [aplique, setAplique]= useState('')
     const [cor, setCor] = useState('')
-
     const [tecidos, setTecidos] = useState([]);
     const [apliques, setApliques] = useState([]);
-
     const [resultado, setResultado] = useState('')
-
     const [click, setClick] = useState('3')
     
     const loadData = async () => {
@@ -38,9 +34,7 @@ export const TecidosBQK = () => {
 
     const primeiroClick = (e) => {
         e.preventDefault();
-
         const imga = e.target.src
-
         setClick('1')
         setCor(
             <img className='imagem1' src={imga} id="one" name="fav_language" value='aaaa' alt='...'></img>
@@ -55,7 +49,6 @@ export const TecidosBQK = () => {
         if(window.screen.width < 700){
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-
     }
 
     const escolherTecido = () => {
@@ -64,10 +57,8 @@ export const TecidosBQK = () => {
 
     tecidos.sort(compare)
 
-    console.log(window.screen.width);
   return (
     <div >
-        
         <div className='fixed'>
             <div className='buttonCaatalogo '>
                 <p>Escolha a cor clicando em cima da cor e depois escolha o aplique clicando no aplique.</p>
@@ -76,16 +67,12 @@ export const TecidosBQK = () => {
             <hr className='hr'/>
             {resultado === '' ? '' : 
             <div className='backgroundTransparente' >
-                {/* <div className='d-flex justify-content-center align-items-center '> */}
                 <div className='imagemFinal' > 
                     {cor}{aplique}{cor} 
                 </div>
-                {/* </div> */}
-                
             </div>
             }
         </div>
-
         {click === '3' ? 
         <div className='container'>
         {tecidos.map((tecido, index) => (
@@ -104,7 +91,6 @@ export const TecidosBQK = () => {
             </div>
             ))}    
         </div>
-        
         :
         <div  >
             <div className="container">
@@ -128,4 +114,4 @@ export const TecidosBQK = () => {
         }            
     </div>
   )
-}
+};
