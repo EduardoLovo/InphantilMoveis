@@ -87,6 +87,7 @@ const Sidebar = () => {
               <Link to='/apliques-para-cortar'>Apliques para Cortar</Link>
               <Link to='/apliques-estoque'>Apliques Estoque</Link>
               <Link to='/apliques-create'>Adicionar Aplique</Link>
+              <Link to='/tecidos'>Tecidos</Link>
             </div>: ''
           }
           <Link to='/calculadora-para-lencois'>Calculadora para Lençois</Link>

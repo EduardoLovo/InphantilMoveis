@@ -33,8 +33,8 @@ export const TecidosParaLencol = () => {
     <div className="">
       
       {type === "adm" ? 
-      <div>
-        <button onClick={()=>{navigate("/addtecidos")}}>Adicionar novo Tecido</button>
+      <div className='p-3'>
+        <button onClick={()=>{navigate("/tecidos-create")}} className=" btnPadrao">Adicionar novo Tecido</button>
       </div> 
       :
        ''}
@@ -57,7 +57,7 @@ export const TecidosParaLencol = () => {
                             type="button" 
                             className="btn btn-outline-warning "
                             onClick={() => {
-                              navigate(`/tecidos/${tecido._id}`);
+                              navigate(`/tecido-edit/${tecido._id}`);
                             }}
                           >
                             Editar
@@ -91,7 +91,7 @@ export const TecidosParaLencol = () => {
                             type="button" 
                             className="btn btn-outline-warning "
                             onClick={() => {
-                              navigate(`/tecidos/${tecido._id}`);
+                              navigate(`/tecido-edit/${tecido._id}`);
                             }}
                           >
                             Editar
@@ -125,7 +125,7 @@ export const TecidosParaLencol = () => {
                             type="button" 
                             className="btn btn-outline-warning "
                             onClick={() => {
-                              navigate(`/tecidos/${tecido._id}`);
+                              navigate(`/tecido-edit/${tecido._id}`);
                             }}
                           >
                             Editar
@@ -159,7 +159,7 @@ export const TecidosParaLencol = () => {
                             type="button" 
                             className="btn btn-outline-warning "
                             onClick={() => {
-                              navigate(`/tecidos/${tecido._id}`);
+                              navigate(`/tecido-edit/${tecido._id}`);
                             }}
                           >
                             Editar
@@ -193,7 +193,7 @@ export const TecidosParaLencol = () => {
                             type="button" 
                             className="btn btn-outline-warning "
                             onClick={() => {
-                              navigate(`/tecidos/${tecido._id}`);
+                              navigate(`/tecido-edit/${tecido._id}`);
                             }}
                           >
                             Editar
@@ -226,7 +226,7 @@ export const TecidosParaLencol = () => {
                             type="button" 
                             className="btn btn-outline-warning "
                             onClick={() => {
-                              navigate(`/tecidos/${tecido._id}`);
+                              navigate(`/tecido-edit/${tecido._id}`);
                             }}
                           >
                             Editar

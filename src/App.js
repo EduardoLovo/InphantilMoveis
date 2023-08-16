@@ -26,6 +26,9 @@ import { CatalogoLencolPE } from "./pages/CatalogoLencolPE/CatalogoLencolPE";
 import { LencolCreate } from "./pages/CatalogoLencolPE/LencolCreate";
 import { LencolEdit } from "./pages/CatalogoLencolPE/LencolEdit";
 import { ApliquesParaCabana } from "./pages/ApliquesParaCabana";
+import { TecidosEdit } from "./pages/TecidosParaLencol/TecidosEdit";
+import { TecidosParaLencol } from "./pages/TecidosParaLencol/TecidosParaLencol";
+import { TecidosCreate } from "./pages/TecidosParaLencol/TecidosCreate";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -130,6 +133,30 @@ function App() {
           element={
             <PrivateRoute redirectTo="/">
               <LencolEdit />
+            </PrivateRoute>
+          }
+          />
+          <Route
+          path="/tecidos/"
+          element={
+            <PrivateRoute redirectTo="/">
+              <TecidosParaLencol />
+            </PrivateRoute>
+          }
+          />
+          <Route
+          path="/tecidos-create/"
+          element={
+            <PrivateRoute redirectTo="/">
+              <TecidosCreate />
+            </PrivateRoute>
+          }
+          />
+          <Route
+          path="/tecido-edit/:id/"
+          element={
+            <PrivateRoute redirectTo="/">
+              <TecidosEdit />
             </PrivateRoute>
           }
           />

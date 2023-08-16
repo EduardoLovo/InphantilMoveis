@@ -138,12 +138,12 @@ export const TecidosEdit = () => {
                     </select> 
                 </div>
   
-          <button className="btnAtu btnBack" type="submit" >
+          <button className=" btnPadrao" type="submit" >
             Atualizar
           </button>   
         </form>
         <div className='text-center m-4'>
-            <button className="btnBack btnDel" onClick={deleteAplic}>
+            <button className=" btnPadrao" onClick={deleteAplic}>
                 Deletar
             </button>
         </div>
