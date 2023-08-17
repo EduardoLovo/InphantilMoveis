@@ -33,6 +33,17 @@ export const TecidosCasal = () => {
         return 0;
       }
 
+      tecidos.sort(compare)
+
+
+    function compareApliques(a, b) {
+    if (a.number < b.number) return -1;
+    if (a.number > b.number) return 1;
+    return 0;
+    }
+    
+    apliques.sort(compareApliques)
+
     const primeiroClick = (e) => {
         e.preventDefault();
         const imga = e.target.src
@@ -56,7 +67,6 @@ export const TecidosCasal = () => {
         setClick('3')
     }
 
-    tecidos.sort(compare)
 
   return (
     <div >
