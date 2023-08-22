@@ -30,6 +30,13 @@ export const Api = {
   updateTecidoUrl: (id) => Api.baseUrl + "/lencolTecidos/updateOne/" + id,
   deleteTecidoUrl: (id) => Api.baseUrl + "/lencolTecidos/deleteOne/" + id,
 
+  // Rotas Materiais
+  readAllMaterialUrl: () => Api.baseUrl + "/material",
+  addMaterialUrl: () => Api.baseUrl + "/material/create",
+  readByIdMaterialUrl: (id) => Api.baseUrl + "/material/getById/" + id,
+  updateMaterialUrl: (id) => Api.baseUrl + "/material/updateOne/" + id,
+  deleteMaterialUrl: (id) => Api.baseUrl + "/material/deleteOne/" + id,
+
   // Auth Header
   authHeader: () => ({
     Authorization: "Bearer " + JwtHandler.getJwt(),

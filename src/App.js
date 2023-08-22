@@ -29,6 +29,11 @@ import { ApliquesParaCabana } from "./pages/ApliquesParaCabana";
 import { TecidosEdit } from "./pages/TecidosParaLencol/TecidosEdit";
 import { TecidosParaLencol } from "./pages/TecidosParaLencol/TecidosParaLencol";
 import { TecidosCreate } from "./pages/TecidosParaLencol/TecidosCreate";
+import { MaterialEstoque } from "./pages/Materiais/MaterialEstoque";
+import { MaterialEdit } from "./pages/Materiais/MaterialEdit";
+import { Teste } from "./pages/Teste";
+import { MaterialCatalogo } from "./pages/Materiais/MaterialCatalogo";
+import { MaterialCreate } from "./pages/Materiais/MaterialCreate";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -67,6 +72,7 @@ function App() {
           <Route path="/catalogo-lencol-pronta-entrega" element={<CatalogoLencolPE />} />
           <Route path="/catalogo-apliques-para-cabana" element={<ApliquesParaCabana />} />
           <Route path="/info" element={<Info />} />
+          <Route path="/teste" element={<Teste />} />
 
           
           <Route
@@ -157,6 +163,38 @@ function App() {
           element={
             <PrivateRoute redirectTo="/">
               <TecidosEdit />
+            </PrivateRoute>
+          }
+          />
+          <Route
+          path="/material-estoque/"
+          element={
+            <PrivateRoute redirectTo="/">
+              <MaterialEstoque />
+            </PrivateRoute>
+          }
+          />
+          <Route
+          path="/material-catalogo/"
+          element={
+            <PrivateRoute redirectTo="/">
+              <MaterialCatalogo />
+            </PrivateRoute>
+          }
+          />
+          <Route
+          path="/material-create/"
+          element={
+            <PrivateRoute redirectTo="/">
+              <MaterialCreate />
+            </PrivateRoute>
+          }
+          />
+          <Route
+          path="/material-edit/:id/"
+          element={
+            <PrivateRoute redirectTo="/">
+              <MaterialEdit />
             </PrivateRoute>
           }
           />

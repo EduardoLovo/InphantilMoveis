@@ -88,6 +88,8 @@ const Sidebar = () => {
               <Link to='/apliques-estoque'>Apliques Estoque</Link>
               <Link to='/apliques-create'>Adicionar Aplique</Link>
               <Link to='/tecidos'>Tecidos</Link>
+              <Link to='/material-catalogo'>Material catalogo</Link>
+              <Link to='/material-estoque'>Material Estoque</Link>
             </div>: ''
           }
           <Link to='/calculadora-para-lencois'>Calculadora para Lençois</Link>
