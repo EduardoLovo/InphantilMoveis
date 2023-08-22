@@ -36,9 +36,10 @@
 }
 
 .marginDesktop {
-    /* position: relative; */
-    /* margin-top: 30vw; */
+    
     margin-top: 21rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .btnFixado {

@@ -67,8 +67,19 @@ export const MaterialCreate = () => {
         <label>Cor: </label>
         <div className="input-group mb-3 w-50">
           <select id="cor" name="cor" className="form-control"  placeholder="Cor">
+            <option></option>
+            <option>Amarelo</option>
+            <option>Azul</option>
+            <option>Bege</option>
+            <option>Branco</option>
+            <option>Cinza</option>
+            <option>Laranja</option>
+            <option>Lilas</option>
+            <option>Mostarda</option>
+            <option>Preto</option>
             <option>Rosa</option>
-            <option>Nao</option>
+            <option>Vermelho</option>
+            <option>Verde</option>
           </select> 
         </div>
 

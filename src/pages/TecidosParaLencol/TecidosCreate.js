@@ -70,6 +70,7 @@ export const TecidosCreate = () => {
                   <select id="cor" name="cor" className="form-control"  placeholder="cor">
                   <option ></option>
                   <option>Azul</option>
+                  <option>Azul AZ3</option>
                   <option>Bege</option>
                   <option>Branco</option>
                   <option>Cinza</option>
