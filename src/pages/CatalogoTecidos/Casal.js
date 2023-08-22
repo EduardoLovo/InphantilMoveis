@@ -88,20 +88,17 @@ export const TecidosCasal = () => {
         <div className='container'>
             <div  className={window.screen.width > 700 ? ' marginDesktop' : 'marginmobile'}>
                 {tecidos.map((tecido, index) => (
-                    <div>
-                        <div className={tecido.estoque === "Nao" ? 'display' : ''} key={index} >
-                        {tecido.tamanho === 'Casal' ? 
-                        <div className="card border-dark mb-3">
-                            <img src={tecido.img} className="card-img-top" alt="..." onClick={primeiroClick}/>
-                            <div className="card-body text-success">
-                            <p>Cor: {tecido.cor}</p>
-                            </div>
+                    <div className={tecido.estoque === "Nao" ? 'display' : ''} key={index} >
+                    {tecido.tamanho === 'Casal' ? 
+                    <div className="card border-dark mb-3">
+                        <img src={tecido.img} className="card-img-top" alt="..." onClick={primeiroClick}/>
+                        <div className="card-body text-success">
+                        <p>Cor: {tecido.cor}</p>
                         </div>
-                        :''}
-                        </div>
-                        
                     </div>
-                    ))}    
+                    :''}
+                    </div>                    
+                ))}    
             </div>
         </div>
         :

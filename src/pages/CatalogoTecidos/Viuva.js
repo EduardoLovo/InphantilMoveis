@@ -86,9 +86,9 @@ export const TecidosViuva = () => {
         </div>
         {click === '3' ? 
         <div className='container'>
-            <div>
+            <div className={window.screen.width > 700 ? ' marginDesktop' : 'marginmobile'}>
                 {tecidos.map((tecido, index) => (
-                    <div className={window.screen.width > 700 ? ' marginDesktop' : 'marginmobile'}>
+                    <div>
                         <div className={tecido.estoque === "Nao" ? 'display' : ''} key={index} >
                         {tecido.tamanho === 'Viuva - GG' ? 
                         <div className="card border-dark mb-3">

@@ -87,7 +87,6 @@ export const TecidosSolteiro = () => {
         <div className='container'>
             <div className={window.screen.width > 700 ? ' marginDesktop' : 'marginmobile'}>
                 {tecidos.map((tecido, index) => (
-                    <div >
                         <div className={tecido.estoque === "Nao" ? 'display' : ''} key={index} >
                         {tecido.tamanho === 'Solteiro / Solteirão - G' ? 
                         <div className="card border-dark mb-3">
@@ -97,9 +96,7 @@ export const TecidosSolteiro = () => {
                             </div>
                         </div>
                         :''}
-                        </div>
-                        
-                    </div>
+                        </div>                    
                 ))}    
             </div>
         </div>
