@@ -45,7 +45,7 @@ export const ApliquesEdit = () => {
     if (response.status === 200) {
       // Product updated successfully
       toast.success("Atualizado com Sucesso!")
-      navigate("/material-estoque");
+      navigate("/apliques-estoque");
     
 
     } else {
@@ -65,7 +65,7 @@ export const ApliquesEdit = () => {
     if (response.status === 200) {
       // Product updated successfully
       toast.success("Deletado com Sucesso!")
-      navigate("/material-estoque");
+      navigate("/apliques-estoque");
     } else {
       // Error
       toast.error("Erro ao deletar!")
