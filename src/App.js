@@ -73,6 +73,7 @@ function App() {
           <Route path="/catalogo-apliques-para-cabana" element={<ApliquesParaCabana />} />
           <Route path="/info" element={<Info />} />
           <Route path="/teste" element={<Teste />} />
+          <Route path="/material-catalogo" element={<MaterialCatalogo />} />
 
           
           <Route
@@ -174,14 +175,14 @@ function App() {
             </PrivateRoute>
           }
           />
-          <Route
+          {/* <Route
           path="/material-catalogo/"
           element={
             <PrivateRoute redirectTo="/">
               <MaterialCatalogo />
             </PrivateRoute>
           }
-          />
+          /> */}
           <Route
           path="/material-create/"
           element={

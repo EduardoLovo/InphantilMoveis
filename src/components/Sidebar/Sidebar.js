@@ -80,6 +80,7 @@ const Sidebar = () => {
           <Link to='/catalogo-lencol-pronta-entrega'>Catalogo Lencol Pronto Entrega</Link>
           <Link to='/apliques-estoque'>Apliques Estoque</Link>
           <Link to='/catalogo-apliques-para-cabana'>Apliques Para Cabana</Link>
+          <Link to='/material-catalogo'>Material catalogo</Link>
 
           {type === 'adm' ?  
             <div>
@@ -88,7 +89,7 @@ const Sidebar = () => {
               <Link to='/apliques-estoque'>Apliques Estoque</Link>
               <Link to='/apliques-create'>Adicionar Aplique</Link>
               <Link to='/tecidos'>Tecidos</Link>
-              <Link to='/material-catalogo'>Material catalogo</Link>
+              
               <Link to='/material-estoque'>Material Estoque</Link>
             </div>: ''
           }
