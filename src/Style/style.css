@@ -169,6 +169,25 @@
     font-size: large;
 }
 
+.estoqueMaterial {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.estoqueMaterial .card {
+    background-color: #000000;
+}
+.estoqueMaterial .card p {
+    color: #fff;
+    padding: 15px 0 0 15px;
+}
+
+.btnCinza {
+    border-radius: 5px;
+    margin: .5rem;
+    padding: .3rem
+}
+
 @media screen and (max-width: 568px) {
     .infochild {
         display: flex;

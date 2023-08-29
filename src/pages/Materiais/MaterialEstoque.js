@@ -19,21 +19,20 @@ export const MaterialEstoque = () => {
 
   return (
     <div>
-        <Link to='/material-create'><button>Adicionar novo material</button></Link>
-
-        {materiais.map((material, id) => (
-            <div key={id} className='card'>
-                
-                <img src={material.img} alt='imagem do material'/>
-                
-                <div>
-                    <p>{material.codigo}</p>
-                    <Link to={`/material-edit/${material._id}/`} teste='testea'>
-                        <button className='m-1 p-1' >Editar</button>
-                    </Link>
+        <Link to='/material-create' ><button className='btnCinza'>Adicionar novo material</button></Link>
+        <div className='estoqueMaterial'>
+            {materiais.map((material, id) => (
+                <div key={id} className='card '>
+                    <img src={material.img} alt='imagem do material'/>
+                    <div>
+                        <p>{material.codigo}</p>
+                        <Link to={`/material-edit/${material._id}/`} teste='testea'>
+                            <button className='m-1 p-1 btnPadrao' >Editar</button>
+                        </Link>
+                    </div>
                 </div>
-            </div>
-        ))}
+            ))}
+        </div>
     </div>
   )
 }
