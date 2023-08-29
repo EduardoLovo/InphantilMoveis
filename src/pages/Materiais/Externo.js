@@ -1,10 +1,9 @@
 import React from 'react'
 import { Api } from '../../Api/Api';
-import { useEffect } from 'react';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
-export const Rosa = () => {
-
+export const Externo = () => {
     const [materiais, setMateriais] = useState([]);
 
     const loadData = async () => {
@@ -16,21 +15,21 @@ export const Rosa = () => {
     useEffect(() => {
         loadData();
     }, []);
-
+  
     function compare(a, b) {
         if (a.codigo < b.codigo) return -1;
         if (a.codigo > b.codigo) return 1;
         return 0;
       }
       materiais.sort(compare);
-
+  
   return (
     <div className='coresLista'>
         {materiais.map((material, index) => (
-            <div key={index} className={material.cor === 'Rosa' ? 'cardMaterial' : 'display'}>
+            <div key={index} className={material.cor === 'Externo' ? 'cardMaterial' : 'display'}>
                 {console.log(material.cor)}
                 <div>
-                    <img src={material.img} alt='imagem do material'/>
+                    <img src={material.img}  alt='imagem do material'/>
                 </div>
             </div>
         ))}

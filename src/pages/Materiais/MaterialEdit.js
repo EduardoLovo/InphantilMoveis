@@ -14,7 +14,6 @@ export const MaterialEdit = () => {
 
 
     const [material, setMaterial] = useState("");
-    const [rolo, setRolo] = useState([])
     
     const loadProduct = async () => {
     const response = await Api.buildApiGetRequest(Api.readByIdMaterialUrl(id), true);
@@ -50,7 +49,7 @@ export const MaterialEdit = () => {
           if (response.status === 200) {
             // Product updated successfully
             toast.success("Atualizado com Sucesso!")
-            navigate("/material");
+            navigate("/material-estoque");
       
           } else {
             // Error
@@ -118,8 +117,20 @@ export const MaterialEdit = () => {
             <label>Cor: </label>
             <div className="input-group mb-3 w-50">
             <select id="cor" name="cor" className="form-control"  placeholder="Cor">
-                <option>Rosa</option>
-                <option>Nao</option>
+              <option></option>
+              <option>Amarelo</option>
+              <option>Azul</option>
+              <option>Bege</option>
+              <option>Branco</option>
+              <option>Cinza</option>
+              <option>Laranja</option>
+              <option>Lilas</option>
+              <option>Mostarda</option>
+              <option>Preto</option>
+              <option>Rosa</option>
+              <option>Verde</option>
+              <option>Vermelho</option>
+              <option>Externo</option>
             </select> 
 
             </div>

@@ -78,8 +78,10 @@ export const MaterialCreate = () => {
             <option>Mostarda</option>
             <option>Preto</option>
             <option>Rosa</option>
-            <option>Vermelho</option>
+            <option>Tiffany</option>
             <option>Verde</option>
+            <option>Vermelho</option>
+            <option>Externo</option>
           </select> 
         </div>
 

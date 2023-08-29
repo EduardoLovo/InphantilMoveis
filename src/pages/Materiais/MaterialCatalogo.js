@@ -1,10 +1,20 @@
 import React from 'react'
-import { Api } from '../../Api/Api';
-import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
-import { Rosa } from './Rosa';
 import { JwtHandler } from '../../jwt_handler/jwt_handler';
+import { useState } from 'react';
+import {  useNavigate } from 'react-router-dom';
+import { Amarelo } from './Amarelo';
+import { Azul } from './Azul';
+import { Bege } from './Bege';
+import { Branco } from './Branco';
+import { Cinza } from './Cinza';
+import { Laranja } from './Laranja';
+import { Lilas } from './Lilas';
+import { Mostarda } from './Mostarda';
+import { Rosa } from './Rosa';
+import { Tiffany } from './Tiffany';
+import { Verde } from './Verde';
+import { Vermelho } from './Vermelho';
+import { Externo } from './Externo';
 
 export const MaterialCatalogo = () => {
   const navigate = useNavigate();
@@ -15,31 +25,51 @@ export const MaterialCatalogo = () => {
 
   const render = (e) => {
     const cor = e.target.id
-    console.log(cor);
-    if (cor === 'rosa') {
+    if (cor === 'amarelo') {
+      setMateriais(<Amarelo/>)
+    } else if (cor === 'azul') {
+      setMateriais(<Azul/>)
+    } else if (cor === 'bege') {
+      setMateriais(<Bege/>)
+    } else if (cor === 'branco') {
+      setMateriais(<Branco/>)
+    } else if (cor === 'cinza') {
+      setMateriais(<Cinza/>)
+    } else if (cor === 'laranja') {
+      setMateriais(<Laranja/>)
+    } else if (cor === 'lilas') {
+      setMateriais(<Lilas/>)
+    } else if (cor === 'mostarda') {
+      setMateriais(<Mostarda/>)
+    } else if (cor === 'rosa') {
       setMateriais(<Rosa/>)
-    } else if (cor === 'junior') {
-      setMateriais(<Rosa/>)
-    } else if (cor === 'solteiro') {
-      setMateriais(<Rosa/>)
-    } else if (cor === 'solteiroao') {
-      setMateriais(<Rosa/>)
-    } else if (cor === 'viuva') {
-      setMateriais(<Rosa/>)
-    } else if (cor === 'casal') {
-      setMateriais(<Rosa/>)
-    } else if (cor === 'queen') {
-      setMateriais(<Rosa/>)
+    } else if (cor === 'tiffany') {
+      setMateriais(<Tiffany/>)
+    } else if (cor === 'verde') {
+      setMateriais(<Verde/>)
+    } else if (cor === 'vermelho') {
+      setMateriais(<Vermelho/>)
+    } else if (cor === 'externo') {
+      setMateriais(<Externo/>)
     }
   }
 
   return (
     <div className="btn-toolbar  menuLencol" role="toolbar" aria-label="Toolbar with button groups">
-      <div className="btn-group me-2" role="group" aria-label="First group">
+      <div className="btn-group me-2 " role="group" aria-label="First group">
 
+        <button type="button" className="btn btn-secondary" id='amarelo' onClick={render}>Amarelo</button>
+        <button type="button" className="btn btn-secondary" id='azul' onClick={render}>Azul</button>
+        <button type="button" className="btn btn-secondary" id='bege' onClick={render}>Bege</button>
+        <button type="button" className="btn btn-secondary" id='branco' onClick={render}>Branco</button>
+        <button type="button" className="btn btn-secondary" id='laranja' onClick={render}>Laranja</button>
+        <button type="button" className="btn btn-secondary" id='lilas' onClick={render}>Lilas</button>
+        <button type="button" className="btn btn-secondary" id='mostarda' onClick={render}>Mostarda</button>
         <button type="button" className="btn btn-secondary" id='rosa' onClick={render}>Rosa</button>
-        <button type="button" className="btn btn-secondary" id='solteiro' onClick={render}>Rosa</button>
-        <button type="button" className="btn btn-secondary" id='solteiroao' onClick={render}>Rosa</button>
+        <button type="button" className="btn btn-secondary" id='tiffany' onClick={render}>Tiffany</button>
+        <button type="button" className="btn btn-secondary" id='verde' onClick={render}>Verde</button>
+        <button type="button" className="btn btn-secondary" id='vermelho' onClick={render}>Vermelho</button>
+        <button type="button" className="btn btn-secondary" id='externo' onClick={render}>Externo</button>
         
         {isLogged === true ? 
           <div>
