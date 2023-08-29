@@ -62,7 +62,7 @@ export const MaterialCatalogo = () => {
         <button type="button" className="btn btn-secondary" id='azul' onClick={render}>Azul</button>
         <button type="button" className="btn btn-secondary" id='bege' onClick={render}>Bege</button>
         <button type="button" className="btn btn-secondary" id='branco' onClick={render}>Branco</button>
-        <button type="button" className="btn btn-secondary" id='cinza' onClick={render}>cinza</button>
+        <button type="button" className="btn btn-secondary" id='cinza' onClick={render}>Cinza</button>
         <button type="button" className="btn btn-secondary" id='laranja' onClick={render}>Laranja</button>
         <button type="button" className="btn btn-secondary" id='lilas' onClick={render}>Lilas</button>
         <button type="button" className="btn btn-secondary" id='mostarda' onClick={render}>Mostarda</button>
