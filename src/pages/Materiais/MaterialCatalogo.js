@@ -22,7 +22,7 @@ export const MaterialCatalogo = () => {
   const [isLogged] = useState(JwtHandler.isJwtValid);
   const type = localStorage.getItem("user");
 
-  const [materiais, setMateriais] = useState([]);
+  const [materiais, setMateriais] = useState();
 
   const render = (e) => {
     const cor = e.target.id
@@ -88,7 +88,12 @@ export const MaterialCatalogo = () => {
           ''}
         </div>
       <div >
-        {materiais}
+        {materiais ? materiais : 
+        <div className='text-center'>
+          <h2>***MUITO IMPORTANTE***</h2>
+          <p className='fs-3'>O tom das cores pode alterar de aperelho para aparelho.</p>
+          <p className='fs-3'>Utilize o brilho da tela no máximo para visualizar mellhor.</p>
+        </div> }
       </div>
     </div>
   )
