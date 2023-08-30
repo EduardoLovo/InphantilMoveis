@@ -47,7 +47,7 @@ export const MontarCores = () => {
       }
   return (
     <div>
-        <h1>Montar cores</h1>
+        <h1 className='ms-5'>Montar cores</h1>
         {click === 'escolhaDois' ? 
         <div>
             <div className='displayResult'>
@@ -68,7 +68,7 @@ export const MontarCores = () => {
         ''}
         {click === '' ? 
         <div>
-            <h2>Externo</h2>
+            <h2 className='ms-5'>Externo</h2>
             <div className="coresLista">
                 {materiais.map((material, index) => (
                     <div key={index} className={material.cor === 'Externo' ? 'cardMaterial' : 'display'}>
@@ -83,7 +83,7 @@ export const MontarCores = () => {
         ''}
         {click === 'escolhaUm' ?
         <div>
-            <h2>Interno</h2>
+            <h2 className='ms-5'>Interno</h2>
             <div className="coresLista">
                 {materiais.map((material, index) => (
                     <div key={index} className={material.cor === 'Externo' ? 'display' : 'cardMaterial'}>
