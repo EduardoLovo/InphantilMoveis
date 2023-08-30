@@ -17,6 +17,13 @@ export const MaterialEstoque = () => {
         loadData();
     }, []);
 
+    function compare(a, b) {
+        if (a.codigo < b.codigo) return -1;
+        if (a.codigo > b.codigo) return 1;
+        return 0;
+      }
+      materiais.sort(compare);
+
   return (
     <div>
         <Link to='/material-create' ><button className='btnCinza'>Adicionar novo material</button></Link>

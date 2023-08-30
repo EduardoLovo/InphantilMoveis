@@ -80,7 +80,7 @@ const Sidebar = () => {
           <Link to='/catalogo-lencol-pronta-entrega'>Catalogo Lencol Pronto Entrega</Link>
           <Link to='/apliques-estoque'>Apliques Estoque</Link>
           <Link to='/catalogo-apliques-para-cabana'>Apliques Para Cabana</Link>
-          <Link to='/material-catalogo'>sMaterial catalogo</Link>
+          <Link to='/material-catalogo'>Material catalogo</Link>
 
           {type === 'adm' ?  
             <div>

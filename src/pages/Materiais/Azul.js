@@ -21,13 +21,14 @@ export const Azul = () => {
     }
     materiais.sort(compare);
 
+  
+
 return (
   <div className='coresLista'>
       {materiais.map((material, index) => (
           <div key={index} className={material.cor === 'Azul' ? 'cardMaterial' : 'display'}>
-              {console.log(material.cor)}
               <div>
-                  <img src={material.img} alt='imagem do material'/>
+                  <img src={material.img} alt='imagem do material' />
               </div>
           </div>
       ))}

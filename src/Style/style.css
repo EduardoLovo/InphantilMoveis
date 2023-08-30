@@ -188,6 +188,21 @@
     padding: .3rem
 }
 
+.resultMontagem {
+    width: 300px;
+    height: 300px;
+}
+
+.displayResult {
+    display: flex;
+}
+
+.displayResult p {
+    margin-left:10px ;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
 @media screen and (max-width: 568px) {
     .infochild {
         display: flex;
@@ -225,4 +240,10 @@
     .cardMaterial img {
         width:100px;
     }
+
+    .resultMontagem {
+        width: 120px;
+        height: 120px;
+    }
+    
 }

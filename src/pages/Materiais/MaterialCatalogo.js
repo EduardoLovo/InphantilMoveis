@@ -15,6 +15,7 @@ import { Tiffany } from './Tiffany';
 import { Verde } from './Verde';
 import { Vermelho } from './Vermelho';
 import { Externo } from './Externo';
+import { MontarCores } from './MontarCores';
 
 export const MaterialCatalogo = () => {
   const navigate = useNavigate();
@@ -51,6 +52,8 @@ export const MaterialCatalogo = () => {
       setMateriais(<Vermelho/>)
     } else if (cor === 'externo') {
       setMateriais(<Externo/>)
+    } else if (cor === 'montar') {
+      setMateriais(<MontarCores/>)
     }
   }
 
@@ -71,6 +74,7 @@ export const MaterialCatalogo = () => {
         <button type="button" className="btn btn-secondary" id='verde' onClick={render}>Verde</button>
         <button type="button" className="btn btn-secondary" id='vermelho' onClick={render}>Vermelho</button>
         <button type="button" className="btn btn-secondary" id='externo' onClick={render}>Externo</button>
+        <button type="button" className="btn btn-secondary" id='montar' onClick={render}>Montar</button>
         
         {isLogged === true ? 
           <div>
