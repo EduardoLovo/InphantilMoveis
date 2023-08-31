@@ -91,8 +91,8 @@ export const MaterialCatalogo = () => {
         {materiais ? materiais : 
         <div className='text-center'>
           <h2>***MUITO IMPORTANTE***</h2>
-          <p className='fs-3'>O tom das cores pode alterar de aperelho para aparelho.</p>
-          <p className='fs-3'>Utilize o brilho da tela no máximo para visualizar mellhor.</p>
+          <p className='fs-3'>O tom das cores pode alterar de aparelho para aparelho.</p>
+          <p className='fs-3'>Utilize o brilho da tela no máximo para visualizar o tom mais próximo possível do real.</p>
         </div> }
       </div>
     </div>
