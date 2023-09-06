@@ -108,6 +108,7 @@ export const MaterialEdit = () => {
             <label>Estoque: </label>
             <div className="input-group mb-3 w-50">
             <select id="estoque" name="estoque" className="form-control"  placeholder="Estoque">
+                <option>{material.estoque}</option>
                 <option>Sim</option>
                 <option>Nao</option>
             </select> 
@@ -117,7 +118,7 @@ export const MaterialEdit = () => {
             <label>Cor: </label>
             <div className="input-group mb-3 w-50">
             <select id="cor" name="cor" className="form-control"  placeholder="Cor">
-              <option></option>
+              <option>{material.cor}</option>
               <option>Amarelo</option>
               <option>Azul</option>
               <option>Bege</option>
