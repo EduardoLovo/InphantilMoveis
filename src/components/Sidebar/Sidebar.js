@@ -137,7 +137,7 @@ const Sidebar = () => {
           <p className='mt-4'>Estoque:</p>
           <Link to='/apliques-estoque'>Apliques</Link>
           <Link to='/tecidos'>Tecidos</Link>
-          <Link to='/material-estoque'>Materiais</Link>
+          <Link to='/material-estoque'>Cores para Cama</Link>
 
           <p className='mt-4'>catalogos:</p>
           <Link to='/catalogo'>Apliques % Lençois</Link>
@@ -152,10 +152,10 @@ const Sidebar = () => {
 
           <p className='mt-4'>Inphantil</p>
           <Link to='/info'>Informações</Link>  
-          <Link to='https://www.inphantil.com.br/' target='_blank'>Inphantil Site</Link>  
-          <Link to='https://www.instagram.com/inphantil/' target='_blank'>Instagram</Link>  
-          <Link to='https://api.whatsapp.com/send?phone=5561982388828' target='_blank'>WhatsApp</Link> 
-       </div>
+          <a href='https://www.inphantil.com.br/' rel="noreferrer" target='_blank'>Inphantil Site</a>  
+          <a href='https://www.instagram.com/inphantil/' rel="noreferrer" target='_blank'>Instagram</a>  
+          <a href='https://api.whatsapp.com/send?phone=5561982388828' rel="noreferrer" target='_blank'>WhatsApp</a> 
+        </div>
          :
          ''}
 
@@ -178,9 +178,9 @@ const Sidebar = () => {
 
           <p className='mt-4'>Inphantil</p>
           <Link to='/info'>Informações</Link>  
-          <Link to='https://www.inphantil.com.br/' target='_blank'>Inphantil Site</Link>  
-          <Link to='https://www.instagram.com/inphantil/' target='_blank'>Instagram</Link>  
-          <Link to='https://api.whatsapp.com/send?phone=5561982388828' target='_blank'>WhatsApp</Link> 
+          <a href='https://www.inphantil.com.br/' rel="noreferrer" target='_blank'>Inphantil Site</a>  
+          <a href='https://www.instagram.com/inphantil/' rel="noreferrer" target='_blank'>Instagram</a>  
+          <a href='https://api.whatsapp.com/send?phone=5561982388828' rel="noreferrer" target='_blank'>WhatsApp</a> 
        </div>
          :
          ''}
@@ -196,9 +196,9 @@ const Sidebar = () => {
         
           <p className='mt-4'>Inphantil</p>
           <Link to='/info'>Informações</Link>  
-          <Link to='https://www.inphantil.com.br/' target='_blank'>Inphantil Site</Link>  
-          <Link to='https://www.instagram.com/inphantil/' target='_blank'>Instagram</Link>  
-          <Link to='https://api.whatsapp.com/send?phone=5561982388828' target='_blank'>WhatsApp</Link> 
+          <a href='https://www.inphantil.com.br/' rel="noreferrer" target='_blank'>Inphantil Site</a>  
+          <a href='https://www.instagram.com/inphantil/' rel="noreferrer" target='_blank'>Instagram</a>  
+          <a href='https://api.whatsapp.com/send?phone=5561982388828' rel="noreferrer" target='_blank'>WhatsApp</a> 
         </div>
         :
         ''}
