@@ -13,6 +13,7 @@ const Sidebar = () => {
   const navigate = useNavigate()
 
   const type = localStorage.getItem("user");
+  console.log(type);
 
   const logout = () => {
     setIsLogged(JwtHandler.clearJwt());
@@ -35,25 +36,82 @@ const Sidebar = () => {
           Menu
         </button>
         {isDropdownOpen && (
-           
           <div className="dropdown-content">
-          {isLogged === false ? 
-          <div>
-            <span ><Link to='/info'>Informações</Link></span>
-            <span ><Link to='https://www.inphantil.com.br/' target='_blank'>Inphantil Site</Link></span>
-            <span ><Link to='https://www.instagram.com/inphantil/' target='_blank'>Instagram</Link></span>
-            <span ><Link to='https://api.whatsapp.com/send?phone=5561982388828' target='_blank'>WhatsApp</Link>  </span>
+          {isLogged === true  && type === 'adm' ? 
+         <div className="sidebar-items">
+          <p className='mt-4'>Adm:</p>
+          <Link to='/apliques-create'>Adicionar Aplique</Link>
+          <Link to='/apliques-para-comprar'>Apliques para Comprar</Link>
+          <Link to='/apliques-para-cortar'>Apliques para Cortar</Link>
 
-          </div>
-          :
-          <div>
-            <span><Link to='/apliques-estoque'>Apliques Estoque</Link></span>
-            <span><Link to='/apliques-vendedoras'>Apliques Vendedoras</Link></span>
-            <span><Link to='/catalogo-apliques-para-cabana'>Apliques Para Cabana</Link></span>
-            <span><Link to='/calculadora-para-lencois'>Calculadora para Lençois</Link></span>
-            <span><Link to='/calculadora-60-40'>Calculadora 60 / 40</Link></span>
-          </div>
-          }
+          <p className='mt-4'>Estoque:</p>
+          <Link to='/apliques-estoque'>Apliques</Link>
+          <Link to='/tecidos'>Tecidos</Link>
+          <Link to='/material-estoque'>Materiais</Link>
+
+          <p className='mt-4'>catalogos:</p>
+          <Link to='/catalogo'>Apliques & Lençois</Link>
+          <Link to='/catalogo-apliques-para-cabana'>Apliques Para Cabana</Link>
+          <Link to='/material-catalogo'>Cores para Cama</Link>
+          <Link to='/catalogo-lencol-pronta-entrega'>Lencois Pronto Entrega</Link>
+          <Link to='/catalogo-cliente'>Lista de Apliques</Link>
+
+          <p className='mt-4'>Calculadoras:</p>
+          <Link to='/calculadora-para-lencois'>Calculadora Sob Medida</Link>
+          <Link to='/calculadora-60-40'>Calculadora 60 / 40</Link>
+
+          <p className='mt-4'>Inphantil</p>
+          <Link to='/info'>Informações</Link>  
+          <Link to='https://www.inphantil.com.br/' target='_blank'>Inphantil Site</Link>  
+          <Link to='https://www.instagram.com/inphantil/' target='_blank'>Instagram</Link>  
+          <Link to='https://api.whatsapp.com/send?phone=5561982388828' target='_blank'>WhatsApp</Link> 
+       </div>
+         :
+         ''}
+
+        {isLogged === true  && type === 'vendedor' ? 
+         <div className="sidebar-items">
+          <p className='mt-4'>Calculadoras:</p>
+          <Link to='/calculadora-para-lencois'>Calculadora Sob Medida</Link>
+          <Link to='/calculadora-60-40'>Calculadora 60 / 40</Link>
+
+          <p className='mt-4'>Catalogos:</p>
+          <Link to='/catalogo'>Apliques & Lençois</Link>
+          <Link to='/catalogo-apliques-para-cabana'>Apliques Para Cabana</Link>
+          <Link to='/catalogo-lencol-pronta-entrega'>Lencois Pronto Entrega</Link>
+          <Link to='/catalogo-cliente'>Lista de Apliques</Link>
+          <Link to='/material-catalogo'>Cores para Cama</Link>
+          
+          <p className='mt-4'>Estoque:</p>
+          <Link to='/apliques-estoque'>Apliques</Link>
+          <Link to='/tecidos'>Tecidos</Link>
+
+          <p className='mt-4'>Inphantil</p>
+          <Link to='/info'>Informações</Link>  
+          <Link to='https://www.inphantil.com.br/' target='_blank'>Inphantil Site</Link>  
+          <Link to='https://www.instagram.com/inphantil/' target='_blank'>Instagram</Link>  
+          <Link to='https://api.whatsapp.com/send?phone=5561982388828' target='_blank'>WhatsApp</Link> 
+       </div>
+         :
+         ''}
+
+        {isLogged === false  ? 
+         <div className="sidebar-items">
+          <p className='mt-4'>Catalogos:</p>
+          <Link to='/catalogo'>Apliques & Lençois</Link>
+          <Link to='/catalogo-apliques-para-cabana'>Apliques Para Cabana</Link>
+          <Link to='/material-catalogo'>Cores para Cama</Link>
+          <Link to='/catalogo-lencol-pronta-entrega'>Lencois Pronto Entrega</Link>
+          <Link to='/catalogo-cliente'>Lista de Apliques</Link>
+        
+          <p className='mt-4'>Inphantil</p>
+          <Link to='/info'>Informações</Link>  
+          <Link to='https://www.inphantil.com.br/' target='_blank'>Inphantil Site</Link>  
+          <Link to='https://www.instagram.com/inphantil/' target='_blank'>Instagram</Link>  
+          <Link to='https://api.whatsapp.com/send?phone=5561982388828' target='_blank'>WhatsApp</Link> 
+        </div>
+        :
+        ''}
             
           </div>
         )}
@@ -63,48 +121,87 @@ const Sidebar = () => {
       <div className='sidebar'>
         <div className="sidebar-logo">
           <img src={Logo} alt='logo inphantil'/>
+          {isLogged===true? 
+            <button onClick={logout} className="btnPadrao m-2">
+            Logout
+          </button>: ''}
         </div>
-        {isLogged === false ? 
-        <div className="sidebar-items">
+
+        {isLogged === true  && type === 'adm' ? 
+         <div className="sidebar-items">
+          <p className='mt-4'>Adm:</p>
+          <Link to='/apliques-create'>Adicionar Aplique</Link>
+          <Link to='/apliques-para-comprar'>Apliques para Comprar</Link>
+          <Link to='/apliques-para-cortar'>Apliques para Cortar</Link>
+
+          <p className='mt-4'>Estoque:</p>
+          <Link to='/apliques-estoque'>Apliques</Link>
+          <Link to='/tecidos'>Tecidos</Link>
+          <Link to='/material-estoque'>Materiais</Link>
+
+          <p className='mt-4'>catalogos:</p>
+          <Link to='/catalogo'>Apliques % Lençois</Link>
+          <Link to='/catalogo-apliques-para-cabana'>Apliques Para Cabana</Link>
+          <Link to='/material-catalogo'>Cores para Cama</Link>
+          <Link to='/catalogo-lencol-pronta-entrega'>Lencois Pronto Entrega</Link>
+          <Link to='/catalogo-cliente'>Lista de Apliques</Link>
+
+          <p className='mt-4'>Calculadoras:</p>
+          <Link to='/calculadora-para-lencois'>Calculadora Sob Medida</Link>
+          <Link to='/calculadora-60-40'>Calculadora 60 / 40</Link>
+
+          <p className='mt-4'>Inphantil</p>
           <Link to='/info'>Informações</Link>  
           <Link to='https://www.inphantil.com.br/' target='_blank'>Inphantil Site</Link>  
           <Link to='https://www.instagram.com/inphantil/' target='_blank'>Instagram</Link>  
-          <Link to='https://api.whatsapp.com/send?phone=5561982388828' target='_blank'>WhatsApp</Link>  
-        </div>
-        : 
-        <div className="sidebar-items">
-          <Link to='/'>Home</Link>
-          <Link to='/info'>Informações</Link>  
-          <Link to='/catalogo-cliente'>Apliques Clientes</Link>
-          <Link to='/catalogo'>Catalogo</Link>
-          <Link to='/catalogo-lencol-pronta-entrega'>Catalogo Lencol Pronto Entrega</Link>
-          <Link to='/apliques-estoque'>Apliques Estoque</Link>
-          <Link to='/catalogo-apliques-para-cabana'>Apliques Para Cabana</Link>
-          <Link to='/material-catalogo'>Material catalogo</Link>
+          <Link to='https://api.whatsapp.com/send?phone=5561982388828' target='_blank'>WhatsApp</Link> 
+       </div>
+         :
+         ''}
 
-          {type === 'adm' ?  
-            <div>
-              <Link to='/apliques-para-comprar'>Apliques para Comprar</Link>
-              <Link to='/apliques-para-cortar'>Apliques para Cortar</Link>
-              <Link to='/apliques-estoque'>Apliques Estoque</Link>
-              <Link to='/apliques-create'>Adicionar Aplique</Link>
-              <Link to='/tecidos'>Tecidos</Link>
-              
-              <Link to='/material-estoque'>Material Estoque</Link>
-            </div>: ''
-          }
-          <Link to='/calculadora-para-lencois'>Calculadora para Lençois</Link>
+        {isLogged === true  && type === 'vendedor' ? 
+         <div className="sidebar-items">
+          <p className='mt-4'>Calculadoras:</p>
+          <Link to='/calculadora-para-lencois'>Calculadora Sob Medida</Link>
           <Link to='/calculadora-60-40'>Calculadora 60 / 40</Link>
+
+          <p className='mt-4'>Catalogos:</p>
+          <Link to='/catalogo'>Apliques % Lençois</Link>
+          <Link to='/catalogo-apliques-para-cabana'>Apliques Para Cabana</Link>
+          <Link to='/material-catalogo'>Cores para Cama</Link>
+          <Link to='/catalogo-lencol-pronta-entrega'>Lencois Pronto Entrega</Link>
+          <Link to='/catalogo-cliente'>Lista de Apliques</Link>
           
+          <p className='mt-4'>Estoque:</p>
+          <Link to='/apliques-estoque'>Apliques</Link>
+          <Link to='/tecidos'>Tecidos</Link>
+
+          <p className='mt-4'>Inphantil</p>
+          <Link to='/info'>Informações</Link>  
+          <Link to='https://www.inphantil.com.br/' target='_blank'>Inphantil Site</Link>  
+          <Link to='https://www.instagram.com/inphantil/' target='_blank'>Instagram</Link>  
+          <Link to='https://api.whatsapp.com/send?phone=5561982388828' target='_blank'>WhatsApp</Link> 
+       </div>
+         :
+         ''}
+
+        {isLogged === false  ? 
+         <div className="sidebar-items">
+          <p className='mt-4'>Catalogos:</p>
+          <Link to='/catalogo'>Apliques & Lençois</Link>
+          <Link to='/catalogo-apliques-para-cabana'>Apliques Para Cabana</Link>
+          <Link to='/material-catalogo'>Cores para Cama</Link>
+          <Link to='/catalogo-lencol-pronta-entrega'>Lencois Pronto Entrega</Link>
+          <Link to='/catalogo-cliente'>Lista de Apliques</Link>
+        
+          <p className='mt-4'>Inphantil</p>
+          <Link to='/info'>Informações</Link>  
+          <Link to='https://www.inphantil.com.br/' target='_blank'>Inphantil Site</Link>  
+          <Link to='https://www.instagram.com/inphantil/' target='_blank'>Instagram</Link>  
+          <Link to='https://api.whatsapp.com/send?phone=5561982388828' target='_blank'>WhatsApp</Link> 
         </div>
-        }
-      
-        <div className='btnLogout'>
-            {isLogged===true? 
-            <button onClick={logout} className="btnPadrao ">
-            Logout
-          </button>: ''}
-          </div>
+        :
+        ''}
       </div>
     </div>
 

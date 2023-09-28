@@ -46,6 +46,12 @@ right: 10px;
 cursor: pointer;
 }
 
+.sidebar-items p {
+	text-decoration: underline;
+	font-weight: bolder;
+	margin-left: 10px;
+}
+
 /* BTN Logout */
 .btnLogout {
     position: absolute;
@@ -63,14 +69,15 @@ cursor: pointer;
 	display: inline-block;
   }
   
-  .dropbtn {
-	background-color: rgba(255, 255, 135, 0.616);
-    color: rgba(71, 71, 71, 0.575);
+.dropbtn {
+	background-color: rgba(255, 255, 135, 0.712);
+    color: rgba(71, 71, 71, 0.664);
 	padding: 10px;
 	border: none;
 	cursor: pointer;
 	border-radius: 30px;
 	position: fixed;
+	z-index: 999;
   }
 
   .dropbtn:hover {
@@ -86,6 +93,7 @@ cursor: pointer;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
 	border-radius: 10px;
+	margin-top: 30px;
   }
   
   .dropdown-content a {
