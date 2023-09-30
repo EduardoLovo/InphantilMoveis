@@ -73,8 +73,8 @@ export const MaterialCatalogo = () => {
         <button type="button" className="btn btn-secondary" id='tiffany' onClick={render}>Tiffany</button>
         <button type="button" className="btn btn-secondary" id='verde' onClick={render}>Verde</button>
         <button type="button" className="btn btn-secondary" id='vermelho' onClick={render}>Vermelho</button>
-        <button type="button" className="btn btn-secondary" id='externo' onClick={render}>Externo</button>
-        <button type="button" className="btn btn-secondary" id='montar' onClick={render}>Montar</button>
+        <button type="button" className="btn btn-warning" id='externo' onClick={render}>Externo</button>
+        <button type="button" className="btn btn-primary" id='montar' onClick={render}>Montar</button>
         
         {isLogged === true ? 
           <div>
