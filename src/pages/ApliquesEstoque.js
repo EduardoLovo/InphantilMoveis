@@ -6,21 +6,24 @@ import { Filtro } from "../components/Filtro";
 export const ApliquesEstoque = () => {
   const type = localStorage.getItem("user");
 
-    const [apliques, setApliques] = useState([]);
-    const [texto, setTexto] = useState("");
+  const [apliques, setApliques] = useState([]);
+  const [texto, setTexto] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
-    const loadData = async () => {
+  const loadData = async () => {
     const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
     const results = await response.json();
-        
+    // setIsLoading(false)
     setApliques(results);
   };
-    useEffect(() => {
-        loadData();
-    }, []);
 
-    const navigate = useNavigate();
-    
+  useEffect(() => {
+    setIsLoading(false);
+    loadData();
+  }, []);
+
+  const navigate = useNavigate();
+
   function compare(a, b) {
     if (a.number < b.number) return -1;
     if (a.number > b.number) return 1;
@@ -30,58 +33,75 @@ export const ApliquesEstoque = () => {
 
   const onChange = (e) => {
     setTexto(e.target.value);
-};
+  };
 
   return (
     <div>
+      {isLoading ? (
+        <div className="loading">Carregando...</div>
+      ) : (
         <div>
-        <div className="position-relative d-flex justify-content-center p-5">
-                <div className="input-group mb-3 w-25" >
-                <span className="input-group-text bg-black text-white" id="inputGroup-sizing-default">Procurar</span>
-                <input 
-                    type="text" 
-                    className="form-control --bs-primary-bg-subtle" 
-                    aria-label="Sizing example input" 
-                    aria-describedby="inputGroup-sizing-default"
-                    onChange={onChange}
-                    value={texto}
-                    />
-                </div>
+          <div>
+            <div className="position-relative d-flex justify-content-center p-5">
+              <div className="input-group mb-3 w-25">
+                <span
+                  className="input-group-text bg-black text-white"
+                  id="inputGroup-sizing-default"
+                >
+                  Procurar
+                </span>
+                <input
+                  type="text"
+                  className="form-control --bs-primary-bg-subtle"
+                  aria-label="Sizing example input"
+                  aria-describedby="inputGroup-sizing-default"
+                  onChange={onChange}
+                  value={texto}
+                />
+              </div>
             </div>
-        </div>
+          </div>
 
-        {!texto ? 
-        <div className="container">
-        {apliques.map((aplique, index) => (
-            <div className="col" key={index}>
-                <div className="card border-dark mb-3">
-                <img src={aplique.img} className="card-img-top" alt="..."/>
-                <div className={aplique.estoque === "Nao" ? "card-body text-danger " : "card-body text-success"}>
-                    <h5 className="card-title">{aplique.number} </h5>
-                    <p className="card-text ">
+          {!texto ? (
+            <div className="container">
+              {apliques.map((aplique, index) => (
+                <div className="col" key={index}>
+                  <div className="card border-dark mb-3">
+                    <img src={aplique.img} className="card-img-top" alt="..." />
+                    <div
+                      className={
+                        aplique.estoque === "Nao"
+                          ? "card-body text-danger "
+                          : "card-body text-success"
+                      }
+                    >
+                      <h5 className="card-title">{aplique.number} </h5>
+                      <p className="card-text ">
                         Estoque: {aplique.quantidade}
-                        {type === 'adm' ? 
-                        <button
-                        type="button" 
-                        className="btn btn-outline-warning "
-                        onClick={() => {
-                          navigate(`/editar-aplique/${aplique._id}`);
-                        }}
-                        >
-                        Editar
-                        </button>
-                        :
-                        ''
-                        }
-                    </p>
+                        {type === "adm" ? (
+                          <button
+                            type="button"
+                            className="btn btn-outline-warning "
+                            onClick={() => {
+                              navigate(`/editar-aplique/${aplique._id}`);
+                            }}
+                          >
+                            Editar
+                          </button>
+                        ) : (
+                          ""
+                        )}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                </div>
-            </div>  
-        ))}
+              ))}
+            </div>
+          ) : (
+            <Filtro apliques={apliques} texto={texto} />
+          )}
         </div>
-        :
-        <Filtro apliques={apliques} texto={texto}/>
-        }  
+      )}
     </div>
-  )
+  );
 };

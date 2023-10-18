@@ -1,9 +1,9 @@
-import React from 'react'
-import { useEffect } from 'react';
-import { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
-import { Api } from '../../Api/Api';
+import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
+import { Api } from "../../Api/Api";
 
 export const LencolEdit = () => {
   const params = useParams();
@@ -14,7 +14,10 @@ export const LencolEdit = () => {
 
   useEffect(() => {
     const loadProduct = async () => {
-      const response = await Api.buildApiGetRequest(Api.readByIdLencolUrl(id), true);
+      const response = await Api.buildApiGetRequest(
+        Api.readByIdLencolUrl(id),
+        true
+      );
       const results = await response.json();
       setLencol(results);
     };
@@ -36,7 +39,7 @@ export const LencolEdit = () => {
       img,
       quantidade,
       tamanho,
-      cor
+      cor,
     };
 
     const response = await Api.buildApiPatchRequest(
@@ -46,9 +49,8 @@ export const LencolEdit = () => {
     );
     if (response.status === 200) {
       // Product updated successfully
-      toast.success("Lençol atualizado com sucesso!")
+      toast.success("Lençol atualizado com sucesso!");
       navigate("/junior");
-      
     } else {
       // Error
       console.log("Erro ao atualizar");
@@ -64,7 +66,7 @@ export const LencolEdit = () => {
 
     if (response.status === 200) {
       // Product updated successfully
-      toast.success("Lençol excluido com sucesso!")
+      toast.success("Lençol excluido com sucesso!");
       navigate("/junior");
     } else {
       // Error
@@ -75,10 +77,13 @@ export const LencolEdit = () => {
   return (
     <div>
       <div className="row align-items-center">
-
         <div className="col d-flex flex-column mb-3 align-items-center">
           <p>{lencol.number}</p>
-          <img src={lencol.img} className="w-50 h-auto  p-3" alt='foto do aplique'/>
+          <img
+            src={lencol.img}
+            className="w-50 h-auto  p-3"
+            alt="foto do aplique"
+          />
           <p>Quantidade: {lencol.quantidade}</p>
           <button className="btnPadrao" onClick={deleteAplic}>
             Deletar
@@ -86,58 +91,80 @@ export const LencolEdit = () => {
         </div>
 
         <div className="col">
-          <form className="d-flex flex-column align-items-center" onSubmit={handleSubmit}>
+          <form
+            className="d-flex flex-column align-items-center"
+            onSubmit={handleSubmit}
+          >
             <h3>Editar</h3>
             <div className="input-group mb-3 w-50">
-              <span className="input-group-text" id="inputGroup-sizing-default">Numero</span>
-              <input 
+              <span className="input-group-text" id="inputGroup-sizing-default">
+                Numero
+              </span>
+              <input
                 id="number"
                 name="number"
-                defaultValue={lencol.number} 
-                type="text" 
-                className="form-control" 
-                aria-label="Sizing example input" 
-                aria-describedby="inputGroup-sizing-default"/>
+                defaultValue={lencol.number}
+                type="text"
+                className="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
             </div>
             <div className="input-group mb-3 w-50">
-              <span className="input-group-text" id="inputGroup-sizing-default">Imagem</span>
-              <input 
+              <span className="input-group-text" id="inputGroup-sizing-default">
+                Imagem
+              </span>
+              <input
                 id="img"
                 name="img"
-                defaultValue={lencol.img} 
-                type="text" 
-                className="form-control" 
-                aria-label="Sizing example input" 
-                aria-describedby="inputGroup-sizing-default"/>
+                defaultValue={lencol.img}
+                type="text"
+                className="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
             </div>
             <div className="input-group mb-3 w-50">
-              <span className="input-group-text" id="inputGroup-sizing-default">Quantidade</span>
-              <input 
-              id="quantidade"
-              name="quantidade"
-              defaultValue={lencol.quantidade} 
-              type="text" 
-              className="form-control" 
-              aria-label="Sizing example input" 
-              aria-describedby="inputGroup-sizing-default"/>
+              <span className="input-group-text" id="inputGroup-sizing-default">
+                Quantidade
+              </span>
+              <input
+                id="quantidade"
+                name="quantidade"
+                defaultValue={lencol.quantidade}
+                type="text"
+                className="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
             </div>
             <div className="input-group mb-3 w-50">
-              <span className="input-group-text" id="inputGroup-sizing-default">Tamanho</span>
-              <input 
-              id="tamanho"
-              name="tamanho"
-              defaultValue={lencol.tamanho} 
-              type="text" 
-              className="form-control" 
-              aria-label="Sizing example input" 
-              aria-describedby="inputGroup-sizing-default"/>
+              <span className="input-group-text" id="inputGroup-sizing-default">
+                Tamanho
+              </span>
+              <input
+                id="tamanho"
+                name="tamanho"
+                defaultValue={lencol.tamanho}
+                type="text"
+                className="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+              />
             </div>
 
             <label>Cor: </label>
-            {lencol.estoque} 
+            {lencol.estoque}
             <div className="input-group mb-3 w-50">
-              <select id="cor" name="cor" className="form-control" s defaultValue={lencol.cor} placeholder="cor">
-                <option >{lencol.cor}</option>
+              <select
+                id="cor"
+                name="cor"
+                className="form-control"
+                s
+                defaultValue={lencol.cor}
+                placeholder="cor"
+              >
+                <option>{lencol.cor}</option>
                 <option>Bege</option>
                 <option>Azul</option>
                 <option>Branco</option>
@@ -145,17 +172,14 @@ export const LencolEdit = () => {
                 <option>Rosa Bebe</option>
                 <option>Cinza</option>
                 <option>Prata</option>
-              </select> 
-
+              </select>
             </div>
             <button className="btnPadrao" type="submit">
               Atualizar
-            </button>   
+            </button>
           </form>
         </div>
-
       </div>
-
     </div>
-  )
-}
+  );
+};

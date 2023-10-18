@@ -20,38 +20,41 @@ export const Calculadora6040 = () => {
 
   return (
     <div className="text-center">
-
       <div className="p-5">
         <h1>Calculadora Á Vista / Prazo</h1>
       </div>
 
       <div className="row align-items-start p-5">
         <div className="row col">
-          <form onSubmit={calcular} className="col"> 
+          <form onSubmit={calcular} className="col">
             <div className="mb-3">
-              <label for="exampleInputNumber1" className="form-label">Valor da entrada</label>
-              <input 
-                type="number" 
-                className="form-control" 
-                id="ve" 
-                step="0.01" 
+              <label for="exampleInputNumber1" className="form-label">
+                Valor da entrada
+              </label>
+              <input
+                type="number"
+                className="form-control"
+                id="ve"
+                step="0.01"
                 min="0.01"
               />
             </div>
             <div className="mb-3">
-              <label for="exampleInputNumber1" className="form-label">Valor total (sem o valor do frete)</label>
-              <input 
-                type="number" 
-                className="form-control" 
-                id="vt" 
-                step="0.01" 
+              <label for="exampleInputNumber1" className="form-label">
+                Valor total (sem o valor do frete)
+              </label>
+              <input
+                type="number"
+                className="form-control"
+                id="vt"
+                step="0.01"
                 min="0.01"
               />
             </div>
-            
+
             <input className="btnPadrao" type="submit" value="Calcular"></input>
           </form>
-          
+
           <div className=" col">
             <div>
               <h3>Resultado:</h3>
@@ -82,8 +85,7 @@ export const Calculadora6040 = () => {
             )}
           </div>
         </div>
-      </div>   
-
+      </div>
     </div>
   );
 };

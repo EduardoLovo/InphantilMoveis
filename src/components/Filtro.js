@@ -1,66 +1,71 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
 // import { Api } from '../Api/Api';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export const Filtro = (props) => {
-    const apliques = props.apliques
-    const navigate = useNavigate()
-    const [filtrado, setFiltrado] = useState([]);
-    const texto = props.texto
+  const apliques = props.apliques;
+  const navigate = useNavigate();
+  const [filtrado, setFiltrado] = useState([]);
+  const texto = props.texto;
 
-    const type = localStorage.getItem("user");
+  const type = localStorage.getItem("user");
 
-    useEffect(() => {
-        const results = apliques.filter((resp) =>
-          resp.number.toLowerCase().includes(texto)
-        );
-        setFiltrado(results);
-        // eslint-disable-next-line
-      }, [texto]); 
+  useEffect(() => {
+    const results = apliques.filter((resp) =>
+      resp.number.toLowerCase().includes(texto)
+    );
+    setFiltrado(results);
+    // eslint-disable-next-line
+  }, [texto]);
 
+  function compare(a, b) {
+    if (a.number < b.number) return -1;
+    if (a.number > b.number) return 1;
+    return 0;
+  }
 
-    function compare(a, b) {
-        if (a.number < b.number) return -1;
-        if (a.number > b.number) return 1;
-        return 0;
-    }
+  filtrado.sort(compare);
 
-    filtrado.sort(compare)
-
-    
-
-    return (
-        <div>
-            {texto === '' ? '' :
-            <div className='container'>
-                {filtrado.map((aplique, index) => (
-                <div className="col " key={index}>
-                    <div className="card">
-                        <img src={aplique.img} className="card-img-top" alt="..."/>
-                        <div className={aplique.estoque === "Nao" ? "card-body text-danger" : "card-body text-success"}>
-                        <h5 className="card-title">{aplique.number} </h5>
-                        <p className="card-text">
-                            Estoque = {aplique.quantidade}
-                            {type === 'adm' ? 
-                            <button
-                            type="button" 
-                            className="btn btn-outline-warning "
-                            onClick={() => {
-                            navigate(`/editar-aplique/${aplique._id}`);
-                            }}
-                            >
-                            Editar
-                            </button>
-                            :
-                            ''
-                            }
-                            </p>
-                        </div>
-                    </div>
-                </div>  
-                ))}  
+  return (
+    <div>
+      {texto === "" ? (
+        ""
+      ) : (
+        <div className="container">
+          {filtrado.map((aplique, index) => (
+            <div className="col " key={index}>
+              <div className="card">
+                <img src={aplique.img} className="card-img-top" alt="..." />
+                <div
+                  className={
+                    aplique.estoque === "Nao"
+                      ? "card-body text-danger"
+                      : "card-body text-success"
+                  }
+                >
+                  <h5 className="card-title">{aplique.number} </h5>
+                  <p className="card-text">
+                    Estoque = {aplique.quantidade}
+                    {type === "adm" ? (
+                      <button
+                        type="button"
+                        className="btn btn-outline-warning "
+                        onClick={() => {
+                          navigate(`/editar-aplique/${aplique._id}`);
+                        }}
+                      >
+                        Editar
+                      </button>
+                    ) : (
+                      ""
+                    )}
+                  </p>
+                </div>
+              </div>
             </div>
-             }
+          ))}
+        </div>
+      )}
     </div>
-    )
-}
+  );
+};

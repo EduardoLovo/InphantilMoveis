@@ -1,10 +1,10 @@
 .bodyApp {
-    margin-left: 15vw;
-    /* width: 72vw;     */
+  margin-left: 15vw;
+  /* width: 72vw;     */
 }
 
 @media (max-width: 768px) {
-	.bodyApp {
-        margin-left: 0;
-    }
+  .bodyApp {
+    margin-left: 0;
   }
+}

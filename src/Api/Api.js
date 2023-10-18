@@ -9,7 +9,7 @@ export const Api = {
   readAllUsuariosUrl: () => Api.baseUrl + "/users",
   createUsuariosUrl: () => Api.baseUrl + "/auth/register",
 
-   // Rotas Apliques
+  // Rotas Apliques
   readAllApliquesUrl: () => Api.baseUrl + "/aplique",
   addApliquesUrl: () => Api.baseUrl + "/aplique/create",
   readByIdUrl: (id) => Api.baseUrl + "/aplique/getById/" + id,

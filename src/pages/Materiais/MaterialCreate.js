@@ -1,11 +1,11 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
-import { Api } from '../../Api/Api';
-import { toast } from 'react-toastify';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { Api } from "../../Api/Api";
+import { toast } from "react-toastify";
 
 export const MaterialCreate = () => {
   const navigate = useNavigate();
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -18,7 +18,7 @@ export const MaterialCreate = () => {
       codigo: codigo,
       cor: cor,
       img: img,
-      estoque: estoque
+      estoque: estoque,
     };
 
     const response = await Api.buildApiPostRequest(
@@ -26,47 +26,61 @@ export const MaterialCreate = () => {
       payload,
       true
     );
-    
+
     if (response.status === 200) {
       // Product created successfully
-      toast.success("Aplique adicionada com sucesso!")
+      toast.success("Aplique adicionada com sucesso!");
       navigate("/material-estoque");
     } else {
       // Error
-      toast.error("Erro ao adicionar Aplique!")
+      toast.error("Erro ao adicionar Aplique!");
     }
   };
-  
+
   return (
     <div className="contentCreate">
       <div className="text-center m-4">
         <h1>Adicionar novo material</h1>
       </div>
-      <form className="d-flex flex-column align-items-center scale" onSubmit={handleSubmit}>
+      <form
+        className="d-flex flex-column align-items-center scale"
+        onSubmit={handleSubmit}
+      >
         <div className="input-group mb-3 w-50 scale">
-          <span className="input-group-text" id="inputGroup-sizing-default">Codigo</span>
-          <input 
+          <span className="input-group-text" id="inputGroup-sizing-default">
+            Codigo
+          </span>
+          <input
             id="codigo"
             name="codigo"
-            type="text" 
-            className="form-control scale" 
-            aria-label="Sizing example input" 
-            aria-describedby="inputGroup-sizing-default"/>
+            type="text"
+            className="form-control scale"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+          />
         </div>
         <div className="input-group mb-3 w-50">
-          <span className="input-group-text" id="inputGroup-sizing-default">Imagem</span>
-          <input 
+          <span className="input-group-text" id="inputGroup-sizing-default">
+            Imagem
+          </span>
+          <input
             id="img"
             name="img"
-            type="text" 
-            className="form-control" 
-            aria-label="Sizing example input" 
-            aria-describedby="inputGroup-sizing-default"/>
+            type="text"
+            className="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default"
+          />
         </div>
 
         <label>Cor: </label>
         <div className="input-group mb-3 w-50">
-          <select id="cor" name="cor" className="form-control"  placeholder="Cor">
+          <select
+            id="cor"
+            name="cor"
+            className="form-control"
+            placeholder="Cor"
+          >
             <option></option>
             <option>Amarelo</option>
             <option>Azul</option>
@@ -82,21 +96,26 @@ export const MaterialCreate = () => {
             <option>Verde</option>
             <option>Vermelho</option>
             <option>Externo</option>
-          </select> 
+          </select>
         </div>
 
         <label>Estoque: </label>
         <div className="input-group mb-3 w-50">
-          <select id="estoque" name="estoque" className="form-control"  placeholder="Estoque">
+          <select
+            id="estoque"
+            name="estoque"
+            className="form-control"
+            placeholder="Estoque"
+          >
             <option>Sim</option>
             <option>Nao</option>
-          </select> 
+          </select>
         </div>
 
-        <button className="btnPadrao" type="submit" >
+        <button className="btnPadrao" type="submit">
           Adicionar
-        </button>   
+        </button>
       </form>
     </div>
   );
-}
+};

@@ -1,86 +1,77 @@
 .imagem1 {
-    height: 30vh; 
+  height: 30vh;
 }
 
-.backgroundTransparente{
-    background-color: rgba(41, 41, 41, 0.822);
+.backgroundTransparente {
+  background-color: rgba(41, 41, 41, 0.822);
 }
 
-
-
-.imagemFinal {   
-    padding: 1rem 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.imagemFinal {
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .buttonCaatalogo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(41, 41, 41, 0.822);
-    /* padding: 1rem; */
-    color: #fff;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(41, 41, 41, 0.822);
+  /* padding: 1rem; */
+  color: #fff;
+  width: 100%;
 }
 
-
-
 .fixed {
-    position: fixed;
-    z-index: 999;
-    width: 85vw;
+  position: fixed;
+  z-index: 999;
+  width: 85vw;
 }
 
 .marginDesktop {
-    
-    margin-top: 21rem;
-    display: flex;
-    flex-wrap: wrap;
+  margin-top: 21rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .btnFixado {
-    position: fixed;
-    z-index: 999;
-    top: 200px;
-    left: 16vw;
-    background-color: rgba(41, 41, 41, 0.822);
-    color: rgba(255, 255, 135, 1);
-    border: none;
-    border-radius: 3px;
-    padding: 1rem;
+  position: fixed;
+  z-index: 999;
+  top: 200px;
+  left: 16vw;
+  background-color: rgba(41, 41, 41, 0.822);
+  color: rgba(255, 255, 135, 1);
+  border: none;
+  border-radius: 3px;
+  padding: 1rem;
 }
-
 
 @media (max-width: 750px) {
-    
-    .imagem1 {
-        height: 15rem; 
-    }
-    .backgroundTransparente{
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(41, 41, 41, 0.822);
-        display: flex;
-    }
-    .imagemFinal {   
-        transform: rotate(90deg);
-    }
-    .fixed{
-        position: static;
-        width: 100vw;
-        text-align: center;
-    }
-    
+  .imagem1 {
+    height: 15rem;
+  }
+  .backgroundTransparente {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(41, 41, 41, 0.822);
+    display: flex;
+  }
+  .imagemFinal {
+    transform: rotate(90deg);
+  }
+  .fixed {
+    position: static;
+    width: 100vw;
+    text-align: center;
+  }
 
-    .btnFixado {  
-        top: 70px;
-        left: 10px;
-        
-        padding: 1rem;
-        }
+  .btnFixado {
+    top: 70px;
+    left: 10px;
+
+    padding: 1rem;
+  }
 }
-

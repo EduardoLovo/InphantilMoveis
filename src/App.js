@@ -1,9 +1,8 @@
-
 import { Navigate, Route, Routes } from "react-router-dom";
-import Sidebar from './components/Sidebar/Sidebar';
-import './App.css';
+import Sidebar from "./components/Sidebar/Sidebar";
+import "./App.css";
 //Rotas
-import { Home } from './pages/Home';
+import { Home } from "./pages/Home";
 import { Login } from "./pages/Login";
 import { ApliquesParaCliente } from "./pages/ApliquesParaCliente";
 import { ApliquesParaCortar } from "./pages/ApliquesParaCortar";
@@ -43,21 +42,21 @@ function App() {
   };
 
   return (
-    <div className='App'>
-      <Sidebar/>
-      <ToastContainer 
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="dark"
-        />
-      <div className='bodyApp'>
+    <div className="App">
+      <Sidebar />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+      <div className="bodyApp">
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
@@ -65,115 +64,123 @@ function App() {
           <Route path="/apliques-estoque" element={<ApliquesEstoque />} />
           <Route path="/catalogo" element={<CatalogoDeTecidos />} />
           <Route path="/catalogo-junior" element={<TecidosJunior />} />
-          <Route path="/catalogo-solteiro-solteirao" element={<TecidosSolteiro />} />
+          <Route
+            path="/catalogo-solteiro-solteirao"
+            element={<TecidosSolteiro />}
+          />
           <Route path="/catalogo-viuva" element={<TecidosViuva />} />
           <Route path="/catalogo-casal" element={<TecidosCasal />} />
           <Route path="/catalogo-bqk" element={<TecidosBQK />} />
-          <Route path="/catalogo-lencol-pronta-entrega" element={<CatalogoLencolPE />} />
-          <Route path="/catalogo-apliques-para-cabana" element={<ApliquesParaCabana />} />
+          <Route
+            path="/catalogo-lencol-pronta-entrega"
+            element={<CatalogoLencolPE />}
+          />
+          <Route
+            path="/catalogo-apliques-para-cabana"
+            element={<ApliquesParaCabana />}
+          />
           <Route path="/info" element={<Info />} />
           <Route path="/teste" element={<Teste />} />
           <Route path="/material-catalogo" element={<MaterialCatalogo />} />
 
-          
           <Route
-          path="/apliques-para-cortar"
-          element={
-            <PrivateRoute redirectTo="/">
-              <ApliquesParaCortar />
-            </PrivateRoute>
-          }
+            path="/apliques-para-cortar"
+            element={
+              <PrivateRoute redirectTo="/">
+                <ApliquesParaCortar />
+              </PrivateRoute>
+            }
           />
           <Route
-          path="/apliques-para-comprar"
-          element={
-            <PrivateRoute redirectTo="/">
-              <ApliquesParaComprar />
-            </PrivateRoute>
-          }
+            path="/apliques-para-comprar"
+            element={
+              <PrivateRoute redirectTo="/">
+                <ApliquesParaComprar />
+              </PrivateRoute>
+            }
           />
           <Route
-          path="/apliques-create"
-          element={
-            <PrivateRoute redirectTo="/">
-              <ApliquesCreate />
-            </PrivateRoute>
-          }
-          />
-
-          <Route
-          path="/calculadora-para-lencois"
-          element={
-            <PrivateRoute redirectTo="/">
-              <CalculadoraParaLencois />
-            </PrivateRoute>
-          }
+            path="/apliques-create"
+            element={
+              <PrivateRoute redirectTo="/">
+                <ApliquesCreate />
+              </PrivateRoute>
+            }
           />
 
           <Route
-          path="/calculadora-60-40"
-          element={
-            <PrivateRoute redirectTo="/">
-              <Calculadora6040 />
-            </PrivateRoute>
-          }
+            path="/calculadora-para-lencois"
+            element={
+              <PrivateRoute redirectTo="/">
+                <CalculadoraParaLencois />
+              </PrivateRoute>
+            }
           />
 
           <Route
-          path="/editar-aplique/:id/"
-          element={
-            <PrivateRoute redirectTo="/">
-              <ApliquesEdit />
-            </PrivateRoute>
-          }
+            path="/calculadora-60-40"
+            element={
+              <PrivateRoute redirectTo="/">
+                <Calculadora6040 />
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/editar-aplique/:id/"
+            element={
+              <PrivateRoute redirectTo="/">
+                <ApliquesEdit />
+              </PrivateRoute>
+            }
           />
           <Route
-          path="/lencol-create/"
-          element={
-            <PrivateRoute redirectTo="/">
-              <LencolCreate />
-            </PrivateRoute>
-          }
+            path="/lencol-create/"
+            element={
+              <PrivateRoute redirectTo="/">
+                <LencolCreate />
+              </PrivateRoute>
+            }
           />
           <Route
-          path="/lencol-edit/:id/"
-          element={
-            <PrivateRoute redirectTo="/">
-              <LencolEdit />
-            </PrivateRoute>
-          }
+            path="/lencol-edit/:id/"
+            element={
+              <PrivateRoute redirectTo="/">
+                <LencolEdit />
+              </PrivateRoute>
+            }
           />
           <Route
-          path="/tecidos/"
-          element={
-            <PrivateRoute redirectTo="/">
-              <TecidosParaLencol />
-            </PrivateRoute>
-          }
+            path="/tecidos/"
+            element={
+              <PrivateRoute redirectTo="/">
+                <TecidosParaLencol />
+              </PrivateRoute>
+            }
           />
           <Route
-          path="/tecidos-create/"
-          element={
-            <PrivateRoute redirectTo="/">
-              <TecidosCreate />
-            </PrivateRoute>
-          }
+            path="/tecidos-create/"
+            element={
+              <PrivateRoute redirectTo="/">
+                <TecidosCreate />
+              </PrivateRoute>
+            }
           />
           <Route
-          path="/tecido-edit/:id/"
-          element={
-            <PrivateRoute redirectTo="/">
-              <TecidosEdit />
-            </PrivateRoute>
-          }
+            path="/tecido-edit/:id/"
+            element={
+              <PrivateRoute redirectTo="/">
+                <TecidosEdit />
+              </PrivateRoute>
+            }
           />
           <Route
-          path="/material-estoque/"
-          element={
-            <PrivateRoute redirectTo="/">
-              <MaterialEstoque />
-            </PrivateRoute>
-          }
+            path="/material-estoque/"
+            element={
+              <PrivateRoute redirectTo="/">
+                <MaterialEstoque />
+              </PrivateRoute>
+            }
           />
           {/* <Route
           path="/material-catalogo/"
@@ -184,20 +191,20 @@ function App() {
           }
           /> */}
           <Route
-          path="/material-create/"
-          element={
-            <PrivateRoute redirectTo="/">
-              <MaterialCreate />
-            </PrivateRoute>
-          }
+            path="/material-create/"
+            element={
+              <PrivateRoute redirectTo="/">
+                <MaterialCreate />
+              </PrivateRoute>
+            }
           />
           <Route
-          path="/material-edit/:id/"
-          element={
-            <PrivateRoute redirectTo="/">
-              <MaterialEdit />
-            </PrivateRoute>
-          }
+            path="/material-edit/:id/"
+            element={
+              <PrivateRoute redirectTo="/">
+                <MaterialEdit />
+              </PrivateRoute>
+            }
           />
         </Routes>
       </div>
