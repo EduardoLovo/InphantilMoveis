@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../img/LogoCir.png";
 import { useState } from "react";
 import { useEffect } from "react";
+import { Loading } from "../components/Loading/Loading";
 
 export const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -12,11 +13,7 @@ export const Home = () => {
 
   return (
     <div className="contentHome">
-      {isLoading ? (
-        <div>Carregando...</div>
-      ) : (
-        <img src={Logo} alt="logo inphantil" />
-      )}
+      {isLoading ? <Loading /> : <img src={Logo} alt="logo inphantil" />}
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Api } from "../Api/Api";
 import { Filtro } from "../components/Filtro";
+import { Loading } from "../components/Loading/Loading";
 
 export const ApliquesEstoque = () => {
   const type = localStorage.getItem("user");
@@ -38,7 +39,7 @@ export const ApliquesEstoque = () => {
   return (
     <div>
       {isLoading ? (
-        <div className="loading">Carregando...</div>
+        <Loading />
       ) : (
         <div>
           <div>

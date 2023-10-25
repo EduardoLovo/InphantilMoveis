@@ -3,6 +3,7 @@ import { Api } from "../Api/Api";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Loading } from "../components/Loading/Loading";
 
 export const ApliquesEdit = () => {
   const params = useParams();
@@ -20,7 +21,6 @@ export const ApliquesEdit = () => {
       setAplique(results);
       setIsLoading(false);
     };
-
     loadProduct();
   }, [id]);
 
@@ -74,7 +74,7 @@ export const ApliquesEdit = () => {
   return (
     <div className="containerEdit">
       {isLoading ? (
-        <div className="loading">Carregando...</div>
+        <Loading />
       ) : (
         <div className="row align-items-center">
           <div className="col d-flex flex-column mb-3 align-items-center">
