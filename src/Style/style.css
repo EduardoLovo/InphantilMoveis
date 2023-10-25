@@ -248,4 +248,8 @@
     width: 120px;
     height: 120px;
   }
+
+  .tamanhoInput {
+    width: 1rem;
+  }
 }

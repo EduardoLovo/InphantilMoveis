@@ -19,7 +19,9 @@ export const ApliquesEstoque = () => {
   };
 
   useEffect(() => {
-    setIsLoading(false);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
     loadData();
   }, []);
 
@@ -38,31 +40,31 @@ export const ApliquesEstoque = () => {
 
   return (
     <div>
+      <div>
+        <div className="position-relative d-flex justify-content-center p-5">
+          <div className="input-group mb-3  tamanhoInput">
+            <span
+              className="input-group-text bg-black text-white"
+              id="inputGroup-sizing-default"
+            >
+              Procurar
+            </span>
+            <input
+              type="text"
+              className="form-control --bs-primary-bg-subtle"
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+              onChange={onChange}
+              value={texto}
+            />
+          </div>
+        </div>
+      </div>
+
       {isLoading ? (
         <Loading />
       ) : (
         <div>
-          <div>
-            <div className="position-relative d-flex justify-content-center p-5">
-              <div className="input-group mb-3 w-25">
-                <span
-                  className="input-group-text bg-black text-white"
-                  id="inputGroup-sizing-default"
-                >
-                  Procurar
-                </span>
-                <input
-                  type="text"
-                  className="form-control --bs-primary-bg-subtle"
-                  aria-label="Sizing example input"
-                  aria-describedby="inputGroup-sizing-default"
-                  onChange={onChange}
-                  value={texto}
-                />
-              </div>
-            </div>
-          </div>
-
           {!texto ? (
             <div className="container">
               {apliques.map((aplique, index) => (
