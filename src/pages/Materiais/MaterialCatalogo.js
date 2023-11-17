@@ -16,6 +16,7 @@ import { Verde } from "./Verde";
 import { Vermelho } from "./Vermelho";
 import { Externo } from "./Externo";
 import { MontarCores } from "./MontarCores";
+import { Loading } from "../../components/Loading/Loading";
 
 export const MaterialCatalogo = () => {
   const navigate = useNavigate();
@@ -23,10 +24,10 @@ export const MaterialCatalogo = () => {
   const type = localStorage.getItem("user");
 
   const [materiais, setMateriais] = useState();
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setIsLoading(false);
+    setLoading(false);
   }, []);
 
   const render = (e) => {
@@ -68,8 +69,8 @@ export const MaterialCatalogo = () => {
       role="toolbar"
       aria-label="Toolbar with button groups"
     >
-      {isLoading ? (
-        <div className="loading">Carregando...</div>
+      {loading ? (
+        <Loading />
       ) : (
         <div>
           <div

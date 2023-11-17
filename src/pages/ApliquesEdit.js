@@ -12,14 +12,14 @@ export const ApliquesEdit = () => {
   const navigate = useNavigate();
 
   const [aplique, setAplique] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const loadProduct = async () => {
       const response = await Api.buildApiGetRequest(Api.readByIdUrl(id), true);
       const results = await response.json();
       setAplique(results);
-      setIsLoading(false);
+      setLoading(false);
     };
     loadProduct();
   }, [id]);
@@ -73,7 +73,7 @@ export const ApliquesEdit = () => {
 
   return (
     <div className="containerEdit">
-      {isLoading ? (
+      {loading ? (
         <Loading />
       ) : (
         <div className="row align-items-center">

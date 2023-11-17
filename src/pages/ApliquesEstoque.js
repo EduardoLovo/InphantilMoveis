@@ -9,7 +9,7 @@ export const ApliquesEstoque = () => {
 
   const [apliques, setApliques] = useState([]);
   const [texto, setTexto] = useState("");
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   const loadData = async () => {
     const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
@@ -19,9 +19,7 @@ export const ApliquesEstoque = () => {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 500);
+    setLoading(false);
     loadData();
   }, []);
 
@@ -61,7 +59,7 @@ export const ApliquesEstoque = () => {
         </div>
       </div>
 
-      {isLoading ? (
+      {loading ? (
         <Loading />
       ) : (
         <div>
