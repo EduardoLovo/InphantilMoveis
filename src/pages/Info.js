@@ -65,6 +65,17 @@ export const Info = () => {
         </div>
       </div>
       <hr className="hr" />
+      <div className="d-flex justify-content-center align-items-center infochild">
+        <div className="">
+          <h2>Cuidados com a limpeza de lençois e protetores impermeáveis</h2>
+
+          <p>
+            Lençóis e Protetores Impermeáveis podem ser lavados em máquina de
+            lavar, porém não pode utilizar na máquina secadora.
+          </p>
+        </div>
+      </div>
+      <hr className="hr" />
 
       <div className="d-flex justify-content-center align-items-center infochild">
         <iframe
