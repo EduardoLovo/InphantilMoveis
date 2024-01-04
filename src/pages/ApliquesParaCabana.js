@@ -26,11 +26,11 @@ export const ApliquesParaCabana = () => {
   apliques.sort(compare);
 
   return (
-    <div className="container">
+    <div className="">
       {loading ? (
         <Loading />
       ) : (
-        <div>
+        <div className="container">
           {apliques.map((aplique, index) => (
             <div className={aplique.estoque === "Nao" ? "display" : "col "}>
               <div className="card border-dark mb-3">

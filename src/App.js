@@ -82,20 +82,16 @@ function App() {
           <Route path="/info" element={<Info />} />
           <Route path="/teste" element={<Teste />} />
           <Route path="/material-catalogo" element={<MaterialCatalogo />} />
+          <Route
+            path="/apliques-para-comprar"
+            element={<ApliquesParaComprar />}
+          />
 
           <Route
             path="/apliques-para-cortar"
             element={
               <PrivateRoute redirectTo="/">
                 <ApliquesParaCortar />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/apliques-para-comprar"
-            element={
-              <PrivateRoute redirectTo="/">
-                <ApliquesParaComprar />
               </PrivateRoute>
             }
           />
