@@ -50,7 +50,7 @@ export const LencolEdit = () => {
     if (response.status === 200) {
       // Product updated successfully
       toast.success("Lençol atualizado com sucesso!");
-      navigate("/junior");
+      navigate("/catalogo-lencol-pronta-entrega");
     } else {
       // Error
       console.log("Erro ao atualizar");
