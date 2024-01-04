@@ -28,7 +28,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="">
+    <div className="navbar ">
       <div className="menuMobile">
         <div className="dropdown">
           <button className="dropbtn" onClick={handleDropdownToggle}>

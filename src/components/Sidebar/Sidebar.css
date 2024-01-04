@@ -17,6 +17,23 @@
   overflow-y: scroll;
 }
 
+.sidebar::-webkit-scrollbar {
+  width: 10px; /* Largura da barra de rolagem */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(
+    255,
+    255,
+    135,
+    0.712
+  ); /* Cor do polegar da barra de rolagem */
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: rgba(71, 71, 71, 1); /* Cor da pista da barra de rolagem */
+}
+
 .sidebar-logo img {
   width: 4rem;
   height: 4rem;
