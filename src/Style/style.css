@@ -87,10 +87,6 @@
   background-color: rgba(255, 255, 255, 0.562);
 }
 
-.contentInfo img {
-  width: 15rem;
-}
-
 .contentInfo:first-child {
   color: rgb(0, 0, 0);
   font-size: 1.5rem;
@@ -204,6 +200,16 @@
   align-items: center;
   height: 100vh;
   font-size: 24px;
+}
+
+.divImgProtetor {
+  /* width: 100vw; */
+  padding: 4em;
+}
+
+.imgProtetor {
+  height: 30em;
+  width: 40em;
 }
 
 @media screen and (max-width: 568px) {

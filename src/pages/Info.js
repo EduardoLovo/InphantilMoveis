@@ -2,6 +2,7 @@ import React from "react";
 import limpeza from "../img/limpeza.png";
 import garantia from "../img/garantia.png";
 import vento from "../img/vento.png";
+import protetor from "../img/protetor.jpeg";
 
 export const Info = () => {
   return (
@@ -9,7 +10,7 @@ export const Info = () => {
       <h2 className="text-center p-5">Informações Importantes!</h2>
       <div className="d-flex justify-content-center align-items-center infochild ">
         <div>
-          <img src={garantia} alt="garantia" />
+          <img src={garantia} alt="garantia" className="w-75" />
         </div>
         <div className="">
           <p>
@@ -60,8 +61,8 @@ export const Info = () => {
             o tapete de drenagem abaixo do colchão ajuda na ventilação🚱
           </p>
         </div>
-        <div className="">
-          <img src={limpeza} alt="imagem limpeza" />
+        <div className="w-100">
+          <img src={limpeza} alt="imagem limpeza" className="w-100" />
         </div>
       </div>
       <hr className="hr" />
@@ -76,7 +77,6 @@ export const Info = () => {
         </div>
       </div>
       <hr className="hr" />
-
       <div className="d-flex justify-content-center align-items-center infochild">
         <iframe
           width="789"
@@ -95,7 +95,6 @@ export const Info = () => {
         </p>
       </div>
       <hr className="hr" />
-
       <div className="d-flex justify-content-center align-items-center infochild">
         <p>
           Este é o vídeo de montagem da cama, é importante seguir os passos nele
@@ -113,7 +112,6 @@ export const Info = () => {
         ></iframe>
       </div>
       <hr className="hr" />
-
       <div className="d-flex justify-content-center align-items-center infochild">
         <div className="">
           <h2>Instalação do protetor de parede</h2>
@@ -157,7 +155,6 @@ export const Info = () => {
         </div>
       </div>
       <hr className="hr" />
-
       <div className="d-flex justify-content-center align-items-center infochild">
         <img src={vento} alt="vento" />
         <div>
@@ -173,6 +170,17 @@ export const Info = () => {
             Sua cama já vai higienizada e pronta para uso, indicamos apenas este
             cuidado com o colchão!
           </p>
+        </div>
+      </div>
+      <hr className="hr" />
+      <div className="d-flex justify-content-center align-items-center  divImgProtetor ">
+        <div>
+          <h2 className="p-3">Instalação do protetor de parede</h2>
+          <img
+            src={protetor}
+            alt="protetor"
+            className="imgProtetor img-fluid"
+          />
         </div>
       </div>
     </div>

@@ -67,7 +67,7 @@ export const LencolEdit = () => {
     if (response.status === 200) {
       // Product updated successfully
       toast.success("Lençol excluido com sucesso!");
-      navigate("/junior");
+      navigate("/catalogo-lencol-pronta-entrega");
     } else {
       // Error
       console.log("Erro ao deletar");
