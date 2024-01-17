@@ -212,6 +212,14 @@
   width: 40em;
 }
 
+.passoApasso {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
 @media screen and (max-width: 568px) {
   .infochild {
     display: flex;

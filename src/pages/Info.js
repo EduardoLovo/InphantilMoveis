@@ -2,7 +2,10 @@ import React from "react";
 import limpeza from "../img/limpeza.png";
 import garantia from "../img/garantia.png";
 import vento from "../img/vento.png";
-import protetor from "../img/protetor.jpeg";
+import protetor5 from "../img/protetor5.jpeg";
+import protetor6 from "../img/protetor6.jpeg";
+import protetor7 from "../img/protetor7.jpeg";
+import protetor8 from "../img/protetor8.jpeg";
 
 export const Info = () => {
   return (
@@ -173,14 +176,45 @@ export const Info = () => {
         </div>
       </div>
       <hr className="hr" />
-      <div className="d-flex justify-content-center align-items-center  divImgProtetor ">
+      <div className="d-flex justify-content-center align-items-center divImgProtetor ">
         <div>
           <h2 className="p-3">Instalação do protetor de parede</h2>
-          <img
-            src={protetor}
-            alt="protetor"
-            className="imgProtetor img-fluid"
-          />
+          <div className="passoApasso">
+            <p>
+              Primeiro encaixe acima do do roda pé a peça que terá uma
+              especificação atrás, escrito "canto". Na ilustração abaixo, é a
+              peça em amarelo.
+            </p>
+            <img
+              src={protetor5}
+              alt="protetor"
+              className="imgProtetor img-fluid"
+            />
+          </div>
+          <div className="passoApasso">
+            <p>Em seguida encaixe o restante das peças na lateral.</p>
+            <img
+              src={protetor6}
+              alt="protetor"
+              className="imgProtetor img-fluid"
+            />
+          </div>
+          <div className="passoApasso">
+            <p>Por fim encaixe as peças da cabeceira.</p>
+            <img
+              src={protetor7}
+              alt="protetor"
+              className="imgProtetor img-fluid"
+            />
+          </div>
+          <div className="passoApasso">
+            <p>Este é o resultado</p>
+            <img
+              src={protetor8}
+              alt="protetor"
+              className="imgProtetor img-fluid"
+            />
+          </div>
         </div>
       </div>
     </div>
