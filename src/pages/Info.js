@@ -181,7 +181,7 @@ export const Info = () => {
           <h2 className="p-3">Instalação do protetor de parede</h2>
           <div className="passoApasso">
             <p>
-              Primeiro encaixe acima do do roda pé a peça que terá uma
+              Primeiro encaixe acima do roda pé a peça que terá uma
               especificação atrás, escrito "canto". Na ilustração abaixo, é a
               peça em amarelo.
             </p>
