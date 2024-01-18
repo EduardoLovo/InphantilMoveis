@@ -12,7 +12,7 @@ export const Filtro = (props) => {
 
   useEffect(() => {
     const results = apliques.filter((resp) =>
-      resp.number.toLowerCase().includes(texto)
+      resp.number.toLowerCase().includes(texto.toLowerCase())
     );
     setFiltrado(results);
     // eslint-disable-next-line
