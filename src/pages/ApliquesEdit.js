@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Loading } from "../components/Loading/Loading";
+import ModalReact from "../components/Modal/ModalReact";
 
 export const ApliquesEdit = () => {
   const params = useParams();
@@ -13,6 +14,7 @@ export const ApliquesEdit = () => {
 
   const [aplique, setAplique] = useState("");
   const [loading, setLoading] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const loadProduct = async () => {
@@ -54,7 +56,12 @@ export const ApliquesEdit = () => {
     }
   };
 
-  const deleteAplic = async (e) => {
+  const deleteAplic = async () => {
+    setIsModalOpen(true);
+  };
+
+  const handleConfirmDelete = async (e) => {
+    // Chame a função de exclusão real aqui
     e.preventDefault();
     const response = await Api.buildApiDeleteRequest(
       Api.deleteAplicUrl(id),
@@ -63,12 +70,18 @@ export const ApliquesEdit = () => {
 
     if (response.status === 200) {
       // Product updated successfully
+
       toast.success("Deletado com Sucesso!");
       navigate("/apliques-estoque");
     } else {
       // Error
       toast.error("Erro ao deletar!");
     }
+    setIsModalOpen(false);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -85,6 +98,12 @@ export const ApliquesEdit = () => {
               alt="foto do aplique"
             />
             <p>Quantidade: {aplique.quantidade}</p>
+            <ModalReact
+              isOpen={isModalOpen}
+              onRequestClose={handleCloseModal}
+              onConfirm={handleConfirmDelete}
+              question="Certeza que deseja excluir?"
+            />
             <button className="btnPadrao" onClick={deleteAplic}>
               Deletar
             </button>

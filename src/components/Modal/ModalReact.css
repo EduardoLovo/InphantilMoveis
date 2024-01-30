@@ -1,0 +1,30 @@
+.modalReact {
+  background-color: rgba(41, 41, 41, 0.849);
+  margin: 10em auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.divModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.divModal p {
+  color: #fff;
+  font-size: 1.5em;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.modalReact div button {
+  margin: 5px;
+  width: 4em;
+  font-size: 1em;
+  border: none;
+}

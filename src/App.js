@@ -30,7 +30,7 @@ import { TecidosParaLencol } from "./pages/TecidosParaLencol/TecidosParaLencol";
 import { TecidosCreate } from "./pages/TecidosParaLencol/TecidosCreate";
 import { MaterialEstoque } from "./pages/Materiais/MaterialEstoque";
 import { MaterialEdit } from "./pages/Materiais/MaterialEdit";
-import { Teste } from "./pages/Teste";
+import { Teste } from "./pages/Teste/Teste";
 import { MaterialCatalogo } from "./pages/Materiais/MaterialCatalogo";
 import { MaterialCreate } from "./pages/Materiais/MaterialCreate";
 
@@ -199,6 +199,14 @@ function App() {
             element={
               <PrivateRoute redirectTo="/">
                 <MaterialEdit />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/teste/"
+            element={
+              <PrivateRoute redirectTo="/">
+                <Teste />
               </PrivateRoute>
             }
           />

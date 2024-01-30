@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Api } from "../../Api/Api";
+import ModalReact from "../../components/Modal/ModalReact";
 
 export const LencolEdit = () => {
   const params = useParams();
@@ -11,6 +12,7 @@ export const LencolEdit = () => {
   const navigate = useNavigate();
 
   const [lencol, setLencol] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const loadProduct = async () => {
@@ -57,7 +59,11 @@ export const LencolEdit = () => {
     }
   };
 
-  const deleteAplic = async (e) => {
+  const deleteAplic = async () => {
+    setIsModalOpen(true);
+  };
+
+  const handleConfirmDelete = async (e) => {
     e.preventDefault();
     const response = await Api.buildApiDeleteRequest(
       Api.deleteLencolUrl(id),
@@ -74,6 +80,10 @@ export const LencolEdit = () => {
     }
   };
 
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div>
       <div className="row align-items-center">
@@ -85,6 +95,12 @@ export const LencolEdit = () => {
             alt="foto do aplique"
           />
           <p>Quantidade: {lencol.quantidade}</p>
+          <ModalReact
+            isOpen={isModalOpen}
+            onRequestClose={handleCloseModal}
+            onConfirm={handleConfirmDelete}
+            question="Certeza que deseja excluir?"
+          />
           <button className="btnPadrao" onClick={deleteAplic}>
             Deletar
           </button>

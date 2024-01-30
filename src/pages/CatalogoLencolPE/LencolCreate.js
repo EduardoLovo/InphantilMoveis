@@ -32,7 +32,7 @@ export const LencolCreate = () => {
     if (response.status === 200) {
       // Product created successfully
       toast.success("Lençol adicionado com sucesso!");
-      navigate("/solteiro");
+      navigate("/catalogo-lencol-pronta-entrega");
     } else {
       // Error
     }

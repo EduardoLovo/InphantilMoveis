@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Api } from "../../Api/Api";
 import { toast } from "react-toastify";
+import ModalReact from "../../components/Modal/ModalReact";
 
 export const TecidosEdit = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const params = useParams();
   const id = params.id;
   const navigate = useNavigate();
@@ -58,7 +61,11 @@ export const TecidosEdit = () => {
     }
   };
 
-  const deleteAplic = async (e) => {
+  const deleteAplic = async () => {
+    setIsModalOpen(true);
+  };
+
+  const handleConfirmDelete = async (e) => {
     e.preventDefault();
     const response = await Api.buildApiDeleteRequest(
       Api.deleteTecidoUrl(id),
@@ -72,6 +79,10 @@ export const TecidosEdit = () => {
       // Error
       console.log("Erro ao deletar");
     }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
   };
 
   return (
@@ -169,6 +180,12 @@ export const TecidosEdit = () => {
         </button>
       </form>
       <div className="text-center m-4">
+        <ModalReact
+          isOpen={isModalOpen}
+          onRequestClose={handleCloseModal}
+          onConfirm={handleConfirmDelete}
+          question="Certeza que deseja excluir?"
+        />
         <button className=" btnPadrao" onClick={deleteAplic}>
           Deletar
         </button>
