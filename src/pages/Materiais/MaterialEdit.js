@@ -5,8 +5,11 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
 import "../../Style/style.css";
+import ModalReact from "../../components/Modal/ModalReact";
 
 export const MaterialEdit = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const params = useParams();
   const id = params.id;
   const navigate = useNavigate();
@@ -57,7 +60,11 @@ export const MaterialEdit = () => {
     }
   };
 
-  const handleDelete = async (e) => {
+  const deleteAplic = async () => {
+    setIsModalOpen(true);
+  };
+
+  const handleConfirmDelete = async (e) => {
     e.preventDefault();
     const response = await Api.buildApiDeleteRequest(
       Api.deleteMaterialUrl(id),
@@ -74,10 +81,19 @@ export const MaterialEdit = () => {
     }
   };
 
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <div>
-      Editar
-      <form onSubmit={handleSubmit}>
+    <div className="contentCreate">
+      <div className="text-center m-4">
+        <h1>Editar material</h1>
+      </div>
+      <form
+        className="d-flex flex-column align-items-center"
+        onSubmit={handleSubmit}
+      >
         <div className="input-group mb-3 w-50">
           <span className="input-group-text" id="inputGroup-sizing-default">
             Codigo
@@ -146,10 +162,22 @@ export const MaterialEdit = () => {
         </div>
 
         <div>
-          <button onClick={handleDelete}>Deletar</button>
-          <button type="submit">Atualizar</button>
+          <button className=" btnPadrao" type="submit">
+            Atualizar
+          </button>
         </div>
       </form>
+      <ModalReact
+        isOpen={isModalOpen}
+        onRequestClose={handleCloseModal}
+        onConfirm={handleConfirmDelete}
+        question="Certeza que deseja excluir?"
+      />
+      <div className="text-center m-4">
+        <button className=" btnPadrao" onClick={deleteAplic}>
+          Deletar
+        </button>
+      </div>
     </div>
   );
 };
