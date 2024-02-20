@@ -88,7 +88,6 @@ export const TecidosJunior = () => {
     setClick("3");
   };
 
-  console.log(aplique);
   return (
     <div>
       <div className="fixed">
