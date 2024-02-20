@@ -125,7 +125,7 @@ export const TecidosJunior = () => {
             }
           >
             {tecidos.map((tecido, index) => (
-              <div>
+              <div key={index}>
                 <div
                   className={tecido.estoque === "Nao" ? "display" : ""}
                   key={index}
@@ -172,11 +172,7 @@ export const TecidosJunior = () => {
                     }
                   >
                     <div onClick={segundo}>
-                      <ApliqueCard
-                        codigo={aplique.number}
-                        img={aplique.img}
-                        id={aplique._id}
-                      />
+                      <ApliqueCard aplique={aplique} />
                     </div>
                   </div>
                 ))}
