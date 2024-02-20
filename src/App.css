@@ -1,6 +1,14 @@
+.App {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #858585;
+}
 .bodyApp {
-  margin-left: 15vw;
-  /* width: 72vw;     */
+  margin-left: 50px;
+  margin-top: 0;
+  background-color: #858585;
 }
 
 @media (max-width: 768px) {

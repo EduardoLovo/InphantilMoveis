@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./Catalogo.css";
 import { Api } from "../../Api/Api";
 import CapsLock from "../../components/CapsLock";
+import { ApliqueCard } from "../Apliques/ApliqueCard/ApliqueCard";
 
 export const TecidosJunior = () => {
   const [aplique, setAplique] = useState("");
@@ -62,15 +63,20 @@ export const TecidosJunior = () => {
   const segundo = (e) => {
     e.preventDefault();
     const imga2 = e.target.src;
+    const codigo = e.target.alt;
+    console.log(codigo);
     setAplique(
-      <img
-        className="imagem1"
-        src={imga2}
-        id="one"
-        name="fav_language"
-        value="bbbb"
-        alt="..."
-      ></img>
+      <div>
+        <img
+          className="imagem1"
+          src={imga2}
+          id="one"
+          name="fav_language"
+          value="bbbb"
+          alt="..."
+        ></img>
+        <div className="codigoApliqueEscolha">{codigo}</div>
+      </div>
     );
     setResultado("q");
     if (window.screen.width < 700) {
@@ -82,6 +88,7 @@ export const TecidosJunior = () => {
     setClick("3");
   };
 
+  console.log(aplique);
   return (
     <div>
       <div className="fixed">
@@ -105,6 +112,7 @@ export const TecidosJunior = () => {
             <div className="imagemFinal">
               {cor}
               {aplique}
+              {}
               {cor}
             </div>
           </div>
@@ -164,18 +172,12 @@ export const TecidosJunior = () => {
                         : "col "
                     }
                   >
-                    <div className="card border-dark mb-3">
-                      <img
-                        src={aplique.img}
-                        className="card-img-top"
-                        alt="..."
-                        onClick={segundo}
+                    <div onClick={segundo}>
+                      <ApliqueCard
+                        codigo={aplique.number}
+                        img={aplique.img}
+                        id={aplique._id}
                       />
-                      <div className="card-body text-warning">
-                        <h5 className="card-title text-center">
-                          {aplique.number}{" "}
-                        </h5>
-                      </div>
                     </div>
                   </div>
                 ))}

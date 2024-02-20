@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Api } from "../Api/Api";
-import { Loading } from "../components/Loading/Loading";
+import { Api } from "../../../Api/Api";
+import { Loading } from "../../../components/Loading/Loading";
 
-export const ApliquesParaCortar = () => {
+export const ApliquesParaComprar = () => {
   const [apliques, setApliques] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -12,9 +12,10 @@ export const ApliquesParaCortar = () => {
 
     setApliques(results);
   };
+
   useEffect(() => {
-    setLoading(false);
     loadData();
+    setLoading(false);
   }, []);
 
   function compare(a, b) {
@@ -25,7 +26,7 @@ export const ApliquesParaCortar = () => {
   apliques.sort(compare);
 
   return (
-    <div>
+    <div className="">
       {loading ? (
         <Loading />
       ) : (
@@ -34,12 +35,12 @@ export const ApliquesParaCortar = () => {
             <div
               key={index}
               className={
-                aplique.quantidade < 5 && aplique.estoque !== "Nao"
+                aplique.quantidade <= 5 && aplique.estoque === "Nao"
                   ? ""
                   : "display"
               }
             >
-              <div className="col alingListCards">
+              <div className="col">
                 <div className="card border-dark mb-3">
                   <img src={aplique.img} className="card-img-top" alt="..." />
                   <div

@@ -13,7 +13,6 @@ const Sidebar = () => {
   const navigate = useNavigate();
 
   const type = localStorage.getItem("user");
-  console.log(type);
 
   const logout = () => {
     setIsLogged(JwtHandler.clearJwt());
@@ -28,7 +27,12 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="navbar ">
+    <div className="sidebar">
+      <section className="iconMenu">
+        <p>Menu</p>
+        <div className="arrow"></div>
+      </section>
+      {/* Conteúdo do Sidebar */}
       <div className="menuMobile">
         <div className="dropdown">
           <button className="dropbtn" onClick={handleDropdownToggle}>
@@ -171,7 +175,7 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <div className="sidebar">
+      <div className="sidebars">
         <div className="sidebar-logo">
           <img src={Logo} alt="logo inphantil" />
           {isLogged === true ? (

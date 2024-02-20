@@ -49,6 +49,20 @@
   padding: 1rem;
 }
 
+.codigoApliqueEscolha {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza o texto completamente */
+  z-index: 1; /* Garante que o texto esteja acima da imagem */
+  color: rgb(0, 0, 0); /* Cor do texto, ajuste conforme necessário */
+  font-size: 18px; /* Tamanho da fonte, ajuste conforme necessário */
+  font-weight: bold; /* Peso da fonte, ajuste conforme necessário */
+  background-color: rgba(182, 182, 182, 0.863);
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
 @media (max-width: 750px) {
   .imagem1 {
     height: 15rem;
@@ -73,5 +87,9 @@
     left: 10px;
 
     padding: 1rem;
+  }
+  .codigoApliqueEscolha {
+    top: 65%;
+    left: 50%;
   }
 }

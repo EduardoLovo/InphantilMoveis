@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Api } from "../../Api/Api";
+import { Api } from "../../../Api/Api";
 import { toast } from "react-toastify";
-import ModalReact from "../../components/Modal/ModalReact";
+import ModalReact from "../../../components/Modal/ModalReact";
 
 export const TecidosEdit = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);

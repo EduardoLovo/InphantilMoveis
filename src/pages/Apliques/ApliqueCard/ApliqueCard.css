@@ -1,0 +1,79 @@
+.menuAplique {
+  position: absolute;
+  top: 3%;
+  left: 90%;
+  transform: translate(-50%, -50%); /* Centraliza o texto completamente */
+  z-index: 1; /* Garante que o texto esteja acima da imagem */
+  color: rgb(0, 0, 0); /* Cor do texto, ajuste conforme necessário */
+  font-size: 18px; /* Tamanho da fonte, ajuste conforme necessário */
+  font-weight: bold; /* Peso da fonte, ajuste conforme necessário */
+  cursor: pointer;
+}
+
+.codigoAplique {
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza o texto completamente */
+  z-index: 0; /* Garante que o texto esteja acima da imagem */
+  color: rgb(0, 0, 0); /* Cor do texto, ajuste conforme necessário */
+  font-size: 18px; /* Tamanho da fonte, ajuste conforme necessário */
+  font-weight: bold; /* Peso da fonte, ajuste conforme necessário */
+  background-color: rgba(182, 182, 182, 0.863);
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  background-color: #3d3d3d;
+  border-radius: 5px;
+  width: 9em;
+}
+
+.linkquantidade {
+  padding: 5px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.linkedit {
+  padding: 5px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.linkedit:hover {
+  background-color: #a398986e;
+  color: rgb(225, 228, 35);
+}
+
+.linkquantidade:hover {
+  background-color: #a398986e;
+  color: rgb(225, 228, 35);
+}
+
+.menu-container:hover .menu {
+  display: block;
+}
+
+.linkdelete {
+  padding: 5px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+.linkdelete:hover {
+  background-color: #a398986e;
+  color: rgb(241, 84, 84);
+}

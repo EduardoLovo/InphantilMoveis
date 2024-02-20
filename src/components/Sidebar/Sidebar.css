@@ -1,20 +1,43 @@
-/* Sidebar.css */
 .sidebar {
   position: fixed;
-  left: 0;
+  left: -150px; /* Define a largura inicial do sidebar */
   top: 0;
   bottom: 0;
-  width: 15vw;
-  background-color: rgba(165, 165, 165, 1);
-  color: rgba(71, 71, 71, 1);
-  padding: 10px;
-  transition: transform 0.3s ease;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 1.1vw;
-  overflow-y: scroll;
+  width: 200px; /* Largura do sidebar quando visível */
+  background-color: #333333;
+  color: white;
+  transition: left 0.5s ease; /* Adiciona uma transição suave de 0.3 segundos */
+  overflow-y: auto;
+  z-index: 98;
+}
+
+.sidebar:hover {
+  left: 0; /* Quando o mouse passa por cima, move o sidebar para a posição visível */
+  background-color: #333333;
+}
+
+.iconMenu {
+  position: relative;
+  top: 50%;
+
+  left: 82%;
+  color: rgb(255, 255, 10);
+  z-index: 99;
+}
+
+.iconMenu p {
+  font-size: 10px;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 30px;
+  border-color: transparent transparent transparent #ffffff; /* Cor da seta */
+  transition: left 0.5s ease; /* Adiciona uma transição suave para a mudança de direção */
+  /* Rotaciona a seta para a direita por padrão */
+  transform: rotate(0deg);
 }
 
 .sidebar::-webkit-scrollbar {
@@ -40,9 +63,10 @@
 
 .sidebar-items a {
   display: block;
-  color: rgba(71, 71, 71, 1);
+  color: rgb(150, 150, 150);
   text-decoration: none;
   margin-bottom: 10px;
+  margin-left: 5px;
   transition: all 0.3s;
 }
 

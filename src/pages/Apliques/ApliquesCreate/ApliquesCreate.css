@@ -1,0 +1,51 @@
+.contentCreate {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divInput {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+}
+
+.contentCreate label {
+  margin-left: 1em;
+  text-decoration: underline;
+}
+
+.contentCreate input {
+  border: none;
+  border-radius: 5px;
+}
+
+.apliqueCreateInputRadio {
+  /* display: flex; */
+  margin-left: 2em;
+}
+
+.apliqueCreateInputRadio label {
+  margin-left: 0.3em;
+}
+.apliqueCreateInputRadio input {
+  margin-left: 1em;
+}
+.divBtnCreateAplique {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.btnCreateAplique {
+  /* border: none; */
+  border-radius: 5px;
+  padding: 0.3em;
+  margin: 0 auto;
+}
+
+.btnCreateAplique:hover {
+  box-shadow: 5px 5px -5px 1px black;
+}

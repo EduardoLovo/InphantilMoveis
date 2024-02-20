@@ -2,37 +2,37 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar";
 import "./App.css";
 //Rotas
-import { Home } from "./pages/Home";
+import { Home } from "./pages/Home/Home";
 import { Login } from "./pages/Login";
-import { ApliquesParaCliente } from "./pages/ApliquesParaCliente";
-import { ApliquesParaCortar } from "./pages/ApliquesParaCortar";
-import { ApliquesParaComprar } from "./pages/ApliquesParaComprar";
-import { CalculadoraParaLencois } from "./pages/CalculadoraParaLencois";
-import { Calculadora6040 } from "./pages/Calculadora6040";
 import { Info } from "./pages/Info";
-import { ApliquesEstoque } from "./pages/ApliquesEstoque";
-import { ApliquesEdit } from "./pages/ApliquesEdit";
-import { JwtHandler } from "./jwt_handler/jwt_handler";
+import { ApliquesParaCliente } from "./pages/Apliques/ApliquesParaCliente/ApliquesParaCliente";
+import { ApliquesParaCortar } from "./pages/Apliques/ApliquesParaCortar/ApliquesParaCortar";
+import { ApliquesParaComprar } from "./pages/Apliques/ApliquesParaComprar/ApliquesParaComprar";
+import { ApliquesCreate } from "./pages/Apliques/ApliquesCreate/ApliquesCreate";
+import { ApliquesParaCabana } from "./pages/Apliques/ApliquesParaCabana/ApliquesParaCabana";
+import { ApliquesEdit } from "./pages/Apliques/ApliquesEdit/ApliquesEdit";
+import { ApliquesEstoque } from "./pages/Apliques/ApliquesEstoque/ApliquesEstoque";
+import { Calculadora6040 } from "./pages/Calculadoras/Calculadora6040";
+import { CalculadoraParaLencois } from "./pages/Calculadoras/CalculadoraParaLencois";
 import { CatalogoDeTecidos } from "./pages/CatalogoTecidos/CatalogoDeTecidos";
+import { CatalogoLencolPE } from "./pages/CatalogoLencolPE/CatalogoLencolPE";
+import { JwtHandler } from "./jwt_handler/jwt_handler";
+import { LencolCreate } from "./pages/CatalogoLencolPE/LencolCreate";
+import { LencolEdit } from "./pages/CatalogoLencolPE/LencolEdit";
+import { MaterialEstoque } from "./pages/Materiais/MaterialEstoque";
+import { MaterialEdit } from "./pages/Materiais/MaterialEdit";
+import { MaterialCatalogo } from "./pages/Materiais/MaterialCatalogo";
+import { MaterialCreate } from "./pages/Materiais/MaterialCreate";
 import { TecidosJunior } from "./pages/CatalogoTecidos/Junior";
 import { TecidosSolteiro } from "./pages/CatalogoTecidos/Solteiro";
 import { TecidosViuva } from "./pages/CatalogoTecidos/Viuva";
 import { TecidosCasal } from "./pages/CatalogoTecidos/Casal";
 import { TecidosBQK } from "./pages/CatalogoTecidos/BQK";
 import { ToastContainer } from "react-toastify";
-import { ApliquesCreate } from "./pages/ApliquesCreate";
-import { CatalogoLencolPE } from "./pages/CatalogoLencolPE/CatalogoLencolPE";
-import { LencolCreate } from "./pages/CatalogoLencolPE/LencolCreate";
-import { LencolEdit } from "./pages/CatalogoLencolPE/LencolEdit";
-import { ApliquesParaCabana } from "./pages/ApliquesParaCabana";
-import { TecidosEdit } from "./pages/TecidosParaLencol/TecidosEdit";
-import { TecidosParaLencol } from "./pages/TecidosParaLencol/TecidosParaLencol";
-import { TecidosCreate } from "./pages/TecidosParaLencol/TecidosCreate";
-import { MaterialEstoque } from "./pages/Materiais/MaterialEstoque";
-import { MaterialEdit } from "./pages/Materiais/MaterialEdit";
+import { TecidosEdit } from "./pages/TecidosParaLencol/TecidosEdit/TecidosEdit";
+import { TecidosParaLencol } from "./pages/TecidosParaLencol/TecidosEstoque/TecidosParaLencol";
+import { TecidosCreate } from "./pages/TecidosParaLencol/TecidosCreate/TecidosCreate";
 import { Teste } from "./pages/Teste/Teste";
-import { MaterialCatalogo } from "./pages/Materiais/MaterialCatalogo";
-import { MaterialCreate } from "./pages/Materiais/MaterialCreate";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -86,7 +86,7 @@ function App() {
             path="/apliques-para-comprar"
             element={<ApliquesParaComprar />}
           />
-
+          // Private Routes
           <Route
             path="/apliques-para-cortar"
             element={
@@ -103,7 +103,6 @@ function App() {
               </PrivateRoute>
             }
           />
-
           <Route
             path="/calculadora-para-lencois"
             element={
@@ -112,7 +111,6 @@ function App() {
               </PrivateRoute>
             }
           />
-
           <Route
             path="/calculadora-60-40"
             element={
@@ -121,7 +119,6 @@ function App() {
               </PrivateRoute>
             }
           />
-
           <Route
             path="/editar-aplique/:id/"
             element={

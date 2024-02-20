@@ -1,0 +1,61 @@
+.contentEdit h1 {
+  /* position: absolute;
+  top: 10%;
+  left: 30%; */
+  text-align: center;
+  padding: 2em;
+}
+.imagemFormEdit {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.imagemFormEdit img {
+  height: 400px;
+}
+
+.formApliquesEdit {
+  margin-top: 4em;
+}
+.divInput {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+}
+
+.contentEdit label {
+  margin-left: 1em;
+  text-decoration: underline;
+}
+
+.contentEdit input {
+  border: none;
+  border-radius: 5px;
+}
+
+.apliqueCreateInputRadio {
+  /* display: flex; */
+  margin-left: 2em;
+}
+
+.apliqueCreateInputRadio label {
+  margin-left: 0.3em;
+}
+.apliqueCreateInputRadio input {
+  margin-left: 1em;
+}
+.divBtnCreateAplique {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.btnCreateAplique {
+  /* border: none; */
+  border-radius: 5px;
+  padding: 0.3em;
+  margin: 0 auto;
+}

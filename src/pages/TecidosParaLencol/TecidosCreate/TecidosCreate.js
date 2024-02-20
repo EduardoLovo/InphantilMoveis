@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Api } from "../../Api/Api";
+import { Api } from "../../../Api/Api";
 
 export const TecidosCreate = () => {
   const navigate = useNavigate();

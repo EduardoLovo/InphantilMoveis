@@ -1,8 +1,8 @@
 import React from "react";
-import Logo from "../img/LogoCir.png";
+import Logo from "../../img/logovetor.png";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Loading } from "../components/Loading/Loading";
+import { Loading } from "../../components/Loading/Loading";
 
 export const Home = () => {
   const [isLoading, setIsLoading] = useState(true);

@@ -1,0 +1,47 @@
+.containerApliquesEstoque {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contentApliqueEstoque h1 {
+  text-align: center;
+  padding: 1em;
+}
+.headerApliqueEstoque {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+}
+
+.headerApliqueEstoque input {
+  border-radius: 5px;
+  margin-left: 15px;
+  outline: none;
+  border: 1px solid #3d3d3d;
+}
+
+::placeholder {
+  color: #463a3a;
+  font-style: italic;
+  padding: 1em;
+}
+
+.add-button {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 1em;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #4caf50; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  border: none; /* Remove a borda */
+  border-radius: 50%; /* Borda arredondada */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

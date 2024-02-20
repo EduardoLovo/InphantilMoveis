@@ -1,10 +1,9 @@
-import React from "react";
-import { Api } from "../Api/Api";
-import { useState } from "react";
-import { useEffect } from "react";
-import { Loading } from "../components/Loading/Loading";
+import React, { useEffect, useState } from "react";
+import { Api } from "../../../Api/Api";
+import { Loading } from "../../../components/Loading/Loading";
+import { ApliqueCard } from "../ApliqueCard/ApliqueCard";
 
-export const ApliquesParaCabana = () => {
+export const ApliquesParaCliente = () => {
   const [apliques, setApliques] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -26,19 +25,30 @@ export const ApliquesParaCabana = () => {
   apliques.sort(compare);
 
   return (
-    <div className="">
+    <div>
       {loading ? (
         <Loading />
       ) : (
         <div className="container">
           {apliques.map((aplique, index) => (
-            <div className={aplique.estoque === "Nao" ? "display" : "col "}>
-              <div className="card border-dark mb-3">
+            <div
+              className={
+                aplique.estoque === "Nao" && aplique.quantidade === "0"
+                  ? "display"
+                  : "col "
+              }
+            >
+              {/* <div className="card border-dark mb-3">
                 <img src={aplique.img} className="card-img-top" alt="..." />
                 <div className="card-body text-warning">
                   <h5 className="card-title text-center">{aplique.number} </h5>
                 </div>
-              </div>
+              </div> */}
+              <ApliqueCard
+                codigo={aplique.number}
+                img={aplique.img}
+                id={aplique._id}
+              />
             </div>
           ))}
         </div>
