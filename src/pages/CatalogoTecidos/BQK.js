@@ -3,6 +3,7 @@ import { useState } from "react";
 import CapsLock from "../../components/CapsLock";
 import "./Catalogo.css";
 import { Api } from "../../Api/Api";
+import { ApliqueCard } from "../Apliques/ApliqueCard/ApliqueCard";
 
 export const TecidosBQK = () => {
   const [aplique, setAplique] = useState("");
@@ -163,19 +164,7 @@ export const TecidosBQK = () => {
                         : "col "
                     }
                   >
-                    <div className="card border-dark mb-3">
-                      <img
-                        src={aplique.img}
-                        className="card-img-top"
-                        alt="..."
-                        onClick={segundo}
-                      />
-                      <div className="card-body text-warning">
-                        <h5 className="card-title text-center">
-                          {aplique.number}{" "}
-                        </h5>
-                      </div>
-                    </div>
+                    <ApliqueCard aplique={aplique} />
                   </div>
                 ))}
               </div>

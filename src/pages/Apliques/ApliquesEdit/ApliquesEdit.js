@@ -30,10 +30,17 @@ export const ApliquesEdit = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    console.log(e.target.number.value);
     const number = e.target.number.value;
     const img = e.target.img.value;
     const quantidade = e.target.quantidade.value;
     const estoque = e.target.estoque.value;
+
+    // if (estoque === "true") {
+    //   estoque = true;
+    // } else {
+    //   estoque = false;
+    // }
 
     const payload = {
       number,
@@ -78,8 +85,8 @@ export const ApliquesEdit = (props) => {
               <div className="divInput">
                 <label className="">Codigo</label>
                 <input
-                  id="codigo"
-                  name="codigo"
+                  id="number"
+                  name="number"
                   type="text"
                   defaultValue={aplique.number}
                 />
@@ -87,8 +94,8 @@ export const ApliquesEdit = (props) => {
               <div className="divInput">
                 <label>Imagem</label>
                 <input
-                  id="imagem"
-                  name="imagem"
+                  id="img"
+                  name="img"
                   type="text"
                   defaultValue={aplique.img}
                 />
@@ -106,27 +113,22 @@ export const ApliquesEdit = (props) => {
               <div>
                 <label>Estoque: </label>
                 <div className="apliqueCreateInputRadio">
-                  <input
-                    type="radio"
+                  <select
                     id="estoque"
                     name="estoque"
-                    value={true}
-                    defaultValue={aplique.estoque}
-                  />
-                  <label for="html">SIM</label>
-                  <input
-                    type="radio"
-                    id="estoque"
-                    name="estoque"
-                    value={false}
-                    defaultValue={aplique.estoque}
-                  />
+                    className="form-control"
+                    placeholder="estoque"
+                  >
+                    <option>{aplique.estoque}</option>
+                    <option>Sim</option>
+                    <option>Nao</option>
+                  </select>
                   <label for="css">NÃO</label>
                 </div>
               </div>
               <div className="divBtnCreateAplique">
                 <button className="btnCreateAplique" type="submit">
-                  Adicionar
+                  Atualizar
                 </button>
               </div>
             </form>
