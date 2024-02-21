@@ -1,10 +1,10 @@
 .sidebar {
   position: fixed;
-  left: -150px; /* Define a largura inicial do sidebar */
+  left: -230px; /* Define a largura inicial do sidebar */
   top: 0;
   bottom: 0;
-  width: 200px; /* Largura do sidebar quando visível */
-  background-color: #333333;
+  width: 300px; /* Largura do sidebar quando visível */
+  background-color: #333333f3;
   color: white;
   transition: left 0.5s ease; /* Adiciona uma transição suave de 0.3 segundos */
   overflow-y: auto;
@@ -13,7 +13,7 @@
 
 .sidebar:hover {
   left: 0; /* Quando o mouse passa por cima, move o sidebar para a posição visível */
-  background-color: #333333;
+  background-color: #333333f3;
 }
 
 .iconMenu {
