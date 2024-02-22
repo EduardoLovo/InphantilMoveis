@@ -164,7 +164,9 @@ export const TecidosBQK = () => {
                         : "col "
                     }
                   >
-                    <ApliqueCard aplique={aplique} />
+                    <div onClick={segundo}>
+                      <ApliqueCard aplique={aplique} />
+                    </div>
                   </div>
                 ))}
               </div>

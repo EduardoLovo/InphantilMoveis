@@ -63,6 +63,7 @@ export const TecidosViuva = () => {
 
   const segundo = (e) => {
     e.preventDefault();
+    console.log("fois");
     const imga2 = e.target.src;
     setAplique(
       <img
@@ -166,7 +167,9 @@ export const TecidosViuva = () => {
                         : "col "
                     }
                   >
-                    <ApliqueCard aplique={aplique} />
+                    <div onClick={segundo}>
+                      <ApliqueCard aplique={aplique} />
+                    </div>
                   </div>
                 ))}
               </div>
