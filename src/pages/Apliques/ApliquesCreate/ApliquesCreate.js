@@ -74,13 +74,19 @@ export const ApliquesCreate = () => {
               <input id="quantidade" name="quantidade" type="number" />
             </div>
 
-            <div>
+            <div className="divInput">
               <label>Estoque: </label>
-              <div className="apliqueCreateInputRadio">
-                <input type="radio" id="estoque" name="estoque" value={true} />
-                <label for="html">SIM</label>
-                <input type="radio" id="estoque" name="estoque" value={false} />
-                <label for="css">NÃO</label>
+              <div >
+              <select
+                    id="estoque"
+                    name="estoque"
+                    className="form-control"
+                    placeholder="estoque"
+                  >
+                    
+                    <option>Sim</option>
+                    <option>Nao</option>
+                  </select>
               </div>
             </div>
             <div className="divBtnCreateAplique">

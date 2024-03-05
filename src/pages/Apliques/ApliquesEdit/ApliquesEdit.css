@@ -25,6 +25,12 @@
   margin: 0.5em;
 }
 
+.contentEdit select {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 .contentEdit label {
   margin-left: 1em;
   text-decoration: underline;
@@ -33,6 +39,7 @@
 .contentEdit input {
   border: none;
   border-radius: 5px;
+  padding: 5px;
 }
 
 .apliqueCreateInputRadio {

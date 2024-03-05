@@ -112,7 +112,7 @@ export const ApliquesEdit = (props) => {
 
               <div>
                 <label>Estoque: </label>
-                <div className="apliqueCreateInputRadio">
+                <div className="divInput">
                   <select
                     id="estoque"
                     name="estoque"
