@@ -16,10 +16,10 @@
   left: 50%;
   transform: translate(-50%, -50%); /* Centraliza o texto completamente */
   z-index: 0; /* Garante que o texto esteja acima da imagem */
-  color: rgb(0, 0, 0); /* Cor do texto, ajuste conforme necessário */
+  color: rgb(255, 255, 255); /* Cor do texto, ajuste conforme necessário */
   font-size: 18px; /* Tamanho da fonte, ajuste conforme necessário */
   font-weight: bold; /* Peso da fonte, ajuste conforme necessário */
-  background-color: rgba(182, 182, 182, 0.863);
+  background-color: rgba(39, 39, 39, 0.832);
   padding: 2px 5px;
   border-radius: 5px;
 }
@@ -76,4 +76,50 @@
 .linkdelete:hover {
   background-color: #a398986e;
   color: rgb(241, 84, 84);
+}
+
+.estoqueApliqueVerde{
+  background-color: rgb(21, 199, 44);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  transform: translate(-50%, -50%); /* Centraliza o texto completamente */
+  z-index: 1; /* Garante que o texto esteja acima da imagem */
+  font-size: 18px; /* Tamanho da fonte, ajuste conforme necessário */
+  font-weight: bold; /* Peso da fonte, ajuste conforme necessário */
+}
+
+.estoqueApliqueVermelho {
+  background-color: rgb(204, 25, 25);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  transform: translate(-50%, -50%); /* Centraliza o texto completamente */
+  z-index: 1; /* Garante que o texto esteja acima da imagem */
+  font-size: 18px; /* Tamanho da fonte, ajuste conforme necessário */
+  font-weight: bold; /* Peso da fonte, ajuste conforme necessário */
+}
+
+.quantidadeCard {
+  z-index: 0; /* Garante que o texto esteja acima da imagem */
+  color: rgb(255, 255, 255); /* Cor do texto, ajuste conforme necessário */
+  font-size: 18px; /* Tamanho da fonte, ajuste conforme necessário */
+  font-weight: bold; /* Peso da fonte, ajuste conforme necessário */
+  background-color: rgba(39, 39, 39, 0.832);
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  width:150px;
+  text-align: center;
+  border-radius: 5px;
+  transform: translate(-50%, -50%); /* Centraliza o texto completamente */
+  z-index: 1; /* Garante que o texto esteja acima da imagem */
+  font-size: 18px; /* Tamanho da fonte, ajuste conforme necessário */
+  font-weight: bold; /* Peso da fonte, ajuste conforme necessário */
 }

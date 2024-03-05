@@ -68,7 +68,7 @@ export const ApliqueCard = (props) => {
     setIsModalOpen(false);
   };
   return (
-    <div className="card border-dark mb-3">
+    <div className="card mb-3">
       <img
         src={img}
         className="card-img-top"
@@ -77,6 +77,8 @@ export const ApliqueCard = (props) => {
       />
       {type === "adm" ? (
         <div>
+          {quantidade > 3 ? <div className="estoqueApliqueVerde"></div> :<div className="estoqueApliqueVermelho"></div>}
+          <p className="quantidadeCard">quantidade: {quantidade}</p>
           <div className="menuAplique" onClick={toggleMenu} ref={menuRef}>
             ...
           </div>
