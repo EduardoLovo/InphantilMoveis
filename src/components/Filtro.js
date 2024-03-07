@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 // import { Api } from '../Api/Api';
 import { useNavigate } from "react-router-dom";
+import { ApliqueCard } from "../pages/Apliques/ApliqueCard/ApliqueCard";
 
 export const Filtro = (props) => {
   const apliques = props.apliques;
@@ -34,34 +35,7 @@ export const Filtro = (props) => {
         <div className="container">
           {filtrado.map((aplique, index) => (
             <div className="col " key={index}>
-              <div className="card">
-                <img src={aplique.img} className="card-img-top" alt="..." />
-                <div
-                  className={
-                    aplique.estoque === "Nao"
-                      ? "card-body text-danger"
-                      : "card-body text-success"
-                  }
-                >
-                  <h5 className="card-title">{aplique.number} </h5>
-                  <p className="card-text">
-                    Estoque = {aplique.quantidade}
-                    {type === "adm" ? (
-                      <button
-                        type="button"
-                        className="btn btn-outline-warning "
-                        onClick={() => {
-                          navigate(`/editar-aplique/${aplique._id}`);
-                        }}
-                      >
-                        Editar
-                      </button>
-                    ) : (
-                      ""
-                    )}
-                  </p>
-                </div>
-              </div>
+              <ApliqueCard aplique={aplique} />
             </div>
           ))}
         </div>
