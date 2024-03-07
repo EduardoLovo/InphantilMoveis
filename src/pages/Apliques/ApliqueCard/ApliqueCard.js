@@ -102,16 +102,22 @@ export const ApliqueCard = (props) => {
         ""
       )}
       <div className="codigoAplique">
-        {quantidade > 3 ? (
-          <div className="estoqueApliqueVerde"></div>
-        ) : (
-          <div className="estoqueApliqueVermelho"></div>
-        )}
         <p>{codigo}</p>
-        <p>quantidade: {quantidade}</p>
-        <div className="menuAplique" onClick={toggleMenu} ref={menuRef}>
-          ...
-        </div>
+        {type === "adm" ? (
+          <div>
+            {quantidade > 3 ? (
+              <div className="estoqueApliqueVerde"></div>
+            ) : (
+              <div className="estoqueApliqueVermelho"></div>
+            )}
+            <p>quantidade: {quantidade}</p>
+            <div className="menuAplique" onClick={toggleMenu} ref={menuRef}>
+              ...
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
