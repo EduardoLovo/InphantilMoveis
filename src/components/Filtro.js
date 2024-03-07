@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
-// import { Api } from '../Api/Api';
-import { useNavigate } from "react-router-dom";
 import { ApliqueCard } from "../pages/Apliques/ApliqueCard/ApliqueCard";
 
 export const Filtro = (props) => {
   const apliques = props.apliques;
-  const navigate = useNavigate();
   const [filtrado, setFiltrado] = useState([]);
   const texto = props.texto;
-
-  const type = localStorage.getItem("user");
 
   useEffect(() => {
     const results = apliques.filter((resp) =>

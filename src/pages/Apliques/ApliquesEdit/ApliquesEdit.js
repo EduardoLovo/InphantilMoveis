@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Api } from "../../../Api/Api";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { Loading } from "../../../components/Loading/Loading";
+import "react-toastify/dist/ReactToastify.css";
 import "./ApliquesEdit.css";
 
 export const ApliquesEdit = (props) => {
@@ -57,8 +57,6 @@ export const ApliquesEdit = (props) => {
       toast.error("Erro ao atualizar!");
     }
   };
-
-  const [selectEstoque, setSelectEstoque] = useState();
 
   return (
     <div className="">
