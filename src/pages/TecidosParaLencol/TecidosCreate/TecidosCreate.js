@@ -84,6 +84,7 @@ export const TecidosCreate = () => {
             <option></option>
             <option>Azul</option>
             <option>Azul AZ3</option>
+            <option>Azul Claro</option>
             <option>Bege</option>
             <option>Branco</option>
             <option>Cinza</option>
@@ -91,6 +92,7 @@ export const TecidosCreate = () => {
             <option>Prata</option>
             <option>Rosa</option>
             <option>Rosa Bebe</option>
+            <option>Verde</option>
           </select>
         </div>
 

@@ -22,12 +22,9 @@ export const ApliquesCreate = () => {
     const codigo = e.target.codigo.value;
     const imagem = e.target.imagem.value;
     const quantidade = +e.target.quantidade.value;
-    var estoque = e.target.estoque.value;
-    if (estoque === "true") {
-      estoque = true;
-    } else {
-      estoque = false;
-    }
+    const estoque = e.target.estoque.value;
+    
+    
 
     const payload = {
       number: codigo,

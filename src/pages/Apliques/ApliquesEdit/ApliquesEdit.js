@@ -36,12 +36,6 @@ export const ApliquesEdit = (props) => {
     const quantidade = e.target.quantidade.value;
     const estoque = e.target.estoque.value;
 
-    // if (estoque === "true") {
-    //   estoque = true;
-    // } else {
-    //   estoque = false;
-    // }
-
     const payload = {
       number,
       img,
