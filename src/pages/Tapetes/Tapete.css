@@ -1,0 +1,36 @@
+.listaMaterialTapete {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 500px;
+}
+
+.listaMaterialTapete .card {
+  width: 120px;
+}
+.imagemteste {
+  width: 70px;
+  height: 70px;
+
+  border: 1px solid black;
+}
+
+.resultadoTapete {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.652);
+  width: 100vw;
+}
+
+.coresLista {
+  color: aliceblue;
+  margin-right: 28em;
+}
+
+.coresLista span {
+  margin-right: 32px;
+}

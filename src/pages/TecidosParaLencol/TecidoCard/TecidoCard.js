@@ -44,7 +44,6 @@ const TecidoCard = (props) => {
   };
 
   const handleConfirmDelete = async (e) => {
-    // Chame a função de exclusão real aqui
     e.preventDefault();
     const response = await Api.buildApiDeleteRequest(
       Api.deleteTecidoUrl(id),
@@ -71,18 +70,14 @@ const TecidoCard = (props) => {
     <div className="card border-dark mb-3">
       <img
         src={imagem}
-        className="card-img-top"
+        className="card-img-top cursorPointer"
         alt=".."
         title={`${quantidade} em estoque`}
       />
       {type === "adm" ? (
         <div>
-          <div className="menuAplique" onClick={toggleMenu} ref={menuRef}>
-            ...
-          </div>
           {isMenuOpen && (
             <div className="menu">
-              <p className="linkquantidade">quantidade: {quantidade}</p>
               <Link
                 className="linkedit"
                 to={`/tecido-edit/${id}`}
@@ -105,7 +100,24 @@ const TecidoCard = (props) => {
       ) : (
         ""
       )}
-      {/* <div className="codigoAplique">{codigo}</div> */}
+      <div className="codigoAplique">
+        <p>{cor}</p>
+        {type === "adm" ? (
+          <div>
+            {quantidade > 3 ? (
+              <div className="estoqueApliqueVerde"></div>
+            ) : (
+              <div className="estoqueApliqueVermelho"></div>
+            )}
+            <p>quantidade: {quantidade}</p>
+            <div className="menuAplique" onClick={toggleMenu} ref={menuRef}>
+              ...
+            </div>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
 };

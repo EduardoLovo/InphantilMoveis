@@ -71,7 +71,7 @@ export const ApliqueCard = (props) => {
     <div className="card mb-3">
       <img
         src={img}
-        className="card-img-top"
+        className="card-img-top cursorPointer"
         alt={codigo}
         title={`${quantidade} em estoque`}
       />

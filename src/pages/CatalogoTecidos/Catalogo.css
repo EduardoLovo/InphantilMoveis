@@ -63,6 +63,10 @@
   border-radius: 5px;
 }
 
+.cursorPointer {
+  cursor: pointer;
+}
+
 @media (max-width: 750px) {
   .imagem1 {
     height: 15rem;

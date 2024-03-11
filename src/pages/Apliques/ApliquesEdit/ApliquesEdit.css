@@ -40,6 +40,12 @@
   border: none;
   border-radius: 5px;
   padding: 5px;
+  /* outline: none; */
+}
+
+.contentEdit input:focus {
+  outline: none;
+  border-radius: 10px;
 }
 
 .apliqueCreateInputRadio {

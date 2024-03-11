@@ -4,6 +4,7 @@ import CapsLock from "../../components/CapsLock";
 import "./Catalogo.css";
 import { Api } from "../../Api/Api";
 import { ApliqueCard } from "../Apliques/ApliqueCard/ApliqueCard";
+import TecidoCard from "../TecidosParaLencol/TecidoCard/TecidoCard";
 
 export const TecidosBQK = () => {
   const [aplique, setAplique] = useState("");
@@ -125,16 +126,8 @@ export const TecidosBQK = () => {
                 key={index}
               >
                 {tecido.tamanho === "BQK" ? (
-                  <div className="card border-dark mb-3">
-                    <img
-                      src={tecido.img}
-                      className="card-img-top"
-                      alt="..."
-                      onClick={primeiroClick}
-                    />
-                    <div className="card-body text-success">
-                      <p>Cor: {tecido.cor}</p>
-                    </div>
+                  <div onClick={primeiroClick} className="cardTecidoCatalogo">
+                    <TecidoCard tecido={tecido} />
                   </div>
                 ) : (
                   ""

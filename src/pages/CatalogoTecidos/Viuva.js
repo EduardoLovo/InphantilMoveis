@@ -4,6 +4,7 @@ import "./Catalogo.css";
 import { Api } from "../../Api/Api";
 import CapsLock from "../../components/CapsLock";
 import { ApliqueCard } from "../Apliques/ApliqueCard/ApliqueCard";
+import TecidoCard from "../TecidosParaLencol/TecidoCard/TecidoCard";
 
 export const TecidosViuva = () => {
   const [aplique, setAplique] = useState("");
@@ -127,16 +128,8 @@ export const TecidosViuva = () => {
                   key={index}
                 >
                   {tecido.tamanho === "Viuva - GG" ? (
-                    <div className="card border-dark mb-3">
-                      <img
-                        src={tecido.img}
-                        className="card-img-top"
-                        alt="..."
-                        onClick={primeiroClick}
-                      />
-                      <div className="card-body text-success">
-                        <p>Cor: {tecido.cor}</p>
-                      </div>
+                    <div onClick={primeiroClick}>
+                      <TecidoCard tecido={tecido} />
                     </div>
                   ) : (
                     ""

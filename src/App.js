@@ -32,7 +32,11 @@ import { ToastContainer } from "react-toastify";
 import { TecidosEdit } from "./pages/TecidosParaLencol/TecidosEdit/TecidosEdit";
 import { TecidosParaLencol } from "./pages/TecidosParaLencol/TecidosEstoque/TecidosParaLencol";
 import { TecidosCreate } from "./pages/TecidosParaLencol/TecidosCreate/TecidosCreate";
-import { Teste } from "./pages/Teste/Teste";
+import { SeisCores } from "./pages/Tapetes/SeisCores";
+import { QuatroCores } from "./pages/Tapetes/QuatroCores";
+import { CincoCores } from "./pages/Tapetes/CincoCores";
+import { SeteCores } from "./pages/Tapetes/SeteCores";
+import { MontagemTapetes } from "./pages/Tapetes/MontagemTapetes";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -80,8 +84,12 @@ function App() {
             element={<ApliquesParaCabana />}
           />
           <Route path="/info" element={<Info />} />
-          <Route path="/teste" element={<Teste />} />
           <Route path="/material-catalogo" element={<MaterialCatalogo />} />
+          <Route path="/tapete-quatro-cores" element={<QuatroCores />} />
+          <Route path="/tapete-cinco-cores" element={<CincoCores />} />
+          <Route path="/tapete-seis-cores" element={<SeisCores />} />
+          <Route path="/tapete-sete-cores" element={<SeteCores />} />
+          <Route path="/montagem-tapetes" element={<MontagemTapetes />} />
           <Route
             path="/apliques-para-comprar"
             element={<ApliquesParaComprar />}
@@ -196,14 +204,6 @@ function App() {
             element={
               <PrivateRoute redirectTo="/">
                 <MaterialEdit />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/teste/"
-            element={
-              <PrivateRoute redirectTo="/">
-                <Teste />
               </PrivateRoute>
             }
           />
