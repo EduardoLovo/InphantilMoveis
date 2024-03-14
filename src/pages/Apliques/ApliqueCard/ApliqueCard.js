@@ -105,7 +105,7 @@ export const ApliqueCard = (props) => {
         <p>{codigo}</p>
         {type === "adm" ? (
           <div>
-            {quantidade > 3 ? (
+            {estoque === "Sim" ? (
               <div className="estoqueApliqueVerde"></div>
             ) : (
               <div className="estoqueApliqueVermelho"></div>

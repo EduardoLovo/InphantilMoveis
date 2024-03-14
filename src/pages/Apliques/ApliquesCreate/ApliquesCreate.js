@@ -24,8 +24,6 @@ export const ApliquesCreate = () => {
     const quantidade = +e.target.quantidade.value;
     const estoque = e.target.estoque.value;
     
-    
-
     const payload = {
       number: codigo,
       imagem: imagem,

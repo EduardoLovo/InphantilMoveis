@@ -30,11 +30,12 @@ export const ApliquesEdit = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(e.target.number.value);
     const number = e.target.number.value;
     const img = e.target.img.value;
     const quantidade = e.target.quantidade.value;
     const estoque = e.target.estoque.value;
+
+    console.log(estoque);
 
     const payload = {
       number,
@@ -115,7 +116,6 @@ export const ApliquesEdit = (props) => {
                     <option>Sim</option>
                     <option>Nao</option>
                   </select>
-                  <label for="css">NÃO</label>
                 </div>
               </div>
               <div className="divBtnCreateAplique">
