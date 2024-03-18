@@ -25,11 +25,11 @@ export const CalculadoraParaLencois = () => {
     const collar = inlar - 3;
     const colcomp = incomp - 3;
 
-    const lenlar = collar + 40;
+    const lenlar = collar + 46;
 
     const lencomp = () => {
       if (acessorio === "lencol") {
-        const lencomp = colcomp + 40;
+        const lencomp = colcomp + 46;
         return lencomp;
       } else {
         const lencomp = colcomp + 70;
@@ -119,7 +119,7 @@ export const CalculadoraParaLencois = () => {
 
     const lenlar = () => {
       if (acessorio === "lencol") {
-        const lenlar = lar + (alt + 10) * 2;
+        const lenlar = lar + (alt + 13) * 2;
         return lenlar;
       } else {
         const lenlar = lar + 40;
@@ -129,7 +129,7 @@ export const CalculadoraParaLencois = () => {
 
     const lencomp = () => {
       if (acessorio === "lencol") {
-        const lencomp = comp + (alt + 10) * 2;
+        const lencomp = comp + (alt + 13) * 2;
         return lencomp;
       } else {
         const lencomp = comp + 70;
@@ -189,7 +189,7 @@ export const CalculadoraParaLencois = () => {
             <label>Quadrado: </label>
             <span>
               {" "}
-              {alt + 10} x {alt + 10}
+              {alt + 12} x {alt + 12}
             </span>
           </div>
         ) : (
