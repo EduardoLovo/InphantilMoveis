@@ -31,6 +31,13 @@
   margin-right: 28em;
 }
 
-.coresLista span {
+.coresListaTapete span {
   margin-right: 32px;
+}
+
+.tituloTapetes {
+  padding: 1em 0 1em 4em;
+}
+.linksTapete {
+  margin-left: 5em;
 }

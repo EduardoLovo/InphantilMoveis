@@ -49,7 +49,6 @@ export const QuatroCores = () => {
     setCor4(<img className="imagemteste" src={e.target.src} />);
   };
 
-  console.log(listas);
 
   return (
     <div>

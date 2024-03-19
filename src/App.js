@@ -37,6 +37,13 @@ import { QuatroCores } from "./pages/Tapetes/QuatroCores";
 import { CincoCores } from "./pages/Tapetes/CincoCores";
 import { SeteCores } from "./pages/Tapetes/SeteCores";
 import { MontagemTapetes } from "./pages/Tapetes/MontagemTapetes";
+import { DuasCores } from "./pages/Tapetes/DuasCores";
+import { TresCores } from "./pages/Tapetes/TresCores";
+import { OitoCores } from "./pages/Tapetes/OitoCores";
+import { NoveCores } from "./pages/Tapetes/NoveCores";
+import { DezCores } from "./pages/Tapetes/DezCores";
+import { OnzeCores } from "./pages/Tapetes/OnzeCores";
+import { DozeCores } from "./pages/Tapetes/DozeCores";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -85,10 +92,17 @@ function App() {
           />
           <Route path="/info" element={<Info />} />
           <Route path="/material-catalogo" element={<MaterialCatalogo />} />
+          <Route path="/tapete-duas-cores" element={<DuasCores />} />
+          <Route path="/tapete-tres-cores" element={<TresCores />} />
           <Route path="/tapete-quatro-cores" element={<QuatroCores />} />
           <Route path="/tapete-cinco-cores" element={<CincoCores />} />
           <Route path="/tapete-seis-cores" element={<SeisCores />} />
           <Route path="/tapete-sete-cores" element={<SeteCores />} />
+          <Route path="/tapete-oito-cores" element={<OitoCores />} />
+          <Route path="/tapete-nove-cores" element={<NoveCores />} />
+          <Route path="/tapete-dez-cores" element={<DezCores />} />
+          <Route path="/tapete-onze-cores" element={<OnzeCores />} />
+          <Route path="/tapete-doze-cores" element={<DozeCores />} />
           <Route path="/montagem-tapetes" element={<MontagemTapetes />} />
           <Route
             path="/apliques-para-comprar"
