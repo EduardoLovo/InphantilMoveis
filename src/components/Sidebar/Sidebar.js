@@ -104,11 +104,12 @@ const Sidebar = () => {
                   <Link to="/catalogo-apliques-para-cabana">
                     Apliques Para Cabana
                   </Link>
+                  <Link to="/material-catalogo">Cores para Cama</Link>
                   <Link to="/catalogo-lencol-pronta-entrega">
                     Lencois Pronto Entrega
                   </Link>
                   <Link to="/catalogo-cliente">Lista de Apliques</Link>
-                  <Link to="/material-catalogo">Cores para Cama</Link>
+                  <Link to="/montagem-tapetes">Tapetes</Link>
 
                   <p className="mt-4">Estoque:</p>
                   <Link to="/apliques-estoque">Apliques</Link>
