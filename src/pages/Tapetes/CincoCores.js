@@ -59,7 +59,7 @@ export const CincoCores = () => {
   return (
     <div>
       <div className="resultadoTapete">
-        <div className="coresLista">
+        <div className="coresListaTapete">
           <span>Cor 1</span>
           <span>Cor 2</span>
           <span>Cor 3</span>
