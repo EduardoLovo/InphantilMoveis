@@ -9,7 +9,7 @@ import protetor8 from "../img/protetor8.jpeg";
 
 export const Info = () => {
   return (
-    <div className="contentInfo fs-6">
+    <div className="contentInfo fs-5">
       <h2 className="text-center p-5">Informações Importantes!</h2>
       <div className="d-flex justify-content-center align-items-center infochild ">
         <div>
@@ -178,12 +178,14 @@ export const Info = () => {
       <hr className="hr" />
       <div className="d-flex justify-content-center align-items-center divImgProtetor ">
         <div>
-          <h2 className="p-3">Instalação do protetor de parede</h2>
+          <h2 className="p-3">
+            <u>Instalação do Painel (Cerca)</u>
+          </h2>
           <div className="passoApasso">
             <p>
-              Primeiro encaixe acima do roda pé a peça que terá uma
-              especificação atrás, escrito "canto". Na ilustração abaixo, é a
-              peça em amarelo.
+              Primeiro instale a lateral. Atrás de cada peça terá uma marcação
+              de lateral ou cabeceira, nas laterais estarão "Lat" e a numeração
+              da peça, como no exemplo:
             </p>
             <img
               src={protetor5}
@@ -192,25 +194,12 @@ export const Info = () => {
             />
           </div>
           <div className="passoApasso">
-            <p>Em seguida encaixe o restante das peças na lateral.</p>
+            <p>
+              Nas cabeceiras estarão "Cab" e a numeração da peça, como no
+              exemplo:
+            </p>
             <img
               src={protetor6}
-              alt="protetor"
-              className="imgProtetor img-fluid"
-            />
-          </div>
-          <div className="passoApasso">
-            <p>Por fim encaixe as peças da cabeceira.</p>
-            <img
-              src={protetor7}
-              alt="protetor"
-              className="imgProtetor img-fluid"
-            />
-          </div>
-          <div className="passoApasso">
-            <p>Este é o resultado</p>
-            <img
-              src={protetor8}
               alt="protetor"
               className="imgProtetor img-fluid"
             />
