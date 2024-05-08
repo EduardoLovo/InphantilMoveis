@@ -203,7 +203,7 @@ export const CalculadoraParaLencois = () => {
     <div>
       <div className="p-5 glass2">
         <h2 className="text-decoration-underline">
-          Sob Medida com colchão Phant:
+          Sob Medida com medida da cama:
         </h2>
         <div className="row align-items-center ">
           <div className="col">
@@ -267,7 +267,7 @@ export const CalculadoraParaLencois = () => {
       <hr className="hr" />
       <div className="p-5 mt-4">
         <h2 className="text-decoration-underline">
-          Sob Medida com colchão do cliente:
+          Sob Medida com medida do colchão:
         </h2>
         <div className="row align-items-center ">
           <div className="col">
