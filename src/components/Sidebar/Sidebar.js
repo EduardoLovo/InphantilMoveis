@@ -140,7 +140,7 @@ const Sidebar = () => {
               {isLogged === false ? (
                 <div className="sidebar-items">
                   <p className="mt-4">Catalogos:</p>
-                  <Link to="/catalogo">Apliques & Lençois</Link>
+                  <Link to="/catalogo-lençol-aplique">Apliques & Lençois</Link>
                   <Link to="/catalogo-apliques-para-cabana">
                     Apliques Para Cabana
                   </Link>
@@ -295,7 +295,7 @@ const Sidebar = () => {
         {isLogged === false ? (
           <div className="sidebar-items">
             <p className="mt-4">Catalogos:</p>
-            <Link to="/catalogo">Apliques & Lençois</Link>
+            <Link to="/catalogo-lençol-aplique">Apliques & Lençois</Link>
             <Link to="/catalogo-apliques-para-cabana">
               Apliques Para Cabana
             </Link>
