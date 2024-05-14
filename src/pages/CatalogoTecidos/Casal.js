@@ -152,7 +152,7 @@ export const TecidosCasal = () => {
                   <div
                     key={index}
                     className={
-                      aplique.estoque === "Nao" && aplique.quantidade === 0
+                      aplique.estoque === "Nao" && aplique.quantidade === "0"
                         ? "display"
                         : "col "
                     }
