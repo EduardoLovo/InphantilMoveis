@@ -53,7 +53,7 @@ const Sidebar = () => {
                   <Link to="/material-estoque">Materiais</Link>
 
                   <p className="mt-4">catalogos:</p>
-                  <Link to="/catalogo">Apliques & Lençois</Link>
+                  <Link to="/catalogo-lençol-aplique">Apliques & Lençois</Link>
                   <Link to="/catalogo-apliques-para-cabana">
                     Apliques Para Cabana
                   </Link>
@@ -100,7 +100,7 @@ const Sidebar = () => {
                   <Link to="/calculadora-60-40">Calculadora 60 / 40</Link>
 
                   <p className="mt-4">Catalogos:</p>
-                  <Link to="/catalogo">Apliques & Lençois</Link>
+                  <Link to="/catalogo-lençol-aplique">Apliques & Lençois</Link>
                   <Link to="/catalogo-apliques-para-cabana">
                     Apliques Para Cabana
                   </Link>
@@ -201,7 +201,7 @@ const Sidebar = () => {
             <Link to="/material-estoque">Cores para Cama</Link>
 
             <p className="mt-4">catalogos:</p>
-            <Link to="/catalogo">Apliques % Lençois</Link>
+            <Link to="/catalogo-lençol-aplique">Apliques % Lençois</Link>
             <Link to="/catalogo-apliques-para-cabana">
               Apliques Para Cabana
             </Link>
@@ -250,7 +250,7 @@ const Sidebar = () => {
             <Link to="/calculadora-60-40">Calculadora 60 / 40</Link>
 
             <p className="mt-4">Catalogos:</p>
-            <Link to="/catalogo">Apliques % Lençois</Link>
+            <Link to="/catalogo-lençol-aplique">Apliques % Lençois</Link>
             <Link to="/catalogo-apliques-para-cabana">
               Apliques Para Cabana
             </Link>
