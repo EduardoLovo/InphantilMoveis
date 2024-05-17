@@ -265,4 +265,15 @@
   .tamanhoInput {
     width: 1rem;
   }
+
+  .displayResult {
+    margin-left: 7rem;
+  }
+  .tituloMontar {
+    margin-left: 8rem;
+  }
+
+  .btnCinza {
+    margin-left: 8rem;
+  }
 }

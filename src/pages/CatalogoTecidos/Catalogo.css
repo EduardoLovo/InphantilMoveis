@@ -1,5 +1,6 @@
 .imagem1 {
-  height: 30vh;
+  height: 50vh;
+  width: 50vw;
 }
 
 .backgroundTransparente {
@@ -22,7 +23,8 @@
   background-color: rgba(41, 41, 41, 0.822);
   /* padding: 1rem; */
   color: #fff;
-  width: 100%;
+  width: 90%;
+  margin-left: 4%;
 }
 
 .fixed {
@@ -95,5 +97,9 @@
   .codigoApliqueEscolha {
     top: 65%;
     left: 50%;
+  }
+
+  .marginDesktop {
+    margin-left: 5rem;
   }
 }

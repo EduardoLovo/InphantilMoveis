@@ -50,7 +50,7 @@ export const MontarCores = () => {
   };
   return (
     <div>
-      <h1 className="ms-5">Montar cores</h1>
+      <h1 className=" tituloMontar">Montar cores</h1>
       {click === "escolhaDois" ? (
         <div>
           <div className="displayResult">
@@ -64,7 +64,7 @@ export const MontarCores = () => {
             </div>
           </div>
           <div>
-            <button onClick={reset} className="m-2 p-1 btnCinza">
+            <button onClick={reset} className=" p-1 btnCinza ">
               Escolher Novamente
             </button>
           </div>

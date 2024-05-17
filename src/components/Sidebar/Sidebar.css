@@ -148,8 +148,9 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    transform: translateX(-100%);
-    display: none;
+    /* transform: translateX(-%); */
+    /* display: none; */
+    background-color: #333333bb;
   }
 
   .sidebar.open {
