@@ -69,7 +69,7 @@ export const TecidosJunior = () => {
     setAplique(
       <div>
         <img
-          className="imagem1"
+          className="imagem2"
           src={imga2}
           id="one"
           name="fav_language"

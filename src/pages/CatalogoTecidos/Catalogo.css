@@ -3,6 +3,10 @@
   width: 50vw;
 }
 
+.imagem2 {
+  height: 50vh;
+}
+
 .backgroundTransparente {
   background-color: rgba(41, 41, 41, 0.822);
 }
@@ -71,6 +75,10 @@
 
 @media (max-width: 750px) {
   .imagem1 {
+    height: 15rem;
+  }
+
+  .imagem2 {
     height: 15rem;
   }
   .backgroundTransparente {
