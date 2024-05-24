@@ -1,6 +1,3 @@
-.contentTecidoCard {
-}
-
 .menuTecido {
   position: absolute;
   top: 8%;
@@ -11,4 +8,40 @@
   font-size: 18px; /* Tamanho da fonte, ajuste conforme necessário */
   font-weight: bold; /* Peso da fonte, ajuste conforme necessário */
   cursor: pointer;
+}
+
+.estoqueApliqueVerde {
+  background-color: rgb(21, 199, 44);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%); /* Centraliza o texto completamente */
+  z-index: 1; /* Garante que o texto esteja acima da imagem */
+  font-size: 18px; /* Tamanho da fonte, ajuste conforme necessário */
+  font-weight: bold; /* Peso da fonte, ajuste conforme necessário */
+}
+
+.estoqueApliqueVermelho {
+  background-color: rgb(204, 25, 25);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%); /* Centraliza o texto completamente */
+  z-index: 1; /* Garante que o texto esteja acima da imagem */
+  font-size: 18px; /* Tamanho da fonte, ajuste conforme necessário */
+  font-weight: bold; /* Peso da fonte, ajuste conforme necessário */
+}
+
+.ImgTecidoEstoque {
+  height: 12em;
+}
+
+.menu {
+  z-index: 95;
 }

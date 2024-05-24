@@ -48,7 +48,7 @@ export const TecidosParaLencol = () => {
       )}
 
       <div>
-        <h2 className="ms-5">Junior</h2>
+        <h2 className="ms-5">Estoque de Tecidos</h2>
         <div className="d-flex flex-wrap justify-content-start">
           {tecidos.map((tecido, index) => (
             <div className="" key={index}>
@@ -57,72 +57,6 @@ export const TecidosParaLencol = () => {
               ) : (
                 ""
               )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <h2 className="ms-5">Solteiro</h2>
-        <div className="d-flex flex-wrap justify-content-start">
-          {tecidos.map((tecido, index) => (
-            <div className="" key={index}>
-              {tecido.tamanho === "Solteiro / Solteirão - G" ? (
-                <TecidoCard tecido={tecido} />
-              ) : (
-                ""
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <h2 className="ms-5">Solteirão</h2>
-        <div className="d-flex flex-wrap justify-content-start">
-          {tecidos.map((tecido, index) => (
-            <div className="" key={index}>
-              {tecido.tamanho === "Solteiro / Solteirão - G" ? (
-                <TecidoCard tecido={tecido} />
-              ) : (
-                ""
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <h2 className="ms-5">Viuva</h2>
-        <div className="d-flex flex-wrap justify-content-start">
-          {tecidos.map((tecido, index) => (
-            <div className="" key={index}>
-              {tecido.tamanho === "Viuva - GG" ? (
-                <TecidoCard tecido={tecido} />
-              ) : (
-                ""
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div>
-        <h2 className="ms-5">Casal</h2>
-        <div className="d-flex flex-wrap justify-content-start">
-          {tecidos.map((tecido, index) => (
-            <div className="" key={index}>
-              {tecido.tamanho === "Casal" ? <TecidoCard tecido={tecido} /> : ""}
-            </div>
-          ))}
-        </div>
-      </div>
-      <div>
-        <h2 className="ms-5">BQK</h2>
-        <div className="d-flex flex-wrap justify-content-start">
-          {tecidos.map((tecido, index) => (
-            <div className="" key={index}>
-              {tecido.tamanho === "BQK" ? <TecidoCard tecido={tecido} /> : ""}
             </div>
           ))}
         </div>

@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import ModalReact from "../../../components/Modal/ModalReact";
 import { toast } from "react-toastify";
 import { Api } from "../../../Api/Api";
+import "./TecidoCard.css";
 
 const TecidoCard = (props) => {
   const navigate = useNavigate();
@@ -66,11 +67,13 @@ const TecidoCard = (props) => {
     setIsModalOpen(false);
   };
 
+  console.log(estoque);
+
   return (
     <div className="card border-dark mb-3">
       <img
         src={imagem}
-        className="card-img-top cursorPointer"
+        className="ImgTecidoEstoque cursorPointer"
         alt=".."
         title={`${quantidade} em estoque`}
       />
@@ -104,12 +107,12 @@ const TecidoCard = (props) => {
         <p>{cor}</p>
         {type === "adm" ? (
           <div>
-            {quantidade > 3 ? (
-              <div className="estoqueApliqueVerde"></div>
-            ) : (
+            {estoque === "Nao" ? (
               <div className="estoqueApliqueVermelho"></div>
+            ) : (
+              <div className="estoqueApliqueVerde"></div>
             )}
-            <p>quantidade: {quantidade}</p>
+            <p></p>
             <div className="menuAplique" onClick={toggleMenu} ref={menuRef}>
               ...
             </div>

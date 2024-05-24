@@ -1,0 +1,23 @@
+.contentTecidoEdit h1 {
+  text-align: center;
+}
+.imagemTecidoEdit {
+  width: 35vw;
+}
+
+.divEditTecido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formularioEditTecido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formularioEditTecido input {
+  width: 25rem;
+}

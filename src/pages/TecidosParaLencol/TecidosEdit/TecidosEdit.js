@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Api } from "../../../Api/Api";
 import { toast } from "react-toastify";
 import ModalReact from "../../../components/Modal/ModalReact";
+import "./TecidosEdit.css";
 
 export const TecidosEdit = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -85,103 +86,97 @@ export const TecidosEdit = () => {
     setIsModalOpen(false);
   };
 
+  console.log(tecido);
+
   return (
-    <div className="contentCreate">
-      <div className="text-center m-4">
-        <h1>Editar tecido</h1>
+    <div className="contentTecidoEdit">
+      <h1>Editar Tecido</h1>
+      <div className="divEditTecido">
+        <img
+          src={tecido.img}
+          alt="imagem tecido"
+          className="imagemTecidoEdit"
+        />
+        <form className="formularioEditTecido" onSubmit={handleSubmit}>
+          <div className="divInput">
+            <label className="" id="inputGroup-sizing-default">
+              Imagem
+            </label>
+            <input
+              id="img"
+              name="img"
+              defaultValue={tecido.img}
+              type="text"
+              className=""
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+            />
+          </div>
+
+          <div className="divInput">
+            <label className="" id="inputGroup-sizing-default">
+              Quantidade
+            </label>
+            <input
+              id="quantidade"
+              name="quantidade"
+              defaultValue={tecido.quantidade}
+              type="text"
+              className=""
+              aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default"
+            />
+          </div>
+
+          <div className="divInput">
+            <label>Cor: </label>
+            <select id="cor" name="cor" className="" placeholder="cor">
+              <option>{tecido.cor}</option>
+              <option>Azul</option>
+              <option>Azul AZ3</option>
+              <option>Azul Claro</option>
+              <option>Bege</option>
+              <option>Branco</option>
+              <option>Cinza</option>
+              <option>Palha</option>
+              <option>Prata</option>
+              <option>Rosa</option>
+              <option>Rosa Bebe</option>
+              <option>Verde</option>
+            </select>
+          </div>
+
+          <div className="divInput">
+            <label>Tamanho: </label>
+            <select id="tamanho" name="tamanho" className="" placeholder="cor">
+              <option>{tecido.tamanho}</option>
+              <option>Junior - M</option>
+              <option>Solteiro / Solteirão - G</option>
+              <option>Viuva - GG</option>
+              <option>Casal</option>
+              <option>BQK</option>
+            </select>
+          </div>
+
+          <label>Estoque: </label>
+          <div className="">
+            <select
+              id="estoque"
+              name="estoque"
+              className=""
+              placeholder="estoque"
+            >
+              <option>{tecido.estoque}</option>
+              <option>Sim</option>
+              <option>Nao</option>
+            </select>
+          </div>
+
+          <button className=" btnPadrao m-4" type="submit">
+            Atualizar
+          </button>
+        </form>
       </div>
-      <form
-        className="d-flex flex-column align-items-center"
-        onSubmit={handleSubmit}
-      >
-        <div className="input-group mb-3 w-50">
-          <span className="input-group-text" id="inputGroup-sizing-default">
-            Imagem
-          </span>
-          <input
-            id="img"
-            name="img"
-            defaultValue={tecido.img}
-            type="text"
-            className="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default"
-          />
-        </div>
-
-        <div className="input-group mb-3 w-50">
-          <span className="input-group-text" id="inputGroup-sizing-default">
-            Quantidade
-          </span>
-          <input
-            id="quantidade"
-            name="quantidade"
-            defaultValue={tecido.quantidade}
-            type="text"
-            className="form-control"
-            aria-label="Sizing example input"
-            aria-describedby="inputGroup-sizing-default"
-          />
-        </div>
-
-        <label>Cor: </label>
-        <div className="input-group mb-3 w-50">
-          <select
-            id="cor"
-            name="cor"
-            className="form-control"
-            placeholder="cor"
-          >
-            <option>{tecido.cor}</option>
-            <option>Azul</option>
-            <option>Azul AZ3</option>
-            <option>Azul Claro</option>
-            <option>Bege</option>
-            <option>Branco</option>
-            <option>Cinza</option>
-            <option>Palha</option>
-            <option>Prata</option>
-            <option>Rosa</option>
-            <option>Rosa Bebe</option>
-            <option>Verde</option>
-          </select>
-        </div>
-
-        <label>Tamanho: </label>
-        <div className="input-group mb-3 w-50">
-          <select
-            id="tamanho"
-            name="tamanho"
-            className="form-control"
-            placeholder="cor"
-          >
-            <option>{tecido.tamanho}</option>
-            <option>Junior - M</option>
-            <option>Solteiro / Solteirão - G</option>
-            <option>Viuva - GG</option>
-            <option>Casal</option>
-            <option>BQK</option>
-          </select>
-        </div>
-
-        <label>Estoque: </label>
-        <div className="input-group mb-3 w-50">
-          <select
-            id="estoque"
-            name="estoque"
-            className="form-control"
-            placeholder="estoque"
-          >
-            <option>{tecido.estoque}</option>
-            <option>Sim</option>
-            <option>Nao</option>
-          </select>
-        </div>
-
-        <button className=" btnPadrao" type="submit">
-          Atualizar
-        </button>
-      </form>
       <div className="text-center m-4">
         <ModalReact
           isOpen={isModalOpen}
@@ -189,9 +184,6 @@ export const TecidosEdit = () => {
           onConfirm={handleConfirmDelete}
           question="Certeza que deseja excluir?"
         />
-        <button className=" btnPadrao" onClick={deleteAplic}>
-          Deletar
-        </button>
       </div>
     </div>
   );
