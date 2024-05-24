@@ -62,10 +62,6 @@ export const TecidosEdit = () => {
     }
   };
 
-  const deleteAplic = async () => {
-    setIsModalOpen(true);
-  };
-
   const handleConfirmDelete = async (e) => {
     e.preventDefault();
     const response = await Api.buildApiDeleteRequest(
@@ -85,8 +81,6 @@ export const TecidosEdit = () => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
-
-  console.log(tecido);
 
   return (
     <div className="contentTecidoEdit">

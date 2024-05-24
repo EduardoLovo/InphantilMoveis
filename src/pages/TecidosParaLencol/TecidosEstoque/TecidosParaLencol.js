@@ -48,7 +48,7 @@ export const TecidosParaLencol = () => {
       )}
 
       <div>
-        <h2 className="ms-5">Estoque de Tecidos</h2>
+        <h2 className="ms-5">Estoque de Tecido</h2>
         <div className="d-flex flex-wrap justify-content-start">
           {tecidos.map((tecido, index) => (
             <div className="" key={index}>

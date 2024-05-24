@@ -19,6 +19,10 @@
   width: 9em;
 }
 
+.imagemApliqueCard {
+  height: 18vw;
+}
+
 .codigoAplique {
   position: absolute;
   top: 90%;

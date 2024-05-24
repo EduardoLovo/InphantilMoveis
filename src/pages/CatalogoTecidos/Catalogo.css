@@ -9,6 +9,8 @@
 
 .backgroundTransparente {
   background-color: rgba(41, 41, 41, 0.822);
+  width: 90%;
+  margin-left: 2.5%;
 }
 
 .imagemFinal {
@@ -17,6 +19,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 80vw;
+  margin-left: 5vw;
 }
 
 .buttonCaatalogo {
@@ -28,7 +32,7 @@
   /* padding: 1rem; */
   color: #fff;
   width: 90%;
-  margin-left: 4%;
+  margin-left: 2.5%;
 }
 
 .fixed {
