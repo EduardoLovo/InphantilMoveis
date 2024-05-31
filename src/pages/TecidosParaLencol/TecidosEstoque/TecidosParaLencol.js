@@ -30,6 +30,8 @@ export const TecidosParaLencol = () => {
 
   tecidos.sort(compare);
 
+  console.log(tecidos);
+
   return (
     <div className="">
       {type === "adm" ? (

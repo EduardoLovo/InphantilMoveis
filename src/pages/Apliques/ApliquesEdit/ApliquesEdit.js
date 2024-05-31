@@ -32,7 +32,7 @@ export const ApliquesEdit = (props) => {
 
     const number = e.target.number.value;
     const img = e.target.img.value;
-    const quantidade = e.target.quantidade.value;
+    const quantidade = +e.target.quantidade.value;
     const estoque = e.target.estoque.value;
 
     console.log(estoque);

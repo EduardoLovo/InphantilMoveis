@@ -14,7 +14,8 @@ export const ApliqueCard = (props) => {
   const quantidade = props.aplique.quantidade;
   const estoque = props.aplique.estoque;
 
-  console.log(codigo);
+  console.log(typeof quantidade);
+
   const navigate = useNavigate();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);

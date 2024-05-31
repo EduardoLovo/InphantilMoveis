@@ -61,7 +61,7 @@ const Sidebar = () => {
                   <Link to="/catalogo-lencol-pronta-entrega">
                     Lencois Pronto Entrega
                   </Link>
-                  <Link to="/catalogo-cliente">Lista de Apliques</Link>
+                  {/* <Link to="/catalogo-cliente">Lista de Apliques</Link> */}
 
                   <p className="mt-4">Calculadoras:</p>
                   <Link to="/calculadora-para-lencois">
@@ -108,7 +108,7 @@ const Sidebar = () => {
                   <Link to="/catalogo-lencol-pronta-entrega">
                     Lencois Pronto Entrega
                   </Link>
-                  <Link to="/catalogo-cliente">Lista de Apliques</Link>
+                  {/* <Link to="/catalogo-cliente">Lista de Apliques</Link> */}
                   <Link to="/montagem-tapetes">Tapetes</Link>
 
                   <p className="mt-4">Estoque:</p>
@@ -148,7 +148,7 @@ const Sidebar = () => {
                   <Link to="/catalogo-lencol-pronta-entrega">
                     Lencois Pronto Entrega
                   </Link>
-                  <Link to="/catalogo-cliente">Lista de Apliques</Link>
+                  {/* <Link to="/catalogo-cliente">Lista de Apliques</Link> */}
 
                   <p className="mt-4">Inphantil</p>
                   <Link to="/info">Informações</Link>
@@ -209,7 +209,7 @@ const Sidebar = () => {
             <Link to="/catalogo-lencol-pronta-entrega">
               Lencois Pronto Entrega
             </Link>
-            <Link to="/catalogo-cliente">Lista de Apliques</Link>
+            {/* <Link to="/catalogo-cliente">Lista de Apliques</Link> */}
 
             <p className="mt-4">Calculadoras:</p>
             <Link to="/calculadora-para-lencois">Calculadora Sob Medida</Link>
@@ -258,7 +258,7 @@ const Sidebar = () => {
             <Link to="/catalogo-lencol-pronta-entrega">
               Lencois Pronto Entrega
             </Link>
-            <Link to="/catalogo-cliente">Lista de Apliques</Link>
+            {/* <Link to="/catalogo-cliente">Lista de Apliques</Link> */}
 
             <p className="mt-4">Estoque:</p>
             <Link to="/apliques-estoque">Apliques</Link>
@@ -303,7 +303,7 @@ const Sidebar = () => {
             <Link to="/catalogo-lencol-pronta-entrega">
               Lencois Pronto Entrega
             </Link>
-            <Link to="/catalogo-cliente">Lista de Apliques</Link>
+            {/* <Link to="/catalogo-cliente">Lista de Apliques</Link> */}
 
             <p className="mt-4">Inphantil</p>
             <Link to="/info">Informações</Link>
