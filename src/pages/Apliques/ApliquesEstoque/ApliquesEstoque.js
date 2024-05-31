@@ -7,6 +7,8 @@ import { ApliqueCard } from "../ApliqueCard/ApliqueCard";
 import "./ApliquesEstoque.css";
 
 export const ApliquesEstoque = () => {
+  const type = localStorage.getItem("user");
+
   const [apliques, setApliques] = useState([]);
   const [texto, setTexto] = useState("");
   const [loading, setLoading] = useState(true);
@@ -47,13 +49,17 @@ export const ApliquesEstoque = () => {
             placeholder="Pesquisar"
           />
         </div>
-        <Link
-          to={"/apliques-create"}
-          className="add-button"
-          title="Adicionar novo aplique"
-        >
-          +
-        </Link>
+        {type === "adm" ? (
+          <Link
+            to={"/apliques-create"}
+            className="add-button"
+            title="Adicionar novo aplique"
+          >
+            +
+          </Link>
+        ) : (
+          ""
+        )}
       </div>
 
       {loading ? (

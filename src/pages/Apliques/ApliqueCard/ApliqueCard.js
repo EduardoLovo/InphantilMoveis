@@ -118,7 +118,14 @@ export const ApliqueCard = (props) => {
             </div>
           </div>
         ) : (
-          <p>quantidade: {quantidade}</p>
+          <div>
+            {estoque === "Sim" ? (
+              <div className="estoqueApliqueVerde"></div>
+            ) : (
+              <div className="estoqueApliqueVermelho"></div>
+            )}
+            <p>quantidade: {quantidade}</p>
+          </div>
         )}
       </div>
     </div>
