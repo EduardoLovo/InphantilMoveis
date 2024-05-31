@@ -14,7 +14,6 @@ import { ApliquesEdit } from "./pages/Apliques/ApliquesEdit/ApliquesEdit";
 import { ApliquesEstoque } from "./pages/Apliques/ApliquesEstoque/ApliquesEstoque";
 import { Calculadora6040 } from "./pages/Calculadoras/Calculadora6040";
 import { CalculadoraParaLencois } from "./pages/Calculadoras/CalculadoraParaLencois";
-// import { CatalogoDeTecidos } from "./pages/CatalogoTecidos/CatalogoDeTecidos";
 import { CatalogoLencolPE } from "./pages/CatalogoLencolPE/CatalogoLencolPE";
 import { JwtHandler } from "./jwt_handler/jwt_handler";
 import { LencolCreate } from "./pages/CatalogoLencolPE/LencolCreate";
@@ -24,10 +23,6 @@ import { MaterialEdit } from "./pages/Materiais/MaterialEdit";
 import { MaterialCatalogo } from "./pages/Materiais/MaterialCatalogo";
 import { MaterialCreate } from "./pages/Materiais/MaterialCreate";
 import { TecidosJunior } from "./pages/CatalogoTecidos/Junior";
-// import { TecidosSolteiro } from "./pages/CatalogoTecidos/Solteiro";
-// import { TecidosViuva } from "./pages/CatalogoTecidos/Viuva";
-// import { TecidosCasal } from "./pages/CatalogoTecidos/Casal";
-// import { TecidosBQK } from "./pages/CatalogoTecidos/BQK";
 import { ToastContainer } from "react-toastify";
 import { TecidosEdit } from "./pages/TecidosParaLencol/TecidosEdit/TecidosEdit";
 import { TecidosParaLencol } from "./pages/TecidosParaLencol/TecidosEstoque/TecidosParaLencol";
@@ -44,6 +39,7 @@ import { NoveCores } from "./pages/Tapetes/NoveCores";
 import { DezCores } from "./pages/Tapetes/DezCores";
 import { OnzeCores } from "./pages/Tapetes/OnzeCores";
 import { DozeCores } from "./pages/Tapetes/DozeCores";
+import { ApliqueListaQuantidade } from "./pages/Apliques/ApliqueListaQuantidade/ApliqueListaQuantidade";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -73,6 +69,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/catalogo-cliente" element={<ApliquesParaCliente />} />
           <Route path="/apliques-estoque" element={<ApliquesEstoque />} />
+          <Route path="/apliques-lista" element={<ApliqueListaQuantidade />} />
           {/* <Route path="/catalogo" element={<CatalogoDeTecidos />} /> */}
           <Route path="/catalogo-lençol-aplique" element={<TecidosJunior />} />
           {/* <Route

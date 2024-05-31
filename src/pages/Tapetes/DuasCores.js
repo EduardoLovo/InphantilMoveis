@@ -31,12 +31,11 @@ export const DuasCores = () => {
   const primeiro = (e) => {
     setListas(1);
     const cor = e.target.src;
-    console.log(cor);
-    setCor1(<img className="imagemteste" src={cor} />);
+    setCor1(<img className="imagemteste" src={cor} alt="..." />);
   };
   const segundo = (e) => {
     setListas(0);
-    setCor2(<img className="imagemteste" src={e.target.src} />);
+    setCor2(<img className="imagemteste" src={e.target.src} alt="..." />);
   };
 
   return (

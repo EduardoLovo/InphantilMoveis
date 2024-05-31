@@ -9,8 +9,6 @@ import "./ApliquesEdit.css";
 export const ApliquesEdit = (props) => {
   const params = useParams();
   const id = params.id;
-  const teste = props;
-  console.log(teste);
 
   const navigate = useNavigate();
 
@@ -34,8 +32,6 @@ export const ApliquesEdit = (props) => {
     const img = e.target.img.value;
     const quantidade = +e.target.quantidade.value;
     const estoque = e.target.estoque.value;
-
-    console.log(estoque);
 
     const payload = {
       number,

@@ -43,7 +43,7 @@ export const Amarelo = () => {
                     material.cor === "Amarelo" ? "cardMaterial" : "display"
                   }
                 >
-                  {console.log(material.cor)}
+               
                   <div>
                     <img src={material.img} alt="imagem do material" />
                   </div>

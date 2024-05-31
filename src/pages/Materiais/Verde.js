@@ -30,7 +30,6 @@ export const Verde = () => {
           key={index}
           className={material.cor === "Verde" ? "cardMaterial" : "display"}
         >
-          {console.log(material.cor)}
           <div>
             <img src={material.img} alt="imagem do material" />
           </div>

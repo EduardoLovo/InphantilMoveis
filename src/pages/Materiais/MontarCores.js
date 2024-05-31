@@ -36,7 +36,6 @@ export const MontarCores = () => {
 
   const EscolhaInterno = (e) => {
     const imagemDois = e.target.src;
-    console.log(imagemDois);
     setInterno(
       <img className="resultMontagem" src={imagemDois} alt="imagemInterno" />
     );

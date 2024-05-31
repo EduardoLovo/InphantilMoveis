@@ -32,18 +32,16 @@ export const TresCores = () => {
   const primeiro = (e) => {
     setListas(1);
     const cor = e.target.src;
-    console.log(cor);
-    setCor1(<img className="imagemteste" src={cor} />);
+    setCor1(<img className="imagemteste" src={cor} alt="..." />);
   };
   const segundo = (e) => {
     setListas(2);
-    setCor2(<img className="imagemteste" src={e.target.src} />);
+    setCor2(<img className="imagemteste" src={e.target.src} alt="..." />);
   };
   const terceiro = (e) => {
     setListas(0);
-    setCor3(<img className="imagemteste" src={e.target.src} />);
+    setCor3(<img className="imagemteste" src={e.target.src} alt="..." />);
   };
-
 
   return (
     <div>

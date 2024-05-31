@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { Api } from "../../../Api/Api";
-import { Filtro } from "../../../components/Filtro";
-import { Loading } from "../../../components/Loading/Loading";
+import { Link } from "react-router-dom";
 import { ApliqueCard } from "../ApliqueCard/ApliqueCard";
-import "./ApliquesEstoque.css";
+import { Loading } from "../../../components/Loading/Loading";
+import { Filtro } from "../../../components/Filtro";
 
-export const ApliquesEstoque = () => {
+export const ApliqueListaQuantidade = () => {
   const type = localStorage.getItem("user");
 
   const [apliques, setApliques] = useState([]);
@@ -35,7 +34,6 @@ export const ApliquesEstoque = () => {
   const onChange = (e) => {
     setTexto(e.target.value);
   };
-
   return (
     <div className="contentApliqueEstoque">
       <h1>Estoque de apliques</h1>
@@ -49,13 +47,6 @@ export const ApliquesEstoque = () => {
             placeholder="Pesquisar"
           />
         </div>
-        <Link
-          to={"/apliques-create"}
-          className="add-button"
-          title="Adicionar novo aplique"
-        >
-          +
-        </Link>
       </div>
 
       {loading ? (

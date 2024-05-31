@@ -10,7 +10,6 @@ const TecidoCard = (props) => {
 
   const id = props.tecido._id;
   const cor = props.tecido.cor;
-  const tecido = props.tecido.estoque;
   const quantidade = props.tecido.quantidade;
   const estoque = props.tecido.estoque;
   const imagem = props.tecido.img;
@@ -66,8 +65,6 @@ const TecidoCard = (props) => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
-
-  console.log(estoque);
 
   return (
     <div className="card border-dark mb-3">

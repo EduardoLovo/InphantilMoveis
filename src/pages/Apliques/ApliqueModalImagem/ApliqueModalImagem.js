@@ -3,8 +3,7 @@ import React from "react";
 import "./ApliqueModalImagem.css";
 
 const ApliqueModalImagem = () => {
-  console.log("fois");
-  //   console.log(image);
+
   return (
     <div className="modal">
       <div className="modal-content">

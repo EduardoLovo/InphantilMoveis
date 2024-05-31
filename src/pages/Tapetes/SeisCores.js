@@ -35,31 +35,28 @@ export const SeisCores = () => {
   const primeiro = (e) => {
     setListas(1);
     const cor = e.target.src;
-    console.log(cor);
     setCor1(<img className="imagemteste" src={cor} />);
   };
   const segundo = (e) => {
     setListas(2);
-    setCor2(<img className="imagemteste" src={e.target.src} />);
+    setCor2(<img className="imagemteste" src={e.target.src} alt="..." />);
   };
   const terceiro = (e) => {
     setListas(3);
-    setCor3(<img className="imagemteste" src={e.target.src} />);
+    setCor3(<img className="imagemteste" src={e.target.src} alt="..." />);
   };
   const quarto = (e) => {
     setListas(4);
-    setCor4(<img className="imagemteste" src={e.target.src} />);
+    setCor4(<img className="imagemteste" src={e.target.src} alt="..." />);
   };
   const quinto = (e) => {
     setListas(5);
-    setCor5(<img className="imagemteste" src={e.target.src} />);
+    setCor5(<img className="imagemteste" src={e.target.src} alt="..." />);
   };
   const sexto = (e) => {
     setListas(0);
-    setCor6(<img className="imagemteste" src={e.target.src} />);
+    setCor6(<img className="imagemteste" src={e.target.src} alt="..." />);
   };
-
-  console.log(listas);
 
   return (
     <div>

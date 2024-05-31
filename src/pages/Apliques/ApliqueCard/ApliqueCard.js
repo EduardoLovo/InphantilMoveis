@@ -104,6 +104,7 @@ export const ApliqueCard = (props) => {
       )}
       <div className="codigoAplique">
         <p>{codigo}</p>
+
         {type === "adm" ? (
           <div>
             {estoque === "Sim" ? (
@@ -117,7 +118,7 @@ export const ApliqueCard = (props) => {
             </div>
           </div>
         ) : (
-          ""
+          <p>quantidade: {quantidade}</p>
         )}
       </div>
     </div>

@@ -65,7 +65,7 @@ export const TecidosJunior = () => {
     e.preventDefault();
     const imga2 = e.target.src;
     const codigo = e.target.alt;
-    console.log(codigo);
+
     setAplique(
       <div>
         <img
