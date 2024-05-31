@@ -39,7 +39,6 @@ import { NoveCores } from "./pages/Tapetes/NoveCores";
 import { DezCores } from "./pages/Tapetes/DezCores";
 import { OnzeCores } from "./pages/Tapetes/OnzeCores";
 import { DozeCores } from "./pages/Tapetes/DozeCores";
-import { ApliqueListaQuantidade } from "./pages/Apliques/ApliqueListaQuantidade/ApliqueListaQuantidade";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -69,16 +68,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/catalogo-cliente" element={<ApliquesParaCliente />} />
           <Route path="/apliques-estoque" element={<ApliquesEstoque />} />
-          <Route path="/apliques-lista" element={<ApliqueListaQuantidade />} />
-          {/* <Route path="/catalogo" element={<CatalogoDeTecidos />} /> */}
           <Route path="/catalogo-lençol-aplique" element={<TecidosJunior />} />
-          {/* <Route
-            path="/catalogo-solteiro-solteirao"
-            element={<TecidosSolteiro />}
-          /> */}
-          {/* <Route path="/catalogo-viuva" element={<TecidosViuva />} /> */}
-          {/* <Route path="/catalogo-casal" element={<TecidosCasal />} /> */}
-          {/* <Route path="/catalogo-bqk" element={<TecidosBQK />} /> */}
           <Route
             path="/catalogo-lencol-pronta-entrega"
             element={<CatalogoLencolPE />}

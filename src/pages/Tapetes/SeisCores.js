@@ -35,7 +35,7 @@ export const SeisCores = () => {
   const primeiro = (e) => {
     setListas(1);
     const cor = e.target.src;
-    setCor1(<img className="imagemteste" src={cor} />);
+    setCor1(<img className="imagemteste" src={cor} alt="..." />);
   };
   const segundo = (e) => {
     setListas(2);

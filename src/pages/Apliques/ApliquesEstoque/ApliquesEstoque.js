@@ -7,8 +7,6 @@ import { ApliqueCard } from "../ApliqueCard/ApliqueCard";
 import "./ApliquesEstoque.css";
 
 export const ApliquesEstoque = () => {
-  const type = localStorage.getItem("user");
-
   const [apliques, setApliques] = useState([]);
   const [texto, setTexto] = useState("");
   const [loading, setLoading] = useState(true);
