@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import "./CalculadoraSobMedida.css";
-// import { CalculadoraSobMedida } from "./index";
 
-export const CalculadoraSobMedida = () => {
+const CalculadoraSobMedidaColchao = () => {
   const [resultado, setResultado] = useState("");
   const [resultadoAcessorio, setResultadoAcessorio] = useState("");
 
@@ -11,40 +9,47 @@ export const CalculadoraSobMedida = () => {
 
     const largura = +evento.target.largura.value;
     const comprimento = +evento.target.comprimento.value;
+    const altura = +evento.target.altura.value;
     const acessorio = evento.target.acessorio.value;
 
-    // Externo
-    const larguraExterno = largura + 2;
-    const comprimentoExterno = comprimento + 2;
+    console.log(largura);
 
     // Interno
-    const larguraInterno = larguraExterno - 14;
-    const comprimentoInterno = comprimentoExterno - 14;
+    const larguraInterno = largura + 3;
+    const comprimentoInterno = comprimento + 3;
 
-    // Colchão
-    const larguraColchao = larguraInterno - 3;
-    const comprimentoColchao = comprimentoInterno - 3;
+    // Externo
+    const larguraExterno = larguraInterno + 14;
+    const comprimentoExterno = comprimentoInterno + 14;
 
-    // Acessorio
-    const larguraAcessorio = larguraColchao + 46;
+    // Altura
+    const diferenca = altura - 10;
+    const alturaExterno = diferenca + 23;
+    const alturaInterno = diferenca + 21;
 
-    if (acessorio === "lençol") {
-      const resultadoComprimentoColchao = comprimentoColchao + 46;
+    // Acessorio lençol
+    const larguraLencol = largura + (altura + 13) * 2;
+    const comprimentoLencol = comprimento + (altura + 13) * 2;
 
-      console.log(resultadoComprimentoColchao);
+    // Acessorio virol
+    const larguraVirol = largura + 40;
+    const comprimentoVirol = comprimento + 70;
+
+    if (acessorio === "lencol") {
+      console.log("é lençol");
       setResultadoAcessorio(
-        larguraAcessorio + " x " + resultadoComprimentoColchao
+        <div>
+          {larguraLencol} x {comprimentoLencol}
+        </div>
       );
     } else if (acessorio === "virol") {
-      const resultadoComprimentoColchao = comprimentoColchao + 70;
       setResultadoAcessorio(
-        larguraAcessorio + " x " + resultadoComprimentoColchao
+        <div>
+          {larguraVirol} x {comprimentoVirol}
+        </div>
       );
-    } else {
-      setResultado("");
     }
 
-    // Resultado
     setResultado(
       <section className="resultadoCalculadoraCamaPhant">
         <h3>Resultado</h3>
@@ -57,19 +62,13 @@ export const CalculadoraSobMedida = () => {
         <div>
           <label>Externo: </label>
           <p>
-            {larguraExterno} x {comprimentoExterno}
+            {larguraExterno} x {comprimentoExterno} x {alturaExterno}
           </p>
         </div>
         <div>
           <label>Interno: </label>
           <p>
-            {larguraInterno} x {comprimentoInterno}{" "}
-          </p>
-        </div>
-        <div>
-          <label>Colchão: </label>
-          <p>
-            {larguraColchao} x {comprimentoColchao}
+            {larguraInterno} x {comprimentoInterno} x {alturaInterno}
           </p>
         </div>
         <div>
@@ -78,13 +77,17 @@ export const CalculadoraSobMedida = () => {
               <label>Lençol: </label>
               <p>{resultadoAcessorio}</p>
               <label> Quadrado: </label>
-              <p>Padrão</p>
+              <p>
+                {altura + 12} x {altura + 12}
+              </p>
             </div>
           )}
           {acessorio === "virol" && (
             <div>
               <label>Virol:</label>
               <p>{resultadoAcessorio}</p>
+              <label>Retangulo:</label>
+              <p>{larguraVirol} x 50</p>
             </div>
           )}
         </div>
@@ -96,7 +99,7 @@ export const CalculadoraSobMedida = () => {
     <div className="contentCalculadoraCamaPhant">
       <div className="contentCalculadoraCamaPhantFormEResultado">
         <form onSubmit={calcular} className="formularioCalculadoraCamaPhant">
-          <h3>Sob Medida com medida da cama Phant:</h3>
+          <h3>Sob Medida com medida do colchão do cliente:</h3>
           <div>
             <label>Largura:</label>
             <input type="number" id="largura" />
@@ -104,6 +107,10 @@ export const CalculadoraSobMedida = () => {
           <div>
             <label>Comprimento:</label>
             <input type="number" id="comprimento" />
+          </div>
+          <div>
+            <label>Altura:</label>
+            <input type="number" id="altura" />
           </div>
           <div>
             <label>Acessorio:</label>
@@ -123,3 +130,5 @@ export const CalculadoraSobMedida = () => {
     </div>
   );
 };
+
+export default CalculadoraSobMedidaColchao;
