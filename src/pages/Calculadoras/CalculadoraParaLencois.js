@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "../../Style/style.css";
+import { CalculadoraSobMedida } from "../../components/CalculadoraSobMedida";
 
 export const CalculadoraParaLencois = () => {
   const [resultadoPhant, setResultadoPhant] = useState("");
@@ -146,69 +147,8 @@ export const CalculadoraParaLencois = () => {
 
   return (
     <div>
-      <div className="p-5 glass2">
-        <h2 className="text-decoration-underline">
-          Sob Medida com medida da cama Phant:
-        </h2>
-        <div className="row align-items-center ">
-          <div className="col">
-            <form onSubmit={calcularPhant}>
-              <div className="mb-3">
-                <label for="exampleInputEmail1" className="form-label">
-                  Largura
-                </label>
-                <input
-                  type="number"
-                  className="form-control"
-                  id="largura"
-                  aria-describedby="emailHelp"
-                />
-              </div>
-              <div className="mb-3">
-                <label for="exampleInputPassword1" className="form-label">
-                  Comprimento
-                </label>
-                <input
-                  type="number"
-                  className="form-control"
-                  id="comprimento"
-                />
-              </div>
-              <div className="form-check">
-                <input
-                  type="radio"
-                  className="form-check-input"
-                  id="acessorio"
-                  value="lencol"
-                  name="radio-stacked"
-                />
-                <label className="form-check-label" for="acessorio">
-                  Lençol
-                </label>
-              </div>
-              <div className="form-check mb-3">
-                <input
-                  type="radio"
-                  className="form-check-input"
-                  id="acessorio"
-                  value="viral"
-                  name="radio-stacked"
-                />
-                <label className="form-check-label" for="acessorio">
-                  Virol
-                </label>
-              </div>
-              <button type="submit" className="btnPadrao">
-                Calcular
-              </button>
-            </form>
-          </div>
-          <div className="col ms-5">
-            <h3>Resultado:</h3>
-            {resultadoPhant}
-          </div>
-        </div>
-      </div>
+      <CalculadoraSobMedida />
+
       <hr className="hr" />
       <div className="p-5 mt-4">
         <h2 className="text-decoration-underline">

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./CalculadoraSobMedida.css";
+// import { CalculadoraSobMedida } from "./index";
 
 export const CalculadoraSobMedida = () => {
   const [resultado, setResultado] = useState("");
@@ -11,13 +13,11 @@ export const CalculadoraSobMedida = () => {
     const comprimento = +evento.target.comprimento.value;
     const acessorio = evento.target.acessorio.value;
 
-    console.log(largura);
-    console.log(comprimento);
-    console.log(acessorio);
-
     // Externo
     const larguraExterno = largura + 2;
     const comprimentoExterno = comprimento + 2;
+
+    console.log(larguraExterno);
 
     // Interno
     const larguraInterno = larguraExterno - 14;
@@ -28,31 +28,28 @@ export const CalculadoraSobMedida = () => {
     const comprimentoColchao = comprimentoInterno - 3;
 
     // Lençol
-    const larguraLencol = larguraColchao + 46;
+    const larguraAcessorio = larguraColchao + 46;
 
     if (acessorio === "lençol") {
-      setResultadoAcessorio(larguraLencol + "x" + comprimentoColchao + 46);
+      const resultadoComprimentoColchao = comprimentoColchao + 46;
+
+      console.log(resultadoComprimentoColchao);
+      setResultadoAcessorio(
+        larguraAcessorio + " x " + resultadoComprimentoColchao
+      );
     } else if (acessorio === "virol") {
-      setResultadoAcessorio(comprimentoColchao + 70);
+      const resultadoComprimentoColchao = comprimentoColchao + 70;
+      setResultadoAcessorio(
+        larguraAcessorio + " x " + resultadoComprimentoColchao
+      );
     } else {
       setResultado("");
     }
 
-    // const comprimentoLencol = () => {
-    //   if (acessorio === "lencol") {
-    //     const comprimentoLencol = comprimentoColchao + 46;
-    //     return comprimentoLencol;
-    //   } else if (acessorio === "virol") {
-    //     console.log("virl");
-    //     const comprimentoLencol = comprimentoColchao + 70;
-    //     return comprimentoLencol;
-    //   } else {
-    //     return "";
-    //   }
-    // };
-
+    // Resultado
     setResultado(
-      <section>
+      <section className="resultadoCalculadoraCamaPhant">
+        <h3>Resultado</h3>
         <div>
           <label>Tamanho da cama:</label>
           <p>
@@ -60,29 +57,29 @@ export const CalculadoraSobMedida = () => {
           </p>
         </div>
         <div>
-          <label>Externo:</label>
+          <label>Externo: </label>
           <p>
             {larguraExterno} x {comprimentoExterno}
           </p>
         </div>
         <div>
-          <label>Interno:</label>
+          <label>Interno: </label>
           <p>
-            {larguraInterno}x {comprimentoInterno}{" "}
+            {larguraInterno} x {comprimentoInterno}{" "}
           </p>
         </div>
         <div>
-          <label>Colchão:</label>
+          <label>Colchão: </label>
           <p>
             {larguraColchao} x {comprimentoColchao}
           </p>
         </div>
         <div>
           {acessorio === "lençol" && (
-            <div>
-              <label>Lençol:</label>
+            <div className="resultadoLencol">
+              <label>Lençol: </label>
               <p>{resultadoAcessorio}</p>
-              <label>Quadrado:</label>
+              <label> Quadrado: </label>
               <p>Padrão</p>
             </div>
           )}
@@ -97,9 +94,9 @@ export const CalculadoraSobMedida = () => {
     );
   };
   return (
-    <div>
-      <h3>Sob Medida com medida da cama Phant:</h3>
-      <form onSubmit={calcular}>
+    <div className="contentCalculadoraCamaPhant">
+      <form onSubmit={calcular} className="formularioCalculadoraCamaPhant">
+        <h3>Sob Medida com medida da cama Phant:</h3>
         <div>
           <label>Largura:</label>
           <input type="number" id="largura" />
@@ -116,10 +113,12 @@ export const CalculadoraSobMedida = () => {
             <option value="virol">Virol</option>
           </select>
         </div>
-        <button type="submit">Calcular</button>
+        <div>
+          <button type="submit">Calcular</button>
+        </div>
       </form>
 
-      <section>{resultado}</section>
+      {resultado && <section>{resultado}</section>}
     </div>
   );
 };
