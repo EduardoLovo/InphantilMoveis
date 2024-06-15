@@ -6,8 +6,6 @@ import "../../Style/style.css";
 import { JwtHandler } from "../../jwt_handler/jwt_handler";
 
 const Sidebar = () => {
-  // const [sidebarOpen, setSidebarOpen] = useState(false);
-
   const [isLogged, setIsLogged] = useState(JwtHandler.isJwtValid);
 
   const navigate = useNavigate();
@@ -61,7 +59,6 @@ const Sidebar = () => {
                   <Link to="/catalogo-lencol-pronta-entrega">
                     Lencois Pronto Entrega
                   </Link>
-                  {/* <Link to="/catalogo-cliente">Lista de Apliques</Link> */}
 
                   <p className="mt-4">Calculadoras:</p>
                   <Link to="/calculadora-para-lencois">

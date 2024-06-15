@@ -69,6 +69,7 @@ export const ApliqueCard = (props) => {
     setIsModalOpen(false);
   };
   return (
+    
     <div className="card mb-3">
       <img
         src={img}
@@ -129,5 +130,6 @@ export const ApliqueCard = (props) => {
         )}
       </div>
     </div>
+    
   );
 };

@@ -36,61 +36,6 @@ export const CalculadoraParaLencois = () => {
         return lencomp;
       }
     };
-
-    setResultadoPhant(
-      <div className="fs-5 text text-amarelo">
-        <div>
-          <label>Cama Completa: </label>
-          <span>
-            {" "}
-            {lar} x {comp}
-          </span>
-        </div>
-        <div className="mt-2">
-          <label>Externo: </label>
-          <span>
-            {" "}
-            {exlar} x {excomp}
-          </span>
-        </div>
-        <div className="mt-2">
-          <label>Interno: </label>
-          <span>
-            {" "}
-            {inlar} x {incomp}
-          </span>
-        </div>
-        <div className="mt-2">
-          <label>Colchão: </label>
-          <span>
-            {" "}
-            {collar} x {colcomp}
-          </span>
-        </div>
-
-        <div className="mt-2">
-          {acessorio === "lencol" ? (
-            <label>Lençol: </label>
-          ) : (
-            <label>Virol:</label>
-          )}
-
-          <span>
-            {" "}
-            {lenlar} x {lencomp()}
-          </span>
-        </div>
-
-        {acessorio === "lencol" ? (
-          <div className="mt-2">
-            <label>Quadrado: </label>
-            <span> Padrão</span>
-          </div>
-        ) : (
-          ""
-        )}
-      </div>
-    );
   };
 
   const calcular = (e) => {

@@ -39,6 +39,7 @@ import { NoveCores } from "./pages/Tapetes/NoveCores";
 import { DezCores } from "./pages/Tapetes/DezCores";
 import { OnzeCores } from "./pages/Tapetes/OnzeCores";
 import { DozeCores } from "./pages/Tapetes/DozeCores";
+import { Teste } from "./pages/Teste/Teste";
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -184,14 +185,14 @@ function App() {
               </PrivateRoute>
             }
           />
-          {/* <Route
-          path="/material-catalogo/"
-          element={
-            <PrivateRoute redirectTo="/">
-              <MaterialCatalogo />
-            </PrivateRoute>
-          }
-          /> */}
+          <Route
+            path="/teste/"
+            element={
+              <PrivateRoute redirectTo="/">
+                <Teste />
+              </PrivateRoute>
+            }
+          />
           <Route
             path="/material-create/"
             element={
