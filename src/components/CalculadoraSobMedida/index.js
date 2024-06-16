@@ -4,7 +4,6 @@ import "./CalculadoraSobMedida.css";
 
 export const CalculadoraSobMedida = () => {
   const [resultado, setResultado] = useState("");
-  const [resultadoAcessorio, setResultadoAcessorio] = useState("");
 
   const calcular = (evento) => {
     evento.preventDefault();
@@ -26,23 +25,11 @@ export const CalculadoraSobMedida = () => {
     const comprimentoColchao = comprimentoInterno - 3;
 
     // Acessorio
-    const larguraAcessorio = larguraColchao + 46;
+    const larguraLencol = larguraColchao + 46;
+    const comprimentoLencol = comprimentoColchao + 46;
 
-    if (acessorio === "lençol") {
-      const resultadoComprimentoColchao = comprimentoColchao + 46;
-
-      console.log(resultadoComprimentoColchao);
-      setResultadoAcessorio(
-        larguraAcessorio + " x " + resultadoComprimentoColchao
-      );
-    } else if (acessorio === "virol") {
-      const resultadoComprimentoColchao = comprimentoColchao + 70;
-      setResultadoAcessorio(
-        larguraAcessorio + " x " + resultadoComprimentoColchao
-      );
-    } else {
-      setResultado("");
-    }
+    const larguraVirol = largura + 40;
+    const comprimentoVirol = comprimento + 70;
 
     // Resultado
     setResultado(
@@ -76,7 +63,9 @@ export const CalculadoraSobMedida = () => {
           {acessorio === "lençol" && (
             <div className="resultadoLencol">
               <label>Lençol: </label>
-              <p>{resultadoAcessorio}</p>
+              <p>
+                {larguraLencol} x {comprimentoLencol}
+              </p>
               <label> Quadrado: </label>
               <p>Padrão</p>
             </div>
@@ -84,7 +73,9 @@ export const CalculadoraSobMedida = () => {
           {acessorio === "virol" && (
             <div>
               <label>Virol:</label>
-              <p>{resultadoAcessorio}</p>
+              <p>
+                {larguraVirol} x {comprimentoVirol}
+              </p>
             </div>
           )}
         </div>

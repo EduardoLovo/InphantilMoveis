@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 const CalculadoraSobMedidaColchao = () => {
   const [resultado, setResultado] = useState("");
-  const [resultadoAcessorio, setResultadoAcessorio] = useState("");
 
   const calcular = (evento) => {
     evento.preventDefault();
@@ -11,8 +10,6 @@ const CalculadoraSobMedidaColchao = () => {
     const comprimento = +evento.target.comprimento.value;
     const altura = +evento.target.altura.value;
     const acessorio = evento.target.acessorio.value;
-
-    console.log(largura);
 
     // Interno
     const larguraInterno = largura + 3;
@@ -34,21 +31,6 @@ const CalculadoraSobMedidaColchao = () => {
     // Acessorio virol
     const larguraVirol = largura + 40;
     const comprimentoVirol = comprimento + 70;
-
-    if (acessorio === "lencol") {
-      console.log("é lençol");
-      setResultadoAcessorio(
-        <div>
-          {larguraLencol} x {comprimentoLencol}
-        </div>
-      );
-    } else if (acessorio === "virol") {
-      setResultadoAcessorio(
-        <div>
-          {larguraVirol} x {comprimentoVirol}
-        </div>
-      );
-    }
 
     setResultado(
       <section className="resultadoCalculadoraCamaPhant">
@@ -75,7 +57,9 @@ const CalculadoraSobMedidaColchao = () => {
           {acessorio === "lençol" && (
             <div className="resultadoLencol">
               <label>Lençol: </label>
-              <p>{resultadoAcessorio}</p>
+              <p>
+                {larguraLencol} x {comprimentoLencol}
+              </p>
               <label> Quadrado: </label>
               <p>
                 {altura + 12} x {altura + 12}
@@ -85,9 +69,9 @@ const CalculadoraSobMedidaColchao = () => {
           {acessorio === "virol" && (
             <div>
               <label>Virol:</label>
-              <p>{resultadoAcessorio}</p>
-              <label>Retangulo:</label>
-              <p>{larguraVirol} x 50</p>
+              <div>
+                {larguraVirol} x {comprimentoVirol}
+              </div>
             </div>
           )}
         </div>
