@@ -1,28 +1,18 @@
 .sidebar {
   position: fixed;
-  left: -230px; /* Define a largura inicial do sidebar */
   top: 0;
   bottom: 0;
-  width: 300px; /* Largura do sidebar quando visível */
+  width: 200px;
   background-color: #333333f3;
   color: white;
-  transition: left 0.5s ease; /* Adiciona uma transição suave de 0.3 segundos */
   overflow-y: auto;
   z-index: 98;
+  font-size: 13px;
 }
 
 .sidebar:hover {
   left: 0; /* Quando o mouse passa por cima, move o sidebar para a posição visível */
   background-color: #333333f3;
-}
-
-.iconMenu {
-  position: relative;
-  top: 50%;
-
-  left: 82%;
-  color: rgb(255, 255, 10);
-  z-index: 99;
 }
 
 .iconMenu p {
@@ -41,7 +31,7 @@
 }
 
 .sidebar::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 .sidebar::-webkit-scrollbar-thumb {
@@ -151,13 +141,6 @@
     /* transform: translateX(-%); */
     /* display: none; */
     background-color: #333333bb;
-  }
-
-  .sidebar.open {
-    transform: translateX(0);
-  }
-
-  .menuMobile {
-    display: block;
+    margin-left: -200px;
   }
 }
