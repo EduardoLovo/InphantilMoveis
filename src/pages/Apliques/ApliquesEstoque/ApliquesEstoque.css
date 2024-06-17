@@ -1,8 +1,15 @@
 .containerApliquesEstoque {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  padding-top: 10px;
+}
+
+.cabecalhoEstoqueAplique {
+  background-color: #a5a5a5;
+  padding: 1rem;
 }
 
 .contentApliqueEstoque h1 {
@@ -20,6 +27,11 @@
   margin-left: 15px;
   outline: none;
   border: 1px solid #3d3d3d;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
 }
 
 ::placeholder {

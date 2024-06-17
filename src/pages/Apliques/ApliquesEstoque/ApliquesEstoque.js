@@ -38,28 +38,30 @@ export const ApliquesEstoque = () => {
 
   return (
     <div className="contentApliqueEstoque">
-      <h1>Estoque de apliques</h1>
-      <div className="headerApliqueEstoque">
-        <div className="">
-          <input
-            type="text"
-            className=""
-            onChange={onChange}
-            value={texto}
-            placeholder="Pesquisar"
-          />
+      <div className="cabecalhoEstoqueAplique">
+        <h1>Estoque de apliques</h1>
+        <div className="headerApliqueEstoque">
+          <div className="">
+            <input
+              type="text"
+              className=""
+              onChange={onChange}
+              value={texto}
+              placeholder="Pesquisar"
+            />
+          </div>
+          {type === "adm" ? (
+            <Link
+              to={"/apliques-create"}
+              className="add-button"
+              title="Adicionar novo aplique"
+            >
+              +
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
-        {type === "adm" ? (
-          <Link
-            to={"/apliques-create"}
-            className="add-button"
-            title="Adicionar novo aplique"
-          >
-            +
-          </Link>
-        ) : (
-          ""
-        )}
       </div>
 
       {loading ? (

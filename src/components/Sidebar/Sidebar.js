@@ -30,9 +30,10 @@ const Sidebar = () => {
             ""
           )}
         </div>
-        Menu login Adm
+        {/* Menu login Adm */}
         {isLogged === true && type === "adm" && (
           <div className="sidebar-items">
+            <h3>Adm</h3>
             <p className="mt-4">Adm:</p>
             <Link to="/apliques-create">Adicionar Aplique</Link>
             <Link to="/apliques-para-comprar">Apliques para Comprar</Link>
@@ -85,6 +86,7 @@ const Sidebar = () => {
         {/* Menu login vendedor */}
         {isLogged === true && type === "vendedor" && (
           <div className="sidebar-items">
+            <h3>Vendas</h3>
             <p className="mt-4">Calculadoras:</p>
             <Link to="/calculadora-para-lencois">Calculadora Sob Medida</Link>
             <Link to="/calculadora-60-40">Calculadora 60 / 40</Link>
