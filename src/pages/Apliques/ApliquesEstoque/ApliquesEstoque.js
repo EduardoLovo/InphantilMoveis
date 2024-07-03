@@ -12,7 +12,6 @@ export const ApliquesEstoque = () => {
   const [apliques, setApliques] = useState([]);
   const [texto, setTexto] = useState("");
   const [loading, setLoading] = useState(true);
-
   const loadData = async () => {
     const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
     const results = await response.json();
@@ -35,6 +34,8 @@ export const ApliquesEstoque = () => {
   const onChange = (e) => {
     setTexto(e.target.value);
   };
+
+  console.log(texto);
 
   return (
     <div className="contentApliqueEstoque">

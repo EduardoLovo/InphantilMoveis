@@ -14,8 +14,6 @@ export const ApliqueCard = (props) => {
   const quantidade = props.aplique.quantidade;
   const estoque = props.aplique.estoque;
 
-  console.log(typeof quantidade);
-
   const navigate = useNavigate();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -69,7 +67,6 @@ export const ApliqueCard = (props) => {
     setIsModalOpen(false);
   };
   return (
-    
     <div className="card mb-3">
       <img
         src={img}
@@ -130,6 +127,5 @@ export const ApliqueCard = (props) => {
         )}
       </div>
     </div>
-    
   );
 };

@@ -19,17 +19,19 @@ export const ApliquesCreate = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const codigo = e.target.codigo.value;
-    const imagem = e.target.imagem.value;
+    const codigo = e.target.number.value;
+    const img = e.target.img.value;
     const quantidade = +e.target.quantidade.value;
     const estoque = e.target.estoque.value;
-    
+
     const payload = {
       number: codigo,
-      imagem: imagem,
+      imagem: img,
       quantidade: quantidade,
       estoque: estoque,
     };
+
+    console.log(payload);
 
     const response = await Api.buildApiPostRequest(
       Api.addApliquesUrl(),
@@ -58,11 +60,11 @@ export const ApliquesCreate = () => {
           <form className="formApliquesCreate" onSubmit={handleSubmit}>
             <div className="divInput">
               <label className="">Codigo</label>
-              <input id="codigo" name="codigo" type="text" className="" />
+              <input id="number" name="number" type="text" className="" />
             </div>
             <div className="divInput">
               <label>Imagem</label>
-              <input id="imagem" name="imagem" type="text" />
+              <input id="img" name="img" type="text" />
             </div>
             <div className="divInput">
               <label>Quantidade</label>
@@ -71,17 +73,16 @@ export const ApliquesCreate = () => {
 
             <div className="divInput">
               <label>Estoque: </label>
-              <div >
-              <select
-                    id="estoque"
-                    name="estoque"
-                    className="form-control"
-                    placeholder="estoque"
-                  >
-                    
-                    <option>Sim</option>
-                    <option>Nao</option>
-                  </select>
+              <div>
+                <select
+                  id="estoque"
+                  name="estoque"
+                  className="form-control"
+                  placeholder="estoque"
+                >
+                  <option>Sim</option>
+                  <option>Nao</option>
+                </select>
               </div>
             </div>
             <div className="divBtnCreateAplique">

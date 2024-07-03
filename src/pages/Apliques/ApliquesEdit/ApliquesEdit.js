@@ -25,16 +25,18 @@ export const ApliquesEdit = (props) => {
     loadProduct();
   }, [id]);
 
+  console.log(aplique);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const number = e.target.number.value;
+    const codigo = e.target.number.value;
     const img = e.target.img.value;
     const quantidade = +e.target.quantidade.value;
     const estoque = e.target.estoque.value;
 
+    console.log(img);
     const payload = {
-      number,
+      codigo,
       img,
       quantidade,
       estoque,
@@ -55,6 +57,7 @@ export const ApliquesEdit = (props) => {
     }
   };
 
+  console.log(aplique);
   return (
     <div className="">
       {loading ? (
@@ -66,7 +69,7 @@ export const ApliquesEdit = (props) => {
           </div>
           <div className="imagemFormEdit">
             <div>
-              <p>{aplique.number}</p>
+              <p>{aplique.codigo}</p>
               <img src={aplique.img} alt="foto do aplique" />
             </div>
 

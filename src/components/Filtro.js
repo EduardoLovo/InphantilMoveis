@@ -11,8 +11,11 @@ export const Filtro = (props) => {
       resp.number.toLowerCase().includes(texto.toLowerCase())
     );
     setFiltrado(results);
+
     // eslint-disable-next-line
   }, [texto]);
+
+  console.log(filtrado);
 
   function compare(a, b) {
     if (a.number < b.number) return -1;
