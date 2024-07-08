@@ -34,6 +34,38 @@ export const Info = () => {
         </div>
       </div>
       <hr className="hr" />
+      <div>
+        <h2 className="m-4">Montagem da cama:</h2>
+      </div>
+      <div className="d-flex justify-content-center align-items-center ">
+        <iframe
+          width="1280"
+          height="725"
+          src="https://www.youtube.com/embed/kIJSRV-1teM"
+          title="Montagem da Cama Montessoriana Phant"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div className="d-flex justify-content-center align-items-center infochild">
+        <p>
+          Este é o vídeo de montagem da cama, é importante seguir os passos nele
+          descritos, não alterando a ordem de montagem!
+        </p>
+        <iframe
+          width="772"
+          height="434"
+          src="https://www.youtube.com/embed/TAtMg7sJZA8"
+          title="Montagem da Cama Montessoriana Phant"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+          className="youtubeVideo"
+        ></iframe>
+      </div>
+      <hr className="hr" />
       <div className="d-flex justify-content-center align-items-center infochild">
         <div className="">
           <h2>Limpeza</h2>
