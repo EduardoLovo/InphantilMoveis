@@ -4,8 +4,6 @@ import garantia from "../img/garantia.png";
 import vento from "../img/vento.png";
 import protetor5 from "../img/protetor5.jpeg";
 import protetor6 from "../img/protetor6.jpeg";
-import protetor7 from "../img/protetor7.jpeg";
-import protetor8 from "../img/protetor8.jpeg";
 
 export const Info = () => {
   return (
@@ -130,22 +128,7 @@ export const Info = () => {
         </p>
       </div>
       <hr className="hr" />
-      <div className="d-flex justify-content-center align-items-center infochild">
-        <p>
-          Este é o vídeo de montagem da cama, é importante seguir os passos nele
-          descritos, não alterando a ordem de montagem!
-        </p>
-        <iframe
-          width="772"
-          height="434"
-          src="https://www.youtube.com/embed/TAtMg7sJZA8"
-          title="Montagem da Cama Montessoriana Phant"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          className="youtubeVideo"
-        ></iframe>
-      </div>
+
       <hr className="hr" />
       <div className="d-flex justify-content-center align-items-center infochild">
         <div className="">
