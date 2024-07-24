@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const CalculadoraSobMedidaColchao = () => {
-  const [resultado, setResultado] = useState("");
+  const [resultado, setResultado] = useState('');
 
   const calcular = (evento) => {
     evento.preventDefault();
@@ -36,9 +36,9 @@ const CalculadoraSobMedidaColchao = () => {
       <section className="resultadoCalculadoraCamaPhant">
         <h3>Resultado</h3>
         <div>
-          <label>Tamanho da cama:</label>
+          <label>Tamanho do colchão:</label>
           <p>
-            {largura} x {comprimento}
+            {largura} x {comprimento} x {altura}
           </p>
         </div>
         <div>
@@ -54,7 +54,7 @@ const CalculadoraSobMedidaColchao = () => {
           </p>
         </div>
         <div>
-          {acessorio === "lençol" && (
+          {acessorio === 'lençol' && (
             <div className="resultadoLencol">
               <label>Lençol: </label>
               <p>
@@ -66,7 +66,7 @@ const CalculadoraSobMedidaColchao = () => {
               </p>
             </div>
           )}
-          {acessorio === "virol" && (
+          {acessorio === 'virol' && (
             <div>
               <label>Virol:</label>
               <div>
