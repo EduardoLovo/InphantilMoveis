@@ -1,9 +1,9 @@
-import React from "react";
-import limpeza from "../img/limpeza.png";
-import garantia from "../img/garantia.png";
-import vento from "../img/vento.png";
-import protetor5 from "../img/protetor5.jpeg";
-import protetor6 from "../img/protetor6.jpeg";
+import React from 'react';
+import limpeza from '../img/limpeza.png';
+import garantia from '../img/garantia.png';
+import vento from '../img/vento.png';
+import protetor5 from '../img/protetor5.jpeg';
+import protetor6 from '../img/protetor6.jpeg';
 
 export const Info = () => {
   return (
@@ -38,8 +38,8 @@ export const Info = () => {
       <div className="d-flex justify-content-center align-items-center ">
         <iframe
           width="1280"
-          height="725"
-          src="https://www.youtube.com/embed/kIJSRV-1teM"
+          height="720"
+          src="https://www.youtube.com/embed/9qnu3gMKYkc"
           title="Montagem da Cama Montessoriana Phant"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

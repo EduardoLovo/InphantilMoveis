@@ -1,7 +1,7 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { Api } from "../../Api/Api";
-import { toast } from "react-toastify";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Api } from '../../Api/Api';
+import { toast } from 'react-toastify';
 
 export const MaterialCreate = () => {
   const navigate = useNavigate();
@@ -21,6 +21,8 @@ export const MaterialCreate = () => {
       estoque: estoque,
     };
 
+    console.log(payload);
+
     const response = await Api.buildApiPostRequest(
       Api.addMaterialUrl(),
       payload,
@@ -29,17 +31,17 @@ export const MaterialCreate = () => {
 
     if (response.status === 200) {
       // Product created successfully
-      toast.success("Aplique adicionada com sucesso!");
-      navigate("/material-estoque");
+      toast.success('Aplique adicionada com sucesso!');
+      navigate('/material-estoque');
     } else {
       // Error
-      toast.error("Erro ao adicionar Aplique!");
+      toast.error('Erro ao adicionar Aplique!');
     }
   };
 
   return (
-    <div className="contentCreate">
-      <div className="text-center m-4">
+    <div className="contentCreateMaterial">
+      <div className="text-center">
         <h1>Adicionar novo material</h1>
       </div>
       <form
