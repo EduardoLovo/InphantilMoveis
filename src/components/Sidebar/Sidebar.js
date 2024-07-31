@@ -1,37 +1,27 @@
-import React, { useState } from "react";
-import Logo from "../../img/LogoCir.png";
-import { Link, useNavigate } from "react-router-dom";
-import "./Sidebar.css";
-import "../../Style/style.css";
-import { JwtHandler } from "../../jwt_handler/jwt_handler";
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import './Sidebar.css';
+import '../../Style/style.css';
+import { JwtHandler } from '../../jwt_handler/jwt_handler';
 
 const Sidebar = () => {
   const [isLogged, setIsLogged] = useState(JwtHandler.isJwtValid);
 
   const navigate = useNavigate();
 
-  const type = localStorage.getItem("user");
+  const type = localStorage.getItem('user');
 
   const logout = () => {
     setIsLogged(JwtHandler.clearJwt());
-    navigate("/");
+    navigate('/');
     window.location.reload(false);
   };
 
   return (
     <div className="sidebar">
       <div className="sidebars">
-        <div className="sidebar-logo">
-          {isLogged === true ? (
-            <button onClick={logout} className="btnPadrao m-2">
-              Logout
-            </button>
-          ) : (
-            ""
-          )}
-        </div>
         {/* Menu login Adm */}
-        {isLogged === true && type === "adm" && (
+        {isLogged === true && type === 'adm' && (
           <div className="sidebar-items">
             <h3>Adm</h3>
             <p className="mt-4">Adm:</p>
@@ -84,7 +74,7 @@ const Sidebar = () => {
           </div>
         )}
         {/* Menu login vendedor */}
-        {isLogged === true && type === "vendedor" && (
+        {isLogged === true && type === 'vendedor' && (
           <div className="sidebar-items">
             <h3>Vendas</h3>
             <p className="mt-4">Calculadoras:</p>
@@ -167,6 +157,15 @@ const Sidebar = () => {
               WhatsApp
             </a>
           </div>
+        )}
+      </div>
+      <div className="sidebar-logo">
+        {isLogged === true ? (
+          <button onClick={logout} className="btnPadrao botaoLogout">
+            Logout
+          </button>
+        ) : (
+          ''
         )}
       </div>
     </div>

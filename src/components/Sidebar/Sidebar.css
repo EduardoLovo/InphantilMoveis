@@ -42,9 +42,11 @@
   background-color: rgba(71, 71, 71, 1); /* Cor da pista da barra de rolagem */
 }
 
-.sidebar-logo img {
-  width: 4rem;
-  height: 4rem;
+.sidebar-logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .sidebar-items {
@@ -134,6 +136,10 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.botaoLogout {
+  width: 4rem;
 }
 
 @media (max-width: 768px) {
