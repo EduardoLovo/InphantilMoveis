@@ -81,35 +81,37 @@ const CalculadoraSobMedidaColchao = () => {
 
   return (
     <div className="contentCalculadoraCamaPhant">
-      <div className="contentCalculadoraCamaPhantFormEResultado">
-        <form onSubmit={calcular} className="formularioCalculadoraCamaPhant">
-          <h3>Sob Medida com medida do colchão do cliente:</h3>
-          <div>
-            <label>Largura:</label>
-            <input type="number" id="largura" />
-          </div>
-          <div>
-            <label>Comprimento:</label>
-            <input type="number" id="comprimento" />
-          </div>
-          <div>
-            <label>Altura:</label>
-            <input type="number" id="altura" />
-          </div>
-          <div>
-            <label>Acessorio:</label>
-            <select id="acessorio">
-              <option></option>
-              <option value="lençol">Lençol</option>
-              <option value="virol">Virol</option>
-            </select>
-          </div>
-          <div>
-            <button type="submit">Calcular</button>
-          </div>
-        </form>
+      <div className="sombra">
+        <h3>Sob Medida com medida do colchão do cliente:</h3>
+        <div className="contentCalculadoraCamaPhantFormEResultado">
+          <form onSubmit={calcular} className="formularioCalculadoraCamaPhant">
+            <div>
+              <label>Largura:</label>
+              <input type="number" id="largura" />
+            </div>
+            <div>
+              <label>Comprimento:</label>
+              <input type="number" id="comprimento" />
+            </div>
+            <div>
+              <label>Altura:</label>
+              <input type="number" id="altura" />
+            </div>
+            <div>
+              <label>Acessorio:</label>
+              <select id="acessorio">
+                <option></option>
+                <option value="lençol">Lençol</option>
+                <option value="virol">Virol</option>
+              </select>
+            </div>
+            <div>
+              <button type="submit">Calcular</button>
+            </div>
+          </form>
 
-        {resultado && <section>{resultado}</section>}
+          {resultado && <section>{resultado}</section>}
+        </div>
       </div>
     </div>
   );

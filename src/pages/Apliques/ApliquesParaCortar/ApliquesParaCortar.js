@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Api } from "../../../Api/Api";
-import { Loading } from "../../../components/Loading/Loading";
+import React, { useEffect, useState } from 'react';
+import { Api } from '../../../Api/Api';
+import { Loading } from '../../../components/Loading/Loading';
+import { ApliqueCard } from '../ApliqueCard/ApliqueCard';
 
 export const ApliquesParaCortar = () => {
   const [apliques, setApliques] = useState([]);
@@ -34,26 +35,12 @@ export const ApliquesParaCortar = () => {
             <div
               key={index}
               className={
-                aplique.quantidade < 5 && aplique.estoque !== "Nao"
-                  ? ""
-                  : "display"
+                aplique.quantidade < 5 && aplique.estoque !== 'Nao'
+                  ? ''
+                  : 'display'
               }
             >
-              <div className="col alingListCards">
-                <div className="card border-dark mb-3">
-                  <img src={aplique.img} className="card-img-top" alt="..." />
-                  <div
-                    className={
-                      aplique.estoque === "Nao"
-                        ? "card-body text-danger"
-                        : "card-body text-success"
-                    }
-                  >
-                    <h5 className="card-title">{aplique.number} </h5>
-                    <p className="card-text">Estoque = {aplique.quantidade}</p>
-                  </div>
-                </div>
-              </div>
+              <ApliqueCard aplique={aplique} />
             </div>
           ))}
         </div>

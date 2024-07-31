@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import "./CalculadoraSobMedida.css";
+import React, { useState } from 'react';
+import './CalculadoraSobMedida.css';
 // import { CalculadoraSobMedida } from "./index";
 
 export const CalculadoraSobMedida = () => {
-  const [resultado, setResultado] = useState("");
+  const [resultado, setResultado] = useState('');
 
   const calcular = (evento) => {
     evento.preventDefault();
@@ -33,7 +33,7 @@ export const CalculadoraSobMedida = () => {
 
     // Resultado
     setResultado(
-      <section className="resultadoCalculadoraCamaPhant">
+      <div className="resultadoCalculadoraCamaPhant">
         <h3>Resultado</h3>
         <div>
           <label>Tamanho da cama:</label>
@@ -50,7 +50,7 @@ export const CalculadoraSobMedida = () => {
         <div>
           <label>Interno: </label>
           <p>
-            {larguraInterno} x {comprimentoInterno}{" "}
+            {larguraInterno} x {comprimentoInterno}{' '}
           </p>
         </div>
         <div>
@@ -60,7 +60,7 @@ export const CalculadoraSobMedida = () => {
           </p>
         </div>
         <div>
-          {acessorio === "lençol" && (
+          {acessorio === 'lençol' && (
             <div className="resultadoLencol">
               <label>Lençol: </label>
               <p>
@@ -70,7 +70,7 @@ export const CalculadoraSobMedida = () => {
               <p>Padrão</p>
             </div>
           )}
-          {acessorio === "virol" && (
+          {acessorio === 'virol' && (
             <div>
               <label>Virol:</label>
               <p>
@@ -79,37 +79,39 @@ export const CalculadoraSobMedida = () => {
             </div>
           )}
         </div>
-      </section>
+      </div>
     );
   };
 
   return (
     <div className="contentCalculadoraCamaPhant">
-      <div className="contentCalculadoraCamaPhantFormEResultado">
-        <form onSubmit={calcular} className="formularioCalculadoraCamaPhant">
-          <h3>Sob Medida com medida da cama Phant:</h3>
-          <div>
-            <label>Largura:</label>
-            <input type="number" id="largura" />
-          </div>
-          <div>
-            <label>Comprimento:</label>
-            <input type="number" id="comprimento" />
-          </div>
-          <div>
-            <label>Acessorio:</label>
-            <select id="acessorio">
-              <option></option>
-              <option value="lençol">Lençol</option>
-              <option value="virol">Virol</option>
-            </select>
-          </div>
-          <div>
-            <button type="submit">Calcular</button>
-          </div>
-        </form>
+      <div className="sombra">
+        <h3>Sob Medida com medida da cama Phant:</h3>
+        <div className="contentCalculadoraCamaPhantFormEResultado">
+          <form onSubmit={calcular} className="formularioCalculadoraCamaPhant">
+            <div>
+              <label>Largura:</label>
+              <input type="number" id="largura" />
+            </div>
+            <div>
+              <label>Comprimento:</label>
+              <input type="number" id="comprimento" />
+            </div>
+            <div>
+              <label>Acessorio:</label>
+              <select id="acessorio">
+                <option></option>
+                <option value="lençol">Lençol</option>
+                <option value="virol">Virol</option>
+              </select>
+            </div>
+            <div>
+              <button type="submit">Calcular</button>
+            </div>
+          </form>
 
-        {resultado && <section>{resultado}</section>}
+          {resultado && <section>{resultado}</section>}
+        </div>
       </div>
     </div>
   );

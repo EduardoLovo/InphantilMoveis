@@ -6,40 +6,41 @@
   max-width: 100vw;
 }
 
-.contentCalculadoraCamaPhantFormEResultado {
+.sombra {
   background-color: rgba(20, 20, 20, 0.253);
-  /* width: 100%; */
-  padding-top: 25px;
+  padding: 25px;
   margin: 20px;
   border-radius: 5px;
+  min-width: 70vw;
+}
+
+.contentCalculadoraCamaPhantFormEResultado {
+  padding: 25px;
+  margin: 20px;
+  display: flex;
 }
 .contentCalculadoraCamaPhant h3 {
-  padding: 30px;
   text-align: center;
   text-decoration: underline;
 }
 
 .formularioCalculadoraCamaPhant {
-  width: 70vw;
-  padding: 20px;
-  border-radius: 5px;
-  margin-bottom: 50px;
+  width: 30vw;
 }
 
 .formularioCalculadoraCamaPhant div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px;
 }
 
 .formularioCalculadoraCamaPhant div label {
   width: 50%;
-  margin-left: 15px;
-  /* display: flex; */
+  text-align: left;
+  margin-left: 10px;
 }
 .formularioCalculadoraCamaPhant div input {
-  width: 50%;
+  /* width: 50%; */
   border-radius: 3px;
   border: none;
   padding: 1px 15px;
@@ -60,23 +61,18 @@
 }
 
 .resultadoCalculadoraCamaPhant {
-  margin: 15px 0 30px;
-  width: 70vw;
-  padding: 20px;
-  border-radius: 5px;
+  position: relative;
+  width: 30vw;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.resultadoCalculadoraCamaPhant h3 {
-  padding: 0 0 5px;
-}
 .resultadoCalculadoraCamaPhant div {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  width: 100%;
 }
 
 .resultadoCalculadoraCamaPhant div label {
@@ -86,7 +82,6 @@
 .resultadoCalculadoraCamaPhant div p {
   font-size: 18px;
   color: #ccd85f;
-  /* font-weight: bolder; */
 }
 
 .resultadoCalculadoraCamaPhant .resultadoLencol p {
