@@ -101,31 +101,40 @@ export const Info = () => {
       <hr className="hr" />
       <div className="d-flex justify-content-center align-items-center infochild">
         <div className="">
-          <h2>Cuidados com a limpeza de lençois e protetores impermeáveis</h2>
+          <h2>
+            Cuidados com a limpeza de Lençóis, Protetores Impermeáveis e
+            Travesseiros Phan
+          </h2>
 
           <p>
             Lençóis e Protetores Impermeáveis podem ser lavados em máquina de
-            lavar, porém não pode utilizar na máquina secadora.
+            lavar, porém sem utilizar máquina secadora. Já os Travesseiros Phant
+            não devem ser lavados em máquina de lavar, pois pode danificar a
+            espuma.
           </p>
         </div>
       </div>
       <hr className="hr" />
       <div className="d-flex justify-content-center align-items-center infochild">
-        <iframe
-          width="789"
-          height="434"
-          src="https://www.youtube.com/embed/EI-uWTHEtZA"
-          title="Alinhamento de Cama Phant"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          className="youtubeVideo"
-        ></iframe>
-        <p className="m-5">
-          Esse é o vídeo de alinhamento da nossa cama. É muito importante que
-          seja feito de tempos em tempos, pois irá conservar sua cama sempre
-          alinhada.
-        </p>
+        <div>
+          <h2>Alinhamento da Cama Phant</h2>
+
+          <p className="">
+            Esse é o vídeo de alinhamento da nossa cama. É muito importante que
+            seja feito de tempos em tempos, pois irá conservar sua cama sempre
+            alinhada.
+          </p>
+          <iframe
+            width="789"
+            height="434"
+            src="https://www.youtube.com/embed/EI-uWTHEtZA"
+            title="Alinhamento de Cama Phant"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            className="youtubeVideo"
+          ></iframe>
+        </div>
       </div>
       <hr className="hr" />
 
@@ -173,21 +182,24 @@ export const Info = () => {
         </div>
       </div>
       <hr className="hr" />
-      <div className="d-flex justify-content-center align-items-center infochild">
-        <img src={vento} alt="vento" />
-        <div>
-          <p>
-            Nós recomendamos deixar o colchão arejando por aproximadamente 48
-            horas, pois ele é embalado assim que produzido e é necessária a
-            dispersão dos gases voláteis. O cheiro de produto novo pode
-            permanecer por aproximadamente 30 dias, no entanto o nosso produto é
-            totalmente hipoalergênico, não oferecendo risco à saúde da sua
-            família.
-          </p>
-          <p>
-            Sua cama já vai higienizada e pronta para uso, indicamos apenas este
-            cuidado com o colchão!
-          </p>
+      <div className=" infochild">
+        <h2>Arejar colchão</h2>
+        <div className="d-flex justify-content-center align-items-center">
+          <img src={vento} alt="vento" />
+          <div>
+            <p>
+              Nós recomendamos deixar o colchão arejando por aproximadamente 48
+              horas, pois ele é embalado assim que produzido e é necessária a
+              dispersão dos gases voláteis. O cheiro de produto novo pode
+              permanecer por aproximadamente 30 dias, no entanto o nosso produto
+              é totalmente hipoalergênico, não oferecendo risco à saúde da sua
+              família.
+            </p>
+            <p>
+              Sua cama já vai higienizada e pronta para uso, indicamos apenas
+              este cuidado com o colchão!
+            </p>
+          </div>
         </div>
       </div>
       <hr className="hr" />
