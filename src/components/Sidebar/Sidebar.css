@@ -53,6 +53,10 @@
   margin-top: 20px;
 }
 
+.sidebar-items h3 {
+  margin-left: 15px;
+}
+
 .sidebar-items a {
   display: block;
   color: rgb(150, 150, 150);

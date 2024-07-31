@@ -49,7 +49,7 @@ const MaterialCard = (props) => {
   const handleConfirmDelete = async (e) => {
     e.preventDefault();
     const response = await Api.buildApiDeleteRequest(
-      Api.deleteTecidoUrl(id),
+      Api.deleteMaterialUrl(id),
       true
     );
 
@@ -57,7 +57,7 @@ const MaterialCard = (props) => {
       // Product updated successfully
 
       toast.success('Deletado com Sucesso!');
-      navigate('/tecidos-estoque');
+      navigate('/material-estoque');
     } else {
       // Error
       toast.error('Erro ao deletar!');
@@ -83,7 +83,7 @@ const MaterialCard = (props) => {
             <div className="menu">
               <Link
                 className="linkedit"
-                to={`/tecido-edit/${id}`}
+                to={`/material-edit/${id}`}
                 estoque={estoque}
               >
                 Editar

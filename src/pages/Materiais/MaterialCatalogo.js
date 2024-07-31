@@ -1,27 +1,27 @@
-import React, { useEffect } from "react";
-import { JwtHandler } from "../../jwt_handler/jwt_handler";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Amarelo } from "./Amarelo";
-import { Azul } from "./Azul";
-import { Bege } from "./Bege";
-import { Branco } from "./Branco";
-import { Cinza } from "./Cinza";
-import { Laranja } from "./Laranja";
-import { Lilas } from "./Lilas";
-import { Mostarda } from "./Mostarda";
-import { Rosa } from "./Rosa";
-import { Tiffany } from "./Tiffany";
-import { Verde } from "./Verde";
-import { Vermelho } from "./Vermelho";
-import { Externo } from "./Externo";
-import { MontarCores } from "./MontarCores";
-import { Loading } from "../../components/Loading/Loading";
+import React, { useEffect } from 'react';
+import { JwtHandler } from '../../jwt_handler/jwt_handler';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Amarelo } from './Amarelo';
+import { Azul } from './Azul';
+import { Bege } from './Bege';
+import { Branco } from './Branco';
+import { Cinza } from './Cinza';
+import { Laranja } from './Laranja';
+import { Lilas } from './Lilas';
+import { Mostarda } from './Mostarda';
+import { Rosa } from './Rosa';
+import { Tiffany } from './Tiffany';
+import { Verde } from './Verde';
+import { Vermelho } from './Vermelho';
+import { Externo } from './Externo';
+import { MontarCores } from './MontarCores';
+import { Loading } from '../../components/Loading/Loading';
 
 export const MaterialCatalogo = () => {
   const navigate = useNavigate();
   const [isLogged] = useState(JwtHandler.isJwtValid);
-  const type = localStorage.getItem("user");
+  const type = localStorage.getItem('user');
 
   const [materiais, setMateriais] = useState();
   const [loading, setLoading] = useState(true);
@@ -32,47 +32,47 @@ export const MaterialCatalogo = () => {
 
   const render = (e) => {
     const cor = e.target.id;
-    if (cor === "amarelo") {
+    if (cor === 'amarelo') {
       setMateriais(<Amarelo />);
-    } else if (cor === "azul") {
+    } else if (cor === 'azul') {
       setMateriais(<Azul />);
-    } else if (cor === "bege") {
+    } else if (cor === 'bege') {
       setMateriais(<Bege />);
-    } else if (cor === "branco") {
+    } else if (cor === 'branco') {
       setMateriais(<Branco />);
-    } else if (cor === "cinza") {
+    } else if (cor === 'cinza') {
       setMateriais(<Cinza />);
-    } else if (cor === "laranja") {
+    } else if (cor === 'laranja') {
       setMateriais(<Laranja />);
-    } else if (cor === "lilas") {
+    } else if (cor === 'lilas') {
       setMateriais(<Lilas />);
-    } else if (cor === "mostarda") {
+    } else if (cor === 'mostarda') {
       setMateriais(<Mostarda />);
-    } else if (cor === "rosa") {
+    } else if (cor === 'rosa') {
       setMateriais(<Rosa />);
-    } else if (cor === "tiffany") {
+    } else if (cor === 'tiffany') {
       setMateriais(<Tiffany />);
-    } else if (cor === "verde") {
+    } else if (cor === 'verde') {
       setMateriais(<Verde />);
-    } else if (cor === "vermelho") {
+    } else if (cor === 'vermelho') {
       setMateriais(<Vermelho />);
-    } else if (cor === "externo") {
+    } else if (cor === 'externo') {
       setMateriais(<Externo />);
-    } else if (cor === "montar") {
+    } else if (cor === 'montar') {
       setMateriais(<MontarCores />);
     }
   };
 
   return (
     <div
-      className="btn-toolbar  menuLencol"
+      className="btn-toolbar "
       role="toolbar"
       aria-label="Toolbar with button groups"
     >
       {loading ? (
         <Loading />
       ) : (
-        <div>
+        <div className="estoqueMaterial">
           <div
             className="btn-group me-2 "
             role="group"
@@ -193,22 +193,22 @@ export const MaterialCatalogo = () => {
 
             {isLogged === true ? (
               <div>
-                {type === "adm" ? (
+                {type === 'adm' ? (
                   <button
                     type="button"
                     className="btn btn-warning btn-sm"
                     onClick={() => {
-                      navigate("/material-create");
+                      navigate('/material-create');
                     }}
                   >
                     Adicionar novo material
                   </button>
                 ) : (
-                  ""
+                  ''
                 )}
               </div>
             ) : (
-              ""
+              ''
             )}
           </div>
           <div>

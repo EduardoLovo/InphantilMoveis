@@ -1,45 +1,46 @@
-import { Navigate, Route, Routes } from "react-router-dom";
-import Sidebar from "./components/Sidebar/Sidebar";
-import "./App.css";
+import { Navigate, Route, Routes } from 'react-router-dom';
+import Sidebar from './components/Sidebar/Sidebar';
+import './App.css';
 //Rotas
-import { Home } from "./pages/Home/Home";
-import { Login } from "./pages/Login";
-import { Info } from "./pages/Info";
-import { ApliquesParaCliente } from "./pages/Apliques/ApliquesParaCliente/ApliquesParaCliente";
-import { ApliquesParaCortar } from "./pages/Apliques/ApliquesParaCortar/ApliquesParaCortar";
-import { ApliquesParaComprar } from "./pages/Apliques/ApliquesParaComprar/ApliquesParaComprar";
-import { ApliquesCreate } from "./pages/Apliques/ApliquesCreate/ApliquesCreate";
-import { ApliquesParaCabana } from "./pages/Apliques/ApliquesParaCabana/ApliquesParaCabana";
-import { ApliquesEdit } from "./pages/Apliques/ApliquesEdit/ApliquesEdit";
-import { ApliquesEstoque } from "./pages/Apliques/ApliquesEstoque/ApliquesEstoque";
-import { Calculadora6040 } from "./pages/Calculadoras/Calculadora6040";
-import { CalculadoraParaLencois } from "./pages/Calculadoras/CalculadoraParaLencois";
-import { CatalogoLencolPE } from "./pages/CatalogoLencolPE/CatalogoLencolPE";
-import { JwtHandler } from "./jwt_handler/jwt_handler";
-import { LencolCreate } from "./pages/CatalogoLencolPE/LencolCreate";
-import { LencolEdit } from "./pages/CatalogoLencolPE/LencolEdit";
-import { MaterialEstoque } from "./pages/Materiais/MaterialEstoque";
-import { MaterialEdit } from "./pages/Materiais/MaterialEdit";
-import { MaterialCatalogo } from "./pages/Materiais/MaterialCatalogo";
-import { MaterialCreate } from "./pages/Materiais/MaterialCreate";
-import { TecidosJunior } from "./pages/CatalogoTecidos/Junior";
-import { ToastContainer } from "react-toastify";
-import { TecidosEdit } from "./pages/TecidosParaLencol/TecidosEdit/TecidosEdit";
-import { TecidosParaLencol } from "./pages/TecidosParaLencol/TecidosEstoque/TecidosParaLencol";
-import { TecidosCreate } from "./pages/TecidosParaLencol/TecidosCreate/TecidosCreate";
-import { SeisCores } from "./pages/Tapetes/SeisCores";
-import { QuatroCores } from "./pages/Tapetes/QuatroCores";
-import { CincoCores } from "./pages/Tapetes/CincoCores";
-import { SeteCores } from "./pages/Tapetes/SeteCores";
-import { MontagemTapetes } from "./pages/Tapetes/MontagemTapetes";
-import { DuasCores } from "./pages/Tapetes/DuasCores";
-import { TresCores } from "./pages/Tapetes/TresCores";
-import { OitoCores } from "./pages/Tapetes/OitoCores";
-import { NoveCores } from "./pages/Tapetes/NoveCores";
-import { DezCores } from "./pages/Tapetes/DezCores";
-import { OnzeCores } from "./pages/Tapetes/OnzeCores";
-import { DozeCores } from "./pages/Tapetes/DozeCores";
-import { Teste } from "./pages/Teste/Teste";
+import { Home } from './pages/Home/Home';
+import { Login } from './pages/Login';
+import { Info } from './pages/Info';
+import { ApliquesParaCliente } from './pages/Apliques/ApliquesParaCliente/ApliquesParaCliente';
+import { ApliquesParaCortar } from './pages/Apliques/ApliquesParaCortar/ApliquesParaCortar';
+import { ApliquesParaComprar } from './pages/Apliques/ApliquesParaComprar/ApliquesParaComprar';
+import { ApliquesCreate } from './pages/Apliques/ApliquesCreate/ApliquesCreate';
+import { ApliquesParaCabana } from './pages/Apliques/ApliquesParaCabana/ApliquesParaCabana';
+import { ApliquesEdit } from './pages/Apliques/ApliquesEdit/ApliquesEdit';
+import { ApliquesEstoque } from './pages/Apliques/ApliquesEstoque/ApliquesEstoque';
+import { Calculadora6040 } from './pages/Calculadoras/Calculadora6040';
+import { CalculadoraParaLencois } from './pages/Calculadoras/CalculadoraParaLencois';
+import { CatalogoLencolPE } from './pages/CatalogoLencolPE/CatalogoLencolPE';
+import { JwtHandler } from './jwt_handler/jwt_handler';
+import { LencolCreate } from './pages/CatalogoLencolPE/LencolCreate';
+import { LencolEdit } from './pages/CatalogoLencolPE/LencolEdit';
+import { MaterialEstoque } from './pages/Materiais/MaterialEstoque';
+import { MaterialEdit } from './pages/Materiais/MaterialEdit';
+import { MaterialCatalogo } from './pages/Materiais/MaterialCatalogo';
+import { MaterialCreate } from './pages/Materiais/MaterialCreate';
+import { TecidosJunior } from './pages/CatalogoTecidos/Junior';
+import { ToastContainer } from 'react-toastify';
+import { TecidosEdit } from './pages/TecidosParaLencol/TecidosEdit/TecidosEdit';
+import { TecidosParaLencol } from './pages/TecidosParaLencol/TecidosEstoque/TecidosParaLencol';
+import { TecidosCreate } from './pages/TecidosParaLencol/TecidosCreate/TecidosCreate';
+import { SeisCores } from './pages/Tapetes/SeisCores';
+import { QuatroCores } from './pages/Tapetes/QuatroCores';
+import { CincoCores } from './pages/Tapetes/CincoCores';
+import { SeteCores } from './pages/Tapetes/SeteCores';
+import { MontagemTapetes } from './pages/Tapetes/MontagemTapetes';
+import { DuasCores } from './pages/Tapetes/DuasCores';
+import { TresCores } from './pages/Tapetes/TresCores';
+import { OitoCores } from './pages/Tapetes/OitoCores';
+import { NoveCores } from './pages/Tapetes/NoveCores';
+import { DezCores } from './pages/Tapetes/DezCores';
+import { OnzeCores } from './pages/Tapetes/OnzeCores';
+import { DozeCores } from './pages/Tapetes/DozeCores';
+import { Teste } from './pages/Teste/Teste';
+import { Sintetico } from './pages/Sinteticos/Sintetico';
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -92,6 +93,7 @@ function App() {
           <Route path="/tapete-onze-cores" element={<OnzeCores />} />
           <Route path="/tapete-doze-cores" element={<DozeCores />} />
           <Route path="/montagem-tapetes" element={<MontagemTapetes />} />
+          <Route path="/teste" element={<Sintetico />} />
           <Route
             path="/apliques-para-comprar"
             element={<ApliquesParaComprar />}
@@ -185,14 +187,14 @@ function App() {
               </PrivateRoute>
             }
           />
-          <Route
+          {/* <Route
             path="/teste/"
             element={
               <PrivateRoute redirectTo="/">
-                <Teste />
+                <Sintetico />
               </PrivateRoute>
             }
-          />
+          /> */}
           <Route
             path="/material-create/"
             element={
