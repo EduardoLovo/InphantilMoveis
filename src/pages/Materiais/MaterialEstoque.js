@@ -1,8 +1,9 @@
-import React from "react";
-import { Api } from "../../Api/Api";
-import { useState } from "react";
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Api } from '../../Api/Api';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import MaterialCard from './MaterialCard';
 
 export const MaterialEstoque = () => {
   const [materiais, setMateriais] = useState([]);
@@ -31,15 +32,7 @@ export const MaterialEstoque = () => {
       </Link>
       <div className="estoqueMaterial">
         {materiais.map((material, id) => (
-          <div key={id} className="card ">
-            <img src={material.img} alt="imagem do material" />
-            <div>
-              <p>{material.codigo}</p>
-              <Link to={`/material-edit/${material._id}/`} teste="testea">
-                <button className="m-1 p-1 btnPadrao">Editar</button>
-              </Link>
-            </div>
-          </div>
+          <MaterialCard material={material} key={id} />
         ))}
       </div>
     </div>

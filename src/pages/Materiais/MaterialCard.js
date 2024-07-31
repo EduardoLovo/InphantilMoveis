@@ -1,20 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import ModalReact from '../../../components/Modal/ModalReact';
+import ModalReact from '../../components/Modal/ModalReact';
 import { toast } from 'react-toastify';
-import { Api } from '../../../Api/Api';
-import './TecidoCard.css';
+import { Api } from '../../Api/Api';
+import '../TecidosParaLencol/TecidoCard/TecidoCard.css';
 
-const TecidoCard = (props) => {
+const MaterialCard = (props) => {
   const navigate = useNavigate();
 
   console.log(props);
 
-  const id = props.tecido._id;
-  const cor = props.tecido.cor;
-  const quantidade = props.tecido.quantidade;
-  const estoque = props.tecido.estoque;
-  const imagem = props.tecido.img;
+  const id = props.material._id;
+  const codigo = props.material.codigo;
+  const cor = props.material.cor;
+  const quantidade = props.material.quantidade;
+  const estoque = props.material.estoque;
+  const imagem = props.material.img;
 
   const type = localStorage.getItem('user');
 
@@ -103,7 +104,9 @@ const TecidoCard = (props) => {
         ''
       )}
       <div className="codigoAplique">
-        <p>{cor}</p>
+        <p>
+          {cor}-{codigo}
+        </p>
         {type === 'adm' ? (
           <div>
             {estoque === 'Nao' ? (
@@ -124,4 +127,4 @@ const TecidoCard = (props) => {
   );
 };
 
-export default TecidoCard;
+export default MaterialCard;
