@@ -35,7 +35,7 @@ export const Info = () => {
       <div>
         <h2 className="m-4">Montagem da cama:</h2>
       </div>
-      <div className="d-flex justify-content-center align-items-center ">
+      <div className="d-flex justify-content-center align-items-center infochild">
         <iframe
           width="1280"
           height="720"
@@ -45,6 +45,7 @@ export const Info = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
+          className="youtubeVideo"
         ></iframe>
       </div>
       <div className="d-flex justify-content-center align-items-center infochild">
@@ -184,7 +185,7 @@ export const Info = () => {
       <hr className="hr" />
       <div className=" infochild">
         <h2>Arejar colchão</h2>
-        <div className="d-flex justify-content-center align-items-center">
+        <div className="d-flex justify-content-center align-items-center infochild">
           <img src={vento} alt="vento" />
           <div>
             <p>
