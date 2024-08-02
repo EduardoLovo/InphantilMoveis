@@ -18,10 +18,7 @@ import { CatalogoLencolPE } from './pages/CatalogoLencolPE/CatalogoLencolPE';
 import { JwtHandler } from './jwt_handler/jwt_handler';
 import { LencolCreate } from './pages/CatalogoLencolPE/LencolCreate';
 import { LencolEdit } from './pages/CatalogoLencolPE/LencolEdit';
-import { MaterialEstoque } from './pages/Materiais/MaterialEstoque';
-import { MaterialEdit } from './pages/Materiais/MaterialEdit';
-import { MaterialCatalogo } from './pages/Materiais/MaterialCatalogo';
-import { MaterialCreate } from './pages/Materiais/MaterialCreate';
+
 import { TecidosJunior } from './pages/CatalogoTecidos/Junior';
 import { ToastContainer } from 'react-toastify';
 import { TecidosEdit } from './pages/TecidosParaLencol/TecidosEdit/TecidosEdit';
@@ -99,7 +96,7 @@ function App() {
             }
           />
           <Route
-            path="/editar-sintetico"
+            path="/editar-sintetico/:id"
             element={
               <PrivateRoute redirectTo="/">
                 <SinteticoEdit />
@@ -117,7 +114,6 @@ function App() {
             element={<ApliquesParaCabana />}
           />
           <Route path="/info" element={<Info />} />
-          <Route path="/material-catalogo" element={<MaterialCatalogo />} />
           <Route path="/tapete-duas-cores" element={<DuasCores />} />
           <Route path="/tapete-tres-cores" element={<TresCores />} />
           <Route path="/tapete-quatro-cores" element={<QuatroCores />} />
@@ -213,38 +209,6 @@ function App() {
             element={
               <PrivateRoute redirectTo="/">
                 <TecidosEdit />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/material-estoque/"
-            element={
-              <PrivateRoute redirectTo="/">
-                <MaterialEstoque />
-              </PrivateRoute>
-            }
-          />
-          {/* <Route
-            path="/teste/"
-            element={
-              <PrivateRoute redirectTo="/">
-                <Sintetico />
-              </PrivateRoute>
-            }
-          /> */}
-          <Route
-            path="/material-create/"
-            element={
-              <PrivateRoute redirectTo="/">
-                <MaterialCreate />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/material-edit/:id/"
-            element={
-              <PrivateRoute redirectTo="/">
-                <MaterialEdit />
               </PrivateRoute>
             }
           />

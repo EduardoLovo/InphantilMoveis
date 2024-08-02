@@ -80,7 +80,7 @@ const SinteticoCard = (props) => {
             <div className="menu">
               <Link
                 className="linkedit"
-                to={`/material-edit/${id}`}
+                to={`/editar-sintetico/${id}`}
                 estoque={estoque}
               >
                 Editar
