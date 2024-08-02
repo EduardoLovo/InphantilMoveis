@@ -39,8 +39,12 @@ import { NoveCores } from './pages/Tapetes/NoveCores';
 import { DezCores } from './pages/Tapetes/DezCores';
 import { OnzeCores } from './pages/Tapetes/OnzeCores';
 import { DozeCores } from './pages/Tapetes/DozeCores';
-import { Teste } from './pages/Teste/Teste';
-import { Sintetico } from './pages/Sinteticos/Sintetico';
+// Sintetico
+import { SinteticoEstoque } from './pages/Sinteticos/SinteticoEstoque/SinteticoEstoque';
+import { SinteticoCatalogo } from './pages/Sinteticos/SinteticoCatalogo/SinteticoCatalogo';
+import { SinteticoComposicoes } from './pages/Sinteticos/SinteticoComposicoes/SinteticoComposicoes';
+import { SinteticoCreate } from './pages/Sinteticos/SinteticoCreate/SinteticoCreate';
+import { SinteticoEdit } from './pages/Sinteticos/SinteticoEdit/SinteticoEdit';
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -66,11 +70,44 @@ function App() {
       />
       <div className="bodyApp">
         <Routes>
-          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/catalogo-cliente" element={<ApliquesParaCliente />} />
           <Route path="/apliques-estoque" element={<ApliquesEstoque />} />
           <Route path="/catalogo-lençol-aplique" element={<TecidosJunior />} />
+
+          {/* Rotas sinteticos */}
+          <Route path="/sintetico-catalogo" element={<SinteticoCatalogo />} />
+          <Route
+            path="/composição-sintetico"
+            element={<SinteticoComposicoes />}
+          />
+          <Route
+            path="/sintetico-estoque"
+            element={
+              <PrivateRoute redirectTo="/">
+                <SinteticoEstoque />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/novo-sintetico"
+            element={
+              <PrivateRoute redirectTo="/">
+                <SinteticoCreate />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/editar-sintetico"
+            element={
+              <PrivateRoute redirectTo="/">
+                <SinteticoEdit />
+              </PrivateRoute>
+            }
+          />
+
+          {/* Rotas Apliques */}
           <Route
             path="/catalogo-lencol-pronta-entrega"
             element={<CatalogoLencolPE />}
@@ -93,12 +130,12 @@ function App() {
           <Route path="/tapete-onze-cores" element={<OnzeCores />} />
           <Route path="/tapete-doze-cores" element={<DozeCores />} />
           <Route path="/montagem-tapetes" element={<MontagemTapetes />} />
-          <Route path="/teste" element={<Sintetico />} />
+
           <Route
             path="/apliques-para-comprar"
             element={<ApliquesParaComprar />}
           />
-          // Private Routes
+
           <Route
             path="/apliques-para-cortar"
             element={

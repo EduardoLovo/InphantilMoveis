@@ -1,0 +1,77 @@
+.contentSinteticoEdit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentSinteticoEdit h1 {
+  padding: 25px;
+  text-decoration: underline;
+}
+
+.contentSinteticoEdit form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentSinteticoEdit form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.contentSinteticoEdit form div label {
+  padding: 3px;
+}
+
+.contentSinteticoEdit form div input {
+  border-radius: 5px;
+  border: none;
+  width: 500px;
+  height: 40px;
+  padding: 10px;
+}
+
+.contentSinteticoEdit form div select {
+  border-radius: 5px;
+  border: none;
+  width: 500px;
+  height: 40px;
+  padding: 10px;
+}
+
+.contentSinteticoEdit form button {
+  margin: 10px;
+  padding: 5px;
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(150, 150, 150);
+}
+
+.contentSinteticoEdit form button:hover {
+  background-color: rgba(255, 255, 135, 1);
+}
+
+.botaoDelete button {
+  margin: 10px;
+  padding: 5px;
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(165, 6, 6, 0.548);
+}
+
+.botaoDelete button:hover {
+  background-color: rgba(165, 6, 6, 0.822);
+}
+
+@media (max-width: 530px) {
+  .contentSinteticoEdit form div input {
+    width: 85vw;
+  }
+  .contentSinteticoEdit form div select {
+    width: 85vw;
+  }
+}

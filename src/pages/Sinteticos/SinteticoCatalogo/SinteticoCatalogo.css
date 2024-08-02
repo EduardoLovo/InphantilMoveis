@@ -1,0 +1,51 @@
+/* Menu do Catalogo */
+.menuDoCatalogoSintetico {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.menuDoCatalogoSintetico button {
+  width: 80px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 1px;
+  background-color: rgb(150, 150, 150);
+}
+
+.menuDoCatalogoSintetico button:hover {
+  background-color: rgba(255, 255, 135, 1);
+}
+
+.botaoFazerComposição {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.botaoFazerComposição button {
+  width: 150px;
+  height: 50px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 1px;
+  background-color: rgba(255, 255, 135, 1);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.botaoFazerComposição button:hover {
+  background-color: rgb(255, 255, 34);
+  box-shadow: none;
+}
+
+/* Aviso Catalogo */
+.avisoCatalogoSintetico {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+  }

@@ -3,17 +3,16 @@ import { Link, useNavigate } from 'react-router-dom';
 import ModalReact from '../../components/Modal/ModalReact';
 import { toast } from 'react-toastify';
 import { Api } from '../../Api/Api';
-import '../TecidosParaLencol/TecidoCard/TecidoCard.css';
+// import '../TecidosParaLencol/TecidoCard/TecidoCard.css';
 
-const MaterialCard = (props) => {
+const SinteticoCard = (props) => {
   const navigate = useNavigate();
 
-  const id = props.material.id;
-  const codigo = props.material.codigo;
-  const cor = props.material.cor;
-  const quantidade = props.material.quantidade;
-  const estoque = props.material.estoque;
-  const imagem = props.material.img;
+  const id = props.sintetico._id;
+  const codigo = props.sintetico.codigo;
+  const cor = props.sintetico.cor;
+  const estoque = props.sintetico.estoque;
+  const imagem = props.sintetico.img;
 
   const type = localStorage.getItem('user');
 
@@ -73,7 +72,7 @@ const MaterialCard = (props) => {
         src={imagem}
         className="ImgTecidoEstoque cursorPointer"
         alt=".."
-        title={`${quantidade} em estoque`}
+        title={codigo}
       />
       {type === 'adm' ? (
         <div>
@@ -125,4 +124,4 @@ const MaterialCard = (props) => {
   );
 };
 
-export default MaterialCard;
+export default SinteticoCard;

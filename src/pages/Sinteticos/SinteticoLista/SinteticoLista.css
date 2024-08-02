@@ -1,0 +1,6 @@
+/* Lista de Sinteticos */
+.listaSintetico {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,0 +1,21 @@
+.contentSinteticoEstoque h1 {
+  text-align: center;
+}
+
+.botaoAdicionarNovoSintetico {
+  display: flex;
+  justify-content: end;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.botaoAdicionarNovoSintetico button {
+  width: 150px;
+  height: 60px;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 1px;
+  background-color: rgba(255, 255, 135, 1);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+}
