@@ -45,9 +45,11 @@
 }
 
 .marginDesktop {
-  /* margin-top: 21rem; */
-  display: flex;
-  flex-wrap: wrap;
+  margin-top: 26rem;
+}
+
+.marginmobile {
+  /* margin-top: 15rem; */
 }
 
 .btnFixado {
@@ -100,6 +102,10 @@
   }
   .fixed {
     position: static;
+  }
+
+  .marginDesktop {
+    margin-top: 0rem;
   }
 
   .btnFixado {
