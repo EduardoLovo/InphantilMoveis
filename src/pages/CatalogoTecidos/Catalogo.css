@@ -45,7 +45,7 @@
 }
 
 .marginDesktop {
-  margin-top: 21rem;
+  /* margin-top: 21rem; */
   display: flex;
   flex-wrap: wrap;
 }
@@ -100,9 +100,6 @@
   }
   .fixed {
     position: static;
-    /* width: 100vw; */
-    /* text-align: center; */
-    /* height: 15vh; */
   }
 
   .btnFixado {
@@ -115,9 +112,5 @@
   .codigoApliqueEscolha {
     top: 65%;
     left: 50%;
-  }
-
-  .marginDesktop {
-    margin-left: 5rem;
   }
 }

@@ -116,11 +116,7 @@ export const TecidosJunior = () => {
       </div>
       {click === '3' ? (
         <div className="container">
-          <div
-            className={
-              window.screen.width > 700 ? 'marginDesktop' : 'marginmobile'
-            }
-          >
+          <div className={window.screen.width > 700 ? 'marginDesktop' : ''}>
             {tecidos.map((tecido, index) => (
               <div key={index}>
                 <div
@@ -143,14 +139,14 @@ export const TecidosJunior = () => {
                 window.screen.width > 700 ? ' marginDesktop' : 'marginmobile'
               }
             >
-              <div className="container containerMargin">
+              <div className="container">
                 {apliques.map((aplique, index) => (
                   <div
                     key={index}
                     className={
                       aplique.estoque === 'Nao' && aplique.quantidade === '0'
                         ? 'display'
-                        : 'col '
+                        : ' '
                     }
                   >
                     <div onClick={segundo}>
