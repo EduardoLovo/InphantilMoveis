@@ -116,7 +116,11 @@ export const TecidosJunior = () => {
       </div>
       {click === '3' ? (
         <div className="container">
-          <div className={window.screen.width > 700 ? 'marginDesktop' : ''}>
+          <div
+            className={
+              window.screen.width > 700 ? 'marginDesktop container' : ''
+            }
+          >
             {tecidos.map((tecido, index) => (
               <div key={index}>
                 <div
