@@ -100,6 +100,18 @@ export const TecidosJunior = () => {
             </CapsLock>{' '}
           </h5>
         </div>
+        <button onClick={escolherTecido} className="btnFixado">
+          Escolher outra cor de tecido
+        </button>
+        {resultado && (
+          <div className="backgroundTransparente">
+            <div className="imagemFinal">
+              {cor}
+              {aplique}
+              {cor}
+            </div>
+          </div>
+        )}
         <hr className="hr" />
       </div>
       {click === '3' ? (
@@ -126,9 +138,6 @@ export const TecidosJunior = () => {
       ) : (
         <div>
           <div className="container">
-            <button onClick={escolherTecido} className="btnFixado">
-              Escolher outra cor de tecido
-            </button>
             <div
               className={
                 window.screen.width > 700 ? ' marginDesktop' : 'marginmobile'
@@ -151,15 +160,6 @@ export const TecidosJunior = () => {
                 ))}
               </div>
             </div>
-          </div>
-        </div>
-      )}
-      {resultado && (
-        <div className="backgroundTransparente">
-          <div className="imagemFinal">
-            {cor}
-            {aplique}
-            {cor}
           </div>
         </div>
       )}
