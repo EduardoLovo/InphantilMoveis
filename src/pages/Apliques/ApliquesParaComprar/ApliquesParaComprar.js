@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Api } from '../../../Api/Api';
 import { Loading } from '../../../components/Loading/Loading';
-import { ApliqueCard } from '../ApliqueCard/ApliqueCard';
+import { ApliqueCard } from '../../../components/ApliqueCard/ApliqueCard';
 
 export const ApliquesParaComprar = () => {
   const [apliques, setApliques] = useState([]);
@@ -10,7 +10,6 @@ export const ApliquesParaComprar = () => {
   const loadData = async () => {
     const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
     const results = await response.json();
-
     setApliques(results);
   };
 
@@ -24,6 +23,7 @@ export const ApliquesParaComprar = () => {
     if (a.number > b.number) return 1;
     return 0;
   }
+  
   apliques.sort(compare);
 
   return (

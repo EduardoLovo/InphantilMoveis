@@ -1,13 +1,8 @@
-import React from "react";
-import { CalculadoraSobMedida } from "../../components/CalculadoraSobMedida";
-import CalculadoraSobMedidaColchao from "../../components/CalculadoraSobMedidaColchao";
+import React from 'react';
+import { apliques } from './Teste2';
 
 export const Teste = () => {
-  return (
-    <div>
-      <CalculadoraSobMedida />
-      <hr />
-      <CalculadoraSobMedidaColchao />
-    </div>
-  );
+  console.log(apliques);
+
+  return <div>44</div>;
 };

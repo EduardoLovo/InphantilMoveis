@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { Api } from "../../../Api/Api";
-import { Filtro } from "../../../components/Filtro";
-import { Loading } from "../../../components/Loading/Loading";
-import { ApliqueCard } from "../ApliqueCard/ApliqueCard";
-import "./ApliquesEstoque.css";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Api } from '../../../Api/Api';
+import { Filtro } from '../../../components/Filtro';
+import { Loading } from '../../../components/Loading/Loading';
+import './ApliquesEstoque.css';
+// import { ApliqueCard } from '../../../components/ApliqueCard/ApliqueCard';
+import { ApliqueLista } from '../../../components/ApliqueLista/ApliqueLista';
 
 export const ApliquesEstoque = () => {
-  const type = localStorage.getItem("user");
+  const type = localStorage.getItem('user');
 
   const [apliques, setApliques] = useState([]);
-  const [texto, setTexto] = useState("");
+  const [texto, setTexto] = useState('');
   const [loading, setLoading] = useState(true);
+
   const loadData = async () => {
     const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
     const results = await response.json();
     // setIsLoading(false)
     setApliques(results);
   };
-
   useEffect(() => {
     setLoading(false);
     loadData();
   }, []);
-
   function compare(a, b) {
     if (a.number < b.number) return -1;
     if (a.number > b.number) return 1;
@@ -34,8 +34,6 @@ export const ApliquesEstoque = () => {
   const onChange = (e) => {
     setTexto(e.target.value);
   };
-
-  console.log(texto);
 
   return (
     <div className="contentApliqueEstoque">
@@ -51,16 +49,16 @@ export const ApliquesEstoque = () => {
               placeholder="Pesquisar"
             />
           </div>
-          {type === "adm" ? (
+          {type === 'adm' ? (
             <Link
-              to={"/apliques-create"}
+              to={'/apliques-create'}
               className="add-button"
               title="Adicionar novo aplique"
             >
               +
             </Link>
           ) : (
-            ""
+            ''
           )}
         </div>
       </div>
@@ -70,15 +68,9 @@ export const ApliquesEstoque = () => {
       ) : (
         <div>
           {!texto ? (
-            <div className="containerApliquesEstoque">
-              {apliques.map((aplique, index) => (
-                <div className="col" key={index}>
-                  <ApliqueCard aplique={aplique} />
-                </div>
-              ))}
-            </div>
+            <ApliqueLista />
           ) : (
-            <Filtro apliques={apliques} texto={texto} />
+            <Filtro texto={texto} apliques={apliques} />
           )}
         </div>
       )}

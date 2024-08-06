@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SinteticoLista } from '../SinteticoLista/SinteticoLista';
 import './SinteticoCatalogo.css';
+import { SinteticoLista } from '../../../components/SinteticoLista/SinteticoLista';
 
 export const SinteticoCatalogo = () => {
   const [cor, setCor] = useState('');

@@ -1,6 +1,6 @@
-import React from "react";
-import Modal from "react-modal";
-import "./ModalReact.css";
+import React from 'react';
+import Modal from 'react-modal';
+import './ModalReact.css';
 const ModalReact = ({ isOpen, onRequestClose, onConfirm, question }) => {
   return (
     <Modal

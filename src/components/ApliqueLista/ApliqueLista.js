@@ -1,23 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { Api } from '../../../Api/Api';
-import { Loading } from '../../../components/Loading/Loading';
-import { ApliqueCard } from '../../../components/ApliqueCard/ApliqueCard';
+import { ApliqueCard } from '../ApliqueCard/ApliqueCard';
+import { Api } from '../../Api/Api';
 
-export const ApliquesParaCortar = () => {
+export const ApliqueLista = () => {
   const [apliques, setApliques] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   const loadData = async () => {
     const response = await Api.buildApiGetRequest(Api.readAllApliquesUrl());
     const results = await response.json();
-
+    // setIsLoading(false)
     setApliques(results);
   };
   useEffect(() => {
-    setLoading(false);
     loadData();
   }, []);
-
   function compare(a, b) {
     if (a.number < b.number) return -1;
     if (a.number > b.number) return 1;
@@ -26,25 +22,16 @@ export const ApliquesParaCortar = () => {
   apliques.sort(compare);
 
   return (
-    <div>
-      {loading ? (
-        <Loading />
-      ) : (
-        <div className="container">
+    <div className="contentApliqueEstoque">
+      <div>
+        <div className="containerApliquesEstoque">
           {apliques.map((aplique, index) => (
-            <div
-              key={index}
-              className={
-                aplique.quantidade < 5 && aplique.estoque !== 'Nao'
-                  ? ''
-                  : 'display'
-              }
-            >
+            <div className="col" key={index}>
               <ApliqueCard aplique={aplique} />
             </div>
           ))}
         </div>
-      )}
+      </div>
     </div>
   );
 };

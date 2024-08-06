@@ -1,3 +1,6 @@
+.modal-container {
+  background-color: rgb(189, 124, 40);
+}
 .modalReact {
   background-color: rgba(41, 41, 41, 0.849);
   margin: 10em auto;

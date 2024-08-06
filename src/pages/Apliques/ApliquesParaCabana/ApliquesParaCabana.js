@@ -1,10 +1,10 @@
-import React from "react";
-import { Api } from "../../../Api/Api";
-import { useState } from "react";
-import { useEffect } from "react";
-import { Loading } from "../../../components/Loading/Loading";
-import { ApliqueCard } from "../ApliqueCard/ApliqueCard";
-import "./ApliquesParaCabana.css";
+import React from 'react';
+import { Api } from '../../../Api/Api';
+import { useState } from 'react';
+import { useEffect } from 'react';
+import { Loading } from '../../../components/Loading/Loading';
+import './ApliquesParaCabana.css';
+import { ApliqueCard } from '../../../components/ApliqueCard/ApliqueCard';
 
 export const ApliquesParaCabana = () => {
   const [apliques, setApliques] = useState([]);
@@ -38,7 +38,7 @@ export const ApliquesParaCabana = () => {
           </div>
           <div className="apliqueCabanaLista">
             {apliques.map((aplique, index) => (
-              <div className={aplique.estoque === "Nao" ? "display" : "col "}>
+              <div className={aplique.estoque === 'Nao' ? 'display' : 'col '}>
                 <ApliqueCard aplique={aplique} />
               </div>
             ))}

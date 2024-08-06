@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { Api } from "../../../Api/Api";
-import { Loading } from "../../../components/Loading/Loading";
-import { ApliqueCard } from "../ApliqueCard/ApliqueCard";
+import React, { useEffect, useState } from 'react';
+import { Api } from '../../../Api/Api';
+import { Loading } from '../../../components/Loading/Loading';
+import { ApliqueCard } from '../../../components/ApliqueCard/ApliqueCard';
 
 export const ApliquesParaCliente = () => {
   const [apliques, setApliques] = useState([]);
@@ -33,17 +33,11 @@ export const ApliquesParaCliente = () => {
           {apliques.map((aplique, index) => (
             <div
               className={
-                aplique.estoque === "Nao" && aplique.quantidade === "0"
-                  ? "display"
-                  : "col "
+                aplique.estoque === 'Nao' && aplique.quantidade === '0'
+                  ? 'display'
+                  : 'col '
               }
             >
-              {/* <div className="card border-dark mb-3">
-                <img src={aplique.img} className="card-img-top" alt="..." />
-                <div className="card-body text-warning">
-                  <h5 className="card-title text-center">{aplique.number} </h5>
-                </div>
-              </div> */}
               <ApliqueCard
                 codigo={aplique.number}
                 img={aplique.img}

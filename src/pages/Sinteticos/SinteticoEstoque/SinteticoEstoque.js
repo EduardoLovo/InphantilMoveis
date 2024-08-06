@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SinteticoLista } from '../SinteticoLista/SinteticoLista';
 import './SinteticoEstoque.css';
+import { SinteticoLista } from '../../../components/SinteticoLista/SinteticoLista';
 
 export const SinteticoEstoque = () => {
   return (

@@ -1,8 +1,8 @@
 import React from 'react';
-import { Api } from '../../../Api/Api';
+import { Api } from '../../Api/Api';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import SinteticoCard from '../../../components/SinteticoCard/SinteticoCard';
+import SinteticoCard from '../SinteticoCard/SinteticoCard';
 import './SinteticoLista.css';
 
 export const SinteticoLista = (props) => {
@@ -19,7 +19,6 @@ export const SinteticoLista = (props) => {
   useEffect(() => {
     loadData();
   }, []);
-
   function compare(a, b) {
     if (a.codigo < b.codigo) return -1;
     if (a.codigo > b.codigo) return 1;

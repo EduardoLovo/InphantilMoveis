@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
-import "./Catalogo.css";
-import { Api } from "../../Api/Api";
-import CapsLock from "../../components/CapsLock";
-import { ApliqueCard } from "../Apliques/ApliqueCard/ApliqueCard";
-import TecidoCard from "../TecidosParaLencol/TecidoCard/TecidoCard";
+import React, { useEffect } from 'react';
+import { useState } from 'react';
+import './Catalogo.css';
+import { Api } from '../../Api/Api';
+import CapsLock from '../../components/CapsLock';
+import TecidoCard from '../TecidosParaLencol/TecidoCard/TecidoCard';
+import { ApliqueCard } from '../../components/ApliqueCard/ApliqueCard';
 
 export const TecidosJunior = () => {
-  const [aplique, setAplique] = useState("");
-  const [cor, setCor] = useState("");
+  const [aplique, setAplique] = useState('');
+  const [cor, setCor] = useState('');
   const [tecidos, setTecidos] = useState([]);
   const [apliques, setApliques] = useState([]);
-  const [resultado, setResultado] = useState("");
-  const [click, setClick] = useState("3");
+  const [resultado, setResultado] = useState('');
+  const [click, setClick] = useState('3');
 
   const loadData = async () => {
     const response = await Api.buildApiGetRequest(Api.readAllTecidolUrl());
@@ -25,30 +25,26 @@ export const TecidosJunior = () => {
     setTecidos(results);
     setApliques(resultsAplic);
   };
-
   useEffect(() => {
     loadData();
   }, []);
-
   function compare(a, b) {
     if (a.cor < b.cor) return -1;
     if (a.cor > b.cor) return 1;
     return 0;
   }
   tecidos.sort(compare);
-
   function compareApliques(a, b) {
     if (a.number < b.number) return -1;
     if (a.number > b.number) return 1;
     return 0;
   }
-
   apliques.sort(compareApliques);
 
   const primeiroClick = (e) => {
     e.preventDefault();
     const imga = e.target.src;
-    setClick("1");
+    setClick('1');
     setCor(
       <img
         className="imagem1"
@@ -79,14 +75,14 @@ export const TecidosJunior = () => {
         <div className="codigoApliqueEscolha">{codigo}</div>
       </div>
     );
-    setResultado("q");
+    setResultado('q');
     if (window.screen.width < 700) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
   const escolherTecido = () => {
-    setClick("3");
+    setClick('3');
   };
 
   return (
@@ -101,43 +97,27 @@ export const TecidosJunior = () => {
             <CapsLock>
               Muito importante! O tom da cor do tecido, pode mudar de acordo com
               a tela do seu dispositivo.
-            </CapsLock>{" "}
+            </CapsLock>{' '}
           </h5>
         </div>
         <hr className="hr" />
-        {resultado === "" ? (
-          ""
-        ) : (
-          <div className="backgroundTransparente">
-            <div className="imagemFinal">
-              {cor}
-              {aplique}
-              {}
-              {cor}
-            </div>
-          </div>
-        )}
       </div>
-      {click === "3" ? (
+      {click === '3' ? (
         <div className="container">
           <div
             className={
-              window.screen.width > 700 ? "marginDesktop" : "marginmobile"
+              window.screen.width > 700 ? 'marginDesktop' : 'marginmobile'
             }
           >
             {tecidos.map((tecido, index) => (
               <div key={index}>
                 <div
-                  className={tecido.estoque === "Nao" ? "display" : ""}
+                  className={tecido.estoque === 'Nao' ? 'display' : ''}
                   key={index}
                 >
-                  {tecido.tamanho === "Junior - M" ? (
-                    <div onClick={primeiroClick} className="">
-                      <TecidoCard tecido={tecido} />
-                    </div>
-                  ) : (
-                    ""
-                  )}
+                  <div onClick={primeiroClick} className="">
+                    <TecidoCard tecido={tecido} />
+                  </div>
                 </div>
               </div>
             ))}
@@ -151,7 +131,7 @@ export const TecidosJunior = () => {
             </button>
             <div
               className={
-                window.screen.width > 700 ? " marginDesktop" : "marginmobile"
+                window.screen.width > 700 ? ' marginDesktop' : 'marginmobile'
               }
             >
               <div className="container containerMargin">
@@ -159,9 +139,9 @@ export const TecidosJunior = () => {
                   <div
                     key={index}
                     className={
-                      aplique.estoque === "Nao" && aplique.quantidade === "0"
-                        ? "display"
-                        : "col "
+                      aplique.estoque === 'Nao' && aplique.quantidade === '0'
+                        ? 'display'
+                        : 'col '
                     }
                   >
                     <div onClick={segundo}>
@@ -171,6 +151,15 @@ export const TecidosJunior = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      )}
+      {resultado && (
+        <div className="backgroundTransparente">
+          <div className="imagemFinal">
+            {cor}
+            {aplique}
+            {cor}
           </div>
         </div>
       )}

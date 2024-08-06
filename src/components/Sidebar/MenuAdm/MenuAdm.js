@@ -11,6 +11,7 @@ export const MenuAdm = () => {
         <Link to="/apliques-create">Adicionar Aplique</Link>
         <Link to="/apliques-para-comprar">Apliques para Comprar</Link>
         <Link to="/apliques-para-cortar">Apliques para Cortar</Link>
+        <Link to="/montagem-tapetes">Composições de tapetes</Link>
 
         <p className="mt-4">Estoque:</p>
         <Link to="/apliques-estoque">Apliques</Link>

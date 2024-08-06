@@ -10,6 +10,9 @@ export const MenuVendas = () => {
         <Link to="/calculadora-para-lencois">Calculadora Sob Medida</Link>
         <Link to="/calculadora-60-40">Calculadora 60 / 40</Link>
 
+        <p className="mt-4">Tapetes:</p>
+        <Link to="/montagem-tapetes">Composições de tapetes</Link>
+
         <p className="mt-4">Catalogos:</p>
         <Link to="/catalogo-lençol-aplique">Apliques % Lençois</Link>
         <Link to="/catalogo-apliques-para-cabana">Apliques Para Cabana</Link>

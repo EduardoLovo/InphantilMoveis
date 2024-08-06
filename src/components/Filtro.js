@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
-import { ApliqueCard } from "../pages/Apliques/ApliqueCard/ApliqueCard";
+import React, { useEffect, useState } from 'react';
+import { ApliqueCard } from './ApliqueCard/ApliqueCard';
 
 export const Filtro = (props) => {
   const apliques = props.apliques;
-  const [filtrado, setFiltrado] = useState([]);
   const texto = props.texto;
+
+  const [filtrado, setFiltrado] = useState([]);
 
   useEffect(() => {
     const results = apliques.filter((resp) =>
@@ -27,8 +28,8 @@ export const Filtro = (props) => {
 
   return (
     <div>
-      {texto === "" ? (
-        ""
+      {texto === '' ? (
+        ''
       ) : (
         <div className="container">
           {filtrado.map((aplique, index) => (

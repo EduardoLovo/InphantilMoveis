@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./ApliqueCard.css";
 import { Link, useNavigate } from "react-router-dom";
-import { Api } from "../../../Api/Api";
 import { toast } from "react-toastify";
-import ModalReact from "../../../components/Modal/ModalReact";
+import ModalReact from "../Modal/ModalReact";
+import { Api } from "../../Api/Api";
 
 export const ApliqueCard = (props) => {
   const type = localStorage.getItem("user");
