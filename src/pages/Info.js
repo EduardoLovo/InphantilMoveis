@@ -4,7 +4,8 @@ import garantia from '../img/garantia.png';
 import vento from '../img/vento.png';
 import protetor5 from '../img/protetor5.jpeg';
 import protetor6 from '../img/protetor6.jpeg';
-
+import CapsLock from '../components/CapsLock';
+import './Info.css';
 export const Info = () => {
   return (
     <div className="contentInfo fs-5">
@@ -28,6 +29,18 @@ export const Info = () => {
             🗓️ ATENÇÃO!!! Trocas e devolução devem ser feitas em até 7 dias do
             recebimento, o produto não pode ter sido usado e a embalagem deve
             ser a mesma do envio!
+          </p>
+          <p className="lacreDeGarantia">
+            <h3>LACRE DE GARANTIA:</h3>
+            <CapsLock>
+              Em caso de violação do lacre do zíper, implicará na garantia do
+              produto
+            </CapsLock>
+          </p>
+          <p className="lacreDeGarantia">
+            <CapsLock>
+              "Para alinhamento não necessita abertura do zíper".
+            </CapsLock>
           </p>
         </div>
       </div>
