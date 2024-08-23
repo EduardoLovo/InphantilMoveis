@@ -25,6 +25,7 @@ export const MenuAdm = () => {
         <Link to="/catalogo-lencol-pronta-entrega">Lencois Pronto Entrega</Link>
 
         <p className="mt-4">Calculadoras:</p>
+        <Link to="/calculadora-nova">Calculadora NOVA</Link>
         <Link to="/calculadora-para-lencois">Calculadora Sob Medida</Link>
         <Link to="/calculadora-60-40">Calculadora 60 / 40</Link>
 

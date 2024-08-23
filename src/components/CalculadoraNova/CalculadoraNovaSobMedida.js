@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './CalculadoraSobMedida.css';
 
-export const CalculadoraSobMedida = () => {
+export const CalculadoraNovaSobMedida = () => {
   const [resultado, setResultado] = useState('');
 
   const calcular = (evento) => {
@@ -12,19 +11,19 @@ export const CalculadoraSobMedida = () => {
     const acessorio = evento.target.acessorio.value;
 
     // Externo
-    const larguraExterno = largura + 2;
-    const comprimentoExterno = comprimento + 2;
+    const larguraExterno = largura + 3;
+    const comprimentoExterno = comprimento + 3;
 
     // Interno
-    const larguraInterno = larguraExterno - 14;
-    const comprimentoInterno = comprimentoExterno - 14;
+    const larguraInterno = larguraExterno - 16;
+    const comprimentoInterno = comprimentoExterno - 16;
 
     // Colchão
-    const larguraColchao = larguraInterno - 3;
-    const comprimentoColchao = comprimentoInterno - 3;
+    const larguraColchao = larguraInterno - 4;
+    const comprimentoColchao = comprimentoInterno - 2;
 
     // Acessorio
-    const larguraLencol = larguraColchao + 46;
+    const larguraLencol = larguraColchao + 48;
     const comprimentoLencol = comprimentoColchao + 46;
 
     const larguraVirol = largura + 40;
@@ -89,11 +88,11 @@ export const CalculadoraSobMedida = () => {
         <div className="contentCalculadoraCamaPhantFormEResultado">
           <form onSubmit={calcular} className="formularioCalculadoraCamaPhant">
             <div>
-              <label>Largura:</label>
+              <label>Cabeceira:</label>
               <input type="number" id="largura" />
             </div>
             <div>
-              <label>Comprimento:</label>
+              <label>Lateral:</label>
               <input type="number" id="comprimento" />
             </div>
             <div>

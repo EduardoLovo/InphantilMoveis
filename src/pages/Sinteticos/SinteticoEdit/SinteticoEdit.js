@@ -89,7 +89,7 @@ export const SinteticoEdit = () => {
   return (
     <div className="contentSinteticoEdit">
       <div className="text-center m-4">
-        <h1>Editar material</h1>
+        <h1>Editar Sintetico</h1>
       </div>
       <form onSubmit={handleSubmit}>
         <div>

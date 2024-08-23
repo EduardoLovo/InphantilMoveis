@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './CalculadoraSobMedida.css';
 
-export const CalculadoraSobMedida = () => {
+export const CalculadoraNovaSobMedidaColchao = () => {
   const [resultado, setResultado] = useState('');
 
   const calcular = (evento) => {
@@ -9,53 +8,49 @@ export const CalculadoraSobMedida = () => {
 
     const largura = +evento.target.largura.value;
     const comprimento = +evento.target.comprimento.value;
+    const altura = +evento.target.altura.value;
     const acessorio = evento.target.acessorio.value;
 
-    // Externo
-    const larguraExterno = largura + 2;
-    const comprimentoExterno = comprimento + 2;
-
     // Interno
-    const larguraInterno = larguraExterno - 14;
-    const comprimentoInterno = comprimentoExterno - 14;
+    const larguraInterno = largura + 4;
+    const comprimentoInterno = comprimento + 2;
 
-    // Colchão
-    const larguraColchao = larguraInterno - 3;
-    const comprimentoColchao = comprimentoInterno - 3;
+    // Externo
+    const larguraExterno = larguraInterno + 16;
+    const comprimentoExterno = comprimentoInterno + 16;
 
-    // Acessorio
-    const larguraLencol = larguraColchao + 46;
-    const comprimentoLencol = comprimentoColchao + 46;
+    // Altura
+    const diferenca = altura - 10;
+    const alturaExterno = diferenca + 23;
+    const alturaInterno = diferenca + 21;
 
+    // Acessorio lençol
+    const larguraLencol = largura + (altura + 13) * 2;
+    const comprimentoLencol = comprimento + (altura + 13) * 2;
+
+    // Acessorio virol
     const larguraVirol = largura + 40;
     const comprimentoVirol = comprimento + 70;
 
-    // Resultado
     setResultado(
-      <div className="resultadoCalculadoraCamaPhant">
+      <section className="resultadoCalculadoraCamaPhant">
         <h3>Resultado</h3>
         <div>
-          <label>Tamanho da cama:</label>
+          <label>Tamanho do colchão:</label>
           <p>
-            {largura} x {comprimento}
+            {largura} x {comprimento} x {altura}
           </p>
         </div>
         <div>
           <label>Externo: </label>
           <p>
-            {larguraExterno} x {comprimentoExterno}
+            {larguraExterno} x {comprimentoExterno} x {alturaExterno}
           </p>
         </div>
         <div>
           <label>Interno: </label>
           <p>
-            {larguraInterno} x {comprimentoInterno}{' '}
-          </p>
-        </div>
-        <div>
-          <label>Colchão: </label>
-          <p>
-            {larguraColchao} x {comprimentoColchao}
+            {larguraInterno} x {comprimentoInterno} x {alturaInterno}
           </p>
         </div>
         <div>
@@ -66,35 +61,41 @@ export const CalculadoraSobMedida = () => {
                 {larguraLencol} x {comprimentoLencol}
               </p>
               <label> Quadrado: </label>
-              <p>Padrão</p>
+              <p>
+                {altura + 12} x {altura + 12}
+              </p>
             </div>
           )}
           {acessorio === 'virol' && (
             <div>
               <label>Virol:</label>
-              <p>
+              <div>
                 {larguraVirol} x {comprimentoVirol}
-              </p>
+              </div>
             </div>
           )}
         </div>
-      </div>
+      </section>
     );
   };
 
   return (
     <div className="contentCalculadoraCamaPhant">
       <div className="sombra">
-        <h3>Sob Medida com medida da cama Phant:</h3>
+        <h3>Sob Medida com medida do colchão do cliente:</h3>
         <div className="contentCalculadoraCamaPhantFormEResultado">
           <form onSubmit={calcular} className="formularioCalculadoraCamaPhant">
             <div>
-              <label>Largura:</label>
+              <label>Cabeceira:</label>
               <input type="number" id="largura" />
             </div>
             <div>
-              <label>Comprimento:</label>
+              <label>Lateral:</label>
               <input type="number" id="comprimento" />
+            </div>
+            <div>
+              <label>Altura:</label>
+              <input type="number" id="altura" />
             </div>
             <div>
               <label>Acessorio:</label>

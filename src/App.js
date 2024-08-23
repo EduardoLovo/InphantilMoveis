@@ -50,8 +50,7 @@ import { NoveCores } from './pages/Tapetes/NoveCores';
 import { DezCores } from './pages/Tapetes/DezCores';
 import { OnzeCores } from './pages/Tapetes/OnzeCores';
 import { DozeCores } from './pages/Tapetes/DozeCores';
-
-import { Teste } from './pages/Teste/Teste';
+import { CalculadoraNova } from './pages/Calculadoras/CalculadoraNova';
 
 function App() {
   const PrivateRoute = ({ children, redirectTo }) => {
@@ -77,12 +76,20 @@ function App() {
       />
       <div className="bodyApp">
         <Routes>
-          <Route path="/teste" element={<Teste />} />
+          <Route path="/calculadora-nova" element={<CalculadoraNova />} />
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/info" element={<Info />} />
 
           {/* Rotas Calculadoras */}
+          <Route
+            path="/calculadora-nova"
+            element={
+              <PrivateRoute redirectTo="/">
+                <CalculadoraNova />
+              </PrivateRoute>
+            }
+          />
           <Route
             path="/calculadora-para-lencois"
             element={
