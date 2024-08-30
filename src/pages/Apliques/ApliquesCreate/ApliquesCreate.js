@@ -26,7 +26,7 @@ export const ApliquesCreate = () => {
 
     const payload = {
       number: codigo,
-      imagem: img,
+      img: img,
       quantidade: quantidade,
       estoque: estoque,
     };
