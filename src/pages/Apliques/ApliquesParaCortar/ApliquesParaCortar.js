@@ -35,7 +35,7 @@ export const ApliquesParaCortar = () => {
             <div
               key={index}
               className={
-                aplique.quantidade < 5 && aplique.estoque !== 'Nao'
+                aplique.quantidade < 3 && aplique.estoque !== 'Nao'
                   ? ''
                   : 'display'
               }
