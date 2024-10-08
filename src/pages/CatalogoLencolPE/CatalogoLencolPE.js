@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LencolPECasal } from './LencolPECasal';
 import { LencolPEJunior } from './LencolPEJunior';
+import { LencolPEBerco } from './LencolPEBerco';
 import { LencolPESolteiro } from './LencolPESolteiro';
 import { LencolPESolteiroao } from './LencolPESolteiroao';
 import { LencolPEViuva } from './LencolPEViuva';
@@ -19,6 +20,8 @@ export const CatalogoLencolPE = () => {
         const tamanho = e.target.id;
         if (tamanho === 'casal') {
             setCatalogoLencol(<LencolPECasal />);
+        } else if (tamanho === 'berço') {
+            setCatalogoLencol(<LencolPEBerco />);
         } else if (tamanho === 'junior') {
             setCatalogoLencol(<LencolPEJunior />);
         } else if (tamanho === 'solteiro') {
@@ -50,10 +53,18 @@ export const CatalogoLencolPE = () => {
                 <button
                     type="button"
                     className="btn btn-secondary"
+                    id="berço"
+                    onClick={render}
+                >
+                    Berço
+                </button>
+                <button
+                    type="button"
+                    className="btn btn-secondary"
                     id="junior"
                     onClick={render}
                 >
-                    junior
+                    Junior
                 </button>
                 <button
                     type="button"
