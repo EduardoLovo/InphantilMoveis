@@ -98,6 +98,7 @@ export const LencolCreate = () => {
                 placeholder="tamanho"
               >
                 <option></option>
+                <option>Berço</option>
                 <option>Junior</option>
                 <option>Solteiro</option>
                 <option>Solteiro / Solteirão</option>

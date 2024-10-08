@@ -33,7 +33,7 @@ export const LencolPEBerco = () => {
                     <div
                         key={index}
                         className={
-                            lencol.tamanho === 'Berco' ? 'col ' : 'display'
+                            lencol.tamanho === 'Berço' ? 'col ' : 'display'
                         }
                     >
                         <div className="card border-dark mb-3">
