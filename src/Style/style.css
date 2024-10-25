@@ -1,279 +1,274 @@
 @import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css');
 
-/* Btn Padrap */
-.btnPadrao {
-  border-color: rgba(255, 255, 135, 1);
-  padding: 5px;
-  border-radius: 5px;
-  background-color: transparent;
-  color: rgba(255, 255, 135, 1);
-  transition: all 0.3s;
-}
-.btnPadrao:hover {
-  background-color: rgba(255, 255, 135, 1);
-  color: rgba(71, 71, 71, 1);
+.cabecalho {
+    background-color: #a5a5a5;
+    padding: 1rem;
+    border-bottom: rgba(255, 255, 135, 1) solid;
 }
 
+.cabecalho h1 {
+    text-align: center;
+}
 /* Login */
 .formLogin {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .formLogin label {
-  color: rgba(255, 255, 135, 1);
+    color: rgba(255, 255, 135, 1);
 }
 
 /* Home */
 .contentHome {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 .contentHome img {
-  width: 20rem;
-  height: 20rem;
+    width: 20rem;
+    height: 20rem;
 }
 
 .card {
-  width: 15em;
-  margin: 10px;
+    width: 15em;
+    margin: 10px;
 }
 
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
 }
 
 .display {
-  display: none;
+    display: none;
 }
 
 /* Card */
 .card-background {
-  background-color: rgba(71, 71, 71, 1);
-  color: rgba(255, 255, 135, 1);
-  width: 100%;
-  height: 100;
+    background-color: rgba(71, 71, 71, 1);
+    color: rgba(255, 255, 135, 1);
+    width: 100%;
+    height: 100;
 }
 .card-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-body button {
-  margin-left: 2rem;
+    margin-left: 2rem;
 }
 
 /* HR */
 .hr {
-  border-top: 2px solid rgba(255, 255, 135, 1);
-  width: 80vw;
-  margin: 0 auto;
+    border-top: 2px solid rgba(255, 255, 135, 1);
+    width: 80vw;
+    margin: 0 auto;
 }
 
 .text-amarelo {
-  color: rgba(255, 255, 135, 1);
+    color: rgba(255, 255, 135, 1);
 }
 
 /* Info */
 .contentInfo {
-  background-color: rgba(255, 255, 255, 0.562);
+    background-color: rgba(255, 255, 255, 0.562);
 }
 
 .contentInfo:first-child {
-  color: rgb(0, 0, 0);
-  font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
 }
 
 .infochild {
-  margin: 2rem;
+    margin: 2rem;
 }
 
 /* Edit aplique */
 .containerEdit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 /* Btn Lençois */
 .menuLencol {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .btn-group {
-  padding: 2rem;
+    padding: 2rem;
 }
 
 .btn-group button {
-  height: 3rem;
+    height: 3rem;
 }
 
 /* Links catalogo */
 .LinksCatalogo div {
-  padding: 1rem 3rem;
+    padding: 1rem 3rem;
 }
 
 .LinksCatalogo a {
-  text-decoration: none;
-  padding-left: 1rem;
-  color: rgba(255, 255, 135, 1);
-  transition: all 0.3s;
+    text-decoration: none;
+    padding-left: 1rem;
+    color: rgba(255, 255, 135, 1);
+    transition: all 0.3s;
 }
 
 .LinksCatalogo a:hover {
-  text-decoration: underline;
-  color: rgba(255, 255, 135, 1);
+    text-decoration: underline;
+    color: rgba(255, 255, 135, 1);
 }
 
 .coresLista {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .cardMaterial {
-  width: 250px;
-  margin: 0.3rem;
-  /* background-color: black; */
+    width: 250px;
+    margin: 0.3rem;
+    /* background-color: black; */
 }
 
 .cardMaterial img {
-  width: 250px;
-  /* margin: 1rem; */
+    width: 250px;
+    /* margin: 1rem; */
 }
 
 .cardMaterial p {
-  color: #fff;
-  text-align: center;
-  font-weight: bold;
-  font-size: large;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
 }
 
 .estoqueMaterial {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .estoqueMaterial .card {
-  background-color: #000000;
+    background-color: #000000;
 }
 .estoqueMaterial .card p {
-  color: #fff;
-  padding: 15px 0 0 15px;
+    color: #fff;
+    padding: 15px 0 0 15px;
 }
 
 .btnCinza {
-  border-radius: 5px;
-  margin: 0.5rem;
-  padding: 0.3rem;
+    border-radius: 5px;
+    margin: 0.5rem;
+    padding: 0.3rem;
 }
 
 .resultMontagem {
-  width: 300px;
-  height: 300px;
+    width: 300px;
+    height: 300px;
 }
 
 .displayResult {
-  display: flex;
+    display: flex;
 }
 
 .displayResult p {
-  margin-left: 10px;
-  font-weight: bold;
-  font-size: 1.5rem;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 .loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 24px;
 }
 
 .divImgProtetor {
-  /* width: 100vw; */
-  padding: 4em;
+    /* width: 100vw; */
+    padding: 4em;
 }
 
 .imgProtetor {
-  height: 40em;
-  width: 50em;
+    height: 40em;
+    width: 50em;
 }
 
 .passoApasso {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
 }
 
 @media screen and (max-width: 568px) {
-  .infochild {
-    display: flex;
-    flex-direction: column;
-  }
+    .infochild {
+        display: flex;
+        flex-direction: column;
+    }
 
-  .youtubeVideo {
-    width: 100%;
-    height: 250px;
-    margin: 0 auto;
-  }
+    .youtubeVideo {
+        width: 100%;
+        height: 250px;
+        margin: 0 auto;
+    }
 
-  .btn-group {
-    /* transform: scale(0.8); */
-    display: block;
-    flex-wrap: wrap;
-  }
+    .btn-group {
+        /* transform: scale(0.8); */
+        display: block;
+        flex-wrap: wrap;
+    }
 
-  .container .col {
-    display: flex;
-    justify-content: center;
-  }
-  .container .col .card {
-    width: 20rem;
-  }
-  .card {
-    width: 15rem;
-  }
+    .container .col {
+        display: flex;
+        justify-content: center;
+    }
+    .container .col .card {
+        width: 20rem;
+    }
+    .card {
+        width: 15rem;
+    }
 
-  .cardMaterial {
-    width: 100px;
-    background-color: black;
-  }
+    .cardMaterial {
+        width: 100px;
+        background-color: black;
+    }
 
-  .cardMaterial img {
-    width: 100px;
-  }
+    .cardMaterial img {
+        width: 100px;
+    }
 
-  .resultMontagem {
-    width: 120px;
-    height: 120px;
-  }
+    .resultMontagem {
+        width: 120px;
+        height: 120px;
+    }
 
-  .tamanhoInput {
-    width: 1rem;
-  }
+    .tamanhoInput {
+        width: 1rem;
+    }
 
-  .displayResult {
-    margin-left: 7rem;
-  }
-  .tituloMontar {
-    margin-left: 8rem;
-  }
+    .displayResult {
+        margin-left: 7rem;
+    }
+    .tituloMontar {
+        margin-left: 8rem;
+    }
 
-  .btnCinza {
-    margin-left: 8rem;
-  }
+    .btnCinza {
+        margin-left: 8rem;
+    }
 }

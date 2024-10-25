@@ -38,41 +38,46 @@ export const ApliquesCreate = () => {
         }
     };
     return (
-        <div className="contentCreate">
-            <div>
+        <div>
+            <div className="cabecalho">
                 <h1>Adicionar novo aplique</h1>
             </div>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Codigo</label>
-                    <input id="number" name="number" type="text" />
-                </div>
-                <div>
-                    <label>Imagem</label>
-                    <input id="img" name="img" type="text" />
-                </div>
-                <div>
-                    <label>Quantidade</label>
-                    <input id="quantidade" name="quantidade" type="number" />
-                </div>
-
-                <div>
-                    <label>Estoque: </label>
+            <div className="contentCreate">
+                <form onSubmit={handleSubmit}>
                     <div>
-                        <select
-                            id="estoque"
-                            name="estoque"
-                            placeholder="estoque"
-                        >
-                            <option>Sim</option>
-                            <option>Nao</option>
-                        </select>
+                        <label>Codigo</label>
+                        <input id="number" name="number" type="text" />
                     </div>
-                </div>
-                <div>
-                    <button type="submit">Adicionar</button>
-                </div>
-            </form>
+                    <div>
+                        <label>Imagem</label>
+                        <input id="img" name="img" type="text" />
+                    </div>
+                    <div>
+                        <label>Quantidade</label>
+                        <input
+                            id="quantidade"
+                            name="quantidade"
+                            type="number"
+                        />
+                    </div>
+                    <div>
+                        <label>Estoque</label>
+                        <div>
+                            <select
+                                id="estoque"
+                                name="estoque"
+                                placeholder="estoque"
+                            >
+                                <option>Sim</option>
+                                <option>Nao</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 };

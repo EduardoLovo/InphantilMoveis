@@ -1,74 +1,86 @@
-.contentEdit h1 {
-  /* position: absolute;
-  top: 10%;
-  left: 30%; */
-  text-align: center;
-  padding: 2em;
-}
-.imagemFormEdit {
-  display: flex;
-  justify-content: space-around;
-  width: 70%;
-  margin-left: 15%;
+.container-editar-aplique {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
 }
 
-.imagemFormEdit img {
-  height: 400px;
+.container-editar-aplique .imagem-editar-aplique {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
 }
 
-.formApliquesEdit {
-  margin-top: 4em;
-}
-.divInput {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5em;
+.container-editar-aplique .imagem-editar-aplique img {
+    width: 300px;
+    border-radius: 5px;
 }
 
-.contentEdit select {
-  border: none;
-  border-radius: 5px;
-  padding: 5px;
+.container-editar-aplique form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.contentEdit label {
-  margin-left: 1em;
-  text-decoration: underline;
+.container-editar-aplique form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
 
-.contentEdit input {
-  border: none;
-  border-radius: 5px;
-  padding: 5px;
-  /* outline: none; */
+.container-editar-aplique form div label {
+    padding: 3px;
 }
 
-.contentEdit input:focus {
-  outline: none;
-  border-radius: 10px;
+.container-editar-aplique form div input {
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+    height: 40px;
+    padding: 10px;
 }
 
-.apliqueCreateInputRadio {
-  /* display: flex; */
-  margin-left: 2em;
+.container-editar-aplique form div select {
+    border-radius: 5px;
+    border: none;
+    width: 300px;
+    height: 40px;
+    padding: 10px;
 }
 
-.apliqueCreateInputRadio label {
-  margin-left: 0.3em;
-}
-.apliqueCreateInputRadio input {
-  margin-left: 1em;
-}
-.divBtnCreateAplique {
-  width: 100%;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
+.container-editar-aplique form button {
+    margin: 10px;
+    padding: 5px;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(150, 150, 150);
 }
 
-.btnCreateAplique {
-  /* border: none; */
-  border-radius: 5px;
-  padding: 0.3em;
-  margin: 0 auto;
+@media (max-width: 630px) {
+    .container-editar-aplique {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .container-editar-aplique h1 {
+        font-size: 20px;
+    }
+
+    .container-editar-aplique form div input {
+        width: 85vw;
+    }
+
+    .container-editar-aplique form div select {
+        width: 85vw;
+    }
 }

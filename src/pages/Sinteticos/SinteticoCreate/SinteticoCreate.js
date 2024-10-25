@@ -41,63 +41,58 @@ export const SinteticoCreate = () => {
     };
 
     return (
-        <div className="contentSinteticoCreate">
-            <div>
-                <h1>Adicionar novo material</h1>
+        <div>
+            <div className="cabecalho">
+                <h1>Adicionar novo sintético</h1>
             </div>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label id="codigo">Codigo</label>
-                    <input
-                        id="codigo"
-                        name="codigo"
-                        type="text"
-                        aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default"
-                    />
-                </div>
-                <div>
-                    <label id="img">Imagem:</label>
-                    <input
-                        id="img"
-                        name="img"
-                        type="text"
-                        aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default"
-                    />
-                </div>
+            <div className="contentSinteticoCreate">
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label id="codigo">Codigo</label>
+                        <input id="codigo" name="codigo" type="text" />
+                    </div>
+                    <div>
+                        <label id="img">Imagem</label>
+                        <input id="img" name="img" type="text" />
+                    </div>
 
-                <div>
-                    <label>Cor: </label>
-                    <select id="cor" name="cor" placeholder="Cor">
-                        <option></option>
-                        <option>Amarelo</option>
-                        <option>Azul</option>
-                        <option>Bege</option>
-                        <option>Branco</option>
-                        <option>Cinza</option>
-                        <option>Laranja</option>
-                        <option>Lilas</option>
-                        <option>Mostarda</option>
-                        <option>Preto</option>
-                        <option>Rosa</option>
-                        <option>Tiffany</option>
-                        <option>Verde</option>
-                        <option>Vermelho</option>
-                        <option>Externo</option>
-                    </select>
-                </div>
+                    <div>
+                        <label>Cor</label>
+                        <select id="cor" name="cor" placeholder="Cor">
+                            <option></option>
+                            <option>Amarelo</option>
+                            <option>Azul</option>
+                            <option>Bege</option>
+                            <option>Branco</option>
+                            <option>Cinza</option>
+                            <option>Laranja</option>
+                            <option>Lilas</option>
+                            <option>Mostarda</option>
+                            <option>Preto</option>
+                            <option>Rosa</option>
+                            <option>Tiffany</option>
+                            <option>Verde</option>
+                            <option>Vermelho</option>
+                            <option>Externo</option>
+                        </select>
+                    </div>
 
-                <div>
-                    <label>Estoque: </label>
-                    <select id="estoque" name="estoque" placeholder="Estoque">
-                        <option>Sim</option>
-                        <option>Nao</option>
-                    </select>
-                </div>
-
-                <button type="submit">Adicionar</button>
-            </form>
+                    <div>
+                        <label>Estoque</label>
+                        <select
+                            id="estoque"
+                            name="estoque"
+                            placeholder="Estoque"
+                        >
+                            <option>Sim</option>
+                            <option>Nao</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">Adicionar</button>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 };
