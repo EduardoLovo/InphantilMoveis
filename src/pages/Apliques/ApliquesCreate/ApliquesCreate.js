@@ -2,18 +2,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Api } from '../../../Api/Api';
 import { toast } from 'react-toastify';
-import { useState } from 'react';
-import { useEffect } from 'react';
 import './ApliquesCreate.css';
 
 export const ApliquesCreate = () => {
     const navigate = useNavigate();
-    const [loading, setLoading] = useState(true);
-    // const [estoque, setEstoque] = useState(false);
-
-    useEffect(() => {
-        setLoading(false);
-    }, []);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -29,8 +21,6 @@ export const ApliquesCreate = () => {
             quantidade: quantidade,
             estoque: estoque,
         };
-
-        console.log(payload);
 
         const response = await Api.buildApiPostRequest(
             Api.addApliquesUrl(),
