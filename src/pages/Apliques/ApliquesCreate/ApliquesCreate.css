@@ -1,42 +1,69 @@
 .contentCreate {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.divInput {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5em;
+.contentCreate h1 {
+    padding: 25px;
+    text-decoration: underline;
 }
 
-.contentCreate label {
-  margin-left: 1em;
-  text-decoration: underline;
+.contentCreate form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.contentCreate input {
-  border: none;
-  border-radius: 5px;
-  padding: 5px;
+.contentCreate form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
 
-
-.divBtnCreateAplique {
-  width: 100%;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
+.contentCreate form div label {
+    padding: 3px;
 }
 
-.btnCreateAplique {
-  /* border: none; */
-  border-radius: 5px;
-  padding: 0.3em;
-  margin: 0 auto;
+.contentCreate form div input {
+    border-radius: 5px;
+    border: none;
+    width: 500px;
+    height: 40px;
+    padding: 10px;
 }
 
-.btnCreateAplique:hover {
-  box-shadow: 5px 5px -5px 1px black;
+.contentCreate form div select {
+    border-radius: 5px;
+    border: none;
+    width: 500px;
+    height: 40px;
+    padding: 10px;
+}
+
+.contentCreate form button {
+    margin: 10px;
+    padding: 5px;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(150, 150, 150);
+}
+
+.contentCreate form button:hover {
+    background-color: rgba(255, 255, 135, 1);
+}
+
+@media (max-width: 530px) {
+    .contentCreate h1 {
+        font-size: 20px;
+    }
+    .contentCreate form div input {
+        width: 85vw;
+    }
+    .contentCreate form div select {
+        width: 85vw;
+    }
 }

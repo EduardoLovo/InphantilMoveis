@@ -51,193 +51,227 @@ import { DezCores } from './pages/Tapetes/DezCores';
 import { OnzeCores } from './pages/Tapetes/OnzeCores';
 import { DozeCores } from './pages/Tapetes/DozeCores';
 import { CalculadoraNova } from './pages/Calculadoras/CalculadoraNova';
+import { Rolos } from './pages/Rolos/Rolos';
 
 function App() {
-  const PrivateRoute = ({ children, redirectTo }) => {
-    const isAuthenticated = JwtHandler.isJwtValid();
-    // console.log("isAuh:", isAuthenticated);
-    return isAuthenticated ? children : <Navigate to={redirectTo} />;
-  };
+    const PrivateRoute = ({ children, redirectTo }) => {
+        const isAuthenticated = JwtHandler.isJwtValid();
+        // console.log("isAuh:", isAuthenticated);
+        return isAuthenticated ? children : <Navigate to={redirectTo} />;
+    };
 
-  return (
-    <div className="App">
-      <Sidebar />
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="dark"
-      />
-      <div className="bodyApp">
-        <Routes>
-          <Route path="/calculadora-nova" element={<CalculadoraNova />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/info" element={<Info />} />
+    return (
+        <div className="App">
+            <Sidebar />
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
+            <div className="bodyApp">
+                <Routes>
+                    <Route
+                        path="/calculadora-nova"
+                        element={<CalculadoraNova />}
+                    />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/info" element={<Info />} />
 
-          {/* Rotas Calculadoras */}
-          <Route
-            path="/calculadora-nova"
-            element={
-              <PrivateRoute redirectTo="/">
-                <CalculadoraNova />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/calculadora-para-lencois"
-            element={
-              <PrivateRoute redirectTo="/">
-                <CalculadoraParaLencois />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/calculadora-60-40"
-            element={
-              <PrivateRoute redirectTo="/">
-                <Calculadora6040 />
-              </PrivateRoute>
-            }
-          />
+                    {/* Rotas Calculadoras */}
+                    <Route
+                        path="/calculadora-nova"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <CalculadoraNova />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/calculadora-para-lencois"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <CalculadoraParaLencois />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/calculadora-60-40"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <Calculadora6040 />
+                            </PrivateRoute>
+                        }
+                    />
 
-          {/* Rotas Apliques */}
-          <Route path="/catalogo-cliente" element={<ApliquesParaCliente />} />
-          <Route path="/apliques-estoque" element={<ApliquesEstoque />} />
-          <Route path="/catalogo-lençol-aplique" element={<TecidosJunior />} />
-          <Route
-            path="/catalogo-apliques-para-cabana"
-            element={<ApliquesParaCabana />}
-          />
-          <Route
-            path="/apliques-para-comprar"
-            element={<ApliquesParaComprar />}
-          />
-          <Route
-            path="/apliques-para-cortar"
-            element={
-              <PrivateRoute redirectTo="/">
-                <ApliquesParaCortar />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/apliques-create"
-            element={
-              <PrivateRoute redirectTo="/">
-                <ApliquesCreate />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/editar-aplique/:id/"
-            element={
-              <PrivateRoute redirectTo="/">
-                <ApliquesEdit />
-              </PrivateRoute>
-            }
-          />
+                    {/* Rotas Apliques */}
+                    <Route
+                        path="/catalogo-cliente"
+                        element={<ApliquesParaCliente />}
+                    />
+                    <Route
+                        path="/apliques-estoque"
+                        element={<ApliquesEstoque />}
+                    />
+                    <Route
+                        path="/catalogo-lençol-aplique"
+                        element={<TecidosJunior />}
+                    />
+                    <Route
+                        path="/catalogo-apliques-para-cabana"
+                        element={<ApliquesParaCabana />}
+                    />
+                    <Route
+                        path="/apliques-para-comprar"
+                        element={<ApliquesParaComprar />}
+                    />
+                    <Route
+                        path="/apliques-para-cortar"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <ApliquesParaCortar />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/apliques-create"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <ApliquesCreate />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/editar-aplique/:id/"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <ApliquesEdit />
+                            </PrivateRoute>
+                        }
+                    />
 
-          {/* Rotas sinteticos */}
-          <Route path="/sintetico-catalogo" element={<SinteticoCatalogo />} />
-          <Route
-            path="/composição-sintetico"
-            element={<SinteticoComposicoes />}
-          />
-          <Route
-            path="/sintetico-estoque"
-            element={
-              <PrivateRoute redirectTo="/">
-                <SinteticoEstoque />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/novo-sintetico"
-            element={
-              <PrivateRoute redirectTo="/">
-                <SinteticoCreate />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/editar-sintetico/:id"
-            element={
-              <PrivateRoute redirectTo="/">
-                <SinteticoEdit />
-              </PrivateRoute>
-            }
-          />
+                    {/* Rotas de rolos */}
+                    <Route
+                        path="/estoque-rolos/"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <Rolos />
+                            </PrivateRoute>
+                        }
+                    />
+                    {/* Rotas sinteticos */}
+                    <Route
+                        path="/sintetico-catalogo"
+                        element={<SinteticoCatalogo />}
+                    />
+                    <Route
+                        path="/composição-sintetico"
+                        element={<SinteticoComposicoes />}
+                    />
+                    <Route
+                        path="/sintetico-estoque"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <SinteticoEstoque />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/novo-sintetico"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <SinteticoCreate />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/editar-sintetico/:id"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <SinteticoEdit />
+                            </PrivateRoute>
+                        }
+                    />
 
-          {/* Rotas Lençois */}
-          <Route
-            path="/catalogo-lencol-pronta-entrega"
-            element={<CatalogoLencolPE />}
-          />
-          <Route
-            path="/lencol-create/"
-            element={
-              <PrivateRoute redirectTo="/">
-                <LencolCreate />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/lencol-edit/:id/"
-            element={
-              <PrivateRoute redirectTo="/">
-                <LencolEdit />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/tecidos/"
-            element={
-              <PrivateRoute redirectTo="/">
-                <TecidosParaLencol />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/tecidos-create/"
-            element={
-              <PrivateRoute redirectTo="/">
-                <TecidosCreate />
-              </PrivateRoute>
-            }
-          />
-          <Route
-            path="/tecido-edit/:id/"
-            element={
-              <PrivateRoute redirectTo="/">
-                <TecidosEdit />
-              </PrivateRoute>
-            }
-          />
+                    {/* Rotas Lençois */}
+                    <Route
+                        path="/catalogo-lencol-pronta-entrega"
+                        element={<CatalogoLencolPE />}
+                    />
+                    <Route
+                        path="/lencol-create/"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <LencolCreate />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/lencol-edit/:id/"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <LencolEdit />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/tecidos/"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <TecidosParaLencol />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/tecidos-create/"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <TecidosCreate />
+                            </PrivateRoute>
+                        }
+                    />
+                    <Route
+                        path="/tecido-edit/:id/"
+                        element={
+                            <PrivateRoute redirectTo="/">
+                                <TecidosEdit />
+                            </PrivateRoute>
+                        }
+                    />
 
-          {/* Rotas de tapetes */}
-          <Route path="/tapete-duas-cores" element={<DuasCores />} />
-          <Route path="/tapete-tres-cores" element={<TresCores />} />
-          <Route path="/tapete-quatro-cores" element={<QuatroCores />} />
-          <Route path="/tapete-cinco-cores" element={<CincoCores />} />
-          <Route path="/tapete-seis-cores" element={<SeisCores />} />
-          <Route path="/tapete-sete-cores" element={<SeteCores />} />
-          <Route path="/tapete-oito-cores" element={<OitoCores />} />
-          <Route path="/tapete-nove-cores" element={<NoveCores />} />
-          <Route path="/tapete-dez-cores" element={<DezCores />} />
-          <Route path="/tapete-onze-cores" element={<OnzeCores />} />
-          <Route path="/tapete-doze-cores" element={<DozeCores />} />
-          <Route path="/montagem-tapetes" element={<MontagemTapetes />} />
-        </Routes>
-      </div>
-    </div>
-  );
+                    {/* Rotas de tapetes */}
+                    <Route path="/tapete-duas-cores" element={<DuasCores />} />
+                    <Route path="/tapete-tres-cores" element={<TresCores />} />
+                    <Route
+                        path="/tapete-quatro-cores"
+                        element={<QuatroCores />}
+                    />
+                    <Route
+                        path="/tapete-cinco-cores"
+                        element={<CincoCores />}
+                    />
+                    <Route path="/tapete-seis-cores" element={<SeisCores />} />
+                    <Route path="/tapete-sete-cores" element={<SeteCores />} />
+                    <Route path="/tapete-oito-cores" element={<OitoCores />} />
+                    <Route path="/tapete-nove-cores" element={<NoveCores />} />
+                    <Route path="/tapete-dez-cores" element={<DezCores />} />
+                    <Route path="/tapete-onze-cores" element={<OnzeCores />} />
+                    <Route path="/tapete-doze-cores" element={<DozeCores />} />
+                    <Route
+                        path="/montagem-tapetes"
+                        element={<MontagemTapetes />}
+                    />
+                </Routes>
+            </div>
+        </div>
+    );
 }
 
 export default App;
