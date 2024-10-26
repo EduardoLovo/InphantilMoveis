@@ -32,23 +32,25 @@ export const TecidosParaLencol = () => {
 
   return (
     <div className="">
-      {type === "adm" ? (
-        <div className="p-3">
-          <button
-            onClick={() => {
-              navigate("/tecidos-create");
-            }}
-            className=" btnPadrao"
-          >
-            Adicionar novo Tecido
-          </button>
-        </div>
-      ) : (
-        ""
-      )}
+      <div className="cabecalho">
+        <h1>Estoque de tecidos</h1>
 
+        {type === "adm" ? (
+          <div>
+            <button
+              onClick={() => {
+                navigate("/tecidos-create");
+              }}
+              className=" botao-primario"
+            >
+              Adicionar novo Tecido
+            </button>
+          </div>
+        ) : (
+          ""
+        )}
+      </div>
       <div>
-        <h2 className="ms-5">Estoque de Tecido</h2>
         <div className="d-flex flex-wrap justify-content-start">
           {tecidos.map((tecido, index) => (
             <div className="" key={index}>

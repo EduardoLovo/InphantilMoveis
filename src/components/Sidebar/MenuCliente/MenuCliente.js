@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 export const MenuCliente = () => {
   return (
@@ -9,7 +9,7 @@ export const MenuCliente = () => {
         <Link to="/catalogo-lençol-aplique">Apliques & Lençois</Link>
         <Link to="/catalogo-apliques-para-cabana">Apliques Para Cabana</Link>
         <Link to="/sintetico-catalogo">Cores para Cama</Link>
-        <Link to="/catalogo-lencol-pronta-entrega">Lencois Pronto Entrega</Link>
+        <Link to="/catalogo-lencol-pronta-entrega">Lencois Pronta-Entrega</Link>
 
         <p className="mt-4">Inphantil</p>
         <Link to="/info">Informações</Link>

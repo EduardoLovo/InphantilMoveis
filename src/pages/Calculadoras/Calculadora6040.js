@@ -62,7 +62,7 @@ export const Calculadora6040 = () => {
             {!resultado ? (
               ""
             ) : (
-              <div className="text-amarelo">
+              <div>
                 <p>
                   O valor da entrada é: R${" "}
                   <span>

@@ -1,70 +1,61 @@
 .contentCreate {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
 }
 
 .contentCreate h1 {
-    padding: 25px;
-    text-decoration: underline;
+  padding: 25px;
+  text-decoration: underline;
 }
 
 .contentCreate form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contentCreate form div {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .contentCreate form div label {
-    padding: 3px;
+  padding: 3px;
 }
 
 .contentCreate form div input {
-    border-radius: 5px;
-    border: none;
-    width: 500px;
-    height: 40px;
-    padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 500px;
+  height: 40px;
+  padding: 10px;
 }
 
 .contentCreate form div select {
-    border-radius: 5px;
-    border: none;
-    width: 500px;
-    height: 40px;
-    padding: 10px;
-}
-
-.contentCreate form button {
-    margin: 10px;
-    padding: 5px;
-    width: 80px;
-    border: none;
-    border-radius: 5px;
-    background-color: rgb(150, 150, 150);
+  border-radius: 5px;
+  border: none;
+  width: 500px;
+  height: 40px;
+  padding: 10px;
 }
 
 .contentCreate form button:hover {
-    background-color: rgba(255, 255, 135, 1);
+  background-color: rgba(255, 255, 135, 1);
 }
 
 @media (max-width: 530px) {
-    .contentCreate h1 {
-        font-size: 20px;
-    }
-    .contentCreate form div input {
-        width: 85vw;
-    }
-    .contentCreate form div select {
-        width: 85vw;
-    }
+  .contentCreate h1 {
+    font-size: 20px;
+  }
+  .contentCreate form div input {
+    width: 85vw;
+  }
+  .contentCreate form div select {
+    width: 85vw;
+  }
 }
