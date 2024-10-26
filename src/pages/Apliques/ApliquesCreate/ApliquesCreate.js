@@ -58,12 +58,10 @@ export const ApliquesCreate = () => {
           </div>
           <div>
             <label>Estoque</label>
-            <div>
-              <select id="estoque" name="estoque" placeholder="estoque">
-                <option>Sim</option>
-                <option>Nao</option>
-              </select>
-            </div>
+            <select id="estoque" name="estoque" placeholder="estoque">
+              <option>Sim</option>
+              <option>Nao</option>
+            </select>
           </div>
           <div>
             <button className="botao-primario" type="submit">
