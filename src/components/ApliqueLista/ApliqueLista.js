@@ -39,7 +39,8 @@ export const ApliqueLista = (props) => {
                     ) : // COMPRA
                     tipoDaLista === 'compra' ? (
                         <div>
-                            {aplique.quantidade <= 5 ? (
+                            {aplique.quantidade <= 5 &&
+                            aplique.estoque === 'Nao' ? (
                                 <ApliqueCard aplique={aplique} />
                             ) : (
                                 ''
