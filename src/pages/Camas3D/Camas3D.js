@@ -17,13 +17,13 @@ function Cama3D() {
 
     useEffect(() => {
         const scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x3c5b66); // Fundo azul claro
+        scene.background = new THREE.Color(0x474747); // Fundo azul claro
 
         const camera = new THREE.PerspectiveCamera(
-            25,
+            35,
             window.innerWidth / window.innerHeight,
             0.1,
-            1000
+            100
         );
         camera.position.set(3.5, 2, 3);
 
@@ -85,10 +85,25 @@ function Cama3D() {
         controls.enableDamping = true;
         controls.dampingFactor = 0.25;
 
+        // const handleResize = () => {
+        //     renderer.setSize(window.innerWidth, window.innerHeight);
+        //     camera.aspect = window.innerWidth / window.innerHeight;
+        //     camera.updateProjectionMatrix();
+        // };
+        if (sceneRef.current) {
+            const container = sceneRef.current; // Div pai
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            container.appendChild(renderer.domElement);
+        }
+
         const handleResize = () => {
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
+            if (sceneRef.current) {
+                const container = sceneRef.current;
+                renderer.setSize(container.clientWidth, container.clientHeight);
+                camera.aspect = container.clientWidth / container.clientHeight;
+                camera.updateProjectionMatrix();
+            }
         };
 
         window.addEventListener('resize', handleResize);
@@ -167,7 +182,7 @@ function Cama3D() {
                     Quarto
                 </button>
             </div>
-            <div ref={sceneRef} style={{ width: '50%', height: '50%' }} />;
+            <div ref={sceneRef} className="imagemCama" />;
         </div>
     );
 }

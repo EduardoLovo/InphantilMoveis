@@ -1,4 +1,20 @@
 .camasContainer {
+    max-width: 100%;
+}
+
+.imagemCama {
+    width: 100%; /* Adapta-se ao tamanho do container pai */
+    height: 100%; /* Adapta-se ao tamanho do container pai */
+    max-width: 100%; /* Tamanho máximo */
+    max-height: 600px; /* Altura máxima */
+    overflow: hidden; /* Evita o estouro de conteúdo */
+}
+
+.botoes {
+    background-color: #474747;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .botoes button {
