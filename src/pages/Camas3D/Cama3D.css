@@ -1,0 +1,124 @@
+.camasContainer {
+}
+
+.botoes button {
+    margin: 1rem;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btnAZ3-AZ5 {
+    background: rgb(88, 108, 138);
+    background: linear-gradient(
+        90deg,
+        rgba(88, 108, 138, 1) 0%,
+        rgba(158, 189, 208, 1) 100%
+    );
+}
+.btnAZ3-AZ6 {
+    background: rgb(88, 108, 138);
+    background: linear-gradient(
+        90deg,
+        rgba(88, 108, 138, 1) 0%,
+        rgba(196, 206, 214, 1) 100%
+    );
+}
+.btnAZ4-AZ5 {
+    background: rgb(113, 141, 177);
+    background: linear-gradient(
+        90deg,
+        rgba(113, 141, 177, 1) 0%,
+        rgba(158, 189, 208, 1) 100%
+    );
+}
+.btnB2-B3 {
+    background: rgb(164, 157, 144);
+    background: linear-gradient(
+        90deg,
+        rgba(164, 157, 144, 1) 0%,
+        rgba(196, 188, 173, 1) 100%
+    );
+}
+.btnB3-B3 {
+    background: #c4bcad;
+}
+.btnB3-B5 {
+    background: rgb(196, 188, 173);
+    background: linear-gradient(
+        90deg,
+        rgba(196, 188, 173, 1) 0%,
+        rgba(218, 214, 203, 1) 100%
+    );
+}
+.btnB3-RA3 {
+    background: rgb(196, 188, 173);
+    background: linear-gradient(
+        90deg,
+        rgba(196, 188, 173, 1) 0%,
+        rgba(205, 167, 160, 1) 100%
+    );
+}
+.btnC2-C4 {
+    background: rgb(153, 154, 152);
+    background: linear-gradient(
+        90deg,
+        rgba(153, 154, 152, 1) 0%,
+        rgba(199, 200, 202, 1) 100%
+    );
+}
+.btnC2-C2 {
+    background: #999a98;
+}
+.btnC3-C4 {
+    background: rgb(180, 183, 186);
+    background: linear-gradient(
+        90deg,
+        rgba(180, 183, 186, 1) 0%,
+        rgba(199, 200, 202, 1) 100%
+    );
+}
+.btnC3-C5 {
+    background: rgb(180, 183, 186);
+    background: linear-gradient(
+        90deg,
+        rgba(180, 183, 186, 1) 0%,
+        rgba(200, 202, 203, 1) 100%
+    );
+}
+.btnRA3-RA3 {
+    background: rgb(205, 167, 160);
+}
+.btnRA3-RA4 {
+    background: rgb(205, 167, 160);
+    background: linear-gradient(
+        90deg,
+        rgba(205, 167, 160, 1) 0%,
+        rgba(239, 197, 190, 1) 100%
+    );
+}
+.btnRA3-RA5 {
+    background: rgb(205, 167, 160);
+    background: linear-gradient(
+        90deg,
+        rgba(205, 167, 160, 1) 0%,
+        rgba(222, 205, 191, 1) 100%
+    );
+}
+.btnV3-B3 {
+    background: rgb(163, 172, 155);
+    background: linear-gradient(
+        90deg,
+        rgba(163, 172, 155, 1) 0%,
+        rgba(196, 188, 173, 1) 100%
+    );
+}
+.btnV3 {
+    background: rgb(238, 227, 164);
+    background: linear-gradient(
+        90deg,
+        rgba(163, 172, 155, 1) 0%,
+        rgba(196, 188, 173, 1) 100%
+    );
+}

@@ -54,6 +54,7 @@ import { OnzeCores } from './pages/Tapetes/OnzeCores';
 import { DozeCores } from './pages/Tapetes/DozeCores';
 import { CalculadoraNova } from './pages/Calculadoras/CalculadoraNova';
 import { Rolos } from './pages/Rolos/Rolos';
+import Cama3D from './pages/Camas3D/Camas3D';
 
 function App() {
     const PrivateRoute = ({ children, redirectTo }) => {
@@ -271,6 +272,7 @@ function App() {
                         path="/montagem-tapetes"
                         element={<MontagemTapetes />}
                     />
+                    <Route path="/camas-3d" element={<Cama3D />} />
                 </Routes>
             </div>
         </div>
