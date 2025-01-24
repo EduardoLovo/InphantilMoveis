@@ -6,7 +6,7 @@
     width: 100%; /* Adapta-se ao tamanho do container pai */
     height: 100%; /* Adapta-se ao tamanho do container pai */
     max-width: 100%; /* Tamanho máximo */
-    max-height: 600px; /* Altura máxima */
+    max-height: 30%; /* Altura máxima */
     overflow: hidden; /* Evita o estouro de conteúdo */
 }
 

@@ -182,7 +182,7 @@ function Cama3D() {
                     Quarto
                 </button>
             </div>
-            <div ref={sceneRef} className="imagemCama" />;
+            <div ref={sceneRef} className="imagemCama" />
         </div>
     );
 }
