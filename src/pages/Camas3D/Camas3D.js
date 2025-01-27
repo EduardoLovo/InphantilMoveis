@@ -33,7 +33,7 @@ function Cama3D() {
             0.1,
             100
         );
-        camera.position.set(3.5, 3, 3);
+        camera.position.set(5.5, 2, 3);
 
         const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
@@ -156,49 +156,49 @@ function Cama3D() {
             {/* Exibe o texto de carregamento */}
             <div className="botoes">
                 <button className="btnAZ3-AZ5" onClick={mudar} id="AZ3-AZ5">
-                    AZ3 - AZ5
+                    AZ3 - AZ10
                 </button>
                 <button className="btnAZ3-AZ6" onClick={mudar} id="AZ3-AZ6">
-                    AZ3 - AZ6
+                    AZ3 - AZ11
                 </button>
                 <button className="btnAZ4-AZ5" onClick={mudar} id="AZ4-AZ5">
-                    AZ4 - AZ5
+                    AZ6 - AZ10
                 </button>
                 <button className="btnB2-B3" onClick={mudar} id="B2-B3">
-                    B2 - B3
+                    B3 - B6
                 </button>
                 <button className="btnB3-B3" onClick={mudar} id="B3-B3">
-                    B3 - B3
+                    B6 - B6
                 </button>
                 <button className="btnB3-B5" onClick={mudar} id="B3-B5">
-                    B3 - B5
+                    B6 - B8
                 </button>
                 <button className="btnB3-RA3" onClick={mudar} id="B3-RA3">
-                    B3 - RA3
+                    B6 - R17
                 </button>
                 <button className="btnC2-C4" onClick={mudar} id="C2-C4">
-                    C2 - C4
+                    CZ3 - CZ25N
                 </button>
                 <button className="btnC2-C2" onClick={mudar} id="C2-C2">
-                    C2 - C2
+                    CZ3 - CZ3
                 </button>
                 <button className="btnC3-C4" onClick={mudar} id="C3-C4">
-                    C3 - C4
+                    CZ6 - CZ25N
                 </button>
                 <button className="btnC3-C5" onClick={mudar} id="C3-C5">
-                    C3 - C5
+                    CZ6 - C26N
                 </button>
                 <button className="btnRA3-RA3" onClick={mudar} id="RA3-RA3">
-                    RA3 - RA3
+                    R17 - R17
                 </button>
                 <button className="btnRA3-RA4" onClick={mudar} id="RA3-RA4">
-                    RA3 - RA4
+                    R17 - R22
                 </button>
                 <button className="btnRA3-RA5" onClick={mudar} id="RA3-RA5">
-                    RA3 - RA5
+                    R17 - R32
                 </button>
                 <button className="btnV3-B3" onClick={mudar} id="V3-B3">
-                    V3 - B3
+                    VD22 - B6
                 </button>
                 <button className="" onClick={mudar} id="Quarto3d2">
                     Quarto
