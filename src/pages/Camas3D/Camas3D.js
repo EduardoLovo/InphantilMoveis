@@ -6,6 +6,7 @@ import './Cama3D.css';
 
 function Cama3D() {
     const [cama, setCama] = useState('AZ3-AZ5');
+    const [isLoading, setIsLoading] = useState(true); // Estado de carregamento
 
     const sceneRef = useRef(null);
 
@@ -13,6 +14,7 @@ function Cama3D() {
         const corDaCama = e.target.id;
         console.log(e.target.id);
         setCama(corDaCama);
+        setIsLoading(true); // Define como carregando ao mudar
         if (window.innerWidth < 768) {
             window.scrollBy({
                 top: 500, // Quantidade de pixels para descer
@@ -78,6 +80,7 @@ function Cama3D() {
                 model.position.set(0, 0, 0);
                 model.scale.set(1, 1, 1);
                 scene.add(model);
+                setIsLoading(false); // Define como carregando ao mudar
             },
             (xhr) => {
                 console.log((xhr.loaded / xhr.total) * 100 + '% carregado');
@@ -145,6 +148,12 @@ function Cama3D() {
 
     return (
         <div className="camasContainer">
+            {isLoading && (
+                <div className="loading">
+                    Carregando... <div className="c-loader"></div>
+                </div>
+            )}{' '}
+            {/* Exibe o texto de carregamento */}
             <div className="botoes">
                 <button className="btnAZ3-AZ5" onClick={mudar} id="AZ3-AZ5">
                     AZ3 - AZ5
@@ -195,11 +204,7 @@ function Cama3D() {
                     Quarto
                 </button>
             </div>
-            {!sceneRef ? (
-                'Carregando'
-            ) : (
-                <div ref={sceneRef} className="imagemCama" />
-            )}
+            <div ref={sceneRef} className="imagemCama" />
             <button onClick={scrollToTop} className="botaoSubirAoTopo">
                 Voltar ao topo
             </button>
