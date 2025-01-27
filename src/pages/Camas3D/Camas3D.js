@@ -13,6 +13,12 @@ function Cama3D() {
         const corDaCama = e.target.id;
         console.log(e.target.id);
         setCama(corDaCama);
+        if (window.innerWidth < 768) {
+            window.scrollBy({
+                top: 500, // Quantidade de pixels para descer
+                behavior: 'smooth', // Suaviza o movimento
+            });
+        }
     };
 
     useEffect(() => {
@@ -25,7 +31,7 @@ function Cama3D() {
             0.1,
             100
         );
-        camera.position.set(3.5, 2, 3);
+        camera.position.set(3.5, 3, 3);
 
         const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
@@ -130,6 +136,13 @@ function Cama3D() {
         };
     }, [cama]);
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth', // Faz a rolagem ser suave
+        });
+    };
+
     return (
         <div className="camasContainer">
             <div className="botoes">
@@ -178,11 +191,18 @@ function Cama3D() {
                 <button className="btnV3-B3" onClick={mudar} id="V3-B3">
                     V3 - B3
                 </button>
-                <button className="" onClick={mudar} id="Quarto3d">
+                <button className="" onClick={mudar} id="Quarto3d2">
                     Quarto
                 </button>
             </div>
-            <div ref={sceneRef} className="imagemCama" />
+            {!sceneRef ? (
+                'Carregando'
+            ) : (
+                <div ref={sceneRef} className="imagemCama" />
+            )}
+            <button onClick={scrollToTop} className="botaoSubirAoTopo">
+                Voltar ao topo
+            </button>
         </div>
     );
 }
